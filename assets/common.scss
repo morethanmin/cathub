@@ -1,0 +1,33 @@
+.color-black {
+  color: $color_black !important;
+}
+.color-gray {
+  color: $color_gray !important;
+}
+
+.font-ko {
+  font-family: $font_family_ko !important;
+}
+.font-en {
+  font-family: $font_family_en !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.common-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: $vt_container_max;
+}
+
+.dev-outlined {
+  border: 1px solid black;
+}
+
+.layout-container {
+  width: 100vh !important;
+  margin: 0px !important;
+}

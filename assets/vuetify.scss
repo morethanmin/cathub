@@ -1,0 +1,90 @@
+.v-application {
+  font-family: $font_family;
+  background: transparent !important;
+
+  &.theme--light {
+    color: $color_black;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .v-application--wrap {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .display-4,
+  .display-3,
+  .display-2,
+  .display-1,
+  .headline,
+  .header-title,
+  .subtitle-1,
+  .subtitle-2,
+  .body-1,
+  .body-2,
+  .caption,
+  .overline {
+    font-family: $font_family !important;
+    font-weight: 500;
+    word-break: keep-all;
+
+    &.font-en {
+      font-family: $font_family_en !important;
+    }
+  }
+
+  .text-h1,
+  .text-h2,
+  .text-h3,
+  .text-h4,
+  .text-h5,
+  .text-h6,
+  .text-subtitle-1,
+  .text-subtitle-2,
+  .text-body-1,
+  .text-body-2,
+  .text-button,
+  .text-caption,
+  .text-overline {
+    font-family: $font_family !important;
+    font-weight: 500;
+    word-break: keep-all;
+
+    &.font-en {
+      font-family: $font_family_en !important;
+    }
+  }
+}
+
+.v-card__subtitle,
+.v-card__text {
+  font-weight: 500;
+}
+
+.container.container--fluid {
+  max-width: $vt_container_max;
+
+  @media (max-width: $vt_xs) {
+    padding: 12px;
+  }
+}
+
+.v-footer {
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: -0.025em;
+  text-align: center;
+  background-color: transparent !important;
+}
+div.v-toolbar__content {
+}
+
+div.v-toolbar__extension {
+  background-color: white;
+  color: black;
+  height: 60px !important;
+  border: 1px solid black;
+}
