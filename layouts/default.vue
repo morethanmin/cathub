@@ -1,28 +1,30 @@
 <template>
   <v-app>
     <v-app-bar flat class="layout-header" hide-on-scroll app>
-      until-dev
+      <div class="layout-header-logo">
+        <v-icon>mdi-cat</v-icon>
+       until-dev
+      </div>
+      
       <template class="layout-header-template" v-slot:extension>
         <v-container class=" common-wrapper">
-          <v-row class="" justify="center" align="center">
-            <v-col class="" cols="3"></v-col>
-            <v-col align-self="end" class=" pa-0" cols="9">
-              <div class=" d-flex flex-row">
-                <div class="">Overview</div>
-                <div class="">Repositories</div>
-                <div class="">Projects</div>
-                <div class="">Packages</div>
+          <v-row class="pleft" justify="center" align="center">
+            <v-col class="pl-5 pr-3" cols="3"></v-col>
+            <v-col align-self="end" class="pr-5 pl-3" cols="9">
+              <div class="mt-2 d-flex flex-row">
+                <div class="mr-6"><button><v-icon>mdi-book-open-outline</v-icon>Overview</button></div>
+                <div class="mr-6"><button><v-icon>mdi-book-outline</v-icon>Repositories</button></div>
               </div>
             </v-col>
           </v-row>
         </v-container>
       </template>
     </v-app-bar>
-    <v-content app>
+    <v-main app>
       <v-container class="main common-wrapper">
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer absolute app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
@@ -33,6 +35,9 @@
   display: block !important;
   background-color: #252a2e !important;
   color: white !important;
+}
+.layout-header-logo{
+  color: white;
 }
 .layout-header-template {
 }

@@ -85,6 +85,7 @@ div.v-toolbar__content {
 div.v-toolbar__extension {
   background-color: white;
   color: black;
-  height: 60px !important;
-  border: 1px solid black;
+  height: 70px !important;
+  border: 1px solid #EAECEF;
+  z-index: 5 !important;
 }
