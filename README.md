@@ -1,6 +1,6 @@
 # cat-hub
 만두는 중
-![image](https://user-images.githubusercontent.com/72514247/118075149-64375880-b3ea-11eb-9d7f-fdc94b1b65ec.png)
+![image](https://user-images.githubusercontent.com/72514247/118096840-dd47a780-b40c-11eb-88d0-2dc95f5924d9.png)
 
 ## Build Setup
 
