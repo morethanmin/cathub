@@ -80,12 +80,12 @@
   background-color: transparent !important;
 }
 div.v-toolbar__content {
+  justify-content: space-between;
 }
 
 div.v-toolbar__extension {
   background-color: white;
   color: black;
   height: 70px !important;
-  border: 1px solid #EAECEF;
-  z-index: 5 !important;
+  border: 1px solid #eaecef;
 }

@@ -165,7 +165,6 @@ export default {
 
 <style lang="scss">
 .page-loading-progress {
-  z-index: 999999;
   position: fixed;
   top: 0px;
   left: 0px;

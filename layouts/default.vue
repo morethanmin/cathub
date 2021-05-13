@@ -1,19 +1,85 @@
 <template>
   <v-app>
-    <v-app-bar flat class="layout-header" hide-on-scroll app>
-      <div class="layout-header-logo">
+    <v-app-bar flat class="header" hide-on-scroll app>
+      <div class="header-mainBox d-flex flex-row align-center">
         <v-icon>mdi-cat</v-icon>
-       until-dev
+        <span class="text-h6">
+          Cathub
+        </span>
+        <input
+          class="header-search rounded-lg pa-3 ml-5"
+          type="text"
+          placeholder="Search or jump to..."
+        />
+        <div
+          class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
+        >
+          <div class="ma-3 ">Pull requests</div>
+          <div class="ma-0">Issues</div>
+          <div class="ma-3">Marketplace</div>
+          <div>Explore</div>
+        </div>
       </div>
-      
-      <template class="layout-header-template" v-slot:extension>
+      <div class="header-itemBox d-flex flex-row align-center">
+        <v-icon>mdi-bell-outline</v-icon>
+        <v-icon>mdi-plus</v-icon>
+        <v-icon>mdi-menu-down</v-icon>
+        <img
+          src="/imgs/face.jpg"
+          alt="face"
+          width="30"
+          height="30"
+          style="border-radius: 50%;"
+        />
+        <v-icon>mdi-menu-down</v-icon>
+      </div>
+
+      <template class="header-template" v-slot:extension>
         <v-container class=" common-wrapper">
           <v-row class="pleft" justify="center" align="center">
-            <v-col class="pl-5 pr-3" cols="3"></v-col>
-            <v-col align-self="end" class="pr-5 pl-3" cols="9">
+            <v-col class="pl-5 pr-3" cols="3">
+              <transition name="fade">
+                <div
+                  v-if="$store.getters.getIsOvered"
+                  class="d-flex align-center"
+                >
+                  <img
+                    src="/imgs/face.jpg"
+                    alt="face"
+                    width="30"
+                    height="30"
+                    style="border-radius: 50%;"
+                  />
+                  <span class="ml-2 font-weight-bold">morethanmin</span>
+                </div>
+              </transition>
+            </v-col>
+            <v-col align-self="end" class="mt-1 pr-5 pl-3" cols="9">
               <div class="mt-2 d-flex flex-row">
-                <div class="mr-6"><button><v-icon>mdi-book-open-outline</v-icon>Overview</button></div>
-                <div class="mr-6"><button><v-icon>mdi-book-outline</v-icon>Repositories</button></div>
+                <div class="mr-6">
+                  <button class="d-flex flex-row">
+                    <v-icon>mdi-book-open-outline</v-icon>
+                    <div class="ml-1">Overview</div>
+                  </button>
+                </div>
+                <div class="mr-6">
+                  <button class="d-flex flex-row">
+                    <v-icon>mdi-book-outline</v-icon>
+                    <div class="ml-1">Repositories</div>
+                  </button>
+                </div>
+                <div class="mr-6">
+                  <button class="d-flex flex-row">
+                    <v-icon>mdi-chart-box-outline</v-icon>
+                    <div class="">Projects</div>
+                  </button>
+                </div>
+                <div class="mr-6">
+                  <button class="d-flex flex-row">
+                    <v-icon>mdi-cube-outline</v-icon>
+                    <div class="ml-1">Packages</div>
+                  </button>
+                </div>
               </div>
             </v-col>
           </v-row>
@@ -26,21 +92,67 @@
       </v-container>
     </v-main>
     <v-footer absolute app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <v-divider></v-divider>
+
+      <div class="footer-box d-flex align-center common-wrapper">
+        <div
+          class="align-center footer-info ma-5 d-flex flex-row justify-space-between"
+        >
+          <span>&copy; {{ new Date().getFullYear() }} morethanmin, Inc.</span>
+          <div><a href="/">Terms</a></div>
+          <div><a href="/">Security</a></div>
+          <div><a href="/">Status</a></div>
+          <div><a href="/">Docs</a></div>
+          <div>
+            <a href="/"><v-icon>mdi-cat</v-icon></a>
+          </div>
+          <div><a href="/">Contact Github</a></div>
+          <div><a href="/">Pricing</a></div>
+          <div><a href="/">API</a></div>
+          <div><a href="/">Training</a></div>
+          <div><a href="/">Blog</a></div>
+          <div><a href="/">About</a></div>
+        </div>
+      </div>
     </v-footer>
   </v-app>
 </template>
 <style lang="scss" scoped>
-.layout-header {
+.header {
   display: block !important;
   background-color: #252a2e !important;
   color: white !important;
 }
-.layout-header-logo{
+.header-mainBox {
   color: white;
 }
-.layout-header-template {
+.header-mainBox .v-icon {
+  color: white;
+  font-size: 2rem;
 }
+
+.header-itemBox .v-icon {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.header-template {
+  z-index: 5 !important;
+}
+
+.header-search {
+  color: black;
+  border: 1px solid #444d56;
+  height: 1rem;
+  width: 200px;
+
+  transition: width 0.25s;
+}
+.header-search:focus {
+  width: 350px;
+  background-color: white;
+}
+
 .layout-nav {
   position: fixed;
   width: 100%;
@@ -51,6 +163,21 @@
 }
 .main {
   margin-top: 40px;
+}
+
+.footer-box {
+  height: 150px;
+}
+.footer-info {
+  width: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
 
