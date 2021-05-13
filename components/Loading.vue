@@ -11,7 +11,8 @@ export default {
       rtl: false,
       throttle: 0,
       duration: 5000,
-      continuous: false
+      continuous: false,
+      height: "3px"
     };
   },
   computed: {
@@ -167,13 +168,14 @@ export default {
 .page-loading-progress {
   position: fixed;
   top: 0px;
+  z-index: 999;
   left: 0px;
   right: 0px;
   width: 0%;
   height: 3px;
   opacity: 1;
   transition: width 0.2s, opacity 1s;
-  background-color: $color_primary;
+  background-color: #6eafff;
 }
 
 .page-loading-progress-hide {

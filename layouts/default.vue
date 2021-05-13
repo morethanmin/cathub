@@ -2,10 +2,13 @@
   <v-app>
     <v-app-bar flat class="header" hide-on-scroll app>
       <div class="header-mainBox d-flex flex-row align-center">
-        <v-icon>mdi-cat</v-icon>
-        <span class="text-h6">
-          Cathub
-        </span>
+        <NuxtLink class="d-flex flex-row align-center" to="/">
+          <v-icon>mdi-cat</v-icon>
+          <span class="text-h6">
+            Cathub
+          </span>
+        </NuxtLink>
+
         <input
           class="header-search rounded-lg pa-3 ml-5"
           type="text"
@@ -55,29 +58,37 @@
               </transition>
             </v-col>
             <v-col align-self="end" class="mt-1 pr-5 pl-3" cols="9">
-              <div class="mt-2 d-flex flex-row">
+              <div class="mt-2 d-flex flex-row text-subtitle-2">
                 <div class="mr-6">
                   <button class="d-flex flex-row">
                     <v-icon>mdi-book-open-outline</v-icon>
-                    <div class="ml-1">Overview</div>
+                    <div class="ml-1">
+                      <NuxtLink to="/">Overview</NuxtLink>
+                    </div>
                   </button>
                 </div>
                 <div class="mr-6">
                   <button class="d-flex flex-row">
                     <v-icon>mdi-book-outline</v-icon>
-                    <div class="ml-1">Repositories</div>
+                    <div class="ml-1">
+                      <NuxtLink to="/repositories">Repositories</NuxtLink>
+                    </div>
                   </button>
                 </div>
                 <div class="mr-6">
                   <button class="d-flex flex-row">
                     <v-icon>mdi-chart-box-outline</v-icon>
-                    <div class="">Projects</div>
+                    <div class="">
+                      <NuxtLink to="/projects">Projects</NuxtLink>
+                    </div>
                   </button>
                 </div>
                 <div class="mr-6">
                   <button class="d-flex flex-row">
                     <v-icon>mdi-cube-outline</v-icon>
-                    <div class="ml-1">Packages</div>
+                    <div class="ml-1">
+                      <NuxtLink to="/packages">Packages</NuxtLink>
+                    </div>
                   </button>
                 </div>
               </div>
