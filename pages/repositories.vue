@@ -2,114 +2,50 @@
   <div>
     <v-row class="" justify="center" align="center">
       <v-col align-self="start" class="col-info pa-5" cols="3">
-        <div class="info-profile">
-          <img
-            ref="profileImage"
-            src="/imgs/face.jpg"
-            alt="face"
-            class="info-profile-face rounded-circle"
-          />
-          <div class="info-profile-title">
-            <div class="text-h5 font-weight-bold">Lee sang min</div>
-            <div class="text-h6">morethanmin</div>
-            <button class="mt-3 mb-3 rounded-lg">
-              Edit profile
-            </button>
-          </div>
-          <div class="info-profile-follo mb-8 text-body-2">
-            <ul>
-              <li>
-                <v-icon>mdi-account-group-outline</v-icon>
-                4 followers
-              </li>
-              <li>7 following</li>
-              <li>
-                <v-icon>mdi-star-outline</v-icon>
-                34
-              </li>
-            </ul>
-          </div>
-          <div class="info-profile-detail text-body-2">
-            <ul>
-              <li>
-                <v-icon>mdi-office-building-outline</v-icon>
-                Myongji Univ
-              </li>
-              <li>
-                <v-icon>mdi-map-marker-outline</v-icon>
-                Seoul, South Korea
-              </li>
-              <li>
-                <v-icon>mdi-email-outline</v-icon>
-                mini4614@gmail.com
-              </li>
-              <li>
-                <v-icon>mdi-link-variant</v-icon>
-                https://github.com/morethanmin
-              </li>
-            </ul>
-          </div>
-          <v-divider class="mt-3 mb-3"></v-divider>
-          <div class="text-body-2">
-            <div>Organizations</div>
-          </div>
-        </div>
+        <Profile />
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
-        repositories
+        <div class="ma-0 pa-0">
+          <!-- <div class="d-flex">
+            <input type="text" placeholder="Find a repository..." />
+            <select name="type" id="">
+              <option value="">a</option>
+            </select>
+            <select name="type" id="">
+              <option value="">a</option>
+            </select>
+            <select name="type" id="">
+              <option value="">a</option>
+            </select>
+            <button>new</button>
+          </div> -->
+          <v-divider class="mb-4"></v-divider>
+          <div v-for="n in 10" :key="n" class="">
+            <div class="d-flex mb-5 justify-space-between ">
+              <div class="text-h6">cat-hub</div>
+              <button class="subtitle-1"></button>
+            </div>
+            <div class="d-flex body-2 mb-3">
+              <div>Vue Updated 1 hour ago</div>
+              <button></button>
+            </div>
+            <v-divider class="mt-5 mb-5"></v-divider>
+          </div>
+        </div>
       </v-col>
     </v-row>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.info-profile {
-  ul {
-    padding: 0;
-  }
-  li {
-    list-style-type: none;
-  }
-  .v-icon {
-    font-size: 1.2rem;
-  }
-  /* transform: translateY(-25%); */
-}
-.info-profile-face {
-  object-fit: cover;
-  width: 100%;
-  z-index: 10;
-}
-.info-profile-title {
-  button {
-    width: 100%;
-    border: 1px solid #e2e3e4;
-    background-color: #fafbfc;
-  }
-}
-.info-profile-follo {
-  li {
-    float: left;
-    margin-right: 5px;
-  }
-  height: 10px;
-}
-.info-profile-detail {
-  li {
-    margin-bottom: 4px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
 
-import Overview from "~/components/Overview.vue";
-import Subjects from "~/components/Subjects.vue";
+import Profile from "~/components/Profile.vue";
 
 export default {
   components: {
-    Overview,
-    Subjects
+    Profile
   },
   data: () => ({
     tab: null

@@ -60,36 +60,44 @@
             <v-col align-self="end" class="mt-1 pr-5 pl-3" cols="9">
               <div class="mt-2 d-flex flex-row text-subtitle-2">
                 <div class="mr-6">
-                  <button class="d-flex flex-row">
-                    <v-icon>mdi-book-open-outline</v-icon>
-                    <div class="ml-1">
-                      <NuxtLink to="/">Overview</NuxtLink>
-                    </div>
-                  </button>
+                  <NuxtLink to="/">
+                    <button class="d-flex flex-row">
+                      <v-icon>mdi-book-open-outline</v-icon>
+                      <div class="ml-1">
+                        Overview
+                      </div>
+                    </button>
+                  </NuxtLink>
                 </div>
                 <div class="mr-6">
-                  <button class="d-flex flex-row">
-                    <v-icon>mdi-book-outline</v-icon>
-                    <div class="ml-1">
-                      <NuxtLink to="/repositories">Repositories</NuxtLink>
-                    </div>
-                  </button>
+                  <NuxtLink to="/repositories">
+                    <button class="d-flex flex-row">
+                      <v-icon>mdi-book-outline</v-icon>
+                      <div class="ml-1">
+                        Repositories
+                      </div>
+                    </button>
+                  </NuxtLink>
                 </div>
                 <div class="mr-6">
-                  <button class="d-flex flex-row">
-                    <v-icon>mdi-chart-box-outline</v-icon>
-                    <div class="">
-                      <NuxtLink to="/projects">Projects</NuxtLink>
-                    </div>
-                  </button>
+                  <NuxtLink to="/projects">
+                    <button class="d-flex flex-row">
+                      <v-icon>mdi-chart-box-outline</v-icon>
+                      <div class="">
+                        Projects
+                      </div>
+                    </button>
+                  </NuxtLink>
                 </div>
                 <div class="mr-6">
-                  <button class="d-flex flex-row">
-                    <v-icon>mdi-cube-outline</v-icon>
-                    <div class="ml-1">
-                      <NuxtLink to="/packages">Packages</NuxtLink>
-                    </div>
-                  </button>
+                  <NuxtLink to="/packages">
+                    <button class="d-flex flex-row">
+                      <v-icon>mdi-cube-outline</v-icon>
+                      <div class="ml-1">
+                        Packages
+                      </div>
+                    </button>
+                  </NuxtLink>
                 </div>
               </div>
             </v-col>
@@ -117,7 +125,7 @@
           <div>
             <a href="/"><v-icon>mdi-cat</v-icon></a>
           </div>
-          <div><a href="/">Contact Github</a></div>
+          <div><a href="/">Contact Cathub</a></div>
           <div><a href="/">Pricing</a></div>
           <div><a href="/">API</a></div>
           <div><a href="/">Training</a></div>
@@ -152,7 +160,7 @@
 }
 
 .header-search {
-  color: black;
+  color: white;
   border: 1px solid #444d56;
   height: 1rem;
   width: 200px;
@@ -161,6 +169,7 @@
 }
 .header-search:focus {
   width: 350px;
+  color: black;
   background-color: white;
 }
 
