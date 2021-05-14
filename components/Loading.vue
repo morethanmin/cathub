@@ -172,7 +172,7 @@ export default {
   left: 0px;
   right: 0px;
   width: 0%;
-  height: 3px;
+  height: 4px;
   opacity: 1;
   transition: width 0.2s, opacity 1s;
   background-color: #6eafff;

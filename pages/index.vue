@@ -30,7 +30,7 @@
                 <v-card outlined flat>
                   <v-card-title class="text-subtitle-2">
                     <v-icon>mdi-tent</v-icon>
-                    mtmcamp
+                    <div class="pinned-link">mtmcamp</div>
                   </v-card-title>
                   <v-card-text class="text-body-2">
                     개인 프로젝트
@@ -59,12 +59,59 @@
             </v-card>
           </div>
         </div>
+        <v-container class="main common-wrapper mt-5 pa-0">
+          <v-row>
+            <v-col class="contribution-main " cols="10">
+              <div class="activity">
+                <div class="mb-3">Contribution activity</div>
+                <div
+                  class="contribution-main-line text-body-2 pa-3 d-flex align-center"
+                >
+                  <div class=" ">
+                    May 2021
+                  </div>
+                  <v-divider></v-divider>
+                </div>
+              </div>
+            </v-col>
+            <v-col class="contribution-side d-flex flex-column mt-2" cols="2">
+              <button class="rounded-lg slected pa-1 pl-4 mb-4 text-left">
+                2021
+              </button>
+              <button class="rounded-lg pa-1 pl-4 mb-4 text-left">
+                2022
+              </button>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
     </v-row>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contribution-side {
+  .slected {
+    background-color: #0366d6;
+    color: white;
+  }
+}
+
+.pinned-link {
+  color: #0366d6;
+  font-weight: 700;
+  :hover {
+    cursor: pointer;
+  }
+}
+.pinned-link:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #0366d6;
+}
+
+.contribution-main-line {
+}
+</style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
 
@@ -74,31 +121,8 @@ export default {
   components: {
     Profile
   },
-  data: () => ({
-    tab: null
-  }),
-  computed: {
-    ...mapGetters({
-      isOvered: "getIsOvered"
-    })
-  },
-  methods: {
-    ...mapMutations({
-      setIsOvered: "setIsOvered"
-    }),
-    handleScrollEvent() {
-      const dom = this.$refs.profileImage;
-      const targetScroll = dom.offsetTop + dom.height;
-
-      if (targetScroll < window.scrollY) this.setIsOvered(true);
-      else this.setIsOvered(false);
-    }
-  },
-  mounted() {
-    document.addEventListener("scroll", this.handleScrollEvent);
-  },
-  beforeDestroy() {
-    document.removeEventListener("scroll", this.handleScrollEvent);
-  }
+  data: () => ({}),
+  computed: {},
+  methods: {}
 };
 </script>

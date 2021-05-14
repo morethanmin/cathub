@@ -38,8 +38,8 @@
       </div>
 
       <template class="header-template" v-slot:extension>
-        <v-container class=" common-wrapper">
-          <v-row class="pleft" justify="center" align="center">
+        <v-container class=" common-wrapper pt-0 pb-0">
+          <v-row class="header-row pleft ma-0" justify="center" align="center">
             <v-col class="pl-5 pr-3" cols="3">
               <transition name="fade">
                 <div
@@ -57,21 +57,43 @@
                 </div>
               </transition>
             </v-col>
-            <v-col align-self="end" class="mt-1 pr-5 pl-3" cols="9">
-              <div class="mt-2 d-flex flex-row text-subtitle-2">
-                <div class="mr-6">
+            <v-col
+              align-self="end"
+              class="header-tab pt-0 pb-0 pr-5 pl-3"
+              cols="9"
+            >
+              <div class=" d-flex flex-row text-subtitle-2 ">
+                <div class="">
                   <NuxtLink to="/">
-                    <button class="d-flex flex-row">
+                    <button
+                      ref="overview"
+                      @click="selectedTab = 'overview'"
+                      :class="[
+                        ...(selectedTab === 'overview'
+                          ? ['selectedTab', 'font-weight-bold']
+                          : [])
+                      ]"
+                      class="d-flex flex-row align-center"
+                    >
                       <v-icon>mdi-book-open-outline</v-icon>
-                      <div class="ml-1">
+                      <div class="ml-1 ">
                         Overview
                       </div>
                     </button>
                   </NuxtLink>
                 </div>
-                <div class="mr-6">
+                <div class="">
                   <NuxtLink to="/repositories">
-                    <button class="d-flex flex-row">
+                    <button
+                      ref="repositories"
+                      @click="selectedTab = 'repositories'"
+                      :class="[
+                        ...(selectedTab === 'repositories'
+                          ? ['selectedTab', 'font-weight-bold']
+                          : [])
+                      ]"
+                      class="d-flex flex-row align-center"
+                    >
                       <v-icon>mdi-book-outline</v-icon>
                       <div class="ml-1">
                         Repositories
@@ -79,9 +101,18 @@
                     </button>
                   </NuxtLink>
                 </div>
-                <div class="mr-6">
+                <div class="">
                   <NuxtLink to="/projects">
-                    <button class="d-flex flex-row">
+                    <button
+                      ref="projects"
+                      @click="selectedTab = 'projects'"
+                      :class="[
+                        ...(selectedTab === 'projects'
+                          ? ['selectedTab', 'font-weight-bold']
+                          : [])
+                      ]"
+                      class="d-flex flex-row align-center"
+                    >
                       <v-icon>mdi-chart-box-outline</v-icon>
                       <div class="">
                         Projects
@@ -89,9 +120,18 @@
                     </button>
                   </NuxtLink>
                 </div>
-                <div class="mr-6">
+                <div class="">
                   <NuxtLink to="/packages">
-                    <button class="d-flex flex-row">
+                    <button
+                      ref="packages"
+                      @click="selectedTab = 'packages'"
+                      :class="[
+                        ...(selectedTab === 'packages'
+                          ? ['selectedTab', 'font-weight-bold']
+                          : [])
+                      ]"
+                      class="d-flex flex-row  align-center"
+                    >
                       <v-icon>mdi-cube-outline</v-icon>
                       <div class="ml-1">
                         Packages
@@ -158,6 +198,9 @@
 .header-template {
   z-index: 5 !important;
 }
+.header-row {
+  height: 100%;
+}
 
 .header-search {
   color: white;
@@ -178,8 +221,27 @@
   width: 100%;
   color: #252a2e;
   background-color: white !important;
-  border-bottom: 1px solid black;
+  border-bottom: 1px s black;
   //height: 100%;
+}
+
+.header-tab {
+  button {
+    height: 45px;
+    font-size: 0.9rem;
+    transition: border 0.2s;
+    padding: 15px;
+    border-bottom: 2px solid white;
+  }
+  button:hover {
+    border-bottom: 2px solid black;
+  }
+  .v-icon {
+    font-size: 1.25rem;
+  }
+  .selectedTab {
+    border-bottom: 2px solid red !important;
+  }
 }
 .main {
   margin-top: 40px;
@@ -204,7 +266,28 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      selectedTab: "overview"
+    };
+  },
+  methods: {
+    initialSelectedTab() {
+      const match = this.$route.matched;
+
+      if (Array.isArray(match) === false) return;
+
+      if (match.some(x => x.path === "/overview"))
+        this.selectedTab = "overview";
+      if (match.some(x => x.path === "/repositories"))
+        this.selectedTab = "repositories";
+      if (match.some(x => x.path === "/projects"))
+        this.selectedTab = "projects";
+      if (match.some(x => x.path === "/packages"))
+        this.selectedTab = "packages";
+    }
+  },
+  mounted() {
+    this.initialSelectedTab();
   }
 };
 </script>

@@ -24,28 +24,7 @@ export default {
   data: () => ({
     tab: null
   }),
-  computed: {
-    ...mapGetters({
-      isOvered: "getIsOvered"
-    })
-  },
-  methods: {
-    ...mapMutations({
-      setIsOvered: "setIsOvered"
-    }),
-    handleScrollEvent() {
-      const dom = this.$refs.profileImage;
-      const targetScroll = dom.offsetTop + dom.height;
-
-      if (targetScroll < window.scrollY) this.setIsOvered(true);
-      else this.setIsOvered(false);
-    }
-  },
-  mounted() {
-    document.addEventListener("scroll", this.handleScrollEvent);
-  },
-  beforeDestroy() {
-    document.removeEventListener("scroll", this.handleScrollEvent);
-  }
+  computed: {},
+  methods: {}
 };
 </script>
