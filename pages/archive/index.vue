@@ -6,6 +6,7 @@
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
         archive
+        github의 wiki 처럼 개발할 예정입니다.
       </v-col>
     </v-row>
   </div>
