@@ -32,7 +32,9 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxt/content'
+  ],
   /*
    ** Customize the progress-bar color
    */

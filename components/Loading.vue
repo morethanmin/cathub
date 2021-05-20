@@ -12,7 +12,7 @@ export default {
       throttle: 0,
       duration: 5000,
       continuous: false,
-      height: "3px"
+      height: "2px"
     };
   },
   computed: {

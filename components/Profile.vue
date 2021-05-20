@@ -7,7 +7,7 @@
       class="info-profile-face rounded-circle"
     />
     <div class="info-profile-title">
-      <div class="text-h5 font-weight-bold">Lee sang min</div>
+      <div class="text-h5 font-weight-bold">Lee sang min (Jade)</div>
       <div class="text-h6">morethanmin</div>
       <button class="mt-3 mb-3 pa-1 rounded-lg text-subtitle-2">
         Edit profile

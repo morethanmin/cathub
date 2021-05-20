@@ -121,12 +121,12 @@
                   </NuxtLink>
                 </div>
                 <div class="">
-                  <NuxtLink to="/packages">
+                  <NuxtLink to="/archive">
                     <button
                       ref="packages"
-                      @click="selectedTab = 'packages'"
+                      @click="selectedTab = 'archive'"
                       :class="[
-                        ...(selectedTab === 'packages'
+                        ...(selectedTab === 'archive'
                           ? ['selectedTab', 'font-weight-bold']
                           : [])
                       ]"
@@ -134,7 +134,7 @@
                     >
                       <v-icon>mdi-cube-outline</v-icon>
                       <div class="ml-1">
-                        Packages
+                        Archive
                       </div>
                     </button>
                   </NuxtLink>
@@ -282,8 +282,8 @@ export default {
         this.selectedTab = "repositories";
       if (match.some(x => x.path === "/projects"))
         this.selectedTab = "projects";
-      if (match.some(x => x.path === "/packages"))
-        this.selectedTab = "packages";
+      if (match.some(x => x.path === "/archive"))
+        this.selectedTab = "archive";
     }
   },
   mounted() {
