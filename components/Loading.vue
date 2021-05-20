@@ -12,7 +12,7 @@ export default {
       throttle: 0,
       duration: 5000,
       continuous: false,
-      height: "2px"
+      height: "2px",
     };
   },
   computed: {
@@ -27,7 +27,7 @@ export default {
         : !this.reversed
         ? "0px"
         : "auto";
-    }
+    },
   },
   beforeDestroy() {
     this.clear();
@@ -141,7 +141,7 @@ export default {
           }
         }
       }, 100);
-    }
+    },
   },
   render(h) {
     let el = h(false);
@@ -151,16 +151,16 @@ export default {
         class: {
           "page-loading-progress-hide": !this.visible,
           "page-loading-progress-notransition": this.skipTimerCount > 0,
-          "page-loading-progress-failed": !this.canSucceed
+          "page-loading-progress-failed": !this.canSucceed,
         },
         style: {
           width: this.percent + "%",
-          left: this.left
-        }
+          left: this.left,
+        },
       });
     }
     return el;
-  }
+  },
 };
 </script>
 
@@ -172,7 +172,7 @@ export default {
   left: 0px;
   right: 0px;
   width: 0%;
-  height: 4px;
+  height: 2px;
   opacity: 1;
   transition: width 0.2s, opacity 1s;
   background-color: #6eafff;

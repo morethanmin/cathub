@@ -2,10 +2,6 @@
   <v-app>
     <v-app-bar flat class="header" hide-on-scroll app>
       <Header />
-
-      <template class="header-template" v-slot:extension>
-        <Nav />
-      </template>
     </v-app-bar>
     <v-main app>
       <v-container class="main common-wrapper">
@@ -32,12 +28,10 @@
 
 <script>
 import Header from "~/components/layouts/Header.vue";
-import Nav from "~/components/layouts/Nav.vue";
 import Footer from "~/components/layouts/Footer.vue";
 export default {
   components: {
     Header,
-    Nav,
     Footer,
   },
 };

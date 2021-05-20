@@ -47,9 +47,14 @@
       </ul>
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
-    <div class="text-body-2">
-      <div>Organizations</div>
-    </div>
+    <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
+    <img class="corp-img" src="" alt="" />
+    <img class="corp-img" src="" alt="" />
+    <img class="corp-img" src="" alt="" />
+    <!-- <div class="text-body-1 font-weight-bold mb-3">Organizations</div>
+    <img class="corp-img" src="" alt="" />
+    <img class="corp-img" src="" alt="" />
+    <img class="corp-img" src="" alt="" /> -->
   </div>
 </template>
 <style lang="scss" scoped>
@@ -89,6 +94,12 @@
     margin-bottom: 4px;
   }
 }
+.corp-img {
+  background: #e2e3e4;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+}
 </style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
@@ -96,12 +107,12 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   computed: {
     ...mapGetters({
-      isOvered: "getIsOvered"
-    })
+      isOvered: "getIsOvered",
+    }),
   },
   methods: {
     ...mapMutations({
-      setIsOvered: "setIsOvered"
+      setIsOvered: "setIsOvered",
     }),
     handleScrollEvent() {
       const dom = this.$refs.profileImage;
@@ -109,13 +120,13 @@ export default {
 
       if (targetScroll < window.scrollY) this.setIsOvered(true);
       else this.setIsOvered(false);
-    }
+    },
   },
   mounted() {
     document.addEventListener("scroll", this.handleScrollEvent);
   },
   beforeDestroy() {
     document.removeEventListener("scroll", this.handleScrollEvent);
-  }
+  },
 };
 </script>
