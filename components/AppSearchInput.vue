@@ -17,8 +17,11 @@
       v-if="searchBarActivated"
     >
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="`/archive/${article.slug}`">
-          {{ article.title }}
+        <NuxtLink class="d-flex align-center" :to="`/archive/${article.slug}`">
+          <v-icon class="text-h6">mdi-cube-outline</v-icon>
+          <span class="text-subtitle-2">
+            {{ article.title }}
+          </span>
         </NuxtLink>
       </li>
     </ul>
@@ -110,6 +113,23 @@ export default {
   border: 1px solid #e4e4e4;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  color: black;
+  list-style: none;
+  padding-left: 0px;
+  li {
+    border-bottom: 1px solid #e4e4e4;
+  }
+  li,
+  .v-icon {
+    color: black;
+    padding: 6px;
+  }
+  li:hover {
+    background: #0366d6;
+    color: white;
+    .v-icon {
+      transition: none;
+      color: white;
+    }
+  }
 }
 </style>>
