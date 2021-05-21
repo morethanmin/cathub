@@ -1,10 +1,10 @@
 ---
-title: 내 첫 글
+title: second-post
 description: Learning how to use @nuxt/content to create a blog
 img: first-blog-post.jpg
 alt: my first blog post
 author:
-  name: 몰덴민
+  name: Benjamin
   bio: All about Benjamin
   image: https://images.unsplash.com/.....
 ---

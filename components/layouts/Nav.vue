@@ -93,7 +93,6 @@
 
 <style lang="scss" scoped>
 .header-template {
-  z-index: 5 !important;
 }
 .header-row {
   height: 100%;

@@ -5,12 +5,8 @@
         <v-icon>mdi-cat</v-icon>
         <span class="text-h6"> Cathub </span>
       </NuxtLink>
-
-      <input
-        class="header-search rounded-lg pa-3 ml-5"
-        type="text"
-        placeholder="Search or jump to..."
-      />
+      <app-search-input/>
+      
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >
@@ -51,18 +47,5 @@
 .header-itemBox .v-icon {
   color: white;
   font-size: 1.2rem;
-}
-.header-search {
-  color: white;
-  border: 1px solid #444d56;
-  height: 1rem;
-  width: 200px;
-
-  transition: width 0.25s;
-}
-.header-search:focus {
-  width: 350px;
-  color: black;
-  background-color: white;
 }
 </style>
