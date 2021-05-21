@@ -1,12 +1,12 @@
 <template>
   <div class="header d-flex flex-row justify-space-between">
     <div class="header-mainBox d-flex flex-row align-center">
-      <NuxtLink class="d-flex flex-row align-center" to="/">
+      <a class="d-flex flex-row align-center" href="/">
         <v-icon>mdi-cat</v-icon>
         <span class="text-h6"> Cathub </span>
-      </NuxtLink>
-      <app-search-input/>
-      
+      </a>
+      <app-search-input />
+
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >

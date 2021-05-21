@@ -1,15 +1,21 @@
 <template>
   <div class="search-box ml-5">
     <input
-      class="search  "
-      v-on:focus="handleFocusOn"
-      v-on:blur="handleFocusOff"
+      :class="[...(searchBarActivated ? ['search-activated'] : [])]"
+      class="search"
+      v-on:focus="focus = true"
+      v-on:blur="focus = false"
       v-model="searchQuery"
       type="search"
       autocomplete="off"
       placeholder="Search or jump to..."
     />
-    <ul class="result " v-if="focused">
+    <ul
+      v-on:mouseover="hover = true"
+      v-on:mouseout="hover = false"
+      class="result"
+      v-if="searchBarActivated"
+    >
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink :to="`/archive/${article.slug}`">
           {{ article.title }}
@@ -20,46 +26,57 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        searchQuery: '',
-        articles: [],
-        focused: false
-      }
+export default {
+  data() {
+    return {
+      searchQuery: "",
+      articles: [],
+      focus: false,
+      hover: false,
+    };
+  },
+  computed: {
+    searchBarActivated() {
+      const activated = this.focus || this.hover;
+      return activated;
     },
-    methods:{
-      handleFocusOn(){
-        this.focused = true
-      },
-      handleFocusOff(){
-        setTimeout(() => {
-        this.focused = false
-          
-        }, 250);
-      }
+  },
+  methods: {
+    handleFocusOn() {
+      this.focus = true;
     },
-    watch: {
-      async searchQuery(searchQuery) {
-        if (!searchQuery) {
-          this.articles = await this.$content('articles').fetch()
-        } else {
-          this.articles = await this.$content('articles')
+    handleFocusOff(e) {
+      this.focus = false;
+    },
+    handleMouseOverOn() {
+      this.mouseover = true;
+    },
+    handleMouseOverOff() {
+      this.mouseover = false;
+    },
+  },
+  watch: {
+    async searchQuery(searchQuery) {
+      console.log(this.searchBarActivated);
+      if (!searchQuery) {
+        this.articles = await this.$content("articles").fetch();
+      } else {
+        this.articles = await this.$content("articles")
           .limit(1)
           .search(searchQuery)
-          .fetch()
-        }
-        console.log(this.articles);
+          .fetch();
       }
+      console.log(this.articles);
     },
-    async mounted(){
-      this.articles = await this.$content('articles').fetch()
-    }
-  }
+  },
+  async mounted() {
+    this.articles = await this.$content("articles").fetch();
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.search-box{
+.search-box {
   z-index: 99;
   position: relative;
 }
@@ -74,7 +91,7 @@
   transition: width 0.25s ease;
   /* transition: background-color 0.25s step-end; */
 }
-.search:focus {
+.search-activated {
   width: 350px;
   border: none;
   outline: none;
@@ -82,11 +99,9 @@
   background-color: white;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  .result{
-    
-  }
 }
-.result{
+.result {
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
   z-index: 99;
   position: absolute;
   min-height: 300px;
