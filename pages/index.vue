@@ -7,16 +7,12 @@
       <v-col class="align-self-start pa-5" cols="9">
         <div class="readme mb-5">
           <v-card outlined flat class="pa-3">
-            <v-card-title class="text-subtitle-2">
-              Hi there 👋
-            </v-card-title>
+            <v-card-title class="text-subtitle-2"> Hi there 👋 </v-card-title>
             <v-card-text class="text-body-2">
               vue nuxt를 겅부하고있습니다. 해당 사이트는 github사이트가 아닌
               공부용으로 제작된 사이트입니다..
             </v-card-text>
-            <v-card-text class="pt-0">
-              this is toy project.
-            </v-card-text>
+            <v-card-text class="pt-0"> this is toy project. </v-card-text>
           </v-card>
         </div>
         <div class="pinned mb-5">
@@ -27,18 +23,12 @@
           <v-container class="ma-0 pa-0">
             <v-row>
               <v-col v-for="n in 6" :key="n" cols="6">
-                <v-card outlined flat>
-                  <v-card-title class="text-subtitle-2">
-                    <v-icon>mdi-tent</v-icon>
-                    <div class="pinned-link">mtmcamp</div>
-                  </v-card-title>
-                  <v-card-text class="text-body-2">
-                    개인 프로젝트
-                  </v-card-text>
-                  <v-card-text class="pt-0">
-                    JavaScript
-                  </v-card-text>
-                </v-card>
+                <info-card
+                  icon="mdi-tent"
+                  title="mtmcamp"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
               </v-col>
             </v-row>
           </v-container>
@@ -61,15 +51,13 @@
         </div>
         <v-container class="main common-wrapper mt-5 pa-0">
           <v-row>
-            <v-col class="contribution-main " cols="10">
+            <v-col class="contribution-main" cols="10">
               <div class="activity">
                 <div class="mb-3">Contribution activity</div>
                 <div
                   class="contribution-main-line text-body-2 pa-3 d-flex align-center"
                 >
-                  <div class=" ">
-                    May 2021
-                  </div>
+                  <div class=" ">May 2021</div>
                   <v-divider></v-divider>
                 </div>
               </div>
@@ -78,9 +66,7 @@
               <button class="rounded-lg slected pa-1 pl-4 mb-4 text-left">
                 2021
               </button>
-              <button class="rounded-lg pa-1 pl-4 mb-4 text-left">
-                2022
-              </button>
+              <button class="rounded-lg pa-1 pl-4 mb-4 text-left">2022</button>
             </v-col>
           </v-row>
         </v-container>
@@ -96,21 +82,6 @@
     color: white;
   }
 }
-
-.pinned-link {
-  color: #0366d6;
-  font-weight: 700;
-  :hover {
-    cursor: pointer;
-  }
-}
-.pinned-link:hover {
-  cursor: pointer;
-  border-bottom: 1px solid #0366d6;
-}
-
-.contribution-main-line {
-}
 </style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
@@ -119,10 +90,10 @@ import Profile from "~/components/Profile.vue";
 
 export default {
   components: {
-    Profile
+    Profile,
   },
   data: () => ({}),
   computed: {},
-  methods: {}
+  methods: {},
 };
 </script>

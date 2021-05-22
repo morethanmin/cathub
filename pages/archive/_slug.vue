@@ -2,24 +2,26 @@
   <div>
     <nav>
       <ul>
-        <li :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }" v-for="link of article.toc" :key="link.id">
+        <li
+          :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
+          v-for="link of article.toc"
+          :key="link.id"
+        >
           <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
         </li>
       </ul>
     </nav>
     <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <!-- <img :src="article.img" :alt="article.alt" /> -->
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.description }}</p>
+      <!-- <img :src="article.img" :alt="article.alt" /> -->
+      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
-    <nuxt-content :document="article" />
-    <author :author="article.author" />
-    <prev-next :prev="prev" :next="next" />
-    <NuxtLink :to="`/archive`">
-      도라가기
-    </NuxtLink>
-  </article>
+      <nuxt-content :document="article" />
+      <category :category="article.category" />
+      <prev-next :prev="prev" :next="next" />
+      <NuxtLink :to="`/archive`"> 돌아가기 </NuxtLink>
+    </article>
   </div>
 </template>
 <style>
@@ -35,7 +37,7 @@
   font-size: 22px;
 }
 .icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
+  background-image: url("~assets/svg/icon-hashtag.svg");
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -48,25 +50,25 @@ export default {
   data: () => ({}),
   async asyncData({ $content, params }) {
     console.log(params);
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content("articles", params.slug).fetch();
 
-    const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+    const [prev, next] = await $content("articles")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
       .surround(params.slug)
-      .fetch()
+      .fetch();
 
     return {
       article,
       prev,
-      next
-    }
+      next,
+    };
   },
   methods: {
     formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    }
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
   },
   mounted() {
     console.log(this.article);

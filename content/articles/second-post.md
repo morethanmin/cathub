@@ -1,12 +1,9 @@
 ---
 title: second-post
-description: Learning how to use @nuxt/content to create a blog
+description: 두번째 글입니다.
 img: first-blog-post.jpg
 alt: my first blog post
-author:
-  name: Benjamin
-  bio: All about Benjamin
-  image: https://images.unsplash.com/.....
+category: javascript
 ---
 
 

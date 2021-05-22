@@ -6,31 +6,44 @@
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
         <div>
-          <h1>카테고리</h1>
-            <ul>
-              <li v-for="(author, index) of authors" :key="index">
-                <!-- <NuxtLink :to="{ name: 'archive', params: { slug: article.slug } }"> -->
-                <NuxtLink :to="`/archive/author/${author}`">
-                  {{author}}
-                </NuxtLink>
-              </li>
-            </ul>
+          <div class="pinned mb-5">
+            <div class="d-flex justify-space-between mb-3">
+              <div class="">Categories</div>
+              <!-- <div class="text-body-2">Customize your pins</div> -->
+            </div>
+            <v-container class="ma-0 pa-0">
+              <v-row>
+                <v-col
+                  v-for="(category, index) of categories"
+                  :key="index"
+                  cols="6"
+                >
+                  <info-card
+                    icon=""
+                    :title="category.name"
+                    :subtitle="category.description"
+                    :link="`/archive/category/${category.name}`"
+                  />
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
         </div>
         <div>
-          <h1>최근 글</h1>
-          <ul>
-            <li v-for="article of articles" :key="article.slug">
-              <!-- <NuxtLink :to="{ name: 'archive', params: { slug: article.slug } }"> -->
-              <NuxtLink :to="`/archive/${article.slug}`">
-                <!-- <img :src="article.img" /> -->
-                <div>
-                  <h2>{{ article.title }}</h2>
-                  <p>by {{ article.author.name }}</p>
-                  <p>{{ article.description }}</p>
-                </div>
-              </NuxtLink>
-            </li>
-          </ul>
+          <div class="d-flex justify-space-between mb-3">
+            <div class="">Recently Added</div>
+            <!-- <div class="text-body-2">Customize your pins</div> -->
+          </div>
+          <v-divider class="mb-4"></v-divider>
+          <div v-for="article of articles" :key="article.slug">
+            <NuxtLink :to="`/archive/${article.slug}`">
+              <info-list-box
+                :title="article.title"
+                :desc="article.description"
+                :createdAt="formatDate(article.createdAt)"
+              />
+            </NuxtLink>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -39,34 +52,38 @@
 
 <style lang="scss" scoped></style>
 <script>
-import { mapGetters, mapMutations } from "vuex";
-
 import Profile from "~/components/Profile.vue";
 
 export default {
   async asyncData({ $content, params }) {
-      const articles = await $content('articles')
-        .only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('createdAt', 'asc')
-        .fetch()
+    const articles = await $content("articles")
+      .sortBy("createdAt", "asc")
+      .fetch();
+    const categories = await $content("categories")
+      .only(["name", "description"])
+      .sortBy("createdAt", "asc")
+      .fetch();
 
-      return {
-        articles
-      }
+    console.log(categories);
+
+    return {
+      articles,
+      categories,
+    };
   },
   components: {
-    Profile
+    Profile,
   },
-  data: () => ({
-    authors: []
-  }),
+  data: () => ({}),
   computed: {},
-  methods: {},
-  mounted(){
-    this.authors = this.articles.map((article)=>{
-      return article.author.name
-    })
-    this.authors  = [...new Set(this.authors)]
-  }
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
+  },
+  mounted() {
+    console.log(this.articles);
+  },
 };
 </script>

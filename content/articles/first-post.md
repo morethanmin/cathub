@@ -1,12 +1,9 @@
 ---
 title: 내 첫 글
-description: Learning how to use @nuxt/content to create a blog
+description: 첫 글입니다. 테스트 용입니다.
 img: first-blog-post.jpg
 alt: my first blog post
-author:
-  name: 몰덴민
-  bio: All about Benjamin
-  image: https://images.unsplash.com/.....
+category: javascript
 ---
 
 

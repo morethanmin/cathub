@@ -5,7 +5,7 @@
         <Profile />
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
-        projects
+        projects 레파지토리중에서 실제로 사용이 가능한 서비스들은 모아놓은 곳?
       </v-col>
     </v-row>
   </div>
@@ -19,12 +19,12 @@ import Profile from "~/components/Profile.vue";
 
 export default {
   components: {
-    Profile
+    Profile,
   },
   data: () => ({
-    tab: null
+    tab: null,
   }),
   computed: {},
-  methods: {}
+  methods: {},
 };
 </script>
