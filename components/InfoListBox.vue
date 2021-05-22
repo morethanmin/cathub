@@ -4,7 +4,7 @@
       <div class="text-h6 pinned-link">{{ title }}</div>
       <button class="subtitle-1"></button>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 color_secondary">
       {{ desc }}
     </div>
     <div class="d-flex body-2 mb-3">
@@ -27,6 +27,10 @@ export default {
       default: "",
     },
     desc: {
+      type: String,
+      default: "",
+    },
+    link: {
       type: String,
       default: "",
     },

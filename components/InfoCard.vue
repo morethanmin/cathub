@@ -6,8 +6,10 @@
         <div class="pinned-link">{{ title }}</div>
       </NuxtLink>
     </v-card-title>
-    <v-card-text class="text-body-2"> {{ subtitle }} </v-card-text>
-    <v-card-text class="pt-0"> {{ desc }} </v-card-text>
+    <v-card-text class="text-body-2 color_secondary">
+      {{ subtitle }}
+    </v-card-text>
+    <v-card-text class="pt-0 color_secondary"> {{ desc }} </v-card-text>
   </v-card>
 </template>
 

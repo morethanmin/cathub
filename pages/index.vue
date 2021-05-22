@@ -8,7 +8,7 @@
         <div class="readme mb-5">
           <v-card outlined flat class="pa-3">
             <v-card-title class="text-subtitle-2"> Hi there 👋 </v-card-title>
-            <v-card-text class="text-body-2">
+            <v-card-text class="text-body-2 color_secondary">
               vue nuxt를 겅부하고있습니다. 해당 사이트는 github사이트가 아닌
               공부용으로 제작된 사이트입니다..
             </v-card-text>
@@ -17,7 +17,7 @@
         </div>
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="">Pinned</div>
+            <div class="color-black">Pinned</div>
             <div class="text-body-2">Customize your pins</div>
           </div>
           <v-container class="ma-0 pa-0">
@@ -35,7 +35,7 @@
         </div>
         <div class="pinned">
           <div class="d-flex justify-space-between mb-3">
-            <div class="">409 contributions in the last year</div>
+            <div class="color-black">409 contributions in the last year</div>
             <div class="text-body-2">
               Contribution settings
               <v-icon>mdi-menu-down</v-icon>

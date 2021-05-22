@@ -1,5 +1,5 @@
 <template>
-  <v-container class="common-wrapper pt-0 pb-0">
+  <v-container class="common-wrapper color-black pt-0 pb-0">
     <v-row class="header-row pleft ma-0" justify="center" align="center">
       <v-col class="pl-5 pr-3" cols="3">
         <transition name="fade">
@@ -103,7 +103,7 @@
   width: 100%;
   color: #252a2e;
   background-color: white !important;
-  border-bottom: 1px s black;
+  border-bottom: 1px solid black;
   //height: 100%;
 }
 
@@ -116,12 +116,15 @@
     border-bottom: 2px solid white;
   }
   button:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #d1d5da;
   }
   .v-icon {
     font-size: 1.25rem;
   }
   .selectedTab {
+    .v-icon {
+      color: black;
+    }
     border-bottom: 2px solid red !important;
   }
 }
