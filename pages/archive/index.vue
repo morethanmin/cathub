@@ -34,16 +34,18 @@
             <div class="">Recently Added</div>
             <!-- <div class="text-body-2">Customize your pins</div> -->
           </div>
-          <v-divider class="mb-4"></v-divider>
-          <div v-for="article of articles" :key="article.slug">
-            <NuxtLink :to="`/archive/${article.slug}`">
-              <info-list-box
-                :title="article.title"
-                :desc="article.description"
-                :createdAt="formatDate(article.createdAt)"
-              />
-            </NuxtLink>
-          </div>
+          <v-row>
+            <v-col v-for="article of articles" :key="article.slug" cols="6">
+              <NuxtLink :to="`/archive/${article.slug}`">
+                <article-card
+                  :title="article.title"
+                  :desc="article.description"
+                  :category="article.category"
+                  :date="formatDate(article.createdAt)"
+                />
+              </NuxtLink>
+            </v-col>
+          </v-row>
         </div>
       </v-col>
     </v-row>
@@ -57,7 +59,7 @@ import Profile from "~/components/Profile.vue";
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content("articles")
-      .sortBy("createdAt", "asc")
+      .sortBy("createdAt", "desc")
       .fetch();
     const categories = await $content("categories")
       .only(["name", "description"])

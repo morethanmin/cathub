@@ -5,8 +5,8 @@
         <Profile />
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
-        사용한 기술 스택 적을 수 있게, 팀 프로젝트인지, 개인 프로젝트인지, 개인
-        학습레파지토리인지
+        <!-- 사용한 기술 스택 적을 수 있게, 팀 프로젝트인지, 개인 프로젝트인지, 개인
+        학습레파지토리인지 -->
         <div class="ma-0 pa-0">
           <v-divider class="mb-4"></v-divider>
           <div v-for="n in 10" :key="n" class="">

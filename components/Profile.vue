@@ -42,10 +42,10 @@
           <v-icon>mdi-email-outline</v-icon>
           mini4614@gmail.com
         </div>
-        <div>
+        <!-- <div>
           <v-icon>mdi-link-variant</v-icon>
           https://github.com/morethanmin
-        </div>
+        </div> -->
       </div>
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
