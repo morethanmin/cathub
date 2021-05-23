@@ -10,10 +10,10 @@
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >
-        <div class="ma-3">Pull requests</div>
-        <div class="ma-0">Issues</div>
-        <div class="ma-3">Marketplace</div>
-        <div>Explore</div>
+        <div class="ma-3">Javascript</div>
+        <div class="ma-0">CSS</div>
+        <div class="ma-3">React</div>
+        <div class="ma-0">Vue</div>
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">

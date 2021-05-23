@@ -29,24 +29,24 @@
       </ul>
     </div> -->
     <div class="info-profile-detail text-body-2">
-      <ul>
-        <li>
+      <div class="d-flex flex-column flex-nowrap">
+        <div>
           <v-icon>mdi-office-building-outline</v-icon>
           Myongji Univ
-        </li>
-        <li>
+        </div>
+        <div>
           <v-icon>mdi-map-marker-outline</v-icon>
-          Seoul, South Korea
-        </li>
-        <li>
+          Seodul, South Korea
+        </div>
+        <div>
           <v-icon>mdi-email-outline</v-icon>
           mini4614@gmail.com
-        </li>
-        <li>
+        </div>
+        <div>
           <v-icon>mdi-link-variant</v-icon>
           https://github.com/morethanmin
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
     <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
@@ -60,13 +60,16 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.info-profile {
-  ul {
+.info-profile-detail {
+  > div {
     padding: 0;
+    > div {
+      list-style-type: none;
+      display: flex;
+      margin-bottom: 8px;
+    }
   }
-  li {
-    list-style-type: none;
-  }
+
   .v-icon {
     font-size: 1.2rem;
   }
