@@ -1,10 +1,10 @@
 <template>
   <div>
-    <img :src="category.image" />
+    <!-- <img :src="category.image" /> -->
     <div>
       <h4>Category</h4>
-      <p>{{ category.name }}</p>
-      <p>{{ category.bio }}</p>
+      <p>{{ category }}</p>
+      <!-- <p>{{ category.bio }}</p> -->
     </div>
   </div>
 </template>

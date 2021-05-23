@@ -6,6 +6,8 @@ alt: my first blog post
 category: javascript
 ---
 
+![picture 2](../../images/8974a987652d36b07be024d0639ca9623405b7c7d38b9eb2bb5ab7fd2a3d2860.png)  
+
 
 ## This is a heading
 

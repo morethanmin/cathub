@@ -20,14 +20,7 @@
       <!-- <v-icon>mdi-bell-outline</v-icon>
       <v-icon>mdi-plus</v-icon>
       <v-icon>mdi-menu-down</v-icon> -->
-      <img
-        src="/imgs/face.jpg"
-        alt="face"
-        width="30"
-        height="30"
-        style="border-radius: 50%"
-      />
-      <v-icon>mdi-menu-down</v-icon>
+      <toggle />
     </div>
   </div>
 </template>

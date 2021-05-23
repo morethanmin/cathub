@@ -44,20 +44,7 @@ export default {
       return activated;
     },
   },
-  methods: {
-    handleFocusOn() {
-      this.focus = true;
-    },
-    handleFocusOff(e) {
-      this.focus = false;
-    },
-    handleMouseOverOn() {
-      this.mouseover = true;
-    },
-    handleMouseOverOff() {
-      this.mouseover = false;
-    },
-  },
+  methods: {},
   watch: {
     async searchQuery(searchQuery) {
       console.log(this.searchBarActivated);
@@ -132,4 +119,4 @@ export default {
     }
   }
 }
-</style>>
+</style>

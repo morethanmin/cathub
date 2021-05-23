@@ -7,10 +7,14 @@ category: javascript
 
 ---
 
+![picture 1](../../static/images/51a9a258d5a7dcf9140b3b00d2f579b9dc58bf24623dee720a958f697c08c695.png)  
+
+
 Welcome to my first blog post using content module
 
 ## This is a heading
 This is some more info
+
 <div class="bg-blue-500 text-white p-4 mb-4">
   This is HTML inside markdown that has a class some classes
 </div>

@@ -18,7 +18,7 @@
       <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
       <nuxt-content :document="article" />
-      <category :category="article.category" />
+      <!-- <category :category="article.category" /> -->
       <prev-next :prev="prev" :next="next" />
       <NuxtLink :to="`/archive`"> 돌아가기 </NuxtLink>
     </article>

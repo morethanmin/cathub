@@ -2,7 +2,7 @@
   <div class="info-profile black--text">
     <img
       ref="profileImage"
-      src="/imgs/face.jpg"
+      src="/images/face.jpg"
       alt="face"
       class="info-profile-face rounded-circle"
     />

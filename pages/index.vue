@@ -9,8 +9,8 @@
           <v-card outlined flat class="pa-3 color-black">
             <v-card-title class="text-h5"> Hi there 👋 </v-card-title>
             <v-card-text class="text-body-2 color_secondary">
-              vue nuxt를 겅부하고있습니다. 해당 사이트는 github사이트가 아닌
-              공부용으로 제작된 사이트입니다..
+              안녕하세요! 주니어 개발자 이상민입니다! 해당 사이트는 vue의
+              NuxtJS를 사용해 만들어졌습니다.
             </v-card-text>
           </v-card>
         </div>
