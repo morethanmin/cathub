@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">
-      <v-icon>mdi-bell-outline</v-icon>
+      <!-- <v-icon>mdi-bell-outline</v-icon>
       <v-icon>mdi-plus</v-icon>
-      <v-icon>mdi-menu-down</v-icon>
+      <v-icon>mdi-menu-down</v-icon> -->
       <img
         src="/imgs/face.jpg"
         alt="face"
