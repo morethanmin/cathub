@@ -88,7 +88,7 @@ export default {
   border: 1px solid #444d56;
   background-color: #252a2e;
   height: 1rem;
-  padding: 15px;
+  padding: 12px;
   width: 200px;
   border-radius: 8px;
   transition: width 0.25s ease;

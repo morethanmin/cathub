@@ -18,8 +18,7 @@ export default {
   props: {
     icon: {
       type: String,
-      required: false,
-      default: "",
+      default: "mdi-book-outline",
     },
     title: {
       type: String,

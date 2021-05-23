@@ -12,10 +12,10 @@
       <button
         class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2"
       >
-        Edit profile
+        resume
       </button>
     </div>
-    <div class="info-profile-follo mb-8 text-body-2">
+    <!-- <div class="info-profile-follo mb-8 text-body-2">
       <ul>
         <li>
           <v-icon>mdi-account-group-outline</v-icon>
@@ -27,7 +27,7 @@
           34
         </li>
       </ul>
-    </div>
+    </div> -->
     <div class="info-profile-detail text-body-2">
       <ul>
         <li>

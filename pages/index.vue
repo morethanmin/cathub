@@ -6,13 +6,12 @@
       </v-col>
       <v-col class="align-self-start pa-5" cols="9">
         <div class="readme mb-5">
-          <v-card outlined flat class="pa-3">
-            <v-card-title class="text-subtitle-2"> Hi there 👋 </v-card-title>
+          <v-card outlined flat class="pa-3 color-black">
+            <v-card-title class="text-h5"> Hi there 👋 </v-card-title>
             <v-card-text class="text-body-2 color_secondary">
               vue nuxt를 겅부하고있습니다. 해당 사이트는 github사이트가 아닌
               공부용으로 제작된 사이트입니다..
             </v-card-text>
-            <v-card-text class="pt-0"> this is toy project. </v-card-text>
           </v-card>
         </div>
         <div class="pinned mb-5">
@@ -22,10 +21,45 @@
           </div>
           <v-container class="ma-0 pa-0">
             <v-row>
-              <v-col v-for="n in 6" :key="n" cols="6">
+              <v-col cols="6">
                 <info-card
                   icon="mdi-tent"
                   title="mtmcamp"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  title="mtmtravel"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  title="mtmcamp"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  title="remotto"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  title="mtmcamp"
+                  subtitle="개인 프로젝트"
+                  desc="Javascript"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  title="remotto"
                   subtitle="개인 프로젝트"
                   desc="Javascript"
                 />

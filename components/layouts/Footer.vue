@@ -3,7 +3,7 @@
     <div
       class="align-center footer-info ma-5 d-flex flex-row justify-space-between"
     >
-      <span>&copy; {{ new Date().getFullYear() }} morethanmin, Inc.</span>
+      <span>&copy; {{ new Date().getFullYear() }} morethanmin</span>
       <div><a href="/">Terms</a></div>
       <div><a href="/">Security</a></div>
       <div><a href="/">Status</a></div>
