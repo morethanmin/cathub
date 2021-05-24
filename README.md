@@ -1,15 +1,29 @@
 
 # cat-hub
-만두는 중
-![image](https://user-images.githubusercontent.com/72514247/118096840-dd47a780-b40c-11eb-88d0-2dc95f5924d9.png)
 
-search bar event
+github blog project
 
-![header effect](https://user-images.githubusercontent.com/72514247/118224569-6539ba00-b4be-11eb-80a4-4abe1f49f521.gif)
+![image](https://user-images.githubusercontent.com/72514247/119289161-01b14880-bc85-11eb-81d6-b400be3b7eba.png)
 
-scroll event
 
-![chrome-capture](https://user-images.githubusercontent.com/72514247/118106315-703a0f00-b418-11eb-8f88-e2a89067cc1b.gif)
+## feature
+
+#### article search
+
+![feature-search](https://user-images.githubusercontent.com/72514247/119289216-23123480-bc85-11eb-88f3-9386c37f840f.gif)
+
+#### toolbar
+
+![feature-toolbar](https://user-images.githubusercontent.com/72514247/119289250-32917d80-bc85-11eb-87f8-0f9d3881bd86.gif)
+
+#### scroll
+
+![feature-scroll](https://user-images.githubusercontent.com/72514247/119289267-3d4c1280-bc85-11eb-91fb-6f40d144af29.gif)
+
+#### article edit
+
+![feature-article](https://user-images.githubusercontent.com/72514247/119289314-51900f80-bc85-11eb-8b80-3aa2f85f8511.gif)
+
 
 도현님이 도와주셨다.
 
