@@ -25,7 +25,7 @@ This is some more info
 
 ```
 export default {
-  nuxt: 'is the best'
+  nuxt: 'is the best' 테스트
 }
 ```
 
