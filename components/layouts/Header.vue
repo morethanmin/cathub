@@ -10,10 +10,10 @@
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >
-        <div class="ma-3">Javascript</div>
-        <div class="ma-0">CSS</div>
-        <div class="ma-3">React</div>
-        <div class="ma-0">Vue</div>
+
+        <NuxtLink v-for="(category, index) of categories" :key="index" class="ml-4" :to="`/archive/category/${category.name}`">
+          {{category.name}}
+        </NuxtLink>
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">
@@ -28,6 +28,22 @@
 <script>
 import SearchBar from "./SearchBar";
 export default {
+  data:()=>({
+    categories:[]
+  }),
+  methods:{
+    async getContent() {
+      const { $content } = this
+      this.categories = await $content("categories")
+      .only(["name"])
+      .fetch();
+
+    }
+  },
+  async mounted() {
+    await this.getContent()
+    console.log(this.categories);
+  },
   components: {
     SearchBar,
   },
