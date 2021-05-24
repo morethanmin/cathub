@@ -1,12 +1,17 @@
 
 # cat-hub
 
-github blog project
+vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개발을 진행하였다가 현재는 포트폴리오 형식의 개발블로그로 개발하고 있습니다.
 
 ![image](https://user-images.githubusercontent.com/72514247/119289161-01b14880-bc85-11eb-81d6-b400be3b7eba.png)
 
+## Skills
 
-## feature
+`vue` `vuetify` `nuxt` `nuxt/content`
+
+### link
+
+## Features
 
 #### article search
 
