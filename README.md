@@ -25,8 +25,6 @@ github blog project
 ![feature-article](https://user-images.githubusercontent.com/72514247/119289314-51900f80-bc85-11eb-8b80-3aa2f85f8511.gif)
 
 
-도현님이 도와주셨다.
-
 ## Build Setup
 
 ```bash
