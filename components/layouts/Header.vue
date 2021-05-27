@@ -42,7 +42,6 @@ export default {
   },
   async mounted() {
     await this.getContent()
-    console.log(this.categories);
   },
   components: {
     SearchBar,

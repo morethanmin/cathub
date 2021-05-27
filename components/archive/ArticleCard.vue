@@ -1,15 +1,14 @@
 <template>
   <v-card outlined flat class="card">
-    <v-img height="250" :src="image"></v-img>
-
-    <v-card-title class="pb-1 d-flex flex-column align-start">
-      <div>
-        <v-chip class="ma-0" color=""> {{ category }} </v-chip>
-      </div>
-      <div>{{ title }}</div>
+    <div class="imgBox">
+      <img src="" alt="">
+      <v-chip outlined class="ma-0" color="white"> {{ category }} </v-chip>
+    </div>
+    <v-card-title class="title d-flex flex-column align-start">
+      {{ title }}
     </v-card-title>
-    <v-card-text>
-      <div class="subtitle-2">{{ date }}</div>
+    <v-card-text class="mb-1">
+      <div class="subtitle-2 mb-2">{{ date }}</div>
       <div>{{ desc }}</div>
     </v-card-text>
   </v-card>
@@ -20,7 +19,8 @@ export default {
   props: {
     image: {
       type: String,
-      default: "./images/ArticleDefault.jpg",
+      // default: "./images/ArticleDefault.jpg",
+      default: "",
     },
     title: {
       type: String,
@@ -48,4 +48,23 @@ export default {
 .v-chip {
   height: 23px;
 }
+.title{
+    font-weight: bold;
+}
+.imgBox{
+  position:relative;
+  img{
+    background: #252a2e;
+    width: 100%;
+    height: 250px;
+  }
+  .v-chip{
+    position:absolute;
+    z-index: 3;
+    left: 15px;
+    top: 15px;
+  }
+
+}
+
 </style>

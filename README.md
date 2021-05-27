@@ -13,6 +13,11 @@ vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개
 
 ## Features
 
+### 실제 쓴 게시글 수 만큼 commit 가시화
+
+![image](https://user-images.githubusercontent.com/72514247/119786319-08e98800-bf0b-11eb-82d9-8e1bb3b7d0f0.png)
+
+
 #### article search
 
 ![feature-search](https://user-images.githubusercontent.com/72514247/119289216-23123480-bc85-11eb-88f3-9386c37f840f.gif)

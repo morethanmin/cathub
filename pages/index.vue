@@ -9,15 +9,16 @@
           <v-card outlined flat class="pa-3 color-black">
             <v-card-title class="text-h5"> Hi there 👋 </v-card-title>
             <v-card-text class="text-body-2 color_secondary">
-              안녕하세요! 주니어 개발자 이상민입니다! 해당 사이트는 vue의
-              NuxtJS를 사용해 만들어졌습니다.
+              Hello! I'm junior javascript developer.
+              Cathub is my dev archiving area. <br>
+              Cathub은 NodeJS, Vue, Vuex, NuxtJS(SSR), Nuxt/Content 등을 사용하여 개발하였습니다.
             </v-card-text>
           </v-card>
         </div>
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Pinned</div>
-            <div class="text-body-2">Customize your pins</div>
+            <div class="text-body-2">more..</div>
           </div>
           <v-container class="ma-0 pa-0">
             <v-row>
@@ -69,17 +70,15 @@
         </div>
         <div class="pinned">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">409 contributions in the last year</div>
+            <div class="color-black"> {{total}} archives in cathub</div>
             <div class="text-body-2">
-              Contribution settings
-              <v-icon>mdi-menu-down</v-icon>
+              more..
+              <!-- <v-icon>mdi-menu-down</v-icon> -->
             </div>
           </div>
           <div class="ma-0 pa-0">
             <v-card outlined flat>
-              <v-card-title class="text-subtitle-2"> </v-card-title>
-              <v-card-text class="text-body-2"> </v-card-text>
-              <v-card-text class="pt-0"> </v-card-text>
+              <commit-box :countedDate="countedDate" />
             </v-card>
           </div>
         </div>
@@ -87,7 +86,7 @@
           <v-row>
             <v-col class="contribution-main" cols="10">
               <div class="activity">
-                <div class="mb-3">Contribution activity</div>
+                <div class="mb-3">Development activity</div>
                 <div
                   class="contribution-main-line text-body-2 pa-3 d-flex align-center"
                 >
@@ -121,13 +120,50 @@
 import { mapGetters, mapMutations } from "vuex";
 
 import Profile from "~/components/Profile.vue";
+import CommitBox from '../components/CommitBox.vue';
 
 export default {
   components: {
     Profile,
+    CommitBox,
   },
-  data: () => ({}),
+  async asyncData({ $content, params }) {
+    const articles = await $content("articles")
+    .sortBy("createdAt", "desc")
+    .fetch();
+    const articlesDateList = articles.map((article)=>(article.createdAt))
+    return {
+      articlesDateList,
+    };
+  },
+  data: () => ({
+    countedDate:{},
+    total: 0
+  }),
   computed: {},
-  methods: {},
+  methods: {
+    parseDate(date){
+      return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(-2)}-${`0${date.getDate()}`.slice(-2)}`
+    },
+    parseArticleDate(){
+      const date = this.articlesDateList.map((articleDate)=>{
+        const date = new Date(articleDate)
+        return this.parseDate(date)
+      })
+      const data = {}
+      date.forEach(x => {
+        data[x] = (data[x]||0)+1;
+      });
+
+      this.countedDate = data
+    },
+    parseTotal(){
+      this.total = this.articlesDateList.length
+    }
+  },
+  mounted(){
+    this.parseArticleDate()
+    this.parseTotal()
+  }
 };
 </script>
