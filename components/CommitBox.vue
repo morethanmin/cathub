@@ -2,7 +2,7 @@
   <div>
     <svg width="828" height="128">
       <g transform="translate(10,20)">
-        <g v-for="(week) of parseInt(mergedData.length/7+1)" :key="week" :transform="`translate(${16*(week-1)}, 0)`">
+        <g v-for="(week) of Math.ceil(mergedData.length/7)" :key="week" :transform="`translate(${16*(week-1)}, 0)`">
           <rect 
             v-for="day of mergedData.length - week*7 < 0?mergedData.length%7:7" 
             :key="day" width="11" height="11" 
@@ -12,6 +12,14 @@
             :class="`counted-${mergedData[(week-1)*7+(day-1)].count}`"
           />
         </g>
+        <text text-anchor="start" class="label" dx="-10" dy="8" style="display: none;">Sun</text>
+        <text text-anchor="start" class="label" dx="-10" dy="25">Mon</text>
+        <text text-anchor="start" class="label" dx="-10" dy="32" style="display: none;">Tue</text>
+        <text text-anchor="start" class="label" dx="-10" dy="56">Wed</text>
+        <text text-anchor="start" class="label" dx="-10" dy="57" style="display: none;">Thu</text>
+        <text text-anchor="start" class="label" dx="-10" dy="85">Fri</text>
+        <text text-anchor="start" class="label" dx="-10" dy="81" style="display: none;">Sat</text>
+
       </g>
     </svg>
   </div>
@@ -66,6 +74,9 @@ export default {
 <style lang="scss">
 rect{
   fill: #ebedf0;
+}
+.label{
+  font-size: .6rem;
 }
 
 .counted-1{

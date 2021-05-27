@@ -9,9 +9,10 @@
           <v-card outlined flat class="pa-3 color-black">
             <v-card-title class="text-h5"> Hi there 👋 </v-card-title>
             <v-card-text class="text-body-2 color_secondary">
-              Hello! I'm junior javascript developer.
+              Hello! I'm junior javascript developer. <br>
+              안녕하세요! 저는 주니어 자바스크립트 개발자입니다. <br>
               Cathub is my dev archiving area. <br>
-              Cathub은 NodeJS, Vue, Vuex, NuxtJS(SSR), Nuxt/Content 등을 사용하여 개발하였습니다.
+              Cathub은 저의 개발 저장공간입니다. <br>
             </v-card-text>
           </v-card>
         </div>
@@ -70,14 +71,14 @@
         </div>
         <div class="pinned">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black"> {{total}} archives in cathub</div>
+            <div class="color-black"> {{total}} articles in cathub</div>
             <div class="text-body-2">
-              more..
+              articles..
               <!-- <v-icon>mdi-menu-down</v-icon> -->
             </div>
           </div>
           <div class="ma-0 pa-0">
-            <v-card outlined flat>
+            <v-card class="commit" outlined flat>
               <commit-box :countedDate="countedDate" />
             </v-card>
           </div>
@@ -113,6 +114,15 @@
   .slected {
     background-color: #0366d6;
     color: white;
+  }
+}
+.commit{
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+  >*{
+  margin-right: 10px;
+
   }
 }
 </style>
