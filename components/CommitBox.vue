@@ -20,6 +20,8 @@
         <text text-anchor="start" class="label" dx="-10" dy="85">Fri</text>
         <text text-anchor="start" class="label" dx="-10" dy="81" style="display: none;">Sat</text>
 
+        <text text-anchor="start" class="label" dx="-10" dy="81" style="display: none;">Sat</text>
+
       </g>
     </svg>
   </div>
@@ -34,13 +36,8 @@ export default {
     }
   },
   data: () => ({
-    datesBetween:[]
+    mergedData:[]
   }),
-  computed: {
-    mergedData() {
-      return this.getDateData()
-    }
-  },
   methods:{
     parseDate(date){
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(-2)}-${`0${date.getDate()}`.slice(-2)}`
@@ -65,8 +62,29 @@ export default {
       })
       return result
     },
+    getMonthData(){
+      const date = new Date()
+      const month = date.getMonth()
+      const dateData = this.mergedData.map(x=>x.date)
+      const monthData = []
+
+      for (let i = 0; i <= 12; i++) {
+        const curMonth = ((month+i) % 12) + 1
+        const curMonthString = `0${curMonth}`.slice(-2)
+        const x = parseInt(dateData.findIndex(x=>x.includes(`-${curMonthString}-`))/7)
+        console.log(x);
+        monthData.push({
+          month: curMonth,
+          x : x
+        })
+      }
+
+      console.log(monthData);
+    }
   },
   mounted(){
+    this.mergedData = this.getDateData()
+    this.getMonthData()
   }
 }
 </script>

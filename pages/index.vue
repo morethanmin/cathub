@@ -79,7 +79,7 @@
           </div>
           <div class="ma-0 pa-0">
             <v-card class="commit" outlined flat>
-              <commit-box :countedDate="countedDate" />
+              <commit-box :countedDate="data" />
             </v-card>
           </div>
         </div>
@@ -142,12 +142,22 @@ export default {
     .sortBy("createdAt", "desc")
     .fetch();
     const articlesDateList = articles.map((article)=>(article.createdAt))
+    const parsedDate = articlesDateList.map((articleDate)=>{
+      const date = new Date(articleDate)
+      return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(-2)}-${`0${date.getDate()}`.slice(-2)}`
+    })
+    const data = {}
+    parsedDate.forEach(x => {
+      data[x] = (data[x]||0)+1;
+    });
+    const total = articlesDateList.length
     return {
-      articlesDateList,
+      data,
+      total
     };
   },
   data: () => ({
-    countedDate:{},
+    data:{},
     total: 0
   }),
   computed: {},
@@ -172,8 +182,8 @@ export default {
     }
   },
   mounted(){
-    this.parseArticleDate()
-    this.parseTotal()
+    // this.parseArticleDate()
+    // this.parseTotal()
   }
 };
 </script>

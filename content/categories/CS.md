@@ -1,4 +1,4 @@
 ---
-name: CS
-description: Archive Computer Science
+name: cs
+description: about Computer Science
 ---
