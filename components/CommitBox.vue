@@ -20,7 +20,7 @@
         <text text-anchor="start" class="label" dx="-10" dy="85">Fri</text>
         <text text-anchor="start" class="label" dx="-10" dy="81" style="display: none;">Sat</text>
 
-        <text text-anchor="start" class="label" dx="-10" dy="81" style="display: none;">Sat</text>
+        <text v-for="month of monthData" :key="month.count" text-anchor="start" class="label" :dx="15 + 16*month.x" dy="-5">{{month.month}}</text>
 
       </g>
     </svg>
@@ -36,7 +36,8 @@ export default {
     }
   },
   data: () => ({
-    mergedData:[]
+    mergedData:[],
+    monthData:[],
   }),
   methods:{
     parseDate(date){
@@ -44,6 +45,23 @@ export default {
     },
     getStart(date){
       return `${date.getFullYear()-1}-${`0${date.getMonth() + 1}`.slice(-2)}-${`0${date.getDate()}`.slice(-2)}`
+    },
+    getMonthLetter(month){
+      const letter = {
+        1: "Jan",
+        2: "Feb",
+        3: "Mar",
+        4: "Apr",
+        5: "May",
+        6: "Jun",
+        7: "Jul",
+        8: "Aug",
+        9: "Sept",
+        10: "Oct",
+        11: "Nov",
+        12: "Dec",
+      }
+      return letter[month]
     },
     getDateData(){
       const dateEnd = new Date()
@@ -68,23 +86,26 @@ export default {
       const dateData = this.mergedData.map(x=>x.date)
       const monthData = []
 
+
+      let lastFound = 0
       for (let i = 0; i <= 12; i++) {
         const curMonth = ((month+i) % 12) + 1
         const curMonthString = `0${curMonth}`.slice(-2)
-        const x = parseInt(dateData.findIndex(x=>x.includes(`-${curMonthString}-`))/7)
-        console.log(x);
+        const x = (Math.ceil((dateData.slice(lastFound).findIndex(x=>x.includes(`-${curMonthString}-`)) + lastFound)/7))
+        lastFound = x
+        console.log(lastFound);
         monthData.push({
-          month: curMonth,
+          month: this.getMonthLetter(curMonth),
           x : x
         })
       }
-
-      console.log(monthData);
+      return monthData
     }
   },
   mounted(){
     this.mergedData = this.getDateData()
-    this.getMonthData()
+    this.monthData = this.getMonthData()
+    console.log(this.monthData);
   }
 }
 </script>
