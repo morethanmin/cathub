@@ -47,7 +47,6 @@ export default {
   methods: {},
   watch: {
     async searchQuery(searchQuery) {
-      console.log(this.searchBarActivated);
       if (!searchQuery) {
         this.articles = await this.$content("articles").fetch();
       } else {
@@ -56,7 +55,6 @@ export default {
           .search(searchQuery)
           .fetch();
       }
-      console.log(this.articles);
     },
   },
   async mounted() {

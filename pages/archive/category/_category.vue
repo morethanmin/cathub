@@ -27,7 +27,6 @@ export default {
       .without("body")
       .sortBy("createdAt", "asc")
       .fetch();
-    console.log(articles);
     return {
       articles,
     };
@@ -36,7 +35,6 @@ export default {
     nestedProperties: ["category.name"],
   },
   mounted() {
-    console.log(this.articles);
   },
   methods: {
     formatDate(date) {

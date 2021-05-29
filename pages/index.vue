@@ -7,13 +7,8 @@
       <v-col class="align-self-start pa-5" cols="9">
         <div class="readme mb-5">
           <v-card outlined flat class="pa-3 color-black">
-            <v-card-title class="text-h5"> Hi there 👋 </v-card-title>
-            <v-card-text class="text-body-2 color_secondary">
-              Hello! I'm junior javascript developer. <br>
-              안녕하세요! 저는 주니어 자바스크립트 개발자입니다. <br>
-              Cathub is my dev archiving area. <br>
-              Cathub은 저의 개발 저장공간입니다. <br>
-            </v-card-text>
+            
+            <nuxt-content :document="readme" />
           </v-card>
         </div>
         <div class="pinned mb-5">
@@ -25,45 +20,47 @@
             <v-row>
               <v-col cols="6">
                 <info-card
+                  icon="mdi-cat"
+                  title="cathub"
+                  subtitle="해당 프로젝트"
+                  :desc="[`vue`,`nuxt`,`ssr`]"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
+                  icon="mdi-airplane-takeoff"
+                  title="mtmtravel"
+                  subtitle="공부용 프로젝트"
+                  :desc="[`mern stack`,`react`,`express`]"
+                />
+              </v-col>
+              <v-col cols="6">
+                <info-card
                   icon="mdi-tent"
                   title="mtmcamp"
-                  subtitle="개인 프로젝트"
-                  desc="Javascript"
-                />
-              </v-col>
-              <v-col cols="6">
-                <info-card
-                  title="mtmtravel"
-                  subtitle="개인 프로젝트"
-                  desc="Javascript"
-                />
-              </v-col>
-              <v-col cols="6">
-                <info-card
-                  title="mtmcamp"
-                  subtitle="개인 프로젝트"
-                  desc="Javascript"
+                  subtitle="공부용 프로젝트"
+                  :desc="[`node js`,`ejs`,`express`]"
                 />
               </v-col>
               <v-col cols="6">
                 <info-card
                   title="remotto"
                   subtitle="개인 프로젝트"
-                  desc="Javascript"
+                  :desc="[`node js`,`ejs`,`express`]"
                 />
               </v-col>
               <v-col cols="6">
                 <info-card
                   title="mtmcamp"
                   subtitle="개인 프로젝트"
-                  desc="Javascript"
+                  :desc="[`vue`,`nuxt`,`ssr`]"
                 />
               </v-col>
               <v-col cols="6">
                 <info-card
                   title="remotto"
                   subtitle="개인 프로젝트"
-                  desc="Javascript"
+                  :desc="[`vue`,`nuxt`,`ssr`]"
                 />
               </v-col>
             </v-row>
@@ -91,9 +88,17 @@
                 <div
                   class="contribution-main-line text-body-2 pa-3 d-flex align-center"
                 >
-                  <div class=" ">May 2021</div>
+                  <div class="">May 2021</div>
                   <v-divider></v-divider>
                 </div>
+                <ActivityBox icon="mdi-office-building-outline" title="Giant frontend-developer (산업기능요원 재배정 대기중)" :contents="[`sloker members 개발 (vue, nuxt, express, my-sql)`,`sloker id 유지보수 (vue, nuxt, express, my-sql)`]" />
+                <ActivityBox title="J2KB 3기 활동 (전국 코딩 연합 동아리)" :contents="[`유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)`]" />
+                <ActivityBox icon="mdi-office-building-outline" title="Weplanet frontend-developer (인턴)" :contents="[`Cash Fi Admin Page 개발 (react)`,`밑고맡겨 Landing Page 개발`,`kkoit Admin Page 개발 (react)`]" />
+                <ActivityBox title="STUDY HALLE 활동 (자바 스터디)" :contents="[`1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`]" />
+                <ActivityBox icon="mdi-office-building-outline" title="Trigit Software front-developer (인턴)" :contents="[`E-learning Contents 개발`]" />
+                <ActivityBox title="둥지 개발팀 부리더 (현업 개발자 모임)" :contents="[`둥지톡 백엔드 개발(중단)`]"/>
+                <ActivityBox title="Web Developer Bootcamp" :contents="[`udemy-web-developer-bootcamp 수강`,`mtm-camp 개발`]" />
+                <ActivityBox icon="mdi-school-outline" title="명지대학교 정보통신공학과 휴학 (3학년)" />
               </div>
             </v-col>
             <v-col class="contribution-side d-flex flex-column mt-2" cols="2">
@@ -122,7 +127,6 @@
   justify-content: flex-end;
   >*{
   margin-right: 10px;
-
   }
 }
 </style>
@@ -138,6 +142,8 @@ export default {
     CommitBox,
   },
   async asyncData({ $content, params }) {
+    const readme = await $content("portfolio","introduce").fetch();
+    console.log(readme);
     const articles = await $content("articles")
     .sortBy("createdAt", "desc")
     .fetch();
@@ -152,13 +158,15 @@ export default {
     });
     const total = articlesDateList.length
     return {
+      readme,
       data,
       total
     };
   },
   data: () => ({
     data:{},
-    total: 0
+    total: 0,
+
   }),
   computed: {},
   methods: {

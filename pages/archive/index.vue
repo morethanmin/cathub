@@ -66,7 +66,6 @@ export default {
       .sortBy("createdAt", "asc")
       .fetch();
 
-    console.log(categories);
 
     return {
       articles,
@@ -85,7 +84,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.articles);
   },
 };
 </script>

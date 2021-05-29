@@ -1,27 +1,34 @@
 <template>
   <div>
-    <nav>
-      <ul>
-        <li
-          :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
-          v-for="link of article.toc"
-          :key="link.id"
-        >
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-    <article>
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <!-- <img :src="article.img" :alt="article.alt" /> -->
-      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+    <v-row>
+      <v-col cols="9">
+        <article>
+          <h1>{{ article.title }}</h1>
+          <p>{{ article.description }}</p>
+          <!-- <img :src="article.img" :alt="article.alt" /> -->
+          <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
-      <nuxt-content :document="article" />
-      <!-- <category :category="article.category" /> -->
-      <prev-next :prev="prev" :next="next" />
-      <NuxtLink :to="`/archive`"> 돌아가기 </NuxtLink>
-    </article>
+          <nuxt-content :document="article" />
+          <!-- <category :category="article.category" /> -->
+          <NuxtLink :to="`/archive`"> 돌아가기 </NuxtLink>
+        </article>
+      </v-col>
+      <v-col cols="3">
+        <nav>
+          <ul>
+            <li
+              :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
+              v-for="link of article.toc"
+              :key="link.id"
+            >
+              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+            </li>
+          </ul>
+        </nav>
+        <prev-next :prev="prev" :next="next" />
+      </v-col>
+    </v-row>
+    
   </div>
 </template>
 <style>
@@ -49,7 +56,6 @@ export default {
   layout: "detail",
   data: () => ({}),
   async asyncData({ $content, params }) {
-    console.log(params);
     const article = await $content("articles", params.slug).fetch();
 
     const [prev, next] = await $content("articles")
@@ -71,7 +77,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.article);
   },
 };
 </script>

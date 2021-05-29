@@ -31,7 +31,7 @@
 export default {
   props: {
     countedDate: {
-      tyoe: Object,
+      type: Object,
       default: () => ({})
     }
   },
@@ -93,7 +93,6 @@ export default {
         const curMonthString = `0${curMonth}`.slice(-2)
         const x = (Math.ceil((dateData.slice(lastFound).findIndex(x=>x.includes(`-${curMonthString}-`)) + lastFound)/7))
         lastFound = x
-        console.log(lastFound);
         monthData.push({
           month: this.getMonthLetter(curMonth),
           x : x
@@ -105,7 +104,6 @@ export default {
   mounted(){
     this.mergedData = this.getDateData()
     this.monthData = this.getMonthData()
-    console.log(this.monthData);
   }
 }
 </script>
