@@ -17,7 +17,10 @@
         <nav>
           <ul>
             <li
-              :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
+              :class="{
+                'py-2': link.depth === 2,
+                'ml-2 pb-2': link.depth === 3,
+              }"
               v-for="link of article.toc"
               :key="link.id"
             >
@@ -28,10 +31,9 @@
         <prev-next :prev="prev" :next="next" />
       </v-col>
     </v-row>
-    
   </div>
 </template>
-<style>
+<style lang="scss" scoped>
 .nuxt-content p {
   margin-bottom: 20px;
 }
@@ -76,7 +78,6 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     },
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>

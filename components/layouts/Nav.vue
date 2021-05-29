@@ -144,6 +144,11 @@ export default {
       selectedTab: "overview",
     };
   },
+  watch: {
+    "$route.fullPath"() {
+      this.initialSelectedTab();
+    },
+  },
   methods: {
     initialSelectedTab() {
       const match = this.$route.matched;

@@ -23,6 +23,7 @@
                     :title="category.name"
                     :subtitle="category.description"
                     :link="`/archive/category/${category.name}`"
+                    :desc="[]"
                   />
                 </v-col>
               </v-row>
@@ -66,7 +67,6 @@ export default {
       .sortBy("createdAt", "asc")
       .fetch();
 
-
     return {
       articles,
       categories,
@@ -83,7 +83,6 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     },
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
