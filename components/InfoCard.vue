@@ -47,6 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-card {
+  width: 100%;
+}
 .pinned-link {
   color: #0366d6;
   font-weight: 700;

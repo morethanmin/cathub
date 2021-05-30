@@ -1,24 +1,26 @@
 <template>
   <div class="info-profile black--text">
-    <img
-      ref="profileImage"
-      src="/images/face.jpg"
-      alt="face"
-      class="info-profile-face rounded-circle"
-    />
-    <div class="info-profile-title">
-      <div class="text-h5 font-weight-bold">Lee sang min</div>
-      <div class="text-h6 font-weight-thin">morethanmin</div>
-      <a
-        href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
-      >
-        <button
-          class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2"
-        >
-          resume
-        </button>
-      </a>
+    <div class="profile-header">
+      <img
+        ref="profileImage"
+        src="/images/face.jpg"
+        alt="face"
+        class="info-profile-face rounded-circle"
+      />
+      <div class="info-profile-title">
+        <div class="text-h5 font-weight-bold">Lee sang min</div>
+        <div class="text-h6 font-weight-thin">morethanmin</div>
+      </div>
     </div>
+    <a
+      href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
+    >
+      <button
+        class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2 btn-resume"
+      >
+        resume
+      </button>
+    </a>
     <!-- <div class="info-profile-follo mb-8 text-body-2">
       <ul>
         <li>
@@ -44,7 +46,7 @@
         </div>
         <div>
           <v-icon>mdi-map-marker-outline</v-icon>
-          Seodul, South Korea
+          Seoul, South Korea
         </div>
         <div>
           <v-icon>mdi-email-outline</v-icon>
@@ -89,17 +91,16 @@
   }
   /* transform: translateY(-25%); */
 }
+
 .info-profile-face {
   object-fit: cover;
   width: 100%;
-  z-index: 10;
+  max-width: 400px;
 }
-.info-profile-title {
-  button {
-    width: 100%;
-    border: 1px solid #e2e3e4;
-    background-color: #fafbfc;
-  }
+.btn-resume {
+  width: 100%;
+  border: 1px solid #e2e3e4;
+  background-color: #fafbfc;
 }
 .info-profile-follo {
   li {
@@ -118,6 +119,18 @@
   width: 45px;
   height: 45px;
   border-radius: 15px;
+}
+@media (max-width: $vt_sm) {
+  .info-profile-face {
+    max-width: 100px;
+  }
+  .profile-header {
+    display: flex;
+    align-content: center;
+    > * {
+      margin-right: 10px;
+    }
+  }
 }
 </style>
 <script>

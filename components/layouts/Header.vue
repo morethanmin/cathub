@@ -5,7 +5,9 @@
         <v-icon>mdi-cat</v-icon>
         <!-- <span class="text-h6"> Cathub </span> -->
       </NuxtLink>
-      <search-bar />
+      <div class="search">
+        <search-bar />
+      </div>
 
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
@@ -57,6 +59,11 @@ export default {
 .header-mainBox {
   color: white;
 }
+.header-itemBox {
+}
+.header-nav {
+}
+
 .header-mainBox .v-icon {
   color: white;
   font-size: 2rem;
@@ -65,5 +72,18 @@ export default {
 .header-itemBox .v-icon {
   color: white;
   font-size: 1.2rem;
+}
+
+.header-nav::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: $vt_sm) {
+  .search {
+    display: none;
+  }
+  .header-nav {
+    display: none !important;
+  }
 }
 </style>

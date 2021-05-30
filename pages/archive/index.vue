@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-row class="" justify="center" align="center">
-      <v-col align-self="start" class="col-info pa-5" cols="3">
+      <v-col align-self="start" class="card col-info pa-5" sm="12" md="3">
         <Profile />
       </v-col>
-      <v-col class="align-self-start pa-5" cols="9">
+      <v-col class="card align-self-start pa-5" sm="12" md="9">
         <div>
           <div class="pinned mb-5">
             <div class="d-flex justify-space-between mb-3">
@@ -14,9 +14,11 @@
             <v-container class="ma-0 pa-0">
               <v-row>
                 <v-col
+                  class="card"
                   v-for="(category, index) of categories"
                   :key="index"
-                  cols="6"
+                  sm="12"
+                  md="6"
                 >
                   <info-card
                     icon=""
@@ -36,7 +38,13 @@
             <!-- <div class="text-body-2">Customize your pins</div> -->
           </div>
           <v-row>
-            <v-col v-for="article of articles" :key="article.slug" cols="6">
+            <v-col
+              class="card"
+              v-for="article of articles"
+              :key="article.slug"
+              sm="12"
+              md="6"
+            >
               <NuxtLink :to="`/archive/${article.slug}`">
                 <article-card
                   :title="article.title"
@@ -53,7 +61,20 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media (max-width: $vt_sm) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: $vt_xs) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+</style>
 <script>
 import Profile from "~/components/Profile.vue";
 

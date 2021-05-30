@@ -13,8 +13,8 @@
 
 ### **React**
 
-- 재사용성을 고려하여 컴포넌트를 만들고, 리액트에 대해서 이해하고 사용해요.
-- Custom Hook을 만들고 사용하고, 지역적 상태관리와 Context api, Redux를 통한 전역적 상태관리에 익숙해요.
+- 재 사용성을 고려하여 Component와 Custom Hook을 만들어 사용해요
+- 지역적 상태 관리와 Context api, Redux를 통한 전역적 상태관리에 익숙해요.
 - CSR과 SSR을 이해하고, Next.js를 이용해 SSR Application을 만들 수 있어요.
 
 ### **Vue**

@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-row class="" justify="center" align="center">
-      <v-col align-self="start" class="col-info pa-5" cols="3">
+      <v-col align-self="start" class="col-info pa-5" sm="12" md="3">
         <Profile />
       </v-col>
-      <v-col class="align-self-start pa-5" cols="9">
+      <v-col class="align-self-start pa-5" sm="12" md="9">
         <div class="readme mb-5">
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="readme" />
@@ -12,14 +12,14 @@
         </div>
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Pinned</div>
+            <div class="color-black">Projects</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
             </NuxtLink> -->
           </div>
           <v-container class="ma-0 pa-0">
             <v-row>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   icon="mdi-cat"
                   title="cathub"
@@ -28,7 +28,7 @@
                   link="https://github.com/morethanmin/cat-hub"
                 />
               </v-col>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   title="dev-in"
                   subtitle="팀 프로젝트 (J2KB 유니콘 대회)"
@@ -36,7 +36,7 @@
                   link="https://github.com/morethanmin/dev-in"
                 />
               </v-col>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   icon="mdi-alien-outline"
                   title="remotto"
@@ -45,7 +45,7 @@
                   link="https://github.com/morethanmin/remotto"
                 />
               </v-col>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   icon="mdi-tent"
                   title="mtmtravel"
@@ -54,7 +54,7 @@
                   link="https://github.com/morethanmin/mtmtravel"
                 />
               </v-col>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   icon="mdi-tent"
                   title="mtmcamp"
@@ -63,7 +63,7 @@
                   link="https://github.com/morethanmin/mtmcamp"
                 />
               </v-col>
-              <v-col cols="6">
+              <v-col class="card-col" sm="12" md="6">
                 <info-card
                   title="until-offline"
                   subtitle="개인 프로젝트 (진행중)"
@@ -99,7 +99,7 @@
                   <v-divider></v-divider>
                 </div>
                 <ActivityBox
-                  icon="mdi-office-building-outline"
+                  img="/images/giant.png"
                   title="Giant frontend-developer (산업기능요원 재배정 대기중)"
                   :contents="[
                     `sloker members 개발 (vue, nuxt, express, my-sql)`,
@@ -114,7 +114,7 @@
                   ]"
                 />
                 <ActivityBox
-                  icon="mdi-office-building-outline"
+                  img="/images/weplanet.png"
                   title="Weplanet frontend-developer (인턴)"
                   :contents="[
                     `Cash Fi Admin Page 개발 (react)`,
@@ -130,7 +130,7 @@
                   ]"
                 />
                 <ActivityBox
-                  icon="mdi-office-building-outline"
+                  img="/images/trigit.png"
                   title="Trigit Software front-developer (인턴)"
                   :contents="[`E-learning Contents 개발`]"
                 />
@@ -179,6 +179,14 @@
   justify-content: flex-end;
   > * {
     margin-right: 10px;
+  }
+}
+@media (max-width: $vt_sm) {
+}
+@media (max-width: $vt_xs) {
+  .card-col {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 </style>

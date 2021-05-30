@@ -1,7 +1,7 @@
 <template>
   <v-container class="common-wrapper color-black pt-0 pb-0">
-    <v-row class="header-row pleft ma-0" justify="center" align="center">
-      <v-col class="pl-5 pr-3" cols="3">
+    <v-row class="header-row pleft ma-0" align="center">
+      <v-col class="show-text pl-5 pr-3" cols="3">
         <transition name="fade">
           <div v-if="$store.getters.getIsOvered" class="d-flex align-center">
             <img
@@ -134,6 +134,11 @@
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+@media (max-width: $vt_sm) {
+  .show-text {
+    display: none;
+  }
 }
 </style>
 
