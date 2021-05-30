@@ -3,7 +3,7 @@
 
 vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개발을 진행하였다가 현재는 저의 개발 관련 내용 아카이빙 공간으로 만들어나가고 있습니다.
 
-![image](https://user-images.githubusercontent.com/72514247/119289161-01b14880-bc85-11eb-81d6-b400be3b7eba.png)
+![scroll](https://user-images.githubusercontent.com/72514247/120103338-1c565680-c18a-11eb-9e6d-ff5a22b4da04.gif)
 
 ## Skills
 
@@ -30,7 +30,7 @@ https://morethanmin.du.r.appspot.com
 
 #### scroll
 
-![feature-scroll](https://user-images.githubusercontent.com/72514247/119289267-3d4c1280-bc85-11eb-91fb-6f40d144af29.gif)
+![scroll](https://user-images.githubusercontent.com/72514247/120103345-224c3780-c18a-11eb-9e60-f3a031ed0b1c.gif)
 
 #### article edit
 
