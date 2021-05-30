@@ -19,7 +19,6 @@ https://morethanmin.du.r.appspot.com
 
 ![image](https://user-images.githubusercontent.com/72514247/119942273-95a84a80-bfcc-11eb-8576-28ae0918ba69.png)
 
-
 #### article search
 
 ![feature-search](https://user-images.githubusercontent.com/72514247/119289216-23123480-bc85-11eb-88f3-9386c37f840f.gif)
@@ -36,6 +35,9 @@ https://morethanmin.du.r.appspot.com
 
 ![feature-article](https://user-images.githubusercontent.com/72514247/119289314-51900f80-bc85-11eb-8b80-3aa2f85f8511.gif)
 
+#### 반응형
+
+![반응](https://user-images.githubusercontent.com/72514247/120112687-c4cbe100-c1b1-11eb-8ed8-11829a6b0bf0.gif)
 
 ## Build Setup
 
