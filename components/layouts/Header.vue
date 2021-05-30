@@ -1,18 +1,22 @@
 <template>
   <div class="header d-flex flex-row justify-space-between">
     <div class="header-mainBox d-flex flex-row align-center">
-      <a class="d-flex flex-row align-center" href="/">
+      <NuxtLink class="d-flex flex-row align-center" to="/">
         <v-icon>mdi-cat</v-icon>
         <!-- <span class="text-h6"> Cathub </span> -->
-      </a>
+      </NuxtLink>
       <search-bar />
 
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >
-
-        <NuxtLink v-for="(category, index) of categories" :key="index" class="ml-4" :to="`/archive/category/${category.name}`">
-          {{category.name}}
+        <NuxtLink
+          v-for="(category, index) of categories"
+          :key="index"
+          class="ml-4"
+          :to="`/archive/category/${category.name}`"
+        >
+          {{ category.name }}
         </NuxtLink>
       </div>
     </div>
@@ -28,20 +32,17 @@
 <script>
 import SearchBar from "./SearchBar";
 export default {
-  data:()=>({
-    categories:[]
+  data: () => ({
+    categories: [],
   }),
-  methods:{
+  methods: {
     async getContent() {
-      const { $content } = this
-      this.categories = await $content("categories")
-      .only(["name"])
-      .fetch();
-
-    }
+      const { $content } = this;
+      this.categories = await $content("categories").only(["name"]).fetch();
+    },
   },
   async mounted() {
-    await this.getContent()
+    await this.getContent();
   },
   components: {
     SearchBar,

@@ -9,11 +9,15 @@
     <div class="info-profile-title">
       <div class="text-h5 font-weight-bold">Lee sang min</div>
       <div class="text-h6 font-weight-thin">morethanmin</div>
-      <button
-        class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2"
+      <a
+        href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
       >
-        resume
-      </button>
+        <button
+          class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2"
+        >
+          resume
+        </button>
+      </a>
     </div>
     <!-- <div class="info-profile-follo mb-8 text-body-2">
       <ul>
@@ -30,6 +34,10 @@
     </div> -->
     <div class="info-profile-detail text-body-2">
       <div class="d-flex flex-column flex-nowrap">
+        <div>
+          <v-icon>mdi-laptop</v-icon>
+          Frontend engineer
+        </div>
         <div>
           <v-icon>mdi-office-building-outline</v-icon>
           Myongji Univ
@@ -50,9 +58,15 @@
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
     <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
-    <img class="corp-img" src="" alt="" />
-    <img class="corp-img" src="" alt="" />
-    <img class="corp-img" src="" alt="" />
+    <a href="http://www.giantcorp.co.kr/">
+      <img class="corp-img" src="/images/giant.png" alt="" />
+    </a>
+    <a href="http://wepla.net/">
+      <img class="corp-img" src="/images/weplanet.png" alt="" />
+    </a>
+    <a href="http://www.trigit.com/">
+      <img class="corp-img" src="/images/trigit.png" alt="" />
+    </a>
     <!-- <div class="text-body-1 font-weight-bold mb-3">Organizations</div>
     <img class="corp-img" src="" alt="" />
     <img class="corp-img" src="" alt="" />

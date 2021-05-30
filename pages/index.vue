@@ -13,9 +13,9 @@
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Pinned</div>
-            <NuxtLink to="/repositories">
+            <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
-            </NuxtLink>
+            </NuxtLink> -->
           </div>
           <v-container class="ma-0 pa-0">
             <v-row>

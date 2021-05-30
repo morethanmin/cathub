@@ -34,7 +34,7 @@
               </button>
             </NuxtLink>
           </div>
-          <div class="">
+          <!-- <div class="">
             <NuxtLink to="/repositories">
               <button
                 ref="repositories"
@@ -50,8 +50,8 @@
                 <div class="ml-1">Repositories</div>
               </button>
             </NuxtLink>
-          </div>
-          <div class="">
+          </div> -->
+          <!-- <div class="">
             <NuxtLink to="/projects">
               <button
                 ref="projects"
@@ -67,7 +67,7 @@
                 <div class="">Projects</div>
               </button>
             </NuxtLink>
-          </div>
+          </div> -->
           <div class="">
             <NuxtLink to="/archive">
               <button
@@ -145,16 +145,15 @@ export default {
     };
   },
   watch: {
-    "$route.fullPath"() {
+    "$route.fullPath"(log) {
       this.initialSelectedTab();
     },
   },
   methods: {
     initialSelectedTab() {
       const match = this.$route.matched;
-
       if (Array.isArray(match) === false) return;
-
+      if (match.some((x) => x.path === "")) this.selectedTab = "overview";
       if (match.some((x) => x.path === "/overview"))
         this.selectedTab = "overview";
       if (match.some((x) => x.path === "/repositories"))

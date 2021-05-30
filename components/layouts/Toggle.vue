@@ -23,17 +23,20 @@
       <div class="arrow"></div>
       <ul class="menu">
         <li>
-          <a class="d-flex align-center" href="/">
+          <a class="d-flex align-center" href="https://github.com/morethanmin">
             <span class="text-subtitle-2"> Github </span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-center" href="/">
+          <a
+            class="d-flex align-center"
+            href="https://www.instagram.com/more_than_min/"
+          >
             <span class="text-subtitle-2"> Instagram </span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-center" href="/">
+          <a class="d-flex align-center" href="mailto:mini4614@gmail.com">
             <span class="text-subtitle-2"> Gmail </span>
           </a>
         </li>
