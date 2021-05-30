@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s",
-    title: "cat-hub",
+    title: "cathub",
     htmlAttrs: {
       lang: "en"
     },

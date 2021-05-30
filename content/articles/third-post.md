@@ -1,8 +1,6 @@
 ---
-title: third
-description: 세번째
-img: first-blog-post.jpg
-alt: my first blog post
+title: 게시글 테스트
+description: 게시글 작성 테스트
 category: react
 ---
 

@@ -21,9 +21,6 @@
 </template>
 
 <style lang="scss" scoped>
-.footer-box {
-  height: 150px;
-}
 .footer-info {
   width: 100%;
 }

@@ -2,15 +2,15 @@
   <v-card outlined flat>
     <v-card-title class="text-subtitle-2 pb-1">
       <v-icon>{{ icon }}</v-icon>
-      <NuxtLink :to="link">
+      <a :href="link">
         <div class="pinned-link">{{ title }}</div>
-      </NuxtLink>
+      </a>
     </v-card-title>
     <v-card-text class="text-body-2 color_secondary">
       {{ subtitle }}
     </v-card-text>
-    <v-card-text class="pt-0 color_secondary"> 
-      <languege-chip v-for="(name, index) in desc" :key="index"  :name="name" />
+    <v-card-text class="pt-0 color_secondary">
+      <languege-chip v-for="(name, index) in desc" :key="index" :name="name" />
     </v-card-text>
   </v-card>
 </template>

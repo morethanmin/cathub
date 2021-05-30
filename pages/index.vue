@@ -25,6 +25,7 @@
                   title="cathub"
                   subtitle="해당 프로젝트"
                   :desc="[`vue`, `nuxt`]"
+                  link="https://github.com/morethanmin/cat-hub"
                 />
               </v-col>
               <v-col cols="6">
@@ -32,6 +33,7 @@
                   title="dev-in"
                   subtitle="팀 프로젝트 (J2KB 유니콘 대회)"
                   :desc="[`react`]"
+                  link="https://github.com/morethanmin/dev-in"
                 />
               </v-col>
               <v-col cols="6">
@@ -40,6 +42,7 @@
                   title="remotto"
                   subtitle="개인 프로젝트"
                   :desc="[`node js`, `ejs`, `express`]"
+                  link="https://github.com/morethanmin/remotto"
                 />
               </v-col>
               <v-col cols="6">
@@ -48,6 +51,7 @@
                   title="mtmtravel"
                   subtitle="공부용 프로젝트"
                   :desc="[`node js`, `react`, `express`]"
+                  link="https://github.com/morethanmin/mtmtravel"
                 />
               </v-col>
               <v-col cols="6">
@@ -56,6 +60,7 @@
                   title="mtmcamp"
                   subtitle="개인 프로젝트"
                   :desc="[`node js`, `ejs`, `express`]"
+                  link="https://github.com/morethanmin/mtmcamp"
                 />
               </v-col>
               <v-col cols="6">
@@ -63,6 +68,7 @@
                   title="until-offline"
                   subtitle="개인 프로젝트 (진행중)"
                   :desc="[`react`, `next`]"
+                  link="https://github.com/morethanmin/until-offline"
                 />
               </v-col>
             </v-row>
