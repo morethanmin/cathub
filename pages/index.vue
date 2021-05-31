@@ -89,7 +89,7 @@
         </div>
         <v-container class="main common-wrapper mt-5 pa-0">
           <v-row>
-            <v-col class="contribution-main" cols="10">
+            <v-col class="contribution-main" sm="12" md="10">
               <div class="activity">
                 <div class="mb-3">Development activity</div>
                 <div
@@ -153,7 +153,11 @@
                 />
               </div>
             </v-col>
-            <v-col class="contribution-side d-flex flex-column mt-2" cols="2">
+            <v-col
+              class="contribution-side d-flex flex-column mt-2"
+              sm="0"
+              md="2"
+            >
               <button class="rounded-lg slected pa-1 pl-4 mb-4 text-left">
                 2021
               </button>
@@ -182,6 +186,9 @@
   }
 }
 @media (max-width: $vt_sm) {
+  .contribution-side {
+    display: none !important;
+  }
 }
 @media (max-width: $vt_xs) {
   .card-col {
