@@ -96,6 +96,7 @@
   object-fit: cover;
   width: 100%;
   max-width: 400px;
+  max-height: 400px;
 }
 .btn-resume {
   width: 100%;
@@ -123,6 +124,7 @@
 @media (max-width: $vt_sm) {
   .info-profile-face {
     max-width: 100px;
+    max-height: 100px;
   }
   .profile-header {
     display: flex;
