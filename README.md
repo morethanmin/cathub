@@ -11,7 +11,7 @@ vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개
 
 ### link
 
-https://morethanmin.du.r.appspot.com
+https://morethanmin.github.io/cat-hub/
 
 ## Features
 
