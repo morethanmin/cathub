@@ -4,7 +4,7 @@
       <v-icon v-if="icon !== ``" class="title-icon">
         {{ icon }}
       </v-icon>
-      <img v-if="img !== ``" :src="`~/${img}`" alt="" class="title-icon" />
+      <img v-if="img !== ``" :src="`~${img}`" alt="" class="title-icon" />
       <div class="title-text">
         {{ title }}
       </div>
