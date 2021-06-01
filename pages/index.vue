@@ -99,7 +99,7 @@
                   <v-divider></v-divider>
                 </div>
                 <ActivityBox
-                  img="/static/images/giant.png"
+                  img="static/images/giant.png"
                   title="Giant frontend-developer (산업기능요원 재배정 대기중)"
                   :contents="[
                     `sloker members 개발 (vue, nuxt, express, my-sql)`,
@@ -114,7 +114,7 @@
                   ]"
                 />
                 <ActivityBox
-                  img="/static/images/weplanet.png"
+                  img="static/images/weplanet.png"
                   title="Weplanet frontend-developer (인턴)"
                   :contents="[
                     `Cash Fi Admin Page 개발 (react)`,
@@ -130,7 +130,7 @@
                   ]"
                 />
                 <ActivityBox
-                  img="/static/images/trigit.png"
+                  img="static/images/trigit.png"
                   title="Trigit Software front-developer (인턴)"
                   :contents="[`E-learning Contents 개발`]"
                 />
