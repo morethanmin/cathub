@@ -23,7 +23,7 @@
                 <info-card
                   icon="mdi-cat"
                   title="cathub"
-                  subtitle="해당 프로젝트"
+                  subtitle="Nuxt기반의 내 블로그"
                   :desc="[`vue`, `nuxt`]"
                   link="https://github.com/morethanmin/cat-hub"
                 />
