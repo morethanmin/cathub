@@ -114,7 +114,7 @@
                   ]"
                 />
                 <ActivityBox
-                  img="/images/weplanet.png"
+                  img="~/static/images/weplanet.png"
                   title="Weplanet frontend-developer (인턴)"
                   :contents="[
                     `Cash Fi Admin Page 개발 (react)`,
@@ -130,7 +130,7 @@
                   ]"
                 />
                 <ActivityBox
-                  img="/images/trigit.png"
+                  img="~/static/images/trigit.png"
                   title="Trigit Software front-developer (인턴)"
                   :contents="[`E-learning Contents 개발`]"
                 />

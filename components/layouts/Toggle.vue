@@ -6,7 +6,7 @@
       class="d-flex align-center"
     >
       <img
-        src="/images/face.jpg"
+        src="~/static/images/face.jpg"
         alt="face"
         width="25"
         height="25"

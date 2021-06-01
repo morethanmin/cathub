@@ -3,7 +3,7 @@
     <div class="profile-header">
       <img
         ref="profileImage"
-        src="/images/face.jpg"
+        src="~/static/images/face.jpg"
         alt="face"
         class="info-profile-face rounded-circle"
       />
@@ -61,13 +61,13 @@
     <v-divider class="mt-3 mb-3"></v-divider>
     <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
     <a href="http://www.giantcorp.co.kr/">
-      <img class="corp-img" src="/images/giant.png" alt="" />
+      <img class="corp-img" src="~/static/images/giant.png" alt="" />
     </a>
     <a href="http://wepla.net/">
-      <img class="corp-img" src="/images/weplanet.png" alt="" />
+      <img class="corp-img" src="~/static/images/weplanet.png" alt="" />
     </a>
     <a href="http://www.trigit.com/">
-      <img class="corp-img" src="/images/trigit.png" alt="" />
+      <img class="corp-img" src="~/static/images/trigit.png" alt="" />
     </a>
     <!-- <div class="text-body-1 font-weight-bold mb-3">Organizations</div>
     <img class="corp-img" src="" alt="" />
