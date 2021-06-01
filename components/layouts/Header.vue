@@ -3,7 +3,7 @@
     <div class="header-mainBox d-flex flex-row align-center">
       <NuxtLink class="d-flex flex-row align-center" to="/">
         <v-icon>mdi-cat</v-icon>
-        <!-- <span class="text-h6"> Cathub </span> -->
+        <span class="title-text text-h6"> Cathub </span>
       </NuxtLink>
       <div class="search">
         <search-bar />
@@ -77,10 +77,16 @@ export default {
 .header-nav::-webkit-scrollbar {
   display: none;
 }
+.title-text {
+  display: none;
+}
 
 @media (max-width: $vt_sm) {
   .search {
     display: none;
+  }
+  .title-text {
+    display: block;
   }
   .header-nav {
     display: none !important;

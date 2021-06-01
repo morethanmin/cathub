@@ -1,6 +1,6 @@
 <template>
-  <v-container class="common-wrapper color-black pt-0 pb-0">
-    <v-row class="header-row pleft ma-0" align="center">
+  <v-container class="common-wrapper color-black pa-0">
+    <v-row class="header-row pleft ma-0 pa-0" align="center">
       <v-col class="show-text pl-5 pr-3" cols="3">
         <transition name="fade">
           <div v-if="$store.getters.getIsOvered" class="d-flex align-center">
@@ -15,7 +15,7 @@
           </div>
         </transition>
       </v-col>
-      <v-col align-self="end" class="header-tab pt-0 pb-0 pr-5 pl-3" cols="9">
+      <v-col align-self="end" class="header-tab pt-0 pb-0 pr-5 pl-0" cols="9">
         <div class="d-flex flex-row text-subtitle-2">
           <div class="">
             <NuxtLink to="/">
