@@ -99,7 +99,7 @@
                   <v-divider></v-divider>
                 </div>
                 <ActivityBox
-                  img="/images/giant.png"
+                  img="~/static/images/giant.png"
                   title="Giant frontend-developer (산업기능요원 재배정 대기중)"
                   :contents="[
                     `sloker members 개발 (vue, nuxt, express, my-sql)`,
