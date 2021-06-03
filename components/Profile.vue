@@ -54,11 +54,24 @@
         </div>
         <!-- <div>
           <v-icon>mdi-link-variant</v-icon>
-          https://github.com/morethanmin
+          <a href="https://github.com/morethanmin"
+            >https://github.com/morethanmin</a
+          >
         </div> -->
       </div>
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
+
+    <!-- <div class="text-body-1 font-weight-bold mb-3">Skills</div>
+    <a href="http://www.giantcorp.co.kr/">
+      <img class="corp-img" src="~/static/images/giant.png" alt="" />
+    </a>
+    <a href="http://wepla.net/">
+      <img class="corp-img" src="~/static/images/weplanet.png" alt="" />
+    </a>
+    <a href="http://www.trigit.com/">
+      <img class="corp-img" src="~/static/images/trigit.png" alt="" />
+    </a> -->
     <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
     <a href="http://www.giantcorp.co.kr/">
       <img class="corp-img" src="~/static/images/giant.png" alt="" />

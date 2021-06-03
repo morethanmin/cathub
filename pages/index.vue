@@ -209,7 +209,7 @@ export default {
     CommitBox,
   },
   async asyncData({ $content, params }) {
-    const readme = await $content("portfolio", "introduce").fetch();
+    const readme = await $content("overview", "morethanmin").fetch();
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")
       .fetch();
