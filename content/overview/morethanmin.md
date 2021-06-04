@@ -22,8 +22,7 @@ Archive는 개발과 관련된 정보를 기록하는 공간입니다. -->
 
 ## Link
 
-- [portfolio](https://morethanmin.github.io/cat-hub/portfolio)
 - [github](https://github.com/morethanmin)
+- [resume](https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view)
+- [portfolio](https://morethanmin.github.io/cat-hub/portfolio)
 - [source code](https://github.com/morethanmin/cat-hub/)
-
-
