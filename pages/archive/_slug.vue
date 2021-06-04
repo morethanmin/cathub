@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="9">
-        <article>
+        <article-box>
           <h1>{{ article.title }}</h1>
           <p>{{ article.description }}</p>
           <!-- <img :src="article.img" :alt="article.alt" /> -->
@@ -11,7 +11,7 @@
           <nuxt-content :document="article" />
           <!-- <category :category="article.category" /> -->
           <NuxtLink :to="`/archive`"> 돌아가기 </NuxtLink>
-        </article>
+        </article-box>
       </v-col>
       <v-col cols="3">
         <nav>
@@ -34,24 +34,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.nuxt-content p {
-  margin-bottom: 20px;
-}
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url("~assets/svg/icon-hashtag.svg");
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-}
 </style>
 <script>
 export default {
