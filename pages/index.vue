@@ -47,29 +47,12 @@
 </template>
 
 <style lang="scss" scoped>
-.contribution-side {
-  .slected {
-    background-color: #0366d6;
-    color: white;
-  }
-}
 .commit {
   display: flex;
   overflow: hidden;
   justify-content: flex-end;
   > * {
     margin-right: 10px;
-  }
-}
-@media (max-width: $vt_sm) {
-  .contribution-side {
-    display: none !important;
-  }
-}
-@media (max-width: $vt_xs) {
-  .card-col {
-    flex: 0 0 100%;
-    max-width: 100%;
   }
 }
 </style>

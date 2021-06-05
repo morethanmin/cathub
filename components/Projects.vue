@@ -56,3 +56,12 @@
     </v-row>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+@media (max-width: $vt_xs) {
+  .card-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+</style>
