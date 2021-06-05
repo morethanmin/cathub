@@ -20,17 +20,17 @@
           <div class="">
             <NuxtLink to="/">
               <button
-                ref="overview"
-                @click="selectedTab = 'overview'"
+                ref="Portfolio"
+                @click="selectedTab = 'Portfolio'"
                 :class="[
-                  ...(selectedTab === 'overview'
+                  ...(selectedTab === 'Portfolio'
                     ? ['selectedTab', 'font-weight-bold']
                     : []),
                 ]"
                 class="d-flex flex-row align-center"
               >
-                <v-icon>mdi-book-open-outline</v-icon>
-                <div class="ml-1">Overview</div>
+                <v-icon>mdi-account-circle-outline</v-icon>
+                <div class="ml-1">Portfolio</div>
               </button>
             </NuxtLink>
           </div>
@@ -71,17 +71,17 @@
           <div class="">
             <NuxtLink to="/archive">
               <button
-                ref="packages"
-                @click="selectedTab = 'archive'"
+                ref="Blog"
+                @click="selectedTab = 'Blog'"
                 :class="[
-                  ...(selectedTab === 'archive'
+                  ...(selectedTab === 'Blog'
                     ? ['selectedTab', 'font-weight-bold']
                     : []),
                 ]"
                 class="d-flex flex-row align-center"
               >
-                <v-icon>mdi-cube-outline</v-icon>
-                <div class="ml-1">Archive</div>
+                <v-icon>mdi-post-outline</v-icon>
+                <div class="ml-1">Blog</div>
               </button>
             </NuxtLink>
           </div>
@@ -146,7 +146,7 @@
 export default {
   data() {
     return {
-      selectedTab: "overview",
+      selectedTab: "Portfolio",
     };
   },
   watch: {
@@ -158,15 +158,14 @@ export default {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some((x) => x.path === "")) this.selectedTab = "overview";
-      if (match.some((x) => x.path === "/overview"))
-        this.selectedTab = "overview";
+      if (match.some((x) => x.path === "")) this.selectedTab = "Portfolio";
+      if (match.some((x) => x.path === "/Portfolio"))
+        this.selectedTab = "Portfolio";
       if (match.some((x) => x.path === "/repositories"))
         this.selectedTab = "repositories";
       if (match.some((x) => x.path === "/projects"))
         this.selectedTab = "projects";
-      if (match.some((x) => x.path === "/archive"))
-        this.selectedTab = "archive";
+      if (match.some((x) => x.path === "/Blog")) this.selectedTab = "Blog";
     },
   },
   mounted() {

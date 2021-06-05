@@ -17,66 +17,11 @@
               <div class="text-body-2">more...</div>
             </NuxtLink> -->
           </div>
-          <v-container class="ma-0 pa-0">
-            <v-row>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  icon="mdi-cat"
-                  title="cathub"
-                  subtitle="Nuxt기반의 내 블로그"
-                  :desc="[`vue`, `nuxt`]"
-                  link="https://github.com/morethanmin/cat-hub"
-                />
-              </v-col>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  title="dev-in"
-                  subtitle="팀 프로젝트 (J2KB 유니콘 대회)"
-                  :desc="[`react`]"
-                  link="https://github.com/morethanmin/dev-in"
-                />
-              </v-col>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  icon="mdi-alien-outline"
-                  title="remotto"
-                  subtitle="개인 프로젝트"
-                  :desc="[`node js`, `ejs`, `express`]"
-                  link="https://github.com/morethanmin/remotto"
-                />
-              </v-col>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  icon="mdi-tent"
-                  title="mtmtravel"
-                  subtitle="공부용 프로젝트"
-                  :desc="[`node js`, `react`, `express`]"
-                  link="https://github.com/morethanmin/mtmtravel"
-                />
-              </v-col>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  icon="mdi-tent"
-                  title="mtmcamp"
-                  subtitle="개인 프로젝트"
-                  :desc="[`node js`, `ejs`, `express`]"
-                  link="https://github.com/morethanmin/mtmcamp"
-                />
-              </v-col>
-              <v-col class="card-col" sm="12" md="6">
-                <info-card
-                  title="until-offline"
-                  subtitle="개인 프로젝트 (진행중)"
-                  :desc="[`react`, `next`]"
-                  link="https://github.com/morethanmin/until-offline"
-                />
-              </v-col>
-            </v-row>
-          </v-container>
+          <projects />
         </div>
-        <div class="pinned">
+        <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">{{ total }} articles in cathub</div>
+            <div class="color-black">{{ total }} Articles in cathub</div>
             <NuxtLink to="/archive">
               <div class="text-body-2">more...</div>
             </NuxtLink>
@@ -87,84 +32,15 @@
             </v-card>
           </div>
         </div>
-        <v-container class="main common-wrapper mt-5 pa-0">
-          <v-row>
-            <v-col class="contribution-main" sm="12" md="10">
-              <div class="activity">
-                <div class="mb-3">Development activity</div>
-                <div
-                  class="contribution-main-line text-body-2 pa-3 d-flex align-center"
-                >
-                  <div class="">May 2021</div>
-                  <v-divider></v-divider>
-                </div>
-                <ActivityBox
-                  :img="require('~/static/images/giant.png')"
-                  title="Giant frontend-developer (산업기능요원 재배정 대기중)"
-                  :contents="[
-                    `sloker members 개발 (vue, nuxt, express, my-sql)`,
-                    `sloker id 유지보수 (vue, nuxt, express, my-sql)`,
-                  ]"
-                />
-                <ActivityBox
-                  icon="mdi-laptop"
-                  title="J2KB 3기 활동 (전국 코딩 연합 동아리)"
-                  :contents="[
-                    `유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)`,
-                  ]"
-                />
-                <ActivityBox
-                  :img="require('~/static/images/weplanet.png')"
-                  title="Weplanet frontend-developer (인턴)"
-                  :contents="[
-                    `Cash Fi Admin Page 개발 (react)`,
-                    `밑고맡겨 Landing Page 개발`,
-                    `kkoit Admin Page 개발 (react)`,
-                  ]"
-                />
-                <ActivityBox
-                  icon="mdi-book-open-outline"
-                  title="STUDY HALLE 활동 (자바 스터디)"
-                  :contents="[
-                    `1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`,
-                  ]"
-                />
-                <ActivityBox
-                  :img="require('~/static/images/trigit.png')"
-                  title="Trigit Software front-developer (인턴)"
-                  :contents="[`E-learning Contents 개발`]"
-                />
-                <ActivityBox
-                  icon="mdi-bird"
-                  title="둥지 개발팀 부리더 (현업 개발자 모임)"
-                  :contents="[`둥지톡 백엔드 개발(중단)`]"
-                />
-                <ActivityBox
-                  icon="mdi-laptop"
-                  title="Web Developer Bootcamp"
-                  :contents="[
-                    `udemy-web-developer-bootcamp 수강`,
-                    `mtm-camp 개발`,
-                  ]"
-                />
-                <ActivityBox
-                  icon="mdi-school-outline"
-                  title="명지대학교 정보통신공학과 휴학 (3학년)"
-                />
-              </div>
-            </v-col>
-            <v-col
-              class="contribution-side d-flex flex-column mt-2"
-              sm="0"
-              md="2"
-            >
-              <button class="rounded-lg slected pa-1 pl-4 mb-4 text-left">
-                2021
-              </button>
-              <!-- <button class="rounded-lg pa-1 pl-4 mb-4 text-left">2022</button> -->
-            </v-col>
-          </v-row>
-        </v-container>
+        <div class="pinned mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="color-black">Carrer</div>
+            <!-- <NuxtLink to="/repositories">
+              <div class="text-body-2">more...</div>
+            </NuxtLink> -->
+          </div>
+          <development-activity />
+        </div>
       </v-col>
     </v-row>
   </div>
