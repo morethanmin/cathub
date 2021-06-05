@@ -21,19 +21,6 @@
         </div>
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">{{ total }} Articles in cathub</div>
-            <NuxtLink to="/archive">
-              <div class="text-body-2">more...</div>
-            </NuxtLink>
-          </div>
-          <div class="ma-0 pa-0">
-            <v-card class="commit" outlined flat>
-              <commit-box :countedDate="data" />
-            </v-card>
-          </div>
-        </div>
-        <div class="pinned mb-5">
-          <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Carrer</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
@@ -47,14 +34,6 @@
 </template>
 
 <style lang="scss" scoped>
-.commit {
-  display: flex;
-  overflow: hidden;
-  justify-content: flex-end;
-  > * {
-    margin-right: 10px;
-  }
-}
 </style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
