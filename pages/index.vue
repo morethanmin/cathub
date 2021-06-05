@@ -45,6 +45,12 @@
 </template>
 
 <style lang="scss" scoped>
+@media (max-width: $vt_xs) {
+  .col-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 </style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
