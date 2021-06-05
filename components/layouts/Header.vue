@@ -12,14 +12,14 @@
       <div
         class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
       >
-        <NuxtLink
+        <!-- <NuxtLink
           v-for="(category, index) of categories"
           :key="index"
           class="ml-4"
           :to="`/archive/category/${category.name}`"
         >
           {{ category.name }}
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">

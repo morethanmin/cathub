@@ -51,7 +51,7 @@
           <ActivityBox
             icon="mdi-laptop"
             title="Web Developer Bootcamp"
-            :contents="[`udemy-web-developer-bootcamp 수강`, `mtm-camp 개발`]"
+            :contents="[`udemy-web-developer-bootcamp 수강`, `mtm-camp`]"
           />
           <ActivityBox
             icon="mdi-school-outline"

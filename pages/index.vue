@@ -5,9 +5,20 @@
         <Profile />
       </v-col>
       <v-col class="align-self-start pa-5" sm="12" md="9">
-        <div class="readme mb-5">
+        <div class="pinned mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="color-black">About</div>
+          </div>
           <v-card outlined flat class="pa-5 color-black">
-            <nuxt-content :document="readme" />
+            <nuxt-content :document="about" />
+          </v-card>
+        </div>
+        <div class="pinned mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="color-black">Skills</div>
+          </div>
+          <v-card outlined flat class="pa-5 color-black">
+            <nuxt-content :document="skills" />
           </v-card>
         </div>
         <div class="pinned mb-5">
@@ -47,7 +58,8 @@ export default {
     CommitBox,
   },
   async asyncData({ $content, params }) {
-    const readme = await $content("overview", "morethanmin").fetch();
+    const about = await $content("overview", "about").fetch();
+    const skills = await $content("overview", "skills").fetch();
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")
       .fetch();
@@ -64,7 +76,8 @@ export default {
     });
     const total = articlesDateList.length;
     return {
-      readme,
+      about,
+      skills,
       data,
       total,
     };

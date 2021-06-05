@@ -3,9 +3,8 @@
     <v-row>
       <v-col class="card-col" sm="12" md="6">
         <info-card
-          icon="mdi-cat"
           title="cathub"
-          subtitle="Nuxt기반의 내 블로그"
+          subtitle="github스타일의 소개페이지"
           :desc="[`vue`, `nuxt`]"
           link="https://github.com/morethanmin/cat-hub"
         />
@@ -20,7 +19,6 @@
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <info-card
-          icon="mdi-alien-outline"
           title="remotto"
           subtitle="개인 프로젝트"
           :desc="[`node js`, `ejs`, `express`]"
@@ -29,7 +27,6 @@
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <info-card
-          icon="mdi-tent"
           title="mtmtravel"
           subtitle="공부용 프로젝트"
           :desc="[`node js`, `react`, `express`]"
@@ -38,7 +35,6 @@
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <info-card
-          icon="mdi-tent"
           title="mtmcamp"
           subtitle="개인 프로젝트"
           :desc="[`node js`, `ejs`, `express`]"

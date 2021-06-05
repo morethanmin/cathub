@@ -20,7 +20,7 @@ export default {
   props: {
     icon: {
       type: String,
-      default: "mdi-book-outline",
+      default: "",
     },
     title: {
       type: String,
