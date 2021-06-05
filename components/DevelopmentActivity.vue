@@ -70,6 +70,11 @@
 </template>
 
 <style lang="scss" scoped>
+@media (max-width: $vt_sm) {
+  .contribution-side {
+    display: none !important;
+  }
+}
 .contribution-side {
   .slected {
     background-color: #0366d6;
