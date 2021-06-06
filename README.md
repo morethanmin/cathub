@@ -1,11 +1,10 @@
-
 # cat-hub
 
 vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개발을 진행하였다가 현재는 저의 개발 관련 내용 아카이빙 공간으로 만들어나가고 있습니다.
 
-![scroll](https://user-images.githubusercontent.com/72514247/120103338-1c565680-c18a-11eb-9e6d-ff5a22b4da04.gif)
+![image](https://user-images.githubusercontent.com/72514247/120918062-70fb5380-c6ed-11eb-9181-77fcf80a099a.png)
 
-## Skills
+## stacks
 
 `vue` `vuetify` `nuxt` `nuxt/content`
 
