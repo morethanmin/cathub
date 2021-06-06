@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <comment-box
+      :img="require('~/static/images/user.png')"
+      title="morethanmin"
+      subTitle="giant"
+      comment="test"
+    />
+    <comment-box
+      :img="require('~/static/images/user.png')"
+      title="morethanmin"
+      subTitle="giant"
+      comment="test"
+    />
+  </div>
+</template>

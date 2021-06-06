@@ -3,9 +3,7 @@
     <v-row>
       <v-col class="contribution-main" sm="12" md="10">
         <div class="activity">
-          <div
-            class="contribution-main-line text-body-2 pa-3 d-flex align-center"
-          >
+          <div class="contribution-main-line text-body-2 d-flex align-center">
             <div class="">May 2021</div>
             <v-divider></v-divider>
           </div>
@@ -14,7 +12,7 @@
             title="Giant frontend-developer (산업기능요원 재배정 대기중)"
             :contents="[
               `sloker members (vue, nuxt, express, my-sql)`,
-              `sloker id (vue, nuxt, express, my-sql)`,
+              `sloker id (vue, nuxt, express, my-sql)`
             ]"
           />
           <ActivityBox
@@ -28,14 +26,14 @@
             :contents="[
               `Cash Fi Admin Page (react)`,
               `밑고맡겨 Landing Page`,
-              `kkoit Admin Page (react)`,
+              `kkoit Admin Page (react)`
             ]"
           />
           <ActivityBox
             icon="mdi-book-open-outline"
             title="STUDY HALLE (자바 스터디)"
             :contents="[
-              `1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`,
+              `1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`
             ]"
           />
           <ActivityBox

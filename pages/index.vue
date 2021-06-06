@@ -5,7 +5,7 @@
         <Profile />
       </v-col>
       <v-col class="align-self-start pa-5" sm="12" md="9">
-        <div class="pinned mb-5">
+        <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">About</div>
           </div>
@@ -13,7 +13,7 @@
             <nuxt-content :document="about" />
           </v-card>
         </div>
-        <div class="pinned mb-5">
+        <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Skills</div>
           </div>
@@ -21,23 +21,27 @@
             <nuxt-content :document="skills" />
           </v-card>
         </div>
-        <div class="pinned mb-5">
+        <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Projects</div>
-            <!-- <NuxtLink to="/repositories">
-              <div class="text-body-2">more...</div>
-            </NuxtLink> -->
           </div>
-          <projects />
+          <project-box-list />
         </div>
-        <div class="pinned mb-5">
+        <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="color-black">Carrer</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
             </NuxtLink> -->
           </div>
-          <development-activity />
+          <activity-box-list />
+        </div>
+        <div class="mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="color-black">Comments</div>
+          </div>
+          <v-divider></v-divider>
+          <comment-box-list />
         </div>
       </v-col>
     </v-row>
@@ -61,7 +65,7 @@ import CommitBox from "../components/CommitBox.vue";
 export default {
   components: {
     Profile,
-    CommitBox,
+    CommitBox
   },
   async asyncData({ $content, params }) {
     const about = await $content("overview", "about").fetch();
@@ -69,15 +73,15 @@ export default {
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")
       .fetch();
-    const articlesDateList = articles.map((article) => article.createdAt);
-    const parsedDate = articlesDateList.map((articleDate) => {
+    const articlesDateList = articles.map(article => article.createdAt);
+    const parsedDate = articlesDateList.map(articleDate => {
       const date = new Date(articleDate);
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
         -2
       )}-${`0${date.getDate()}`.slice(-2)}`;
     });
     const data = {};
-    parsedDate.forEach((x) => {
+    parsedDate.forEach(x => {
       data[x] = (data[x] || 0) + 1;
     });
     const total = articlesDateList.length;
@@ -85,12 +89,12 @@ export default {
       about,
       skills,
       data,
-      total,
+      total
     };
   },
   data: () => ({
     data: {},
-    total: 0,
+    total: 0
   }),
   computed: {},
   methods: {
@@ -100,12 +104,12 @@ export default {
       )}-${`0${date.getDate()}`.slice(-2)}`;
     },
     parseArticleDate() {
-      const date = this.articlesDateList.map((articleDate) => {
+      const date = this.articlesDateList.map(articleDate => {
         const date = new Date(articleDate);
         return this.parseDate(date);
       });
       const data = {};
-      date.forEach((x) => {
+      date.forEach(x => {
         data[x] = (data[x] || 0) + 1;
       });
 
@@ -113,11 +117,11 @@ export default {
     },
     parseTotal() {
       this.total = this.articlesDateList.length;
-    },
+    }
   },
   mounted() {
     // this.parseArticleDate()
     // this.parseTotal()
-  },
+  }
 };
 </script>

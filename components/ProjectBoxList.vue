@@ -2,7 +2,7 @@
   <v-container class="ma-0 pa-0">
     <v-row>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="cathub"
           subtitle="github스타일의 소개페이지"
           :desc="[`vue`, `nuxt`]"
@@ -10,7 +10,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="dev-in"
           subtitle="팀 프로젝트 (J2KB 유니콘 대회)"
           :desc="[`react`]"
@@ -18,7 +18,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="remotto"
           subtitle="개인 프로젝트"
           :desc="[`node js`, `ejs`, `express`]"
@@ -26,7 +26,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="mtmtravel"
           subtitle="공부용 프로젝트"
           :desc="[`node js`, `react`, `express`]"
@@ -34,7 +34,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="mtmcamp"
           subtitle="개인 프로젝트"
           :desc="[`node js`, `ejs`, `express`]"
@@ -42,7 +42,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <info-card
+        <project-box
           title="until-offline"
           subtitle="개인 프로젝트 (진행중)"
           :desc="[`react`, `next`]"
