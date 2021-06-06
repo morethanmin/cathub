@@ -26,13 +26,36 @@ Nuxt를 이용해 SSR Application을 만들 수 있어요.
 
 Express를 통해 REST API를 구현하고 SQL, MongoDB와 연동 할 수 있어요.
 
+**Javascript**
+
+![Progress](https://progress-bar.dev/80)
+
+ES6+ 문법에 익숙해요.
+
+webpack과 babel을 통한 개발환경을 이해하고 구축 할 수 있어요.
+
+typescript를 사용할 수 있고, 서비스 경험이 있어요.
+
+디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다.
+
+**HTML/CSS**
+
+![Progress](https://progress-bar.dev/90)
+
+
+웹표준과 semantic UI를 준수하려 노력합니다.
+
+다양한 CSS 라이브러리(material, antd, bootstrap, etc)를 사용할 수 있어요.
+
+다양한 CSS 전처리기(styled-component, scss, module)을 사용하고 활용할 수 있어요.
+
 **etc**
 
-`HTML`
-`CSS`
-`Javascript` 
-`Typescript`
-`Node.js`
+`git`
+`node.js`
 `mongo`
 `SQL`
+`aws`
+`google cloud`
+
 ...
