@@ -42,7 +42,7 @@
         </div>
         <div>
           <v-icon>mdi-office-building-outline</v-icon>
-          Myongji Univ
+          Myongji University
         </div>
         <div>
           <v-icon>mdi-map-marker-outline</v-icon>
@@ -93,6 +93,9 @@
   > div {
     padding: 0;
     > div {
+      > .v-icon {
+        margin-right: 5px;
+      }
       list-style-type: none;
       display: flex;
       margin-bottom: 8px;
@@ -134,7 +137,11 @@
   height: 45px;
   border-radius: 15px;
 }
+
 @media (max-width: $vt_sm) {
+  .no-d {
+    display: none !important;
+  }
   .info-profile-face {
     max-width: 100px;
     max-height: 100px;
