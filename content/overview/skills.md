@@ -57,5 +57,4 @@ typescript를 사용할 수 있고, 서비스 경험이 있어요.
 `SQL`
 `aws`
 `google cloud`
-
 ...
