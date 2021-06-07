@@ -29,7 +29,7 @@
                 sm="12"
                 md="6"
               >
-                <info-card
+                <project-box
                   icon=""
                   :title="category.name"
                   :subtitle="category.description"
@@ -99,15 +99,15 @@ export default {
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")
       .fetch();
-    const articlesDateList = articles.map((article) => article.createdAt);
-    const parsedDate = articlesDateList.map((articleDate) => {
+    const articlesDateList = articles.map(article => article.createdAt);
+    const parsedDate = articlesDateList.map(articleDate => {
       const date = new Date(articleDate);
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
         -2
       )}-${`0${date.getDate()}`.slice(-2)}`;
     });
     const data = {};
-    parsedDate.forEach((x) => {
+    parsedDate.forEach(x => {
       data[x] = (data[x] || 0) + 1;
     });
     const total = articlesDateList.length;
@@ -120,11 +120,11 @@ export default {
       data,
       total,
       articles,
-      categories,
+      categories
     };
   },
   components: {
-    Profile,
+    Profile
   },
   data: () => ({}),
   computed: {},
@@ -132,8 +132,8 @@ export default {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
-    },
+    }
   },
-  mounted() {},
+  mounted() {}
 };
 </script>

@@ -1,4 +1,3 @@
-
 **React**
 
 ![Progress](https://progress-bar.dev/70)
@@ -7,13 +6,13 @@
 
 지역적 상태 관리와 reducer, Context api, Redux를 통한 전역적 상태관리에 익숙해요.
 
-CSR과 SSR을 이해하고, Next.js를 이용해 SSR Application을 만들 수 있어요
+체이닝 방식으로 작동하는 미들웨어의 원리를 이해하고 다양한 미들웨어를 사용하고 적용해요.
 
+CSR과 SSR을 이해하고, Next.js를 이용해 SSR Application을 만들 수 있어요.
 
 **Vue.js**
 
 ![Progress](https://progress-bar.dev/75)
-
 
 Vuex를 이용해 전역적 상태관리를 할 수 있어요.
 
@@ -22,7 +21,6 @@ Nuxt를 이용해 SSR Application을 만들 수 있어요.
 **Express.js**
 
 ![Progress](https://progress-bar.dev/60)
-
 
 Express를 통해 REST API를 구현하고 SQL, MongoDB와 연동 할 수 있어요.
 
@@ -43,7 +41,6 @@ typescript를 사용할 수 있고, 서비스 경험이 있어요.
 **HTML/CSS**
 
 ![Progress](https://progress-bar.dev/90)
-
 
 웹표준과 semantic UI를 준수하려 노력합니다.
 
