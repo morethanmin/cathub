@@ -38,10 +38,10 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Comments</div>
+            <div class="color-black">Recommendations</div>
           </div>
           <v-divider></v-divider>
-          <comment-box-list />
+          <!-- <comment-box-list /> -->
         </div>
       </v-col>
     </v-row>
