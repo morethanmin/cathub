@@ -99,7 +99,7 @@ export default {
 
 @media (max-width: $vt_sm) {
   .search {
-    display: none;
+    display: none !important;
   }
   .title-text {
     display: block;
