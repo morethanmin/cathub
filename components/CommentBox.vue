@@ -104,6 +104,4 @@ export default {
   border-left: 1px solid #ebedef;
   z-index: 0;
 }
-div {
-}
 </style>
