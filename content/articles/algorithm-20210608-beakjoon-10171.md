@@ -16,18 +16,14 @@ category: algorithm
 
 고양이를 출력한다.
 
-```
-\    /\
- )  ( ')
-(  /  )
- \(__)|
-```
-
 ## 풀이
 
 이것도 콘솔로그 찍으면 됩니다.
+주의할 점은 \는 예약어(? \n 과 같이..)이므로 특수하게 두번 써줘야한다.
 
 ```javascript
-console.log("강한친구 대한육군");
-console.log("강한친구 대한육군");
+console.log(`\\    /\\`);
+console.log(` )  ( ')`);
+console.log(`(  /  )`);
+console.log(` \\(__)|`);
 ```
