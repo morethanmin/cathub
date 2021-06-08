@@ -41,7 +41,7 @@
             <div class="color-black">Recommendations</div>
           </div>
           <v-divider></v-divider>
-          <!-- <comment-box-list /> -->
+          <comment-box-list />
         </div>
       </v-col>
     </v-row>
