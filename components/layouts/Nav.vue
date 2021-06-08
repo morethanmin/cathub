@@ -1,9 +1,9 @@
 <template>
-  <v-container class="common-wrapper color-black pa-0">
-    <v-row class="header-row pleft ma-0 pa-0" align="center">
-      <v-col class="show-text pl-5 pr-3" cols="3">
+  <nav class="header-nav  color-black pa-0">
+    <v-row class=" ma-0 pa-0 common-wrapper">
+      <v-col class="show-info-box pa-0 pl-5 pr-3" cols="3">
         <transition name="fade">
-          <div v-if="$store.getters.getIsOvered" class="d-flex align-center">
+          <div v-if="$store.getters.getIsOvered" class="show-data">
             <img
               src="~/static/images/face.jpg"
               alt="face"
@@ -25,7 +25,7 @@
                 :class="[
                   ...(selectedTab === 'Portfolio'
                     ? ['selectedTab', 'font-weight-bold']
-                    : []),
+                    : [])
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -76,7 +76,7 @@
                 :class="[
                   ...(selectedTab === 'archive'
                     ? ['selectedTab', 'font-weight-bold']
-                    : []),
+                    : [])
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -88,11 +88,21 @@
         </div>
       </v-col>
     </v-row>
-  </v-container>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
-.header-template {
+.header-nav {
+  z-index: 15;
+}
+.header-nav {
+  position: sticky !important;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+  justify-content: center;
+  background: white;
 }
 .header-row {
   height: 100%;
@@ -128,6 +138,12 @@
     border-bottom: 2px solid red !important;
   }
 }
+
+.show-data {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s;
@@ -136,7 +152,7 @@
   opacity: 0;
 }
 @media (max-width: $vt_sm) {
-  .show-text {
+  .show-info-box {
     display: none;
   }
 }
@@ -146,31 +162,30 @@
 export default {
   data() {
     return {
-      selectedTab: "Portfolio",
+      selectedTab: "Portfolio"
     };
   },
   watch: {
     "$route.fullPath"(log) {
       this.initialSelectedTab();
-    },
+    }
   },
   methods: {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some((x) => x.path === "")) this.selectedTab = "Portfolio";
-      if (match.some((x) => x.path === "/Portfolio"))
+      if (match.some(x => x.path === "")) this.selectedTab = "Portfolio";
+      if (match.some(x => x.path === "/Portfolio"))
         this.selectedTab = "Portfolio";
-      if (match.some((x) => x.path === "/repositories"))
+      if (match.some(x => x.path === "/repositories"))
         this.selectedTab = "repositories";
-      if (match.some((x) => x.path === "/projects"))
+      if (match.some(x => x.path === "/projects"))
         this.selectedTab = "projects";
-      if (match.some((x) => x.path === "/archive"))
-        this.selectedTab = "archive";
-    },
+      if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
+    }
   },
   mounted() {
     this.initialSelectedTab();
-  },
+  }
 };
 </script>

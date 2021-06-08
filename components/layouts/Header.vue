@@ -1,11 +1,11 @@
 <template>
-  <div class="header d-flex flex-row justify-space-between">
-    <div class="header-mainBox d-flex flex-row align-center">
+  <div class="header">
+    <div class="header-mainBox">
       <NuxtLink class="d-flex flex-row align-center" to="/">
         <v-icon>mdi-cat</v-icon>
         <span class="title-text text-h6"> Cathub </span>
       </NuxtLink>
-      <div class="search">
+      <div class="search d-flex align-center">
         <search-bar />
       </div>
 
@@ -35,31 +35,47 @@
 import SearchBar from "./SearchBar";
 export default {
   data: () => ({
-    categories: [],
+    categories: []
   }),
   methods: {
     async getContent() {
       const { $content } = this;
-      this.categories = await $content("categories").only(["name"]).fetch();
-    },
+      this.categories = await $content("categories")
+        .only(["name"])
+        .fetch();
+    }
   },
   async mounted() {
     await this.getContent();
   },
   components: {
-    SearchBar,
-  },
+    SearchBar
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
+  background-color: #252a2e;
+  color: white;
   width: 100%;
+  height: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 .header-mainBox {
   color: white;
+  display: flex;
+  align-content: center;
+  margin-left: 20px;
+  //  d-flex flex-row align-center
 }
 .header-itemBox {
+  > * {
+    margin-right: 15px;
+  }
 }
 .header-nav {
 }

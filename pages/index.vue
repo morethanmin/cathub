@@ -57,8 +57,6 @@
 }
 </style>
 <script>
-import { mapGetters, mapMutations } from "vuex";
-
 import Profile from "~/components/Profile.vue";
 import CommitBox from "../components/CommitBox.vue";
 

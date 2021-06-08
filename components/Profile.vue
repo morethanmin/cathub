@@ -1,12 +1,12 @@
 <template>
   <div class="info-profile black--text">
+    <img
+      ref="profileImage"
+      src="~/static/images/face.jpg"
+      alt="face"
+      class="info-profile-face rounded-circle"
+    />
     <div class="profile-header">
-      <img
-        ref="profileImage"
-        src="~/static/images/face.jpg"
-        alt="face"
-        class="info-profile-face rounded-circle"
-      />
       <div class="info-profile-title">
         <div class="text-h5 font-weight-bold">Lee sang min</div>
         <div class="text-h6 font-weight-thin">morethanmin</div>
@@ -89,6 +89,8 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.info-profile {
+}
 .info-profile-detail {
   > div {
     padding: 0;
@@ -161,12 +163,12 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   computed: {
     ...mapGetters({
-      isOvered: "getIsOvered",
-    }),
+      isOvered: "getIsOvered"
+    })
   },
   methods: {
     ...mapMutations({
-      setIsOvered: "setIsOvered",
+      setIsOvered: "setIsOvered"
     }),
     handleScrollEvent() {
       const dom = this.$refs.profileImage;
@@ -174,13 +176,13 @@ export default {
 
       if (targetScroll < window.scrollY) this.setIsOvered(true);
       else this.setIsOvered(false);
-    },
+    }
   },
   mounted() {
     document.addEventListener("scroll", this.handleScrollEvent);
   },
   beforeDestroy() {
     document.removeEventListener("scroll", this.handleScrollEvent);
-  },
+  }
 };
 </script>
