@@ -93,16 +93,10 @@ export default {
 .header-nav::-webkit-scrollbar {
   display: none;
 }
-.title-text {
-  display: none;
-}
 
 @media (max-width: $vt_sm) {
   .search {
     display: none !important;
-  }
-  .title-text {
-    display: block;
   }
   .header-nav {
     display: none !important;
