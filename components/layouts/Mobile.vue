@@ -1,18 +1,18 @@
 <template>
   <div class="header">
-    <div class="header-bar">
-      <div class="header-menu d-flex flex-row align-center ml-3">
+    <div class="header-bar justify-start">
+      <div class="header-menu d-flex flex-row  align-center pl-3">
         <button v-on:click="toggle = !toggle">
           <v-icon>mdi-menu</v-icon>
         </button>
       </div>
-      <div class="header-mainBox">
-        <NuxtLink class="d-flex flex-row align-center" to="/">
+      <div class="header-mainBox justify-center">
+        <NuxtLink class="d-flex flex-row  align-center" to="/">
           <v-icon>mdi-cat</v-icon>
           <!-- <span class="title-text text-h6"> Cathub </span> -->
         </NuxtLink>
       </div>
-      <div class="header-itemBox d-flex flex-row align-center">
+      <div class="header-itemBox justify-end d-flex flex-row align-center">
         <!-- <v-icon>mdi-bell-outline</v-icon>
       <v-icon>mdi-plus</v-icon>
       <v-icon>mdi-menu-down</v-icon> -->
@@ -108,6 +108,9 @@ export default {
   display: flex;
   align-content: center;
   justify-content: space-between;
+  > * {
+    flex-grow: 1;
+  }
 }
 .tab {
   display: flex;
@@ -130,7 +133,7 @@ export default {
 }
 .header-itemBox {
   > * {
-    margin-right: 15px;
+    padding-right: 10px;
   }
 }
 .header-nav {
