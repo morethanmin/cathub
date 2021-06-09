@@ -138,7 +138,7 @@ export default {
     // md height not calculated in mounted :<
     setTimeout(
       function() {
-        // this.setOffset();
+        this.setOffset();
       }.bind(this),
       500
     );
