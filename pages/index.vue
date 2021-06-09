@@ -2,12 +2,12 @@
   <div>
     <v-row class="" justify="center" align="center">
       <v-col align-self="start" class="col-info pa-5" sm="12" md="3">
-        <Profile />
+        <profile />
       </v-col>
       <v-col class="align-self-start pa-5" sm="12" md="9">
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">About</div>
+            <div ref="about" class=" color-black">About</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="about" />
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Skills</div>
+            <div ref="skills" class="skills color-black">Skills</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="skills" />
@@ -23,13 +23,13 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Projects</div>
+            <div ref="projects" class="projects color-black">Projects</div>
           </div>
           <project-box-list />
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Carrer</div>
+            <div ref="carrer" class="color-black">Carrer</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
             </NuxtLink> -->
@@ -38,7 +38,9 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="color-black">Recommendations</div>
+            <div ref="recommendations" class="color-black">
+              Recommendations
+            </div>
           </div>
           <v-divider></v-divider>
           <comment-box-list />
@@ -57,14 +59,9 @@
 }
 </style>
 <script>
-import Profile from "~/components/Profile.vue";
-import CommitBox from "../components/CommitBox.vue";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
-  components: {
-    Profile,
-    CommitBox
-  },
   async asyncData({ $content, params }) {
     const about = await $content("overview", "about").fetch();
     const skills = await $content("overview", "skills").fetch();
@@ -96,6 +93,9 @@ export default {
   }),
   computed: {},
   methods: {
+    ...mapMutations({
+      initOffset: "setOffset"
+    }),
     parseDate(date) {
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
         -2
@@ -115,11 +115,35 @@ export default {
     },
     parseTotal() {
       this.total = this.articlesDateList.length;
+    },
+    getElementY(element) {
+      console.log(`${element.offsetParent.offsetTop} + ${element.offsetTop}`);
+      return element.offsetParent.offsetTop + element.offsetTop;
+    },
+    setOffset() {
+      const offset = {};
+      // window.pageYOffset + element.getBoundingClientRect().top;
+      offset.about = this.getElementY(this.$refs.about);
+      offset.skills = this.getElementY(this.$refs.skills);
+      offset.projects = this.getElementY(this.$refs.projects);
+      offset.carrer = this.getElementY(this.$refs.carrer);
+      offset.recommend = this.getElementY(this.$refs.recommendations);
+      this.initOffset(offset);
     }
   },
-  mounted() {
+  async mounted() {
+    console.log("mounted");
+    // document.addEventListener("scroll", this.setOffset);
     // this.parseArticleDate()
     // this.parseTotal()
+
+    // md height not calculated in mounted :<
+    setTimeout(
+      function() {
+        this.setOffset();
+      }.bind(this),
+      500
+    );
   }
 };
 </script>

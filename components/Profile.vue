@@ -172,8 +172,8 @@ export default {
     }),
     handleScrollEvent() {
       const dom = this.$refs.profileImage;
-      const targetScroll = dom.offsetTop + dom.height;
-
+      const targetScroll =
+        dom.offsetParent.offsetTop - 45 + dom.offsetTop + dom.height;
       if (targetScroll < window.scrollY) this.setIsOvered(true);
       else this.setIsOvered(false);
     }

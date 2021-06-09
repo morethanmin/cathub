@@ -6,8 +6,8 @@
 <style lang="scss" scoped>
 div {
   img {
-    max-width: 200px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
   }

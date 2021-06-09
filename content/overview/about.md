@@ -1,4 +1,4 @@
-<about-me></about-me>
+<profile-img></profile-img>
 
 **Lee Sang Min** <br/>
 Frontend Developer <br/>

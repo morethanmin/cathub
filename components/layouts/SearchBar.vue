@@ -1,5 +1,5 @@
 <template>
-  <div class="search-box ml-5">
+  <div class="search-box">
     <input
       :class="[...(searchBarActivated ? ['search-activated'] : [])]"
       class="search"
@@ -35,14 +35,14 @@ export default {
       searchQuery: "",
       articles: [],
       focus: false,
-      hover: false,
+      hover: false
     };
   },
   computed: {
     searchBarActivated() {
       const activated = this.focus || this.hover;
       return activated;
-    },
+    }
   },
   methods: {},
   watch: {
@@ -55,11 +55,11 @@ export default {
           .search(searchQuery)
           .fetch();
       }
-    },
+    }
   },
   async mounted() {
     this.articles = await this.$content("articles").fetch();
-  },
+  }
 };
 </script>
 
