@@ -1,6 +1,6 @@
 **React**
 
-![Progress](https://progress-bar.dev/70)
+<custom-img src="https://progress-bar.dev/70" width=90 height="20"></custom-img>
 
 재 사용성을 고려하여 Component와 Custom Hook을 만들어 사용해요.
 
@@ -12,7 +12,7 @@ CSR과 SSR을 이해하고, Next.js를 이용해 SSR Application을 만들 수 �
 
 **Vue.js**
 
-![Progress](https://progress-bar.dev/75)
+<custom-img src="https://progress-bar.dev/75" width=90 height="20"></custom-img>
 
 Vuex를 이용해 전역적 상태관리를 할 수 있어요.
 
@@ -20,13 +20,13 @@ Nuxt를 이용해 SSR Application을 만들 수 있어요.
 
 **Express.js**
 
-![Progress](https://progress-bar.dev/60)
+<custom-img src="https://progress-bar.dev/60" width=90 height="20"></custom-img>
 
 Express를 통해 REST API를 구현하고 SQL, MongoDB와 연동 할 수 있어요.
 
 **Javascript**
 
-![Progress](https://progress-bar.dev/80)
+<custom-img src="https://progress-bar.dev/80" width=90 height="20"></custom-img>
 
 ES6+ 문법에 익숙해요.
 
@@ -40,7 +40,7 @@ typescript를 사용할 수 있고, 서비스 경험이 있어요.
 
 **HTML/CSS**
 
-![Progress](https://progress-bar.dev/90)
+<custom-img src="https://progress-bar.dev/90" width=90 height="20"></custom-img>
 
 웹표준과 semantic UI를 준수하려 노력합니다.
 
