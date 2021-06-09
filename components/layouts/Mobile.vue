@@ -1,14 +1,27 @@
 <template>
   <div class="header">
-    <div class="header-mainBox">
-      <NuxtLink class="d-flex flex-row align-center" to="/">
-        <v-icon>mdi-cat</v-icon>
-        <!-- <span class="title-text text-h6"> Cathub </span> -->
-      </NuxtLink>
+    <div class="header-bar">
+      <div class="header-menu d-flex flex-row align-center ml-3">
+        <button v-on:click="toggle = !toggle">
+          <v-icon>mdi-menu</v-icon>
+        </button>
+      </div>
+      <div class="header-mainBox">
+        <NuxtLink class="d-flex flex-row align-center" to="/">
+          <v-icon>mdi-cat</v-icon>
+          <!-- <span class="title-text text-h6"> Cathub </span> -->
+        </NuxtLink>
+      </div>
+      <div class="header-itemBox d-flex flex-row align-center">
+        <!-- <v-icon>mdi-bell-outline</v-icon>
+      <v-icon>mdi-plus</v-icon>
+      <v-icon>mdi-menu-down</v-icon> -->
+        <toggle />
+      </div>
+    </div>
+    <div v-if="toggle">
       <div v-if="selectedTab === `Portfolio`" class="tab">
-        <div
-          class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
-        >
+        <div class="header-nav text-subtitle-2 font-weight-bold">
           <a @click="handleScroll(offset.about)">About</a>
           <a @click="handleScroll(offset.skills)">Skills</a>
           <a @click="handleScroll(offset.projects)">Projects</a>
@@ -17,28 +30,18 @@
         </div>
       </div>
       <div v-else class="tab">
-        <div class="search d-flex align-center">
+        <div class="header-nav ">
           <search-bar />
-          <div
-            class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
+          <NuxtLink
+            v-for="(category, index) of categories"
+            :key="index"
+            class="text-subtitle-2 font-weight-bold"
+            :to="`/archive/category/${category.name}`"
           >
-            <NuxtLink
-              v-for="(category, index) of categories"
-              :key="index"
-              class="ml-4"
-              :to="`/archive/category/${category.name}`"
-            >
-              {{ category.name }}
-            </NuxtLink>
-          </div>
+            {{ category.name }}
+          </NuxtLink>
         </div>
       </div>
-    </div>
-    <div class="header-itemBox d-flex flex-row align-center">
-      <!-- <v-icon>mdi-bell-outline</v-icon>
-      <v-icon>mdi-plus</v-icon>
-      <v-icon>mdi-menu-down</v-icon> -->
-      <toggle />
     </div>
   </div>
 </template>
@@ -48,11 +51,13 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   data: () => ({
     selectedTab: "Portfolio",
-    categories: []
+    categories: [],
+    toggle: false
   }),
   watch: {
     "$route.fullPath"(log) {
       this.initialSelectedTab();
+      this.toggle = false;
     }
   },
   computed: {
@@ -89,12 +94,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.search-box {
+  margin-bottom: 15px;
+}
 .header {
   background-color: #252a2e;
   color: white;
+  margin-bottom: 30px;
+}
+.header-bar {
   width: 100%;
   height: 60px;
-  margin-bottom: 30px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -103,15 +113,20 @@ export default {
   display: flex;
   align-content: center;
 }
+.header-menu {
+  color: white;
+  display: flex;
+  align-content: center;
+  .v-icon {
+    color: white;
+    font-size: 2rem;
+  }
+  //  d-flex flex-row align-center
+}
 .header-mainBox {
   color: white;
   display: flex;
   align-content: center;
-  margin-left: 20px;
-  > * {
-    margin-right: 20px;
-  }
-  //  d-flex flex-row align-center
 }
 .header-itemBox {
   > * {
@@ -119,8 +134,14 @@ export default {
   }
 }
 .header-nav {
-  > * {
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin: 10px 20px;
+  > a {
+    padding: 7px;
+    border-top: 1px solid #444d56;
   }
 }
 

@@ -117,7 +117,6 @@ export default {
       this.total = this.articlesDateList.length;
     },
     getElementY(element) {
-      console.log(`${element.offsetParent.offsetTop} + ${element.offsetTop}`);
       return element.offsetParent.offsetTop + element.offsetTop;
     },
     setOffset() {
@@ -132,7 +131,6 @@ export default {
     }
   },
   async mounted() {
-    console.log("mounted");
     // document.addEventListener("scroll", this.setOffset);
     // this.parseArticleDate()
     // this.parseTotal()
@@ -140,7 +138,7 @@ export default {
     // md height not calculated in mounted :<
     setTimeout(
       function() {
-        this.setOffset();
+        // this.setOffset();
       }.bind(this),
       500
     );

@@ -1,13 +1,15 @@
 <template>
   <v-app>
-    <Header />
+    <Mobile class="mobile"></Mobile>
+    <Header class="header"></Header>
+
     <Nav />
-    <v-main app>
+    <v-main>
       <v-container class="common-wrapper">
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer absolute app>
+    <v-footer>
       <v-divider></v-divider>
       <Footer />
     </v-footer>
@@ -17,8 +19,27 @@
 .main {
   margin-top: 40px;
 }
+.header {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: $vt_sm) {
+  .header {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+  }
+}
 </style>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this);
+  }
+};
 </script>

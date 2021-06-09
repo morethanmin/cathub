@@ -74,7 +74,7 @@ export default {
   background-color: #252a2e;
   height: 1rem;
   padding: 12px;
-  width: 200px;
+  width: 100%;
   border-radius: 8px;
   transition: width 0.25s ease;
   /* transition: background-color 0.25s step-end; */
@@ -115,6 +115,11 @@ export default {
       transition: none;
       color: white;
     }
+  }
+}
+@media (max-width: $vt_sm) {
+  .search-activated {
+    width: 100%;
   }
 }
 </style>
