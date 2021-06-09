@@ -1,12 +1,12 @@
 <template>
   <div class="info-profile black--text">
-    <img
-      ref="profileImage"
-      src="~/static/images/face.jpg"
-      alt="face"
-      class="info-profile-face rounded-circle"
-    />
     <div class="profile-header">
+      <img
+        ref="profileImage"
+        src="~/static/images/face.jpg"
+        alt="face"
+        class="info-profile-face rounded-circle"
+      />
       <div class="info-profile-title">
         <div class="text-h5 font-weight-bold">Lee sang min</div>
         <div class="text-h6 font-weight-thin">morethanmin</div>
