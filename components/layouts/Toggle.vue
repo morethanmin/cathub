@@ -37,7 +37,7 @@
         </li>
         <li>
           <a class="d-flex align-center" href="mailto:mini4614@gmail.com">
-            <span class="text-subtitle-2"> Gmail </span>
+            <span class="text-subtitle-2"> Contact </span>
           </a>
         </li>
       </ul>
@@ -102,6 +102,10 @@ export default {
   :first-child {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+  }
+  :last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   li {
     border-bottom: 1px solid #e4e4e4;
