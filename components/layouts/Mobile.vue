@@ -22,11 +22,11 @@
     <div v-if="toggle">
       <div v-if="selectedTab === `Portfolio`" class="tab">
         <div class="header-nav text-subtitle-2 font-weight-bold">
-          <a @click="handleScroll(offset.about)">About</a>
-          <a @click="handleScroll(offset.skills)">Skills</a>
-          <a @click="handleScroll(offset.projects)">Projects</a>
-          <a @click="handleScroll(offset.carrer)">Carrer</a>
-          <a @click="handleScroll(offset.recommend)">Recommendations</a>
+          <a @click="handleScroll(`.about`)">About</a>
+          <a @click="handleScroll(`.skills`)">Skills</a>
+          <a @click="handleScroll(`.projects`)">Projects</a>
+          <a @click="handleScroll(`.carrer`)">Carrer</a>
+          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
       <div v-else class="tab">
@@ -78,11 +78,13 @@ export default {
       if (match.some(x => x.path === "")) this.selectedTab = "Portfolio";
       if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
     },
-    handleScroll(n) {
+    handleScroll(classname) {
+      const element = document.querySelector(classname);
+      const top = element.offsetParent.offsetTop + element.offsetTop;
       window.scroll({
         behavior: "smooth",
         left: 0,
-        top: n - 45
+        top: top - 45
       });
     }
   },

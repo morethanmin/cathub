@@ -12,7 +12,7 @@
         height="25"
         style="border-radius: 50%"
       />
-      <v-icon>mdi-menu-down</v-icon>
+      <v-icon class="icon-pc">mdi-menu-down</v-icon>
     </button>
     <div
       v-if="toggle"
@@ -49,15 +49,15 @@
 export default {
   data: () => ({
     focus: false,
-    hover: false,
+    hover: false
   }),
   computed: {
     toggle() {
       const toggle = this.focus || this.hover;
       return toggle;
-    },
+    }
   },
-  methods: {},
+  methods: {}
 };
 </script>
 
@@ -120,5 +120,12 @@ export default {
     }
   }
 }
+.icon-pc {
+  display: block;
+}
+@media (max-width: $vt_sm) {
+  .icon-pc {
+    display: none;
+  }
+}
 </style>
-

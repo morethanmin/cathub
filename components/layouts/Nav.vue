@@ -20,17 +20,17 @@
           <div class="">
             <NuxtLink to="/">
               <button
-                ref="Portfolio"
-                @click="selectedTab = 'Portfolio'"
+                ref="About"
+                @click="selectedTab = 'About'"
                 :class="[
-                  ...(selectedTab === 'Portfolio'
+                  ...(selectedTab === 'About'
                     ? ['selectedTab', 'font-weight-bold']
                     : [])
                 ]"
                 class="d-flex flex-row align-center"
               >
                 <v-icon>mdi-account-circle-outline</v-icon>
-                <div class="ml-1">Portfolio</div>
+                <div class="ml-1">About</div>
               </button>
             </NuxtLink>
           </div>
@@ -162,7 +162,7 @@
 export default {
   data() {
     return {
-      selectedTab: "Portfolio"
+      selectedTab: ""
     };
   },
   watch: {
@@ -174,9 +174,8 @@ export default {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some(x => x.path === "")) this.selectedTab = "Portfolio";
-      if (match.some(x => x.path === "/Portfolio"))
-        this.selectedTab = "Portfolio";
+      if (match.some(x => x.path === "")) this.selectedTab = "About";
+      if (match.some(x => x.path === "/About")) this.selectedTab = "About";
       if (match.some(x => x.path === "/repositories"))
         this.selectedTab = "repositories";
       if (match.some(x => x.path === "/projects"))

@@ -7,7 +7,7 @@
       <v-col class="align-self-start pa-5" sm="12" md="9">
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div ref="about" class=" color-black">About</div>
+            <div class="about  color-black">About</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="about" />
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div ref="skills" class="skills color-black">Skills</div>
+            <div class="skills skills color-black">Skills</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="skills" />
@@ -23,13 +23,13 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div ref="projects" class="projects color-black">Projects</div>
+            <div class="projects projects color-black">Projects</div>
           </div>
           <project-box-list />
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div ref="carrer" class="color-black">Carrer</div>
+            <div class="carrer color-black">Carrer</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
             </NuxtLink> -->
@@ -38,7 +38,7 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div ref="recommendations" class="color-black">
+            <div class="recommendations color-black">
               Recommendations
             </div>
           </div>
@@ -59,8 +59,6 @@
 }
 </style>
 <script>
-import { mapGetters, mapMutations } from "vuex";
-
 export default {
   async asyncData({ $content, params }) {
     const about = await $content("overview", "about").fetch();
@@ -93,9 +91,6 @@ export default {
   }),
   computed: {},
   methods: {
-    ...mapMutations({
-      initOffset: "setOffset"
-    }),
     parseDate(date) {
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
         -2
@@ -115,33 +110,12 @@ export default {
     },
     parseTotal() {
       this.total = this.articlesDateList.length;
-    },
-    getElementY(element) {
-      return element.offsetParent.offsetTop + element.offsetTop;
-    },
-    setOffset() {
-      const offset = {};
-      // window.pageYOffset + element.getBoundingClientRect().top;
-      offset.about = this.getElementY(this.$refs.about);
-      offset.skills = this.getElementY(this.$refs.skills);
-      offset.projects = this.getElementY(this.$refs.projects);
-      offset.carrer = this.getElementY(this.$refs.carrer);
-      offset.recommend = this.getElementY(this.$refs.recommendations);
-      this.initOffset(offset);
     }
   },
   async mounted() {
     // document.addEventListener("scroll", this.setOffset);
     // this.parseArticleDate()
     // this.parseTotal()
-
-    // md height not calculated in mounted :<
-    setTimeout(
-      function() {
-        this.setOffset();
-      }.bind(this),
-      500
-    );
   }
 };
 </script>

@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .search-box {
-  z-index: 99;
+  z-index: 15;
   position: relative;
 }
 .search {

@@ -9,15 +9,15 @@
         <div
           class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
         >
-          <a @click="handleScroll(offset.about)">About</a>
-          <a @click="handleScroll(offset.skills)">Skills</a>
-          <a @click="handleScroll(offset.projects)">Projects</a>
-          <a @click="handleScroll(offset.carrer)">Carrer</a>
-          <a @click="handleScroll(offset.recommend)">Recommendations</a>
+          <a @click="handleScroll(`.about`)">About</a>
+          <a @click="handleScroll(`.skills`)">Skills</a>
+          <a @click="handleScroll(`.projects`)">Projects</a>
+          <a @click="handleScroll(`.carrer`)">Carrer</a>
+          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
       <div v-else class="tab">
-        <div class="search d-flex align-center">
+        <div class="d-flex align-center">
           <search-bar />
           <div
             class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
@@ -47,7 +47,7 @@
 import { mapGetters, mapMutations } from "vuex";
 export default {
   data: () => ({
-    selectedTab: "Portfolio",
+    selectedTab: "",
     categories: []
   }),
   watch: {
@@ -55,11 +55,7 @@ export default {
       this.initialSelectedTab();
     }
   },
-  computed: {
-    ...mapGetters({
-      offset: "getOffset"
-    })
-  },
+  computed: {},
   methods: {
     async getContent() {
       const { $content } = this;
@@ -73,11 +69,14 @@ export default {
       if (match.some(x => x.path === "")) this.selectedTab = "Portfolio";
       if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
     },
-    handleScroll(n) {
+
+    handleScroll(classname) {
+      const element = document.querySelector(classname);
+      const top = element.offsetParent.offsetTop + element.offsetTop;
       window.scroll({
         behavior: "smooth",
         left: 0,
-        top: n - 45
+        top: top - 45
       });
     }
   },
