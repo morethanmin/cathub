@@ -53,7 +53,7 @@
               sm="12"
               md="6"
             >
-              <NuxtLink :to="`/archive/${article.slug}`">
+              <NuxtLink :to="`/${article.slug}`">
                 <article-card
                   :title="article.title"
                   :desc="article.description"
