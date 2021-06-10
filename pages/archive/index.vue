@@ -53,8 +53,7 @@
               sm="12"
               md="6"
             >
-              {{ article.slug }}
-              <NuxtLink :to="`cat-hub/archive/${article.slug}`">
+              <NuxtLink :to="`/archive/${article.slug}`">
                 <article-card
                   :title="article.title"
                   :desc="article.description"
