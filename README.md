@@ -6,7 +6,7 @@ vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개
 
 ## stacks
 
-`vue` `vuetify` `nuxt` `nuxt/content`
+`vue` `sass` `vuex` `vuetify` `nuxt` `nuxt/content`
 
 ### link
 
