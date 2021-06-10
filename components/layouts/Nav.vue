@@ -93,7 +93,7 @@
 
 <style lang="scss" scoped>
 .header-nav {
-  z-index: 15;
+  z-index: 10;
 }
 .header-nav {
   position: sticky !important;
