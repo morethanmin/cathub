@@ -36,10 +36,10 @@
     </div> -->
     <div class="info-profile-detail text-body-2">
       <div class="d-flex flex-column flex-nowrap">
-        <div>
+        <!-- <div>
           <v-icon>mdi-laptop</v-icon>
           Frontend engineer
-        </div>
+        </div> -->
         <div>
           <v-icon>mdi-office-building-outline</v-icon>
           Myongji University
