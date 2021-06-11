@@ -8,10 +8,6 @@ vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개
 
 `vue` `sass` `vuex` `vuetify` `nuxt` `nuxt/content`
 
-### link
-
-https://morethanmin.github.io/cat-hub/
-
 ## Features
 
 ### 실제 쓴 게시글 수 만큼 commit 내역 표시
