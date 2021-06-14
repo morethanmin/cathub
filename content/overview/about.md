@@ -1,7 +1,7 @@
 <profile-img></profile-img>
 
-**Lee Sang Min** <br/>
-Frontend Developer <br/>
+**Lee Sang Min** (2000.03.02) <br/>
+Javascript Developer (Front-end) <br/>
 [Github](https://github.com/morethanmin) | [Resume](https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view) | [Blog](https://morethanmin.github.io/cat-hub/archive)
 
 기술은 필요에 의해 생겨나는 것임을 머릿속에 되새기며 특정 프레임워크에 구애받지 않는 자바스크립트 개발자가 되고자 합니다.
