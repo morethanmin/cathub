@@ -51,10 +51,10 @@ $ npm run start
 $ npm run generate
 ```
 
-### Note
+## Note
 
 This project is ongoing.
 
-### License
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md for details
