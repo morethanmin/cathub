@@ -8,19 +8,13 @@ github에 저장소를 만들어 소스코드가 아닌 다른 개발 관련 정
 
 ## Live demo
 
----
-
 You can check demo [here](https://morethanmin.github.io/cat-hub/).
 
 ## Preview
 
----
-
 ![image](https://user-images.githubusercontent.com/72514247/121918593-29219f80-cd71-11eb-9e2a-01ba60611fa5.png)
 
 ## Features
-
----
 
 - commit box (아카이브에 기록한 글 만큼 기록됩니다.)
 - article search
@@ -31,8 +25,6 @@ You can check demo [here](https://morethanmin.github.io/cat-hub/).
 
 ## Tech and libraries
 
----
-
 - vue
 - vuex
 - vuetify
@@ -41,8 +33,6 @@ You can check demo [here](https://morethanmin.github.io/cat-hub/).
 - nuxt/content
 
 ## Getting started
-
----
 
 ### Install
 
@@ -66,7 +56,5 @@ $ npm run generate
 This project is ongoing.
 
 ### License
-
----
 
 This project is licensed under the MIT License - see the LICENSE.md for details
