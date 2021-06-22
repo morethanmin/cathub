@@ -1,40 +1,40 @@
 # cat-hub
 
-vue의 SSR 프레임워크인 Nuxt를 사용하여 github clone을 목표로 개발을 진행하였다가 현재는 저의 개발 관련 내용 아카이빙 공간으로 만들어나가고 있습니다.
+> cat-hub은 github 스타일의 소개형 개발 아카이빙 서비스입니다.
+>
+> 개발자로서 저에 대한 소개와, 개발공부를 하며 배운 내용들을 기록하는 공간입니다.
 
-![image](https://user-images.githubusercontent.com/72514247/120918062-70fb5380-c6ed-11eb-9181-77fcf80a099a.png)
+github에 저장소를 만들어 소스코드가 아닌 다른 개발 관련 정보를 올리거나, 저장해두었을 때 불편했던 점을 해소하기위해 만들었습니다.
 
-## stacks
+## Live demo
 
-`vue` `sass` `vuex` `vuetify` `nuxt` `nuxt/content`
+You can check demo [here](https://morethanmin.github.io/cat-hub/).
+
+## Preview
+
+![image](https://user-images.githubusercontent.com/72514247/121918593-29219f80-cd71-11eb-9e2a-01ba60611fa5.png)
 
 ## Features
 
-### 실제 쓴 게시글 수 만큼 commit 내역 표시
+- commit box (아카이브에 기록한 글 만큼 기록됩니다.)
+- article search
+- toolbar
+- scroll
+- article edit
+- 반응형 레이아웃
 
-![image](https://user-images.githubusercontent.com/72514247/119942273-95a84a80-bfcc-11eb-8576-28ae0918ba69.png)
+## Tech and libraries
 
-#### article search
+- vue
+- vuex
+- vuetify
+- sass
+- nuxt
+- nuxt/content
 
-![feature-search](https://user-images.githubusercontent.com/72514247/119289216-23123480-bc85-11eb-88f3-9386c37f840f.gif)
+## Getting started
 
-#### toolbar
-
-![feature-toolbar](https://user-images.githubusercontent.com/72514247/119289250-32917d80-bc85-11eb-87f8-0f9d3881bd86.gif)
-
-#### scroll
-
-![scroll](https://user-images.githubusercontent.com/72514247/120103345-224c3780-c18a-11eb-9e60-f3a031ed0b1c.gif)
-
-#### article edit
-
-![feature-article](https://user-images.githubusercontent.com/72514247/119289314-51900f80-bc85-11eb-8b80-3aa2f85f8511.gif)
-
-#### 반응형
-
-![반응](https://user-images.githubusercontent.com/72514247/120112687-c4cbe100-c1b1-11eb-8ed8-11829a6b0bf0.gif)
-
-## Build Setup
+### Install
 
 ```bash
 # install dependencies
@@ -50,3 +50,11 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+## Note
+
+This project is ongoing.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md for details
