@@ -8,6 +8,11 @@
             <v-divider></v-divider>
           </div>
           <ActivityBox
+            :img="require('~/static/images/gdg.jpg')"
+            title="GDG (Google Developer Group) Korea 지부 활동 "
+            :contents="[``]"
+          />
+          <ActivityBox
             :img="require('~/static/images/giant.png')"
             title="Giant frontend-developer (산업기능요원 재배정 대기중)"
             :contents="[
