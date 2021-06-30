@@ -4,39 +4,39 @@
       <v-col class="card-col" sm="12" md="6">
         <project-box
           title="cathub"
-          subtitle="github스타일의 소개페이지"
+          subtitle="Github'st Development Blog service using vue and nuxt"
           :desc="[`vue`, `nuxt`]"
           link="https://github.com/morethanmin/cat-hub"
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <project-box
-          title="dev-in"
-          subtitle="팀 프로젝트 (J2KB 유니콘 대회)"
-          :desc="[`react`]"
-          link="https://github.com/morethanmin/dev-in"
-        />
-      </v-col>
-      <v-col class="card-col" sm="12" md="6">
-        <project-box
-          title="remotto"
-          subtitle="개인 프로젝트"
-          :desc="[`node js`, `ejs`, `express`]"
-          link="https://github.com/morethanmin/remotto"
+          title="google keep clone"
+          subtitle="memo application using react and redux saga"
+          :desc="[`react`, `redux`, `redux-saga`]"
+          link="https://github.com/morethanmin/memo"
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <project-box
           title="mtmtravel"
-          subtitle="공부용 프로젝트"
+          subtitle="Travel Shopping-mall toy project using react and express"
           :desc="[`node js`, `react`, `express`]"
           link="https://github.com/morethanmin/mtmtravel"
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <project-box
+          title="remotto"
+          subtitle="sns toy project using ejs and express"
+          :desc="[`node js`, `ejs`, `express`]"
+          link="https://github.com/morethanmin/remotto"
+        />
+      </v-col>
+      <v-col class="card-col" sm="12" md="6">
+        <project-box
           title="mtmcamp"
-          subtitle="개인 프로젝트"
+          subtitle="reviewing camping toy Project using ejs and express"
           :desc="[`node js`, `ejs`, `express`]"
           link="https://github.com/morethanmin/mtmcamp"
         />

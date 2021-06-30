@@ -2,7 +2,7 @@
   <v-card outlined flat>
     <v-card-title class="text-subtitle-2 pb-1">
       <v-icon>{{ icon }}</v-icon>
-      <a :href="link">
+      <a :href="link" target="_blank">
         <div class="pinned-link">{{ title }}</div>
       </a>
     </v-card-title>
@@ -20,29 +20,29 @@ export default {
   props: {
     icon: {
       type: String,
-      default: "",
+      default: ""
     },
     title: {
       type: String,
       required: false,
-      default: "",
+      default: ""
     },
     subtitle: {
       type: String,
       required: false,
-      default: "",
+      default: ""
     },
     desc: {
       type: Array,
       required: false,
-      default: [],
+      default: []
     },
     link: {
       type: String,
       required: false,
-      default: "",
-    },
-  },
+      default: ""
+    }
+  }
 };
 </script>
 
