@@ -13,14 +13,14 @@
             <nuxt-content :document="about" />
           </v-card>
         </div>
-        <div class="mb-5">
+        <!-- <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="skills skills color-black">Skills</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="skills" />
           </v-card>
-        </div>
+        </div> -->
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="projects projects color-black">Projects</div>
@@ -29,7 +29,7 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="carrer color-black">Carrer</div>
+            <div class="carrer color-black">Develop Activity</div>
             <!-- <NuxtLink to="/repositories">
               <div class="text-body-2">more...</div>
             </NuxtLink> -->

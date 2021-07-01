@@ -112,7 +112,7 @@
     font-size: 1rem;
     margin-bottom: 1.3rem;
     color: #24292e;
-    text-align: center;
+    // text-align: justify;
   }
   
   h1,
@@ -137,11 +137,15 @@
   h2,
   .modest-h2 {
     font-size: 1.627rem;
+    border-bottom: 1px solid #e1e4e8;
+
   }
   
   h3,
   .modest-h3 {
     font-size: 1.299rem;
+    border-bottom: 1px solid #e1e4e8;
+
   }
   
   h4,
@@ -223,7 +227,7 @@
   }
   
   blockquote {
-    border-left: 8px solid #fafafa;
+    border-left: 8px solid #e1e4e8;
     padding: 1rem;
   }
   
