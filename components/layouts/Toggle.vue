@@ -27,6 +27,14 @@
             <span class="text-subtitle-2"> Github </span>
           </a>
         </li>
+         <li>
+          <a
+            class="d-flex align-center"
+            href="https://moredevmin.tistory.com/"
+          >
+            <span class="text-subtitle-2"> Blog </span>
+          </a>
+        </li>
         <li>
           <a
             class="d-flex align-center"
