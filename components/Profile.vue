@@ -13,6 +13,7 @@
       </div>
     </div>
     <a
+      target="_blank"
       href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
     >
       <button

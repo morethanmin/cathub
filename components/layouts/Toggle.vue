@@ -23,12 +23,17 @@
       <div class="arrow"></div>
       <ul class="menu">
         <li>
-          <a class="d-flex align-center" href="https://github.com/morethanmin">
+          <a
+            target="_blank"
+            class="d-flex align-center"
+            href="https://github.com/morethanmin"
+          >
             <span class="text-subtitle-2"> Github </span>
           </a>
         </li>
-         <li>
+        <li>
           <a
+            target="_blank"
             class="d-flex align-center"
             href="https://moredevmin.tistory.com/"
           >
@@ -37,6 +42,7 @@
         </li>
         <li>
           <a
+            target="_blank"
             class="d-flex align-center"
             href="https://www.instagram.com/more_than_min/"
           >
@@ -44,7 +50,11 @@
           </a>
         </li>
         <li>
-          <a class="d-flex align-center" href="mailto:mini4614@gmail.com">
+          <a
+            target="_blank"
+            class="d-flex align-center"
+            href="mailto:mini4614@gmail.com"
+          >
             <span class="text-subtitle-2"> Contact </span>
           </a>
         </li>
