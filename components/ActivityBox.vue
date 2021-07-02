@@ -9,7 +9,7 @@
         {{ title }}
       </div>
     </div>
-    <div class="activity-desc">
+    <div class="activity-desc" :class="[...(type === `company` ? [`company`]:[])]">
       <ul>
         <li
           v-for="(content, index) of contents"
@@ -34,6 +34,10 @@ export default {
       type: String,
       default: "",
     },
+    type: {
+      type: String,
+      default: "",
+    },
     title: {
       type: String,
       default: " ",
@@ -51,7 +55,7 @@ export default {
 .box {
   border-left: 1px solid #eaedef;
   position: relative;
-  margin: 0px 15px;
+  margin: 0px 0px 0px 15px;
   padding-top: 20px;
   padding-bottom: 20px;
   .activity-title {
@@ -77,6 +81,13 @@ export default {
     li {
       padding-bottom: 5px;
     }
+  }
+
+  .company{
+    border: thin solid rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
   }
 
   .title-text,

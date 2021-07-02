@@ -15,6 +15,7 @@
           <ActivityBox
             :img="require('~/static/images/giant.png')"
             title="Giant frontend-developer (산업기능요원 재배정 대기중)"
+            type="company"
             :contents="[
               `sloker members (vue, nuxt, express, my-sql)`,
               `sloker id (vue, nuxt, express, my-sql)`
@@ -28,6 +29,7 @@
           <ActivityBox
             :img="require('~/static/images/weplanet.png')"
             title="Weplanet frontend-developer (인턴)"
+            type="company"
             :contents="[
               `Cash Fi Admin Page (react)`,
               `밑고맡겨 Landing Page`,
@@ -44,6 +46,7 @@
           <ActivityBox
             :img="require('~/static/images/trigit.png')"
             title="Trigit Software front-developer (인턴)"
+            type="company"
             :contents="[`E-learning Contents 개발`]"
           />
           <ActivityBox
