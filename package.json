@@ -1,5 +1,5 @@
 {
-  "name": "cathub",
+  "name": "morethanmin",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "nuxt generate && firebase deploy --only hosting:morethanmin;"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",

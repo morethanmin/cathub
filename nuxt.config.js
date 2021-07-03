@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s",
-    title: "cathub",
+    title: "morethanmin",
     htmlAttrs: {
       lang: "en"
     },
@@ -13,10 +13,11 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "~/static/favicon.ico" }]
   },
-  target: 'static',
-  router: {
-    base: '/cat-hub/'
-  },
+  target: "static",
+
+  // router: {
+  //   base: "/cat-hub/"
+  // },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -26,9 +27,9 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     {
-      path: '~/components', // will get any components nested in let's say /components/test too
-      pathPrefix: false,
-    },
+      path: "~/components", // will get any components nested in let's say /components/test too
+      pathPrefix: false
+    }
   ],
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -37,9 +38,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxt/content'
-  ],
+  modules: ["@nuxt/content"],
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
@@ -47,10 +46,10 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
+        theme: "prism-themes/themes/prism-material-oceanic.css"
       }
     },
-    nestedProperties: ['category.name']
+    nestedProperties: ["category.name"]
   },
   /*
    ** Customize the progress-bar color

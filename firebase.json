@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "morethanmin",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
