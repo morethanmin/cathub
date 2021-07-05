@@ -1,27 +1,33 @@
 <template>
-  <v-card outlined flat>
-    <v-card-title class="text-subtitle-2 pb-2">
-      <img width="20px" height="20px" :src="icon" />
-      <div class="header">{{ title }}</div>
-    </v-card-title>
-    <v-card-text class="pb-0 text-body-2 color_secondary">
+  <div>
+    <v-card outlined flat>
+      <v-card-title class="text-subtitle-2 pb-2">
+        <img width="20px" height="20px" :src="icon" />
+        <div class="header">{{ title }}</div>
+      </v-card-title>
+      <!-- <v-card-text class="pb-0 text-body-2 color_secondary">
       <div class="percent">
         <div
           class="bar"
           :style="`width: ${percent}%; background: ${color};`"
         ></div>
       </div>
-    </v-card-text>
-    <v-card-text class="subtitle pb-0 color_secondary">
-      {{ subtitle }}
-    </v-card-text>
-    <v-card-text class="text-body-2 color_secondary">
-      <Button class="btn-more text-body-3 pa-1 pl-2 pr-2" text="More" />
-    </v-card-text>
-    <!-- <v-card-text class="pt-0 color_secondary d-flex">
+    </v-card-text> -->
+      <v-card-text class="subtitle pb-0 color_secondary">
+        {{ subtitle }}
+      </v-card-text>
+      <v-card-text class="text-body-2 color_secondary">
+        <Button
+          class="btn-more text-body-3 pa-1 pl-2 pr-2"
+          text="More"
+          @click="$emit(`click`)"
+        />
+      </v-card-text>
+      <!-- <v-card-text class="pt-0 color_secondary d-flex">
       <languege-chip v-for="(name, index) in desc" :key="index" :name="name" />
     </v-card-text> -->
-  </v-card>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -49,11 +55,6 @@ export default {
       type: String,
       required: false,
       default: ""
-    },
-    desc: {
-      type: Array,
-      required: false,
-      default: []
     },
     link: {
       type: String,

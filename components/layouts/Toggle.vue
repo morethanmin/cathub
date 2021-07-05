@@ -44,7 +44,7 @@
           <a
             target="_blank"
             class="d-flex align-center"
-            href="https://www.instagram.com/more_than_min/"
+            href="https://www.instagram.com/more_dev_min/"
           >
             <span class="text-subtitle-2"> Instagram </span>
           </a>

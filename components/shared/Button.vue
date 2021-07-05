@@ -1,5 +1,5 @@
 <template>
-  <button class="rounded-lg btn">
+  <button @click="$emit(`click`)" class="rounded-lg btn">
     {{ text }}
   </button>
 </template>

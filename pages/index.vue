@@ -21,20 +21,24 @@
             <nuxt-content :document="skills" />
           </v-card>
         </div> -->
+
+        <div class="mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="projects color-black">Projects</div>
+            <a
+              target="_blank"
+              href="https://github.com/morethanmin?tab=repositories"
+            >
+              <div class="text-body-2">more...</div>
+            </a>
+          </div>
+          <ProjectList />
+        </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="skills color-black">Skills</div>
           </div>
           <SkillList />
-        </div>
-        <div class="mb-5">
-          <div class="d-flex justify-space-between mb-3">
-            <div class="projects color-black">Projects</div>
-            <a href="/repositories">
-              <div class="text-body-2">more...</div>
-            </a>
-          </div>
-          <ProjectList />
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
