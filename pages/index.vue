@@ -15,7 +15,7 @@
         </div>
         <!-- <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="skills skills color-black">Skills</div>
+            <div class="skills color-black">Skills</div>
           </div>
           <v-card outlined flat class="pa-5 color-black">
             <nuxt-content :document="skills" />
@@ -23,18 +23,24 @@
         </div> -->
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="projects projects color-black">Projects</div>
+            <div class="skills color-black">Skills</div>
           </div>
-          <project-box-list />
+          <SkillList />
+        </div>
+        <div class="mb-5">
+          <div class="d-flex justify-space-between mb-3">
+            <div class="projects color-black">Projects</div>
+            <a href="/repositories">
+              <div class="text-body-2">more...</div>
+            </a>
+          </div>
+          <ProjectList />
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="carrer color-black">Develop Activity</div>
-            <!-- <NuxtLink to="/repositories">
-              <div class="text-body-2">more...</div>
-            </NuxtLink> -->
           </div>
-          <activity-box-list />
+          <ActivityList />
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
@@ -43,7 +49,7 @@
             </div>
           </div>
           <v-divider></v-divider>
-          <comment-box-list />
+          <CommentList />
         </div>
       </v-col>
     </v-row>

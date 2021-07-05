@@ -12,13 +12,13 @@
       subTitle="Giant server-developer"
       comment="이 개발자를 추천합니다. 테스트 글입니다."
     /> -->
-    <comment-box
+    <Comment
       :img="require('~/static/images/user.png')"
       title="Jay"
       subTitle="Weplanet frontend-developer"
       comment="Jade는 개발이라는 업무를 일로 생각하지않고 즐기는 개발자였어요. 항상 현재에 안주하지 않고 끊임없이 성장하는 모습을 보면 찐 개발자라고 생각하면서도 다방면에서 뛰어난 감각을 가지고 있는 사람이여서 잠깐이였지만 팀에 정말 많은 영향을 주었어요. 다재다능한 개발자를 찾으신다면 추천드립니다!"
     />
-    <comment-box
+    <Comment
       :img="require('~/static/images/user.png')"
       title="이성현"
       subTitle="Trigit-Software development leader"

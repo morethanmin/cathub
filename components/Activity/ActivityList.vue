@@ -7,12 +7,12 @@
             <div class="">May 2021</div>
             <v-divider></v-divider>
           </div>
-          <ActivityBox
+          <Activity
             :img="require('~/static/images/gdg.jpg')"
             title="GDG (Google Developer Group) Korea 지부 활동 "
             :contents="[``]"
           />
-          <ActivityBox
+          <Activity
             :img="require('~/static/images/giant.png')"
             title="Giant frontend-developer (산업기능요원 재배정 대기중)"
             type="company"
@@ -21,12 +21,12 @@
               `sloker id (vue, nuxt, express, my-sql)`
             ]"
           />
-          <ActivityBox
+          <Activity
             icon="mdi-laptop"
             title="J2KB 3기 (전국 코딩 연합 동아리)"
             :contents="[`유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)`]"
           />
-          <ActivityBox
+          <Activity
             :img="require('~/static/images/weplanet.png')"
             title="Weplanet frontend-developer (인턴)"
             type="company"
@@ -36,30 +36,30 @@
               `kkoit Admin Page (react)`
             ]"
           />
-          <ActivityBox
+          <Activity
             icon="mdi-book-open-outline"
             title="STUDY HALLE (자바 스터디)"
             :contents="[
               `1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`
             ]"
           />
-          <ActivityBox
+          <Activity
             :img="require('~/static/images/trigit.png')"
             title="Trigit Software front-developer (인턴)"
             type="company"
             :contents="[`E-learning Contents 개발`]"
           />
-          <ActivityBox
+          <Activity
             icon="mdi-bird"
             title="둥지 개발팀 (현업 개발자 모임)"
             :contents="[`둥지톡 백엔드 개발(중단)`]"
           />
-          <ActivityBox
+          <Activity
             icon="mdi-laptop"
             title="Web Developer Bootcamp"
             :contents="[`udemy-web-developer-bootcamp 수강`, `mtm-camp`]"
           />
-          <ActivityBox
+          <Activity
             icon="mdi-school-outline"
             title="명지대학교 정보통신공학과 휴학 (3학년)"
           />

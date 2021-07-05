@@ -9,7 +9,7 @@
     <v-card-text class="text-body-2 color_secondary">
       {{ subtitle }}
     </v-card-text>
-    <v-card-text class="pt-0 color_secondary">
+    <v-card-text class="pt-0 color_secondary d-flex">
       <languege-chip v-for="(name, index) in desc" :key="index" :name="name" />
     </v-card-text>
   </v-card>

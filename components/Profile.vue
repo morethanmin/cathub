@@ -16,11 +16,10 @@
       target="_blank"
       href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
     >
-      <button
-        class="mt-3 mb-3 pa-1 rounded-lg font-weight-bold text-subtitle-2 btn-resume"
-      >
-        resume
-      </button>
+      <Button
+        class="mt-3 mb-3 pa-1 font-weight-bold text-subtitle-2 btn-resume"
+        text="resume"
+      />
     </a>
     <!-- <div class="info-profile-follo mb-8 text-body-2">
       <ul>

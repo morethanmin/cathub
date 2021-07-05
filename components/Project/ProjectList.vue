@@ -2,7 +2,7 @@
   <v-container class="ma-0 pa-0">
     <v-row>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="cathub"
           subtitle="Github'st Development Blog service using vue and nuxt"
           :desc="[`vue`, `nuxt`]"
@@ -10,7 +10,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="google keep clone"
           subtitle="memo application using react and redux saga"
           :desc="[`react`, `redux`, `redux-saga`]"
@@ -18,7 +18,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="mtmtravel"
           subtitle="Travel Shopping-mall toy project using react and express"
           :desc="[`node js`, `react`, `express`]"
@@ -26,7 +26,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="remotto"
           subtitle="sns toy project using ejs and express"
           :desc="[`node js`, `ejs`, `express`]"
@@ -34,7 +34,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="mtmcamp"
           subtitle="reviewing camping toy Project using ejs and express"
           :desc="[`node js`, `ejs`, `express`]"
@@ -42,7 +42,7 @@
         />
       </v-col>
       <v-col class="card-col" sm="12" md="6">
-        <project-box
+        <Project
           title="until-offline"
           subtitle="개인 프로젝트 (진행중)"
           :desc="[`react`, `next`]"

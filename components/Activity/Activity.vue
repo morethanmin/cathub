@@ -9,7 +9,10 @@
         {{ title }}
       </div>
     </div>
-    <div class="activity-desc" :class="[...(type === `company` ? [`company`]:[])]">
+    <div
+      class="activity-desc"
+      :class="[...(type === `company` ? [`company`] : [])]"
+    >
       <ul>
         <li
           v-for="(content, index) of contents"
@@ -28,26 +31,26 @@ export default {
   props: {
     icon: {
       type: String,
-      default: "mdi-pencil",
+      default: "mdi-pencil"
     },
     img: {
       type: String,
-      default: "",
+      default: ""
     },
     type: {
       type: String,
-      default: "",
+      default: ""
     },
     title: {
       type: String,
-      default: " ",
+      default: " "
     },
     contents: {
       type: Array,
       default: () => [],
-      required: false,
-    },
-  },
+      required: false
+    }
+  }
 };
 </script>
 
@@ -79,11 +82,11 @@ export default {
       padding: 0px;
     }
     li {
-      padding-bottom: 5px;
+      padding-bottom: 0px;
     }
   }
 
-  .company{
+  .company {
     border: thin solid rgba(0, 0, 0, 0.12);
     padding: 10px;
     margin-top: 10px;
