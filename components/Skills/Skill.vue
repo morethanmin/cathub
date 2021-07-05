@@ -12,7 +12,7 @@
         ></div>
       </div>
     </v-card-text>
-    <v-card-text class="text-body-2 pb-0 color_secondary">
+    <v-card-text class="subtitle pb-0 color_secondary">
       {{ subtitle }}
     </v-card-text>
     <v-card-text class="text-body-2 color_secondary">
@@ -72,6 +72,9 @@ export default {
   font-weight: 700;
   font-size: 1.1rem;
   margin-left: 6px;
+}
+.subtitle {
+  font-size: 0.8rem;
 }
 .percent {
   width: 100%;
