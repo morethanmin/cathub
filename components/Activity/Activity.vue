@@ -7,6 +7,9 @@
       <img v-if="img !== ``" :src="img" alt="" class="title-icon" />
       <div class="title-text">
         {{ title }}
+        <a v-if="!!href" :href="href">
+          <v-icon class="ico">mdi-link</v-icon>
+        </a>
       </div>
     </div>
     <div
@@ -17,9 +20,12 @@
         <li
           v-for="(content, index) of contents"
           :key="index"
-          class="text-subtitle-2"
+          class="text-subtitle-2 d-flex align-center"
         >
-          {{ content }}
+          {{ content.text }}
+          <a v-if="!!content.href" :href="content.href">
+            <v-icon class="ico">mdi-link</v-icon>
+          </a>
         </li>
       </ul>
     </div>
@@ -43,7 +49,11 @@ export default {
     },
     title: {
       type: String,
-      default: " "
+      default: ""
+    },
+    href: {
+      type: String,
+      default: ""
     },
     contents: {
       type: Array,
@@ -97,5 +107,11 @@ export default {
   .activity-desc {
     margin-left: 40px;
   }
+}
+
+.ico {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  padding-bottom: 1px;
 }
 </style>

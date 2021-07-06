@@ -14,11 +14,12 @@
           />
           <Activity
             :img="require('~/static/images/giant.png')"
-            title="Giant frontend-developer (산업기능요원 재배정 대기중)"
+            title="Giant - Frontend Developer (산업기능요원 재배정 대기)"
+            href="https://giantcorp.co.kr/"
             type="company"
             :contents="[
-              `sloker members (vue, nuxt, express, my-sql)`,
-              `sloker id (vue, nuxt, express, my-sql)`
+              { text: `Sloker Admin`, href: `` },
+              { text: `Sloker Members`, href: `` }
             ]"
           />
           <Activity
@@ -28,26 +29,33 @@
           />
           <Activity
             :img="require('~/static/images/weplanet.png')"
-            title="Weplanet frontend-developer (인턴)"
+            title="Weplanet - Frontend Developer (intern)"
+            href="http://wepla.net/"
             type="company"
             :contents="[
-              `Cash Fi Admin Page (react)`,
-              `밑고맡겨 Landing Page`,
-              `kkoit Admin Page (react)`
+              { text: `양재동 코드랩`, href: `https://www.codelabs.kr` },
+              { text: `중고 맥북 마켓 BARO`, href: `https://www.mybaro.com` },
+              { text: `Styleplus`, href: `https://www.styleplus.me/` }
             ]"
           />
           <Activity
             icon="mdi-book-open-outline"
             title="STUDY HALLE (자바 스터디)"
-            :contents="[
-              `1주차~13주차 참여 (후기 및 주차별 글은 블로그에 게시)`
-            ]"
+            href="https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
+            :contents="[``]"
           />
           <Activity
             :img="require('~/static/images/trigit.png')"
-            title="Trigit Software front-developer (인턴)"
+            title="Trigit Software - Frontend Developer (intern)"
             type="company"
-            :contents="[`E-learning Contents 개발`]"
+            href="http://www.trigit.com/"
+            :contents="[
+              { text: `자사 홈페이지`, href: `http://www.trigit.com` },
+              {
+                text: `e-learning 컨텐츠 개발`,
+                href: `https://www.codelabs.kr`
+              }
+            ]"
           />
           <Activity
             icon="mdi-bird"
@@ -57,7 +65,12 @@
           <Activity
             icon="mdi-laptop"
             title="Web Developer Bootcamp"
-            :contents="[`udemy-web-developer-bootcamp 수강`, `mtm-camp`]"
+            :contents="[
+              {
+                text: `mtm camp`,
+                href: `https://github.com/morethanmin/mtmcamp`
+              }
+            ]"
           />
           <Activity
             icon="mdi-school-outline"
