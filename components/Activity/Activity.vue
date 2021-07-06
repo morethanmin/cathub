@@ -7,7 +7,7 @@
       <img v-if="img !== ``" :src="img" alt="" class="title-icon" />
       <div class="title-text">
         {{ title }}
-        <a v-if="!!href" :href="href">
+        <a v-if="!!href" target="_blank" :href="href">
           <v-icon class="ico">mdi-link</v-icon>
         </a>
       </div>
@@ -23,7 +23,7 @@
           class="text-subtitle-2 d-flex align-center"
         >
           {{ content.text }}
-          <a v-if="!!content.href" :href="content.href">
+          <a v-if="!!content.href" target="_blank" :href="content.href">
             <v-icon class="ico">mdi-link</v-icon>
           </a>
         </li>
