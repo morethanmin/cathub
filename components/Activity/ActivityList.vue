@@ -53,7 +53,7 @@
               { text: `자사 홈페이지`, href: `http://www.trigit.com` },
               {
                 text: `e-learning 컨텐츠 개발`,
-                href: `https://www.codelabs.kr`
+                href: ``
               }
             ]"
           />
