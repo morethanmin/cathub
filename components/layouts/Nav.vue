@@ -5,7 +5,7 @@
         <transition name="fade">
           <div v-if="$store.getters.getIsOvered" class="show-data">
             <img
-              src="~/static/images/face.jpg"
+              src="~/static/images/face.jpeg"
               alt="face"
               width="30"
               height="30"
