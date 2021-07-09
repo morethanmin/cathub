@@ -12,7 +12,7 @@ You can check demo [here](https://morethanmin.github.io/cat-hub/).
 
 ## Preview
 
-![image](https://user-images.githubusercontent.com/72514247/124062390-9f115080-da6b-11eb-990c-ea9fe0b887ba.png)
+![image](https://user-images.githubusercontent.com/72514247/125021041-db206300-e0b4-11eb-999c-746476804ca5.png)
 
 ## Features
 
