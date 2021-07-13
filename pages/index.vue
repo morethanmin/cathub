@@ -42,10 +42,11 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="carrer color-black">Career</div>
+            <div class="carrer color-black">Develop Activity</div>
           </div>
           <ActivityList />
         </div>
+
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="recommendations color-black">

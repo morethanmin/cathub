@@ -10,8 +10,8 @@
           class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
         >
           <a @click="handleScroll(`.about`)">About</a>
-          <a @click="handleScroll(`.skills`)">Skills</a>
           <a @click="handleScroll(`.projects`)">Projects</a>
+          <a @click="handleScroll(`.skills`)">Skills</a>
           <a @click="handleScroll(`.carrer`)">Carrer</a>
           <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
