@@ -29,7 +29,7 @@
                 sm="12"
                 md="6"
               >
-                <project-box
+                <project
                   icon=""
                   :title="category.name"
                   :subtitle="category.description"
