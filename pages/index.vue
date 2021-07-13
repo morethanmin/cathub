@@ -29,7 +29,7 @@
               target="_blank"
               href="https://github.com/morethanmin?tab=repositories"
             >
-              <div class="text-body-2">more...</div>
+              <div class="text-body-2">more</div>
             </a>
           </div>
           <ProjectList />
@@ -42,7 +42,7 @@
         </div>
         <div class="mb-5">
           <div class="d-flex justify-space-between mb-3">
-            <div class="carrer color-black">Develop Activity</div>
+            <div class="carrer color-black">Career</div>
           </div>
           <ActivityList />
         </div>
