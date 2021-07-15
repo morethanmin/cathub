@@ -16,7 +16,38 @@
         <!-- <v-icon>mdi-bell-outline</v-icon>
       <v-icon>mdi-plus</v-icon>
       <v-icon>mdi-menu-down</v-icon> -->
-        <toggle />
+        <toggle
+          :menuItems="[
+            {
+              type: `link`,
+              href: `https://github.com/morethanmin`,
+              text: `Github`
+            },
+            {
+              type: `link`,
+              href: `https://moredevmin.tistory.com`,
+              text: `Blog`
+            },
+            {
+              type: `link`,
+              href: `https://www.instagram.com/more_dev_min`,
+              text: `Instagram`
+            },
+            {
+              type: `link`,
+              href: `mailto:mini4614@gmail.com`,
+              text: `Contact`
+            }
+          ]"
+        >
+          <img
+            src="~/static/images/face.jpeg"
+            alt="face"
+            width="25"
+            height="25"
+            style="border-radius: 50%"
+          />
+        </toggle>
       </div>
     </div>
     <div v-if="toggle">

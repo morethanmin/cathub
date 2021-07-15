@@ -1,5 +1,39 @@
 <template>
   <v-container class="main common-wrapper mt-5 pa-0">
+    <div class="d-flex justify-space-between mb-3">
+      <div class="carrer color-black">Develop Activity</div>
+      <div>
+        <toggle
+          @Career="selected = `career`"
+          @Education="selected = `education`"
+          @Certificate="selected = `certificate`"
+          @Awards="selected = `awards`"
+          :menuItems="[
+            {
+              type: `event`,
+              text: `Career`
+            },
+            {
+              type: `event`,
+              text: `Education`
+            },
+            {
+              type: `event`,
+              text: `Certificate`
+            },
+            {
+              type: `event`,
+              text: `Awards`
+            }
+          ]"
+        >
+          <div class="mobileSelect">
+            {{ selected }}
+            <v-icon>mdi-menu-down</v-icon>
+          </div>
+        </toggle>
+      </div>
+    </div>
     <v-row>
       <v-col
         v-if="selected === `career`"
@@ -148,7 +182,11 @@
           />
         </div>
       </v-col>
-      <v-col class="contribution-side d-flex flex-column mt-2" sm="0" md="2">
+      <v-col
+        class="select contribution-side d-flex flex-column mt-2"
+        sm="0"
+        md="2"
+      >
         <button
           @click="selected = `career`"
           :class="[
@@ -215,15 +253,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: $vt_sm) {
-  .contribution-side {
-    display: none !important;
-  }
+.mobileSelect {
+  visibility: hidden;
 }
 .contribution-side {
   .selected {
     background-color: #0366d6;
     color: white;
+  }
+}
+.selected {
+  background-color: #0366d6;
+  color: white;
+}
+.v-icon {
+  color: black !important;
+}
+
+@media (max-width: $vt_sm) {
+  .select {
+    display: none !important;
+  }
+  .mobileSelect {
+    visibility: visible;
   }
 }
 </style>

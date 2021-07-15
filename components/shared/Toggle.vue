@@ -5,14 +5,7 @@
       v-on:blur="focus = false"
       class="d-flex align-center"
     >
-      <img
-        src="~/static/images/face.jpeg"
-        alt="face"
-        width="25"
-        height="25"
-        style="border-radius: 50%"
-      />
-      <v-icon class="icon-pc">mdi-menu-down</v-icon>
+      <slot></slot>
     </button>
     <div
       v-if="toggle"
@@ -21,50 +14,39 @@
       class="toggle-box"
     >
       <div class="arrow"></div>
-      <ul class="menu">
-        <li>
-          <a
-            target="_blank"
-            class="d-flex align-center"
-            href="https://github.com/morethanmin"
-          >
-            <span class="text-subtitle-2"> Github </span>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="d-flex align-center"
-            href="https://moredevmin.tistory.com/"
-          >
-            <span class="text-subtitle-2"> Blog </span>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="d-flex align-center"
-            href="https://www.instagram.com/more_dev_min/"
-          >
-            <span class="text-subtitle-2"> Instagram </span>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="d-flex align-center"
-            href="mailto:mini4614@gmail.com"
-          >
-            <span class="text-subtitle-2"> Contact </span>
-          </a>
-        </li>
-      </ul>
+      <div>
+        <ul class="menu">
+          <li v-for="(item, index) in menuItems" :key="index">
+            <a
+              v-if="item.type === `link`"
+              target="_blank"
+              class="d-flex align-center"
+              :href="item.href"
+            >
+              <span class="text-subtitle-2"> {{ item.text }} </span>
+            </a>
+            <a
+              v-else-if="item.type === `event`"
+              class="d-flex align-center"
+              @click="$emit(item.text)"
+            >
+              <span class="text-subtitle-2"> {{ item.text }} </span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    menuItems: {
+      type: Array,
+      default: () => []
+    }
+  },
   data: () => ({
     focus: false,
     hover: false
@@ -75,7 +57,10 @@ export default {
       return toggle;
     }
   },
-  methods: {}
+  methods: {},
+  mounted() {
+    console.log(this.menuItems);
+  }
 };
 </script>
 
@@ -140,14 +125,6 @@ export default {
       transition: none;
       color: white;
     }
-  }
-}
-.icon-pc {
-  display: block;
-}
-@media (max-width: $vt_sm) {
-  .icon-pc {
-    display: none;
   }
 }
 </style>
