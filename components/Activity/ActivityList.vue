@@ -96,28 +96,31 @@
           </div>
           <Activity
             :img="require('~/static/images/gdg.jpg')"
-            title="GDG (Google Developer Group) Korea 지부 활동 "
-            :contents="[``]"
+            title="Google Developer Group "
           />
           <Activity
-            icon="mdi-laptop"
+            :img="require('~/static/images/j2kb.png')"
             title="J2KB 3기 (전국 코딩 연합 동아리)"
-            :contents="[`유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)`]"
+            href="https://github.com/J2KB-3rd-Season"
+            :contents="[
+              { text: `유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)` }
+            ]"
           />
           <Activity
             icon="mdi-book-open-outline"
             title="STUDY HALLE (자바 스터디)"
             href="https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
-            :contents="[``]"
           />
           <Activity
-            icon="mdi-bird"
-            title="둥지 개발팀 (현업 개발자 모임)"
-            :contents="[`둥지톡 백엔드 개발(중단)`]"
+            :img="require('~/static/images/doongji.png')"
+            title="doongji"
+            href="https://github.com/Doong-Ji"
+            :contents="[{ text: `Dvelopment Sub Leader` }]"
           />
           <Activity
             icon="mdi-laptop"
             title="Web Developer Bootcamp"
+            href="https://drive.google.com/file/d/1dtc6Hg3zBDtCgO9iK9cn67LSI_QghRzK/view?usp=sharing"
             :contents="[
               {
                 text: `mtm camp`,
@@ -126,8 +129,12 @@
             ]"
           />
           <Activity
-            icon="mdi-school-outline"
-            title="명지대학교 정보통신공학과 휴학 (3학년)"
+            :img="require('~/static/images/MyongJi.jpeg')"
+            title="Myongji university"
+            href="https://www.mju.ac.kr/sites/mjukr/intro/intro.html"
+            :contents="[
+              { text: `Information Communication Engineering (3rd year leave)` }
+            ]"
           />
         </div>
       </v-col>
