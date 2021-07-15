@@ -12,11 +12,6 @@
             <div class="">May 2021</div>
             <v-divider></v-divider>
           </div>
-          <!-- <Activity
-            :img="require('~/static/images/gdg.jpg')"
-            title="GDG (Google Developer Group) Korea 지부 활동 "
-            :contents="[``]"
-          /> -->
           <Activity
             :img="require('~/static/images/giant.png')"
             title="Giant - Frontend Developer"
@@ -27,11 +22,6 @@
               { text: `Sloker Members`, href: `` }
             ]"
           />
-          <!-- <Activity
-            icon="mdi-laptop"
-            title="J2KB 3기 (전국 코딩 연합 동아리)"
-            :contents="[`유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)`]"
-          /> -->
           <Activity
             :img="require('~/static/images/weplanet.png')"
             title="Weplanet - Frontend Developer"
@@ -43,12 +33,6 @@
               { text: `Styleplus`, href: `https://www.styleplus.me/` }
             ]"
           />
-          <!-- <Activity
-            icon="mdi-book-open-outline"
-            title="STUDY HALLE (자바 스터디)"
-            href="https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
-            :contents="[``]"
-          /> -->
           <Activity
             :img="require('~/static/images/trigit.png')"
             title="Trigit Software - Frontend Developer"
@@ -62,25 +46,6 @@
               }
             ]"
           />
-          <!-- <Activity
-            icon="mdi-bird"
-            title="둥지 개발팀 (현업 개발자 모임)"
-            :contents="[`둥지톡 백엔드 개발(중단)`]"
-          /> -->
-          <!-- <Activity
-            icon="mdi-laptop"
-            title="Web Developer Bootcamp"
-            :contents="[
-              {
-                text: `mtm camp`,
-                href: `https://github.com/morethanmin/mtmcamp`
-              }
-            ]"
-          /> -->
-          <!-- <Activity
-            icon="mdi-school-outline"
-            title="명지대학교 정보통신공학과 휴학 (3학년)"
-          /> -->
         </div>
       </v-col>
       <v-col
@@ -138,6 +103,51 @@
           />
         </div>
       </v-col>
+      <v-col
+        v-else-if="selected === `certificate`"
+        class="contribution-main"
+        sm="12"
+        md="10"
+      >
+        <div class="activity">
+          <div class="contribution-main-line text-body-2 d-flex align-center">
+            <div class="">May 2021</div>
+            <v-divider></v-divider>
+          </div>
+          <Activity ico="mid-certificate-outline" title="정보처리산업기사" />
+          <Activity ico="mid-certificate-outline" title="TOEIC 730 score" />
+        </div>
+      </v-col>
+      <v-col
+        v-else-if="selected === `awards`"
+        class="contribution-main"
+        sm="12"
+        md="10"
+      >
+        <div class="activity">
+          <div class="contribution-main-line text-body-2 d-flex align-center">
+            <div class="">May 2021</div>
+            <v-divider></v-divider>
+          </div>
+          <Activity
+            title="유니콘 금상"
+            href="https://drive.google.com/file/d/1UNwF63XqPNjEgAzGTOG3aOe0jR3bebD0/view?usp=sharing"
+            :contents="[
+              {
+                text: `J2KB에서 주최한 해커톤에서 프론트엔드 리더로 참가해 금상을 수상했습니다.`
+              }
+            ]"
+          />
+          <Activity
+            title="교내 공모전 우수상"
+            :contents="[
+              {
+                text: `교내 공모전에서 재정이의 모험이라는 게임을 출품해 우수상을 수상했습니다.`
+              }
+            ]"
+          />
+        </div>
+      </v-col>
       <v-col class="contribution-side d-flex flex-column mt-2" sm="0" md="2">
         <button
           @click="selected = `career`"
@@ -164,6 +174,32 @@
           ]"
         >
           Education
+        </button>
+        <button
+          @click="selected = `certificate`"
+          :class="[
+            'rounded-lg',
+            'pa-1',
+            'pl-4',
+            'mb-4',
+            'text-left',
+            selected === 'certificate' ? 'selected' : ''
+          ]"
+        >
+          Certificate
+        </button>
+        <button
+          @click="selected = `awards`"
+          :class="[
+            'rounded-lg',
+            'pa-1',
+            'pl-4',
+            'mb-4',
+            'text-left',
+            selected === 'awards' ? 'selected' : ''
+          ]"
+        >
+          Awards
         </button>
       </v-col>
     </v-row>
