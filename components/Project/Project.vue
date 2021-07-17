@@ -10,7 +10,12 @@
       {{ subtitle }}
     </v-card-text>
     <v-card-text class="pt-0 color_secondary d-flex">
-      <languege-chip v-for="(name, index) in desc" :key="index" :name="name" />
+      <languege-chip
+        v-for="(languege, index) in langueges"
+        :key="index"
+        :name="languege.name"
+        :color="languege.color"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -32,7 +37,7 @@ export default {
       required: false,
       default: ""
     },
-    desc: {
+    langueges: {
       type: Array,
       required: false,
       default: []

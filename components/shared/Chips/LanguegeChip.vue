@@ -4,7 +4,7 @@
       {{ name }}
     </v-chip> -->
   <div class="wrapper" color="white" small>
-    <div></div>
+    <div :style="`background: ${color};`"></div>
     {{ name }}
   </div>
 </template>
@@ -15,6 +15,10 @@ export default {
     name: {
       type: String,
       default: ""
+    },
+    color: {
+      type: String,
+      default: "#000000"
     }
   }
 };
@@ -30,7 +34,6 @@ export default {
   div {
     margin-right: 5px;
     border-radius: 50%;
-    background: #f1e05a;
     width: 10px;
     height: 10px;
   }

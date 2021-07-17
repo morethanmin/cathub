@@ -58,9 +58,7 @@ export default {
     }
   },
   methods: {},
-  mounted() {
-    console.log(this.menuItems);
-  }
+  mounted() {}
 };
 </script>
 

@@ -83,7 +83,7 @@
         </div>
       </v-col>
       <v-col
-        v-else-if="selected === `activity`"
+        v-else-if="selected === `education`"
         class="contribution-main"
         sm="12"
         md="10"
@@ -201,14 +201,14 @@
           Carrer
         </button>
         <button
-          @click="selected = `activity`"
+          @click="selected = `education`"
           :class="[
             'rounded-lg',
             'pa-1',
             'pl-4',
             'mb-4',
             'text-left',
-            selected === 'activity' ? 'selected' : ''
+            selected === 'education' ? 'selected' : ''
           ]"
         >
           Education
