@@ -8,7 +8,7 @@ github에 저장소를 만들어 소스코드가 아닌 다른 개발 관련 정
 
 ## Live demo
 
-You can check demo [here](https://morethanmin.github.io/cat-hub/).
+You can check demo [here](https://morethanmin.web.app).
 
 ## Preview
 
