@@ -42,7 +42,7 @@
                 :class="[
                   ...(selectedTab === 'repositories'
                     ? ['selectedTab', 'font-weight-bold']
-                    : []),
+                    : [])
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -59,7 +59,7 @@
                 :class="[
                   ...(selectedTab === 'projects'
                     ? ['selectedTab', 'font-weight-bold']
-                    : []),
+                    : [])
                 ]"
                 class="d-flex flex-row align-center"
               >

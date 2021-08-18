@@ -90,7 +90,7 @@
       <v-col class="card-col" sm="12" md="6">
         <Project
           title="until"
-          subtitle="blog platform service (개발중)"
+          subtitle="블로그를 만드려다 블로그 플랫폼을 만들게 되었습니다... (개발중)"
           :langueges="[
             {
               name: `react`,

@@ -20,28 +20,28 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     createdAt: {
       type: String,
-      default: "",
+      default: ""
     },
     desc: {
       type: String,
-      default: "",
+      default: ""
     },
     link: {
       type: String,
-      default: "",
-    },
-  },
+      default: ""
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .pinned-link {
   color: #0366d6;
-  font-weight: 700;
+  font-weight: bold !important;
 
   :hover {
     cursor: pointer;
