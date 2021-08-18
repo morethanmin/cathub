@@ -41,7 +41,7 @@ export default {
 <style lang="scss" scoped>
 .pinned-link {
   color: #0366d6;
-  font-weight: bold !important;
+  font-weight: 700 !important;
 
   :hover {
     cursor: pointer;

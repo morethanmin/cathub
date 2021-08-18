@@ -41,6 +41,19 @@
       </v-col>
       <v-col class="card-col" sm="12" md="6">
         <Project
+          title="Fooorm"
+          subtitle="google form clone application using djagno"
+          :langueges="[
+            {
+              name: `django`,
+              color: `#092E20`
+            }
+          ]"
+          link="https://github.com/morethanmin/Fooorm"
+        />
+      </v-col>
+      <v-col class="card-col" sm="12" md="6">
+        <Project
           title="Remotto"
           subtitle="sns toy project using ejs and express"
           :langueges="[
@@ -55,6 +68,7 @@
           link="https://github.com/morethanmin/remotto"
         />
       </v-col>
+
       <v-col class="card-col" sm="12" md="6">
         <Project
           title="mtmtravel"
@@ -85,27 +99,6 @@
             }
           ]"
           link="https://github.com/morethanmin/mtmcamp"
-        />
-      </v-col>
-      <v-col class="card-col" sm="12" md="6">
-        <Project
-          title="until"
-          subtitle="블로그를 만드려다 블로그 플랫폼을 만들게 되었습니다... (개발중)"
-          :langueges="[
-            {
-              name: `react`,
-              color: `#61DAFB`
-            },
-            {
-              name: `redux`,
-              color: `#61DAFB`
-            },
-            {
-              name: `redux-saga`,
-              color: `#61DAFB`
-            }
-          ]"
-          link="https://github.com/untilled/until"
         />
       </v-col>
     </v-row>

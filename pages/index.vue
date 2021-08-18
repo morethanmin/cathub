@@ -73,7 +73,6 @@
 export default {
   async asyncData({ $content, params }) {
     const about = await $content("overview", "about").fetch();
-    const skills = await $content("overview", "skills").fetch();
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")
       .fetch();
@@ -91,7 +90,6 @@ export default {
     const total = articlesDateList.length;
     return {
       about,
-      skills,
       data,
       total
     };

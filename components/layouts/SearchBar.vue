@@ -8,7 +8,7 @@
       v-model="searchQuery"
       type="search"
       autocomplete="off"
-      placeholder="Search..."
+      placeholder="Search articles..."
     />
     <ul
       v-on:mouseover="hover = true"
