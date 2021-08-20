@@ -99,10 +99,10 @@
             <div class="">May 2021</div>
             <v-divider></v-divider>
           </div>
-          <Activity
+          <!-- <Activity
             :img="require('~/static/images/gdg.jpg')"
             title="Google Developer Group "
-          />
+          /> -->
           <Activity
             :img="require('~/static/images/j2kb.png')"
             title="J2KB 3기 (전국 코딩 연합 동아리)"
