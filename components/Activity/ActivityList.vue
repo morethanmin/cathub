@@ -47,8 +47,14 @@
             <v-divider></v-divider>
           </div>
           <Activity
+            :img="require('~/static/images/opengallery.png')"
+            title="OpenGallery - Web Developer"
+            href="https://www.opengallery.co.kr/"
+            :contents="[]"
+          />
+          <Activity
             :img="require('~/static/images/giant.png')"
-            title="Giant - Frontend Developer"
+            title="Giant - Web Developer"
             href="https://giantcorp.co.kr/"
             type="company"
             :contents="[
@@ -58,7 +64,7 @@
           />
           <Activity
             :img="require('~/static/images/weplanet.png')"
-            title="Weplanet - Frontend Developer"
+            title="Weplanet - Frontend Developer Intern"
             href="http://wepla.net/"
             type="company"
             :contents="[
@@ -69,7 +75,7 @@
           />
           <Activity
             :img="require('~/static/images/trigit.png')"
-            title="Trigit Software - Frontend Developer"
+            title="Trigit Software - Frontend Developer Intern"
             type="company"
             href="http://www.trigit.com/"
             :contents="[

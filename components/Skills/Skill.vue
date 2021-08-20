@@ -37,30 +37,16 @@ export default {
       type: String,
       default: ""
     },
-    color: {
-      type: String,
-      default: "FFFFFF"
-    },
     title: {
       type: String,
       required: false,
       default: ""
-    },
-    percent: {
-      type: Number,
-      required: false,
-      default: 0
     },
     subtitle: {
       type: String,
       required: false,
       default: ""
     },
-    link: {
-      type: String,
-      required: false,
-      default: ""
-    }
   }
 };
 </script>

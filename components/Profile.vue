@@ -73,6 +73,9 @@
       <img class="corp-img" src="~/static/images/trigit.png" alt="" />
     </a> -->
     <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
+    <a href="https://www.opengallery.co.kr/">
+      <img class="corp-img" src="~/static/images/opengallery.png" alt="" />
+    </a>
     <a href="http://www.giantcorp.co.kr/">
       <img class="corp-img" src="~/static/images/giant.png" alt="" />
     </a>
