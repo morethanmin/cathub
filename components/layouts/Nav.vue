@@ -81,7 +81,7 @@
                 class="d-flex flex-row align-center"
               >
                 <v-icon>mdi-post-outline</v-icon>
-                <div class="ml-1">Articles</div>
+                <div class="ml-1">Blog</div>
               </button>
             </NuxtLink>
           </div>
