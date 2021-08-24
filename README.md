@@ -51,6 +51,17 @@ $ npm run start
 $ npm run generate
 ```
 
+### deploy
+
+```bash
+# install firebase CLI
+$ npm install -g firebase-tools
+
+# deploy
+$ npm run deploy
+
+```
+
 ## Note
 
 This project is ongoing.
