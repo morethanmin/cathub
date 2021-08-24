@@ -57,6 +57,9 @@ $ npm run generate
 # install firebase CLI
 $ npm install -g firebase-tools
 
+# login
+$ firebase login
+
 # deploy
 $ npm run deploy
 
