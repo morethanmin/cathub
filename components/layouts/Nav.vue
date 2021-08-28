@@ -63,7 +63,7 @@
                 ]"
                 class="d-flex flex-row align-center"
               >
-                <v-icon>mdi-chart-box-outline</v-icon>
+                <v-icon>mdi-book-outline</v-icon>
                 <div class="">Projects</div>
               </button>
             </NuxtLink>

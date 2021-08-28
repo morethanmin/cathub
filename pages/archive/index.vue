@@ -18,7 +18,6 @@
         <div class="pinned mb-5">
           <div class="d-flex justify-space-between mb-3">
             <div class="">Categories</div>
-            <!-- <div class="text-body-2">Customize your pins</div> -->
           </div>
           <v-container class="ma-0 pa-0">
             <v-row>
@@ -134,6 +133,8 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     }
   },
-  mounted() {}
+  mounted() {
+    console.log(this.articles);
+  }
 };
 </script>

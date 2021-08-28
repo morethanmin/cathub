@@ -19,7 +19,7 @@
             <li
               :class="{
                 'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3,
+                'ml-2 pb-2': link.depth === 3
               }"
               v-for="link of article.toc"
               :key="link.id"
@@ -33,8 +33,7 @@
     </v-row>
   </div>
 </template>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
 <script>
 export default {
   layout: "detail",
@@ -51,15 +50,15 @@ export default {
     return {
       article,
       prev,
-      next,
+      next
     };
   },
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
-    },
+    }
   },
-  mounted() {},
+  mounted() {}
 };
 </script>

@@ -106,6 +106,14 @@
 </template>
 
 <style lang="scss" scoped>
+.btn {
+  color: #0366d6;
+  border: 1px solid #e2e3e4;
+  background-color: white;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
 @media (max-width: $vt_xs) {
   .card-col {
     flex: 0 0 100%;

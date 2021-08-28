@@ -40,7 +40,7 @@ export default {
     langueges: {
       type: Array,
       required: false,
-      default: []
+      default: () => []
     },
     link: {
       type: String,
