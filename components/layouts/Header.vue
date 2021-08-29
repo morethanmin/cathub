@@ -5,7 +5,7 @@
         <v-icon>mdi-cat</v-icon>
         <!-- <span class="title-text text-h6"> Cathub </span> -->
       </NuxtLink>
-      <div v-if="selectedTab === `Portfolio`" class="tab">
+      <div v-if="selectedTab === `About`" class="tab">
         <div
           class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
         >
@@ -16,9 +16,26 @@
           <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
-      <div v-else class="tab">
+      <div v-else-if="selectedTab === `Archive`" class="tab">
         <div class="d-flex align-center">
-          <search-bar />
+          <SearchBar />
+          <div
+            class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
+          >
+            <NuxtLink
+              v-for="(category, index) of categories"
+              :key="index"
+              class="ml-4"
+              :to="`/archive/category/${category.name}`"
+            >
+              {{ category.name }}
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+      <div v-else-if="selectedTab === `Projects`" class="tab">
+        <div class="d-flex align-center">
+          <SearchBar />
           <div
             class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
           >
@@ -35,9 +52,6 @@
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">
-      <!-- <v-icon>mdi-bell-outline</v-icon>
-      <v-icon>mdi-plus</v-icon>
-      <v-icon>mdi-menu-down</v-icon> -->
       <toggle
         :menuItems="[
           {
@@ -98,8 +112,10 @@ export default {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some(x => x.path === "")) this.selectedTab = "Portfolio";
-      if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
+      if (match.some(x => x.path === "")) this.selectedTab = "About";
+      if (match.some(x => x.path === "/projects"))
+        this.selectedTab = "Projects";
+      if (match.some(x => x.path === "/archive")) this.selectedTab = "Archive";
     },
 
     handleScroll(classname) {

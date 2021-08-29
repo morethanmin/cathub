@@ -2,11 +2,17 @@
   <v-app>
     <Mobile class="mobile"></Mobile>
     <Header class="header"></Header>
-
     <Nav />
     <v-main>
       <v-container class="common-wrapper">
-        <nuxt />
+        <v-row class="" justify="center" align="center">
+          <v-col align-self="start" class="card col-info pa-5" sm="12" md="3">
+            <Profile />
+          </v-col>
+          <v-col class="card align-self-start pa-5" sm="12" md="9">
+            <nuxt />
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
     <v-footer>
