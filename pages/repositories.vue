@@ -48,16 +48,11 @@
 <script>
 import { mapGetters, mapMutations } from "vuex";
 
-import Profile from "~/components/Profile.vue";
-
 export default {
-  components: {
-    Profile,
-  },
   data: () => ({
-    tab: null,
+    tab: null
   }),
   computed: {},
-  methods: {},
+  methods: {}
 };
 </script>

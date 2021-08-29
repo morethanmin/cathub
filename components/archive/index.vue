@@ -84,8 +84,6 @@
 }
 </style>
 <script>
-import Profile from "~/components/Profile.vue";
-
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content("articles")
@@ -114,9 +112,6 @@ export default {
       articles,
       categories
     };
-  },
-  components: {
-    Profile
   },
   data: () => ({}),
   computed: {},
