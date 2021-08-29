@@ -18,7 +18,7 @@
       </ul>
     </div>
     <div v-else>
-      검색된 글 없당.
+      작성된 게시글이 없습니당.
     </div>
   </div>
 </template>

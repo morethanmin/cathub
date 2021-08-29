@@ -51,7 +51,7 @@
               </button>
             </NuxtLink>
           </div> -->
-          <!-- <div class="">
+          <div class="">
             <NuxtLink to="/projects">
               <button
                 ref="projects"
@@ -67,7 +67,7 @@
                 <div class="">Projects</div>
               </button>
             </NuxtLink>
-          </div> -->
+          </div>
           <div class="">
             <NuxtLink to="/archive">
               <button

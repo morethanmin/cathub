@@ -1,17 +1,5 @@
 <template>
   <div>
-    <!-- <comment-box
-      :img="require('~/static/images/user.png')"
-      title="안도현"
-      subTitle="Giant frontend-developer"
-      comment="이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다."
-    />
-    <comment-box
-      :img="require('~/static/images/user.png')"
-      title="송정환"
-      subTitle="Giant server-developer"
-      comment="이 개발자를 추천합니다. 테스트 글입니다."
-    /> -->
     <Comment
       :img="require('~/static/images/dohyun.jpeg')"
       title="안도현"
