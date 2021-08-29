@@ -37,8 +37,13 @@
         <div class="d-flex align-center">
           <SearchBar />
           <div
-            class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
-          ></div>
+            class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
+          >
+            <a class="ml-4">React</a>
+            <a class="ml-4">ffff</a>
+            <a class="ml-4">ffff</a>
+            <a class="ml-4">ffff</a>
+          </div>
         </div>
       </div>
     </div>

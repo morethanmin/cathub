@@ -122,7 +122,7 @@ export default {
   }
 }
 @media (max-width: $vt_sm) {
-  .search-activated {
+  .search-box {
     width: 100%;
   }
 }
