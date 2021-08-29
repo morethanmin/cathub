@@ -1,8 +1,10 @@
 <template>
-  <div class="search-box">
+  <div
+    :class="[`search-box`, ...(searchBarActivated ? ['search-activated'] : [])]"
+  >
     <input
-      :class="[...(searchBarActivated ? ['search-activated'] : [])]"
-      class="search"
+      :class="[`search`]"
+      class="search-input"
       v-on:focus="focus = true"
       v-on:blur="focus = false"
       v-model="searchQuery"
@@ -13,7 +15,7 @@
     <ul
       v-on:mouseover="hover = true"
       v-on:mouseout="hover = false"
-      class="result"
+      class="result-box"
       v-if="searchBarActivated"
     >
       <li v-for="article of articles" :key="article.slug">
@@ -67,28 +69,30 @@ export default {
 .search-box {
   z-index: 15;
   position: relative;
+  width: 200px;
+  transition: width 0.25s ease;
 }
-.search {
+.search-input {
   color: white;
   border: 1px solid #444d56;
   background-color: #252a2e;
   height: 1rem;
   padding: 12px;
   width: 100%;
+  outline: none;
   border-radius: 8px;
-  transition: width 0.25s ease;
-  /* transition: background-color 0.25s step-end; */
 }
 .search-activated {
   width: 350px;
-  border: none;
-  outline: none;
-  color: black;
-  background-color: white;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  .search-input {
+    background-color: white;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    color: black;
+  }
 }
-.result {
+.result-box {
   box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
   z-index: 99;
   position: absolute;

@@ -38,16 +38,7 @@
           <SearchBar />
           <div
             class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
-          >
-            <NuxtLink
-              v-for="(category, index) of categories"
-              :key="index"
-              class="ml-4"
-              :to="`/archive/category/${category.name}`"
-            >
-              {{ category.name }}
-            </NuxtLink>
-          </div>
+          ></div>
         </div>
       </div>
     </div>
