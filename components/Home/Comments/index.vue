@@ -1,17 +1,13 @@
 <template>
   <div>
-    <!-- <comment-box
-      :img="require('~/static/images/user.png')"
+    <Comment
+      :img="require('~/static/images/dohyun.jpeg')"
       title="안도현"
-      subTitle="Giant frontend-developer"
-      comment="이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다.이 개발자를 추천합니다. 테스트 글입니다."
+      subTitle="Giant web-developer"
+      comment="이상민 개발자는 끊임없이 배우며 항상 성장합니다.
+배운 내용을 공유하여 조직 또한 함께 성장할 수 있도록 하며, 저 또한 그로부터 많은 영감을 얻을 수 있었습니다. 
+조직 내에 성장동력을 부여하고 앞으로도 스스로 성장할 개발자를 찾으신다면, 이상민 개발자를 추천드립니다."
     />
-    <comment-box
-      :img="require('~/static/images/user.png')"
-      title="송정환"
-      subTitle="Giant server-developer"
-      comment="이 개발자를 추천합니다. 테스트 글입니다."
-    /> -->
     <Comment
       :img="require('~/static/images/user.png')"
       title="Jay"
