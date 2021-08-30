@@ -26,10 +26,13 @@
         </div>
       </div>
       <div class="card-img">
-        <img
+        <v-img
           v-for="(img, idx) in project.imgs"
           :key="idx"
           :src="require(`~/static/images/${img}`)"
+          :lazy-src="require(`~/static/images/${img}`)"
+          :width="100"
+          :height="100"
           alt=""
         />
       </div>
@@ -86,10 +89,8 @@ export default {
 
   gap: 10px;
   filter: brightness(95%);
-  img {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
+  .v-img {
+    object-fit: cover !important;
   }
 }
 

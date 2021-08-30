@@ -2,7 +2,7 @@
   <v-card outlined flat>
     <v-card-title class="text-subtitle-2 pb-1">
       <v-icon>{{ icon }}</v-icon>
-      <a :href="link" target="_blank">
+      <a :href="href" target="_blank">
         <div class="pinned-link">{{ title }}</div>
       </a>
     </v-card-title>
@@ -42,7 +42,7 @@ export default {
       required: false,
       default: () => []
     },
-    link: {
+    href: {
       type: String,
       required: false,
       default: ""
