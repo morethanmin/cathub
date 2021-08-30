@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- 커밋 박스 없애고 리스트로 보여준다.
+      그런 다음 리스트 오른족에는 해당 카테고리의 커밋박스를 보여준다.
+     -->
     <div class="pinned mb-5">
       <div class="d-flex justify-space-between mb-3">
         <div class="color-black">{{ total }} Articles posted</div>
