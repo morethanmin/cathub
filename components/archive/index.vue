@@ -3,6 +3,7 @@
     <div class="filter-box pb-5 mb-5">
       <input type="text" placeholder="Find a category... " />
     </div>
+
     <div class="mb-5">
       <InfoListBox
         v-for="(category, index) of categories"

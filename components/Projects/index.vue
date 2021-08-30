@@ -7,11 +7,7 @@
       <ProjectItem
         v-for="(project, index) of projects"
         :key="index"
-        :title="project.name"
-        :desc="project.description"
-        :createdAt="project.createdAt"
-        :href="`${project.href}`"
-        :tags="project.tags"
+        :project="project"
       />
     </div>
   </div>
