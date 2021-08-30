@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div class="card-content">
-      <div>
+    <div class="card">
+      <div class="card-content">
         <div class="d-flex justify-space-between">
           <a
             target="_blank"
@@ -9,12 +9,11 @@
             class="text-h6 pinned-link"
             >{{ project.name }}</a
           >
-          <button class="subtitle-1"></button>
         </div>
         <div class="mb-3 desc color_secondary">
           {{ project.description }}
         </div>
-        <div class="d-flex subdesc mb-3 color_secondary">
+        <div class="d-flex subdesc color_secondary">
           <div class="d-flex mr-3">
             <languege-chip
               v-for="(tag, index) in project.tags"
@@ -71,8 +70,14 @@ export default {
   font-size: 0.8rem;
 }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -93,5 +98,4 @@ export default {
     display: none;
   }
 }
-
 </style>

@@ -22,7 +22,6 @@ export default {
       extendedProjects.createdAt = formatDate(projects.createdAt);
       return extendedProjects;
     });
-    console.log(projects);
     return {
       projects
     };

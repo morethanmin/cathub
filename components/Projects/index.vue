@@ -37,8 +37,6 @@ export default {
   data: () => ({}),
   computed: {},
   methods: {},
-  mounted() {
-    console.log(this.projects);
-  }
+  mounted() {}
 };
 </script>

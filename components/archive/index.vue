@@ -53,8 +53,6 @@ export default {
   data: () => ({}),
   computed: {},
   methods: {},
-  mounted() {
-    console.log(this.categories);
-  }
+  mounted() {}
 };
 </script>
