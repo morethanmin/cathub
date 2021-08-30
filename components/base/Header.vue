@@ -16,7 +16,7 @@
           <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
-      <div v-else-if="selectedTab === `Archive`" class="tab">
+      <div v-else class="tab">
         <div class="d-flex align-center">
           <SearchBar />
           <div
@@ -26,23 +26,10 @@
               v-for="(category, index) of categories"
               :key="index"
               class="ml-4"
-              :to="`/archive/category/${category.name}`"
+              :to="`/archive/${category.name}`"
             >
               {{ category.name }}
             </NuxtLink>
-          </div>
-        </div>
-      </div>
-      <div v-else-if="selectedTab === `Projects`" class="tab">
-        <div class="d-flex align-center">
-          <SearchBar />
-          <div
-            class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
-          >
-            <a class="ml-4">React</a>
-            <a class="ml-4">ffff</a>
-            <a class="ml-4">ffff</a>
-            <a class="ml-4">ffff</a>
           </div>
         </div>
       </div>

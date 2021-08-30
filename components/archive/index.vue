@@ -1,85 +1,32 @@
 <template>
   <div>
-    <!-- <div class="pinned mb-5">
-      <div class="d-flex justify-space-between mb-3">
-        <div class="color-black">{{ total }} Articles posted</div>
-      </div>
-      <div class="ma-0 pa-0">
-        <v-card class="commit" outlined flat>
-          <commit-box :countedDate="data" />
-        </v-card>
-      </div>
-    </div> -->
-    <div class="pinned mb-5">
-      <!-- <div class="d-flex justify-space-between mb-3">
-        <div class="">Categories</div>
-      </div> -->
-      <v-container class="ma-0 pa-0">
-        <v-row>
-          <v-col
-            class="card"
-            v-for="(category, index) of categories"
-            :key="index"
-            sm="12"
-            md="6"
-          >
-            <project
-              icon=""
-              :title="category.name"
-              :subtitle="category.description"
-              :link="`/archive/category/${category.name}`"
-              :desc="[]"
-            />
-          </v-col>
-        </v-row>
-      </v-container>
+    <div class="filter-box pb-5 mb-5">
+      <input type="text" placeholder="Find a category... " />
     </div>
-    <!-- <div>
-      <div class="d-flex justify-space-between mb-3">
-        <div class="">Recently Added</div>
-      </div>
-      <v-row>
-        <v-col
-          class="card"
-          v-for="article of articles"
-          :key="article.slug"
-          sm="12"
-          md="6"
-        >
-          <NuxtLink :to="`/archive/${article.slug}`">
-            <article-card
-              :title="article.title"
-              :desc="article.description"
-              :category="article.category"
-              :date="article.createdAt"
-            />
-          </NuxtLink>
-        </v-col>
-      </v-row>
-    </div> -->
+    <div class="mb-5">
+      <InfoListBox
+        v-for="(category, index) of categories"
+        :key="index"
+        :title="category.name"
+        :desc="category.description"
+        :createdAt="category.createdAt"
+        :link="`/archive/${category.name}`"
+      />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.commit {
-  display: flex;
-  overflow: hidden;
-  justify-content: flex-end;
-  > * {
-    margin-right: 10px;
-  }
+.filter-box {
+  border-bottom: 1px solid #e4e4e4;
 }
-@media (max-width: $vt_sm) {
-  .card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-@media (max-width: $vt_xs) {
-  .card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+input {
+  border: 1px solid #d0d7de;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
 }
 </style>
 <script>
@@ -104,12 +51,9 @@ export default {
   },
   data: () => ({}),
   computed: {},
-  methods: {
-    formatDate(date) {
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("en", options);
-    }
-  },
-  mounted() {}
+  methods: {},
+  mounted() {
+    console.log(this.categories);
+  }
 };
 </script>

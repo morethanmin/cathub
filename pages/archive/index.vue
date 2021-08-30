@@ -37,11 +37,15 @@ export default {
       data[x] = (data[x] || 0) + 1;
     });
     const total = articlesDateList.length;
-    const categories = await $content("categories")
-      .only(["name", "description"])
-      .sortBy("createdAt", "asc")
-      .fetch();
-
+    const categories = (
+      await $content("categories")
+        .sortBy("createdAt", "asc")
+        .fetch()
+    ).map(category => {
+      let extendedCategory = category;
+      extendedCategory.createdAt = formatDate(category.createdAt);
+      return extendedCategory;
+    });
     return {
       data,
       total,

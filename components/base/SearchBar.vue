@@ -19,7 +19,10 @@
       v-if="searchBarActivated"
     >
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink class="d-flex align-center" :to="`/archive/${article.slug}`">
+        <NuxtLink
+          class="d-flex align-center"
+          :to="`/archive/${article.category}/${article.slug}`"
+        >
           <v-icon class="text-h6">mdi-cube-outline</v-icon>
           <span class="text-subtitle-2">
             {{ article.title }}

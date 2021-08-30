@@ -39,12 +39,12 @@ export default {
   layout: "detail",
   data: () => ({}),
   async asyncData({ $content, params }) {
-    const article = await $content("articles", params.slug).fetch();
+    const article = await $content("articles", params.article).fetch();
 
     const [prev, next] = await $content("articles")
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
-      .surround(params.slug)
+      .surround(params.article)
       .fetch();
 
     return {
