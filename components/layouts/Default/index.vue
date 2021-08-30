@@ -39,9 +39,6 @@
   .mobile {
     display: block !important;
   }
-}
-
-@media (max-width: $vt_sm) {
   .card {
     flex: 0 0 100%;
     max-width: 100%;

@@ -1,19 +1,48 @@
 <template>
   <div>
-    <div class="ma-0 pa-0">
-      <v-divider class="mb-4"></v-divider>
-      <div v-for="n in 10" :key="n" class="">
-        <InfoListBox
-          title="title"
-          desc="description"
-          createdAt="Updated 1 hour ago"
-        />
-      </div>
+    <div class="filter-box pb-5 mb-5">
+      <input type="text" placeholder="Find a project... " />
+    </div>
+    <div class="mb-5">
+      <ProjectItem
+        v-for="(project, index) of projects"
+        :key="index"
+        :title="project.name"
+        :desc="project.description"
+        :createdAt="project.createdAt"
+        :href="`${project.href}`"
+        :tags="project.tags"
+      />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.filter-box {
+  border-bottom: 1px solid #e4e4e4;
+}
+input {
+  border: 1px solid #d0d7de;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+}
+</style>
 <script>
-export default {};
+export default {
+  props: {
+    projects: {
+      type: Array,
+      default: () => []
+    }
+  },
+  data: () => ({}),
+  computed: {},
+  methods: {},
+  mounted() {
+    console.log(this.projects);
+  }
+};
 </script>

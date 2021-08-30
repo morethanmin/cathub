@@ -1,0 +1,13 @@
+---
+name: Keeeep
+description: google keep clone application using react and redux saga
+tags:
+  [
+    { name: "react", color: "#61DAFB" },
+    { name: "redux", color: "#61DAFB" },
+    { name: "redux-saga", color: "#61DAFB" },
+  ]
+href: "https://github.com/morethanmin/keeeep"
+pinned: true
+sort: 2
+---

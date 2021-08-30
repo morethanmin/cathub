@@ -7,6 +7,7 @@ const formatDate = function(date) {
   return new Date(date).toLocaleDateString("en", options);
 };
 export default {
+  layout: "detail",
   async asyncData({ $content, params }) {
     const articles = (
       await $content("articles")

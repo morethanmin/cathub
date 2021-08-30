@@ -34,7 +34,7 @@
               </button>
             </NuxtLink>
           </div>
-          <!-- <div class="">
+          <div class="">
             <NuxtLink to="/projects">
               <button
                 ref="projects"
@@ -50,7 +50,7 @@
                 <div class="">Projects</div>
               </button>
             </NuxtLink>
-          </div> -->
+          </div>
           <div class="">
             <NuxtLink to="/archive">
               <button
@@ -64,7 +64,7 @@
                 class="d-flex flex-row align-center"
               >
                 <v-icon>mdi-post-outline</v-icon>
-                <div class="ml-1">Archive</div>
+                <div class="ml-1">Blog</div>
               </button>
             </NuxtLink>
           </div>

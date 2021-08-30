@@ -11,14 +11,17 @@
     <div class="mb-5">
       <div class="d-flex justify-space-between mb-3">
         <div class="projects color-black">Projects</div>
-        <a
+        <!-- <a
           target="_blank"
           href="https://github.com/morethanmin?tab=repositories"
         >
           <div class="text-body-2">more</div>
-        </a>
+        </a> -->
+        <NuxtLink to="/projects">
+          <div class="text-body-2">more</div>
+        </NuxtLink>
       </div>
-      <ProjectList />
+      <PinnedList :projects="projects" />
     </div>
     <div class="mb-5">
       <div class="d-flex justify-space-between mb-3">
@@ -49,6 +52,10 @@ export default {
     about: {
       type: Object,
       default: () => ({})
+    },
+    projects: {
+      type: Array,
+      default: () => []
     }
   }
 };
