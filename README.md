@@ -6,9 +6,9 @@
 
 github에 저장소를 만들어 소스코드가 아닌 다른 개발 관련 정보를 올리거나, 저장해두었을 때 불편했던 점을 해소하기위해 만들었습니다.
 
-## Live demo
+## Link
 
-You can check demo [here](https://morethanmin.web.app).
+You can check [here](https://morethanmin.web.app).
 
 ## Preview
 
@@ -22,7 +22,7 @@ You can check demo [here](https://morethanmin.web.app).
 - sass
 - nuxt
 - nuxt/content
-- firebase (hosting) 
+- firebase (hosting)
 
 ## Getting started
 

@@ -37,16 +37,12 @@
         <div class="d-flex align-center">
           <SearchBar />
           <div
-            class="header-nav d-flex flex-row align-center text-body-2 font-weight-bold"
+            class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
           >
-            <NuxtLink
-              v-for="(category, index) of categories"
-              :key="index"
-              class="ml-4"
-              :to="`/archive/category/${category.name}`"
-            >
-              {{ category.name }}
-            </NuxtLink>
+            <a class="ml-4">React</a>
+            <a class="ml-4">ffff</a>
+            <a class="ml-4">ffff</a>
+            <a class="ml-4">ffff</a>
           </div>
         </div>
       </div>
