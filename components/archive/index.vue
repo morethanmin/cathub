@@ -5,13 +5,10 @@
     </div>
 
     <div class="mb-5">
-      <InfoListBox
+      <CategoryItem
         v-for="(category, index) of categories"
         :key="index"
-        :title="category.name"
-        :desc="category.description"
-        :createdAt="category.createdAt"
-        :link="`/archive/${category.name}`"
+        :category="category"
       />
     </div>
   </div>

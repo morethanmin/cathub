@@ -1,7 +1,7 @@
 <template>
   <div>
-    <svg width="828" height="128">
-      <g transform="translate(10,20)">
+    <svg width="400" height="100">
+      <g transform="translate(0,0)">
         <g
           v-for="week of Math.ceil(mergedData.length / 7)"
           :key="week"
@@ -12,8 +12,8 @@
               ? mergedData.length % 7
               : 7"
             :key="day"
-            width="11"
-            height="11"
+            width="10"
+            height="10"
             :x="17 - week"
             :y="15 * (day - 1)"
             rx="2"
@@ -23,56 +23,6 @@
             :class="`counted-${mergedData[(week - 1) * 7 + (day - 1)].count}`"
           />
         </g>
-        <text
-          text-anchor="start"
-          class="label"
-          dx="-10"
-          dy="8"
-          style="display: none"
-        >
-          Sun
-        </text>
-        <text text-anchor="start" class="label" dx="-10" dy="25">Mon</text>
-        <text
-          text-anchor="start"
-          class="label"
-          dx="-10"
-          dy="32"
-          style="display: none"
-        >
-          Tue
-        </text>
-        <text text-anchor="start" class="label" dx="-10" dy="56">Wed</text>
-        <text
-          text-anchor="start"
-          class="label"
-          dx="-10"
-          dy="57"
-          style="display: none"
-        >
-          Thu
-        </text>
-        <text text-anchor="start" class="label" dx="-10" dy="85">Fri</text>
-        <text
-          text-anchor="start"
-          class="label"
-          dx="-10"
-          dy="81"
-          style="display: none"
-        >
-          Sat
-        </text>
-
-        <text
-          v-for="month of monthData"
-          :key="month.count"
-          text-anchor="start"
-          class="label"
-          :dx="15 + 16 * month.x"
-          dy="-5"
-        >
-          {{ month.month }}
-        </text>
       </g>
     </svg>
   </div>
@@ -83,12 +33,12 @@ export default {
   props: {
     countedDate: {
       type: Object,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
   data: () => ({
     mergedData: [],
-    monthData: [],
+    monthData: []
   }),
   methods: {
     parseDate(date) {
@@ -114,7 +64,7 @@ export default {
         9: "Sept",
         10: "Oct",
         11: "Nov",
-        12: "Dec",
+        12: "Dec"
       };
       return letter[month];
     },
@@ -130,13 +80,13 @@ export default {
         datesBetween.push(this.parseDate(date));
       }
 
-      const result = datesBetween.map((date) => {
+      const result = datesBetween.map(date => {
         const value = Object.keys(this.countedDate).find(
-          (key) => `${key}` === date
+          key => `${key}` === date
         );
         return {
           date: date,
-          count: value ? this.countedDate[value] : 0,
+          count: value ? this.countedDate[value] : 0
         };
       });
       return result;
@@ -144,7 +94,7 @@ export default {
     getMonthData() {
       const date = new Date();
       const month = date.getMonth();
-      const dateData = this.mergedData.map((x) => x.date);
+      const dateData = this.mergedData.map(x => x.date);
       const monthData = [];
 
       let lastFound = 0;
@@ -154,23 +104,23 @@ export default {
         const x = Math.ceil(
           (dateData
             .slice(lastFound)
-            .findIndex((x) => x.includes(`-${curMonthString}-`)) +
+            .findIndex(x => x.includes(`-${curMonthString}-`)) +
             lastFound) /
             7
         );
         lastFound = x;
         monthData.push({
           month: this.getMonthLetter(curMonth),
-          x: x,
+          x: x
         });
       }
       return monthData;
-    },
+    }
   },
   mounted() {
     this.mergedData = this.getDateData();
     this.monthData = this.getMonthData();
-  },
+  }
 };
 </script>
 
