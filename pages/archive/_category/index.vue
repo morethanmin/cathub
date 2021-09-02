@@ -9,10 +9,12 @@ const formatDate = function(date) {
 export default {
   layout: "detail",
   async asyncData({ $content, params }) {
+    const category = params.category;
+    console.log(category);
     const articles = (
       await $content("articles")
         .where({
-          category: params.category
+          category: category
         })
         .without("body")
         .sortBy("createdAt", "asc")
@@ -24,18 +26,16 @@ export default {
       return extendedArticle;
     });
     return {
-      articles
+      articles,
+      category
     };
   },
-  data: () => ({
-    category: ""
-  }),
+  data: () => ({}),
   content: {
     nestedProperties: ["category.name"]
   },
-  mounted() {
-    this.category = this.$route.params.category;
-  },
-  methods: {}
+
+  watch: {},
+  mounted() {}
 };
 </script>

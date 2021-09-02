@@ -77,6 +77,7 @@
 <style lang="scss" scoped>
 .header-nav {
   z-index: 10;
+  margin-top: 30px;
 }
 .header-nav {
   position: sticky !important;

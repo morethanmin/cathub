@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="filter-box pb-5 mb-5">
-      <input type="text" placeholder="Find a category... " />
+      <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Find a category... "
+      />
     </div>
 
     <div class="mb-5">
@@ -41,15 +45,27 @@ export default {
     articles: {
       type: Array,
       default: () => []
-    },
-    categories: {
-      type: Array,
-      default: () => []
     }
   },
-  data: () => ({}),
+  data: () => ({
+    searchQuery: "",
+    categories: []
+  }),
   computed: {},
   methods: {},
-  mounted() {}
+  watch: {
+    async searchQuery(searchQuery) {
+      if (!searchQuery) {
+        this.categories = await this.$content("categories").fetch();
+      } else {
+        this.categories = await this.$content("categories")
+          .search(searchQuery)
+          .fetch();
+      }
+    }
+  },
+  async mounted() {
+    this.categories = await this.$content("categories").fetch();
+  }
 };
 </script>

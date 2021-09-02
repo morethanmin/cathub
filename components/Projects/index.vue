@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="filter-box pb-5 mb-5">
-      <input type="text" placeholder="Find a project... " />
+      <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Find a project... "
+      />
     </div>
     <div class="mb-5">
       <ProjectItem
@@ -28,15 +32,26 @@ input {
 </style>
 <script>
 export default {
-  props: {
-    projects: {
-      type: Array,
-      default: () => []
-    }
-  },
-  data: () => ({}),
+  props: {},
+  data: () => ({
+    searchQuery: "",
+    projects: []
+  }),
   computed: {},
   methods: {},
-  mounted() {}
+  watch: {
+    async searchQuery(searchQuery) {
+      if (!searchQuery) {
+        this.projects = await this.$content("projects").fetch();
+      } else {
+        this.projects = await this.$content("projects")
+          .search(searchQuery)
+          .fetch();
+      }
+    }
+  },
+  async mounted() {
+    this.projects = await this.$content("projects").fetch();
+  }
 };
 </script>

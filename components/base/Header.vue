@@ -124,7 +124,6 @@ export default {
   color: white;
   width: 100%;
   height: 60px;
-  margin-bottom: 30px;
   display: flex;
   align-content: center;
   justify-content: space-between;

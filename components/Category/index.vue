@@ -1,9 +1,6 @@
 <template>
   <div>
-    <h1>category: {{ category }}</h1>
     <div v-if="articles.length > 0">
-      <p>Bio: {{ articles[0].category.bio }}</p>
-      <h3>Here are a list of articles by {{ articles[0].category.name }}:</h3>
       <ul>
         <li v-for="article in articles" :key="article.slug">
           <NuxtLink :to="`/archive/${category}/${article.slug}`">
@@ -22,6 +19,7 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped></style>
 <script>
 export default {
   props: {

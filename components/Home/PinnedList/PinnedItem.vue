@@ -3,7 +3,7 @@
     <v-card-title class="text-subtitle-2 pb-1">
       <v-icon>{{ icon }}</v-icon>
       <a :href="href" target="_blank">
-        <div class="pinned-link">{{ title }}</div>
+        <div class="link">{{ title }}</div>
       </a>
     </v-card-title>
     <v-card-text class="ft-4 text-body-2 color_secondary">
@@ -54,17 +54,5 @@ export default {
 <style lang="scss" scoped>
 .v-card {
   width: 100%;
-}
-.pinned-link {
-  color: #0366d6;
-  font-weight: 700;
-
-  :hover {
-    cursor: pointer;
-  }
-}
-.pinned-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
 </style>

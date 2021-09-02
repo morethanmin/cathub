@@ -135,7 +135,6 @@ export default {
 .header {
   background-color: #252a2e;
   color: white;
-  margin-bottom: 30px;
 }
 .header-bar {
   width: 100%;

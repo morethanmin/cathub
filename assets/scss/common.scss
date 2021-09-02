@@ -39,6 +39,18 @@
   font-weight: 400 !important;
 }
 
-div.v-toolbar__content {
-  z-index: 99;
+.link {
+  color: #0366d6 !important;
+  font-weight: 700;
+  :hover {
+    cursor: pointer;
+  }
 }
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+// div.v-toolbar__content {
+//   z-index: 99;
+// }
