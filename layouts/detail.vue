@@ -22,7 +22,7 @@
 </template>
 <style lang="scss" scoped>
 .header {
-  display: block;
+  display: flex;
 }
 .mobile {
   display: none;

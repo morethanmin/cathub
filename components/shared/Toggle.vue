@@ -23,14 +23,14 @@
               class="d-flex align-center"
               :href="item.href"
             >
-              <span class="text-subtitle-2"> {{ item.text }} </span>
+              <span class="text-subtitle-2 ft-4"> {{ item.text }} </span>
             </a>
             <a
               v-else-if="item.type === `event`"
               class="d-flex align-center"
               @click="$emit(item.text)"
             >
-              <span class="text-subtitle-2"> {{ item.text }} </span>
+              <span class="text-subtitle-2 ft-4"> {{ item.text }} </span>
             </a>
           </li>
         </ul>
