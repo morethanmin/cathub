@@ -20,7 +20,7 @@
         <li
           v-for="(content, index) of contents"
           :key="index"
-          class="text-subtitle-2 d-flex align-center"
+          class="text-subtitle-2 d-flex align-center ft-4"
         >
           {{ content.text }}
           <a v-if="!!content.href" target="_blank" :href="content.href">

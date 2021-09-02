@@ -16,7 +16,7 @@
         </transition>
       </v-col>
       <v-col align-self="end" class="header-tab pt-0 pb-0 pr-5 pl-0" cols="9">
-        <div class="d-flex flex-row text-subtitle-2">
+        <div class="d-flex flex-row text-subtitle-2 ft-4">
           <div class="">
             <NuxtLink to="/">
               <button

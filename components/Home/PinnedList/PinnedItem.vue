@@ -6,7 +6,7 @@
         <div class="pinned-link">{{ title }}</div>
       </a>
     </v-card-title>
-    <v-card-text class="text-body-2 color_secondary">
+    <v-card-text class="ft-4 text-body-2 color_secondary">
       {{ subtitle }}
     </v-card-text>
     <v-card-text class="pt-0 color_secondary d-flex">

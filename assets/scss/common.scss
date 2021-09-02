@@ -4,8 +4,8 @@
 .color-gray {
   color: $color_gray !important;
 }
-.color_secondary{
-  color: $color_secondary !important
+.color_secondary {
+  color: $color_secondary !important;
 }
 
 .font-ko {
@@ -35,9 +35,10 @@
   margin: 0px !important;
 }
 
-*{
+.ft-4 {
+  font-weight: 400 !important;
 }
-div.v-toolbar__content{
-z-index: 99;
 
+div.v-toolbar__content {
+  z-index: 99;
 }

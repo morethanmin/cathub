@@ -21,7 +21,7 @@
             {{ subTitle }}
           </div>
         </div>
-        <div class="comment-desc text-body-2">
+        <div class="comment-desc text-body-2 font-weight-light">
           {{ comment }}
         </div>
       </div>

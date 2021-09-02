@@ -98,6 +98,7 @@
   > div {
     padding: 0;
     > div {
+      font-weight: 400;
       > .v-icon {
         margin-right: 5px;
       }

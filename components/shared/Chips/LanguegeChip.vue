@@ -3,7 +3,7 @@
       <div></div>
       {{ name }}
     </v-chip> -->
-  <div class="wrapper" color="white" small>
+  <div class="wrapper ft-4" color="white" small>
     <div :style="`background: ${color};`"></div>
     {{ name }}
   </div>

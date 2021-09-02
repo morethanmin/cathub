@@ -18,7 +18,7 @@
           <div class="text-body-2">more</div>
         </a> -->
         <NuxtLink to="/projects">
-          <div class="text-body-2">more</div>
+          <div class="text-body-2 ft-4">more</div>
         </NuxtLink>
       </div>
       <PinnedList :projects="projects" />
