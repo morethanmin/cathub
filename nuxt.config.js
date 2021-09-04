@@ -94,12 +94,20 @@ export default {
   generate: {
     async routes() {
       const { $content } = require("@nuxt/content");
-      const files = await $content("articles", { deep: true })
+      const articles = await $content("articles", { deep: true })
         .only(["path"])
         .fetch();
-      return files.map(file =>
-        file.path === "/index" ? "/" : `/archive/${file.path.slice(10)}`
+      const categories = await $content("categories")
+        .only(["path"])
+        .fetch();
+      const articleRoutes = articles.map(article =>
+        article.path === "/index" ? "/" : `/archive/${article.path.slice(10)}`
       );
+      const categoryRoutes = categories.map(category =>
+        category.path === "/index" ? "/" : `/archive/${category.path.slice(12)}`
+      );
+
+      return [...articleRoutes, ...categoryRoutes];
     }
   },
   static: {
