@@ -1,3 +1,8 @@
+import dotenv from "dotenv";
+let path = ".env";
+
+dotenv.config({ path });
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,7 +16,7 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "~/static/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "cat.png" }]
   },
   target: "static",
 
@@ -36,9 +41,22 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify"
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content"],
+  modules: ["@nuxt/content", "@nuxtjs/firebase"],
+  firebase: {
+    config: {
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      projectId: process.env.PROJECT_ID,
+      storageBucket: process.env.STORAGE_BUCKET,
+      messagingSenderId: process.env.MESSAGING_SENDER_ID,
+      appId: process.env.APP_ID,
+      measurementId: process.env.MEASUREMENT_ID
+    },
+    services: {
+      analytics: true
+    }
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
