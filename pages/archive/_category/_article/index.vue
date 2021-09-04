@@ -39,9 +39,16 @@ export default {
   layout: "detail",
   data: () => ({}),
   async asyncData({ $content, params }) {
-    const article = await $content("articles", params.article).fetch();
+    const article = await $content(
+      "articles",
+      params.category,
+      params.article,
+      {
+        deep: true
+      }
+    ).fetch();
 
-    const [prev, next] = await $content("articles")
+    const [prev, next] = await $content("articles", { deep: true })
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
       .surround(params.article)

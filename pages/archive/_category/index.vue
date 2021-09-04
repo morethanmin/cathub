@@ -12,7 +12,7 @@ export default {
     const category = params.category;
     console.log(category);
     const articles = (
-      await $content("articles")
+      await $content("articles", { deep: true })
         .where({
           category: category
         })

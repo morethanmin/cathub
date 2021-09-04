@@ -91,6 +91,17 @@ export default {
   loading: "~/components/Loading.vue",
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const files = await $content("articles", { deep: true })
+        .only(["path"])
+        .fetch();
+      return files.map(file =>
+        file.path === "/index" ? "/" : `/archive/${file.path.slice(10)}`
+      );
+    }
+  },
   static: {
     prefix: true
   }

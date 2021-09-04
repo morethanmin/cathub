@@ -17,7 +17,7 @@ const formatDate = function(date) {
 export default {
   async asyncData({ $content, params }) {
     const articles = (
-      await $content("articles")
+      await $content("articles", { deep: true })
         .sortBy("createdAt", "desc")
         .fetch()
     ).map(article => {

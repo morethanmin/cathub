@@ -53,9 +53,9 @@ export default {
   watch: {
     async searchQuery(searchQuery) {
       if (!searchQuery) {
-        this.articles = await this.$content("articles").fetch();
+        this.articles = await this.$content("articles", { deep: true }).fetch();
       } else {
-        this.articles = await this.$content("articles")
+        this.articles = await this.$content("articles", { deep: true })
           .limit(1)
           .search(searchQuery)
           .fetch();
@@ -63,7 +63,7 @@ export default {
     }
   },
   async mounted() {
-    this.articles = await this.$content("articles").fetch();
+    this.articles = await this.$content("articles", { deep: true }).fetch();
   }
 };
 </script>
