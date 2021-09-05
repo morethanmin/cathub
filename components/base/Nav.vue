@@ -159,9 +159,6 @@ export default {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
       if (match.some(x => x.path === "")) this.selectedTab = "About";
-      if (match.some(x => x.path === "/About")) this.selectedTab = "About";
-      if (match.some(x => x.path === "/repositories"))
-        this.selectedTab = "repositories";
       if (match.some(x => x.path === "/projects"))
         this.selectedTab = "projects";
       if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";

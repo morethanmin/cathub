@@ -51,7 +51,7 @@
       </div>
     </div>
     <div v-if="toggle">
-      <div v-if="selectedTab === `portfolio`" class="tab">
+      <div v-if="selectedTab === `about`" class="tab">
         <div class="header-nav text-subtitle-2 font-weight-bold">
           <a @click="handleScroll(`.about`)">About</a>
           <a @click="handleScroll(`.skills`)">Skills</a>
@@ -81,7 +81,7 @@
 import { mapGetters, mapMutations } from "vuex";
 export default {
   data: () => ({
-    selectedTab: "portfolio",
+    selectedTab: "",
     categories: [],
     toggle: false
   }),
@@ -106,7 +106,7 @@ export default {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some(x => x.path === "")) this.selectedTab = "portfolio";
+      if (match.some(x => x.path === "")) this.selectedTab = "about";
       if (match.some(x => x.path === "/projects"))
         this.selectedTab = "projects";
       if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
