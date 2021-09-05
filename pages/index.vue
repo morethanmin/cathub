@@ -10,6 +10,7 @@ export default {
       .where({ pinned: true })
       .sortBy("sort")
       .fetch();
+
     return {
       about,
       projects

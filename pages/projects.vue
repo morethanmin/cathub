@@ -1,8 +1,5 @@
 <template>
-  <!-- 
-       리스트 오른족에는 해당 프로젝트의 이미지를 보여준다.
-     -->
-  <Projects :projects="projects" />
+  <Projects :projects="extendedProjects" :onChange="onChange" />
 </template>
 
 <style lang="scss" scoped></style>
@@ -12,24 +9,37 @@ const formatDate = function(date) {
   return new Date(date).toLocaleDateString("en", options);
 };
 export default {
-  async asyncData({ $content, params }) {
-    const projects = (
-      await $content("projects")
-        .sortBy("createdAt")
-        .fetch()
-    ).map(projects => {
-      let extendedProjects = projects;
-      extendedProjects.createdAt = formatDate(projects.createdAt);
-      return extendedProjects;
-    });
-    return {
-      projects
-    };
-  },
   data: () => ({
-    tab: null
+    searchInput: "",
+    projects: []
   }),
-  computed: {},
-  methods: {}
+  computed: {
+    extendedProjects() {
+      return this.projects.map(project => {
+        let extendedProject = project;
+        extendedProject.createdAt = formatDate(project.createdAt);
+        return extendedProject;
+      });
+    }
+  },
+  methods: {
+    onChange(input) {
+      this.searchInput = input;
+    }
+  },
+  watch: {
+    async searchInput(searchInput) {
+      if (!searchInput) {
+        this.projects = await this.$content("projects").fetch();
+      } else {
+        this.projects = await this.$content("projects")
+          .search(searchInput)
+          .fetch();
+      }
+    }
+  },
+  async mounted() {
+    this.projects = await this.$content("projects").fetch();
+  }
 };
 </script>

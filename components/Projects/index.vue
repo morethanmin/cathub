@@ -3,8 +3,9 @@
     <div class="filter-box pb-5 mb-5">
       <input
         type="text"
-        v-model="searchQuery"
+        v-model="input"
         placeholder="Find a project... "
+        v-on:keyup="onChange(input)"
       />
     </div>
     <div class="mb-5">
@@ -32,26 +33,27 @@ input {
 </style>
 <script>
 export default {
-  props: {},
-  data: () => ({
-    searchQuery: "",
-    projects: []
-  }),
-  computed: {},
-  methods: {},
-  watch: {
-    async searchQuery(searchQuery) {
-      if (!searchQuery) {
-        this.projects = await this.$content("projects").fetch();
-      } else {
-        this.projects = await this.$content("projects")
-          .search(searchQuery)
-          .fetch();
+  props: {
+    projects: {
+      type: Array,
+      default: () => []
+    },
+    searchInput: {
+      type: String,
+      default: ""
+    },
+    onChange: {
+      type: Function,
+      default: () => {
+        console.log("!");
       }
     }
   },
-  async mounted() {
-    this.projects = await this.$content("projects").fetch();
+  data: () => ({
+    input: ""
+  }),
+  mounted() {
+    this.input = this.searchInput;
   }
 };
 </script>
