@@ -10,21 +10,22 @@ export default {
   layout: "detail",
   async asyncData({ $content, params }) {
     const category = params.category;
-    console.log(category);
-    const articles = (
-      await $content("articles", { deep: true })
-        .where({
-          category: category
-        })
-        .without("body")
-        .sortBy("createdAt", "asc")
-        .fetch()
-    ).map(article => {
-      let extendedArticle = article;
-      extendedArticle.createdAt = formatDate(article.createdAt);
-      extendedArticle.updatedAt = formatDate(article.updatedAt);
-      return extendedArticle;
-    });
+    let articles = [];
+    try {
+      articles = (
+        await $content("articles", category)
+          .without("body")
+          .sortBy("createdAt", "asc")
+          .fetch()
+      ).map(article => {
+        let extendedArticle = article;
+        extendedArticle.createdAt = formatDate(article.createdAt);
+        extendedArticle.updatedAt = formatDate(article.updatedAt);
+        return extendedArticle;
+      });
+    } catch (error) {
+      articles = [];
+    }
     return {
       articles,
       category
