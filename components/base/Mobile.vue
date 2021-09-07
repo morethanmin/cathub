@@ -67,7 +67,7 @@
             v-for="(category, index) of categories"
             :key="index"
             class="text-subtitle-2 font-weight-bold"
-            :to="`/archive/category/${category.name}`"
+            :to="`/archive/${category.name}`"
           >
             {{ category.name }}
           </NuxtLink>
