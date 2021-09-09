@@ -5,9 +5,15 @@
     <v-main app>
       <div class="title">
         <div class="wrapper">
-          <NuxtLink to="/archive" class="link name">morethanmin</NuxtLink>
+          <NuxtLink to="/archive" class="link prev">morethanmin</NuxtLink>
           <div class="gray">/</div>
-          <div class="link">{{ category }}</div>
+          <NuxtLink
+            :to="`/archive/${category}`"
+            :class="[`link`, article ? `prev` : null]"
+            >{{ category }}</NuxtLink
+          >
+          <div v-if="article" class="gray">/</div>
+          <div v-if="article" class="link">{{ article }}</div>
         </div>
       </div>
       <v-container class="common-wrapper">
@@ -30,7 +36,7 @@
 .title {
   background-color: #f6f8fa;
   border-bottom: 1px solid #d8dee3;
-  .name {
+  .prev {
     font-weight: 500;
   }
   .wrapper {
@@ -56,15 +62,22 @@
 <script>
 export default {
   data: () => ({
-    category: ""
+    category: "",
+    article: undefined
   }),
   watch: {
     "$route.params.category"() {
       this.category = this.$route.params.category;
+    },
+    "$route.params.article"() {
+      this.article = this.$route.params.article;
+      console.log(this.article);
     }
   },
   mounted() {
     this.category = this.$route.params.category;
+    this.article = this.$route.params.article;
+    console.log(this.article);
   }
 };
 </script>
