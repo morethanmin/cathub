@@ -2,25 +2,26 @@
   <v-app>
     <Mobile class="mobile"></Mobile>
     <Header class="header"></Header>
-    <v-main app>
-      <div class="title">
-        <div class="wrapper">
-          <NuxtLink to="/archive" class="link prev">morethanmin</NuxtLink>
-          <div class="gray">/</div>
-          <NuxtLink
-            :to="`/archive/${category}`"
-            :class="[`link`, article ? `prev` : null]"
-            >{{ category }}</NuxtLink
-          >
-          <div v-if="article" class="gray">/</div>
-          <div v-if="article" class="link">{{ article }}</div>
-        </div>
+    <div class="title">
+      <div class="wrapper">
+        <NuxtLink to="/archive" class="link prev">morethanmin</NuxtLink>
+        <div class="gray">/</div>
+        <NuxtLink
+          :to="`/archive/${category}`"
+          :class="[`link`, article ? `prev` : null]"
+          >{{ category }}</NuxtLink
+        >
+        <div v-if="article" class="gray">/</div>
+        <div v-if="article" class="link">{{ article }}</div>
       </div>
+    </div>
+    <v-main app>
       <v-container class="common-wrapper">
         <nuxt :category="category" />
       </v-container>
     </v-main>
-    <v-footer absolute app>
+
+    <v-footer>
       <v-divider></v-divider>
       <Footer />
     </v-footer>

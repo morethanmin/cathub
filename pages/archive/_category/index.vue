@@ -10,7 +10,6 @@ export default {
   layout: "detail",
   async asyncData({ $content, params }) {
     const category = params.category;
-    console.log(category);
     const articles = (
       await $content("articles", { deep: true })
         .where({

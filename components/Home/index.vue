@@ -11,12 +11,6 @@
     <div class="mb-5">
       <div class="d-flex justify-space-between mb-3">
         <div class="projects color-black">Projects</div>
-        <!-- <a
-          target="_blank"
-          href="https://github.com/morethanmin?tab=repositories"
-        >
-          <div class="text-body-2">more</div>
-        </a> -->
         <NuxtLink to="/projects">
           <div class="text-body-2 ft-4">more</div>
         </NuxtLink>
