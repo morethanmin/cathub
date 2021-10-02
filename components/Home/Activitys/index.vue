@@ -58,8 +58,8 @@
             href="https://giantcorp.co.kr/"
             type="company"
             :contents="[
-              { text: `Sloker Admin`, href: `` },
-              { text: `Sloker Members`, href: `` }
+              { text: `삶기술학교`, href: `https://hansan.slowtech.ac` },
+              { text: `커뮤니티호텔H`, href: `https://hotelh1500.com` }
             ]"
           />
           <Activity
@@ -81,7 +81,7 @@
             :contents="[
               { text: `자사 홈페이지`, href: `http://www.trigit.com` },
               {
-                text: `e-learning 컨텐츠 개발`,
+                text: `e-learning contents`,
                 href: ``
               }
             ]"
