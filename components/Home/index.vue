@@ -15,13 +15,13 @@
           <div class="text-body-2 ft-4">more</div>
         </NuxtLink>
       </div>
-      <PinnedList :projects="projects" />
+      <PinnedList :items="projects" />
     </div>
     <div class="mb-5">
       <div class="d-flex justify-space-between mb-3">
         <div class="skills color-black">Skills</div>
       </div>
-      <Skills />
+      <Skills :items="skills" :detailItems="skillsDetail" />
     </div>
     <div class="mb-5">
       <Activitys />
@@ -48,6 +48,14 @@ export default {
       default: () => ({})
     },
     projects: {
+      type: Array,
+      default: () => []
+    },
+    skills: {
+      type: Array,
+      default: () => []
+    },
+    skillsDetail: {
       type: Array,
       default: () => []
     }

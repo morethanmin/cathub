@@ -2,17 +2,17 @@
   <v-container class="ma-0 pa-0">
     <v-row>
       <v-col
-        v-for="(proejct, index) in projects"
+        v-for="(item, index) in items"
         :key="index"
         class="card-col"
         sm="12"
         md="6"
       >
         <PinnedItem
-          :title="proejct.name"
-          :subtitle="proejct.description"
-          :langueges="proejct.tags"
-          :href="proejct.href"
+          :title="item.name"
+          :subtitle="item.description"
+          :langueges="item.tags"
+          :href="item.href"
         />
       </v-col>
     </v-row>
@@ -31,7 +31,7 @@
 <script>
 export default {
   props: {
-    projects: {
+    items: {
       type: Array,
       default: () => []
     }
