@@ -4,6 +4,13 @@
     :projects="projects"
     :skills="skills"
     :skillsDetail="skillsDetail"
+    :activitys="{
+      careers: careers,
+      educations: educations,
+      certificates: certificates,
+      awards: awards
+    }"
+    :comments="comments"
   />
 </template>
 
@@ -28,7 +35,7 @@ export default {
         icon: "react.svg",
         title: "React",
         subtitle:
-          "재 사용성을 고려한 Component와 Custom Hook을 만들어 사용하고,리덕스와 미들웨어를 활용해요."
+          "재 사용성을 고려한 Component와 Custom Hook을 만들어요. Next.js를 주로 사용하고 있어요."
       },
       {
         id: 2,
@@ -109,7 +116,7 @@ export default {
         icon: "javascript.svg",
         color: "#F7DF1E",
         percent: 80,
-        tags: [`typescript`],
+        tags: [`typescript`, "nodejs", "webpack", "babel"],
         title: "Javascript",
         subtitle:
           "ES6+ 문법에 익숙해요. 동기 단일 스레드로 동작하는 원리를 이해하고 비동기 처리가 가능해요. webpack과 babel을 통한 개발환경을 이해하고 구축 할 수 있어요. typescript를 사용할 수 있고, 서비스 경험이 있어요. 디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다."
@@ -123,6 +130,142 @@ export default {
         title: "HTML & CSS",
         subtitle:
           "웹 표준과 semantic UI를 준수하려 노력해요. 다양한 CSS 라이브러리를 사용할 수 있어요. 다양한 CSS 전처리기을 사용하고 활용할 수 있어요."
+      }
+    ],
+    careers: [
+      {
+        img: "opengallery.png",
+        title: "Opengallery - Web Developer",
+        href: "https://www.opengallery.co.kr",
+        contents: []
+      },
+      {
+        img: "giant.png",
+        title: "Giant - Web Developer",
+        href: "https://giantcorp.co.kr",
+        type: "company",
+        contents: [
+          { text: `삶기술학교`, href: `https://hansan.slowtech.ac` },
+          { text: `커뮤니티호텔H`, href: `https://hotelh1500.com` }
+        ]
+      },
+      {
+        img: "weplanet.png",
+        title: "Opengallery - Web Developer",
+        href: "https://www.opengallery.co.kr",
+        type: "company",
+        contents: [
+          { text: `양재동 코드랩`, href: `https://www.codelabs.kr` },
+          { text: `중고 맥북 마켓 BARO`, href: `https://www.mybaro.com` },
+          { text: `Styleplus`, href: `https://www.styleplus.me/` }
+        ]
+      },
+      {
+        img: "trigit.png",
+        title: "Opengallery - Web Developer",
+        href: "https://www.opengallery.co.kr",
+        type: "company",
+        contents: [
+          { text: `자사 홈페이지`, href: `http://www.trigit.com` },
+          {
+            text: `e-learning contents`,
+            href: ``
+          }
+        ]
+      }
+    ],
+    educations: [
+      {
+        img: "j2kb.png",
+        title: "J2KB 3기 (전국 코딩 연합 동아리)",
+        href: "https://github.com/J2KB-3rd-Season",
+        contents: [
+          { text: `유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)` }
+        ]
+      },
+      {
+        icon: "mdi-book-open-outline",
+        title: "STUDY HALLE (자바 스터디)",
+        href: "https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
+      },
+      {
+        img: "doongji.png",
+        title: "Doongji (현업 개발자 모임)",
+        href: "https://github.com/Doong-Ji",
+        contents: [{ text: `Dvelopment Sub Leader` }]
+      },
+      {
+        icon: "mdi-laptop",
+        title: "Web Developer Bootcamp",
+        href:
+          "https://drive.google.com/file/d/1dtc6Hg3zBDtCgO9iK9cn67LSI_QghRzK/view?usp=sharing",
+        contents: [
+          {
+            text: `mtm camp`,
+            href: `https://github.com/morethanmin/mtmcamp`
+          }
+        ]
+      },
+      {
+        img: "MyongJi.jpeg",
+        title: "Myongji university",
+        href: "https://www.mju.ac.kr/sites/mjukr/intro/intro.html",
+        contents: [
+          { text: `Information Communication Engineering (3rd year leave)` }
+        ]
+      }
+    ],
+    certificates: [
+      {
+        icon: "mdi-certificate-outline",
+        title: "정보처리산업기사"
+      },
+      {
+        icon: "mdi-certificate-outline",
+        title: "TOEIC 730 score"
+      }
+    ],
+    awards: [
+      {
+        title: "유니콘 금상",
+        href:
+          "https://drive.google.com/file/d/1UNwF63XqPNjEgAzGTOG3aOe0jR3bebD0/view?usp=sharing",
+        contents: [
+          {
+            text: `J2KB에서 주최한 해커톤에서 프론트엔드 리더로 참가해 금상을 수상했습니다.`
+          }
+        ]
+      },
+      {
+        title: "교내 공모전 우수상",
+        contents: [
+          {
+            text: `교내 공모전에서 재정이의 모험이라는 게임을 출품해 우수상을 수상했습니다.`
+          }
+        ]
+      }
+    ],
+    comments: [
+      {
+        img: "dohyun.jpeg",
+        title: "안도현",
+        subtitle: "Giant web-developer",
+        comment:
+          "이상민 개발자는 끊임없이 배우며 항상 성장합니다. 배운 내용을 공유하여 조직 또한 함께 성장할 수 있도록 하며, 저 또한 그로부터 많은 영감을 얻을 수 있었습니다. 조직 내에 성장동력을 부여하고 앞으로도 스스로 성장할 개발자를 찾으신다면, 이상민 개발자를 추천드립니다."
+      },
+      {
+        img: "user.png",
+        title: "Jay",
+        subtitle: "Weplanet frontend-developer",
+        comment:
+          "Jade는 개발이라는 업무를 일로 생각하지않고 즐기는 개발자였어요. 항상 현재에 안주하지 않고 끊임없이 성장하는 모습을 보면 찐 개발자라고 생각하면서도 다방면에서 뛰어난 감각을 가지고 있는 사람이여서 잠깐이였지만 팀에 정말 많은 영향을 주었어요. 다재다능한 개발자를 찾으신다면 추천드립니다!"
+      },
+      {
+        img: "user.png",
+        title: "이성현",
+        subtitle: "Trigit-Software development leader",
+        comment:
+          "상민님과 짧은 기간동안 협업을 하면서 느꼈던 점은 개발에 대한 높은 관심과 빠른 습득력을 가진 개발자라는것입니다. 짦은 기간 인턴으로 함께한다는 것이 아쉬울 정도로 커뮤니티 능력, 개발 능력에 있어서 높은 가능성을 보여주었습니다."
       }
     ]
   }),

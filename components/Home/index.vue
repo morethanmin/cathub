@@ -24,7 +24,7 @@
       <Skills :items="skills" :detailItems="skillsDetail" />
     </div>
     <div class="mb-5">
-      <Activitys />
+      <Activitys :activitys="activitys" />
     </div>
 
     <div class="mb-5">
@@ -34,7 +34,7 @@
         </div>
       </div>
       <v-divider></v-divider>
-      <Comments />
+      <Comments :comments="comments" />
     </div>
   </div>
 </template>
@@ -56,6 +56,14 @@ export default {
       default: () => []
     },
     skillsDetail: {
+      type: Array,
+      default: () => []
+    },
+    activitys: {
+      type: Object,
+      default: () => {}
+    },
+    comments: {
       type: Array,
       default: () => []
     }

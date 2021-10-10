@@ -47,44 +47,13 @@
             <v-divider></v-divider>
           </div>
           <Activity
-            :img="require('~/static/images/opengallery.png')"
-            title="OpenGallery - Web Developer"
-            href="https://www.opengallery.co.kr/"
-            :contents="[]"
-          />
-          <Activity
-            :img="require('~/static/images/giant.png')"
-            title="Giant - Web Developer"
-            href="https://giantcorp.co.kr/"
-            type="company"
-            :contents="[
-              { text: `삶기술학교`, href: `https://hansan.slowtech.ac` },
-              { text: `커뮤니티호텔H`, href: `https://hotelh1500.com` }
-            ]"
-          />
-          <Activity
-            :img="require('~/static/images/weplanet.png')"
-            title="Weplanet - Frontend Developer Intern"
-            href="http://wepla.net/"
-            type="company"
-            :contents="[
-              { text: `양재동 코드랩`, href: `https://www.codelabs.kr` },
-              { text: `중고 맥북 마켓 BARO`, href: `https://www.mybaro.com` },
-              { text: `Styleplus`, href: `https://www.styleplus.me/` }
-            ]"
-          />
-          <Activity
-            :img="require('~/static/images/trigit.png')"
-            title="Trigit Software - Frontend Developer Intern"
-            type="company"
-            href="http://www.trigit.com/"
-            :contents="[
-              { text: `자사 홈페이지`, href: `http://www.trigit.com` },
-              {
-                text: `e-learning contents`,
-                href: ``
-              }
-            ]"
+            v-for="(item, idx) in activitys.careers"
+            :key="idx"
+            :img="require(`~/static/images/${item.img}`)"
+            :title="item.title"
+            :href="item.href"
+            :type="item.type"
+            :contents="item.contents"
           />
         </div>
       </v-col>
@@ -104,42 +73,13 @@
             title="Google Developer Group "
           /> -->
           <Activity
-            :img="require('~/static/images/j2kb.png')"
-            title="J2KB 3기 (전국 코딩 연합 동아리)"
-            href="https://github.com/J2KB-3rd-Season"
-            :contents="[
-              { text: `유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)` }
-            ]"
-          />
-          <Activity
-            icon="mdi-book-open-outline"
-            title="STUDY HALLE (자바 스터디)"
-            href="https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
-          />
-          <Activity
-            :img="require('~/static/images/doongji.png')"
-            title="doongji"
-            href="https://github.com/Doong-Ji"
-            :contents="[{ text: `Dvelopment Sub Leader` }]"
-          />
-          <Activity
-            icon="mdi-laptop"
-            title="Web Developer Bootcamp"
-            href="https://drive.google.com/file/d/1dtc6Hg3zBDtCgO9iK9cn67LSI_QghRzK/view?usp=sharing"
-            :contents="[
-              {
-                text: `mtm camp`,
-                href: `https://github.com/morethanmin/mtmcamp`
-              }
-            ]"
-          />
-          <Activity
-            :img="require('~/static/images/MyongJi.jpeg')"
-            title="Myongji university"
-            href="https://www.mju.ac.kr/sites/mjukr/intro/intro.html"
-            :contents="[
-              { text: `Information Communication Engineering (3rd year leave)` }
-            ]"
+            v-for="(item, idx) in activitys.educations"
+            :key="idx"
+            :img="item.img ? require(`~/static/images/${item.img}`) : ''"
+            :icon="item.icon ? item.icon : ''"
+            :title="item.title"
+            :href="item.href"
+            :contents="item.contents"
           />
         </div>
       </v-col>
@@ -154,8 +94,15 @@
             <div class="">May 2021</div>
             <v-divider></v-divider>
           </div>
-          <Activity ico="mid-certificate-outline" title="정보처리산업기사" />
-          <Activity ico="mid-certificate-outline" title="TOEIC 730 score" />
+          <Activity
+            v-for="(item, idx) in activitys.certificates"
+            :key="idx"
+            :img="item.img ? require(`~/static/images/${item.img}`) : ''"
+            :icon="item.icon ? item.icon : ''"
+            :title="item.title"
+            :href="item.href"
+            :contents="item.contents"
+          />
         </div>
       </v-col>
       <v-col
@@ -170,21 +117,11 @@
             <v-divider></v-divider>
           </div>
           <Activity
-            title="유니콘 금상"
-            href="https://drive.google.com/file/d/1UNwF63XqPNjEgAzGTOG3aOe0jR3bebD0/view?usp=sharing"
-            :contents="[
-              {
-                text: `J2KB에서 주최한 해커톤에서 프론트엔드 리더로 참가해 금상을 수상했습니다.`
-              }
-            ]"
-          />
-          <Activity
-            title="교내 공모전 우수상"
-            :contents="[
-              {
-                text: `교내 공모전에서 재정이의 모험이라는 게임을 출품해 우수상을 수상했습니다.`
-              }
-            ]"
+            v-for="(item, idx) in activitys.awards"
+            :key="idx"
+            :title="item.title"
+            :href="item.href"
+            :contents="item.contents"
           />
         </div>
       </v-col>
@@ -252,6 +189,12 @@
 
 <script>
 export default {
+  props: {
+    activitys: {
+      type: Object,
+      default: () => {}
+    }
+  },
   data: () => ({
     selected: "career"
   })
