@@ -30,10 +30,6 @@
 <script>
 export default {
   props: {
-    countedDate: {
-      type: Object,
-      default: () => ({})
-    },
     parsedDate: {
       type: Array,
       default: () => []
@@ -74,7 +70,7 @@ export default {
       return letter[month];
     },
     //1년전 date ~ 현재까지를 array로 생성하고 counted에 있는 데이터만큼 추가한다.
-    getDateData(countedDate) {
+    getDateData(parsedDate) {
       const dateEnd = new Date();
       const dateStart = new Date(`${this.getStart(dateEnd)}`);
 
@@ -91,7 +87,7 @@ export default {
       //datesBetween과 countedDate를 합친다.
       const result = datesBetween.map(date => {
         // const value = Object.keys(countedDate).find(key => `${key}` === date);
-        const count = this.parsedDate.filter(item => item === date).length;
+        const count = parsedDate.filter(item => item === date).length;
 
         if (count)
           console.log({
@@ -132,8 +128,8 @@ export default {
     }
   },
   mounted() {
-    this.mergedData = this.getDateData(this.countedDate);
-    this.monthData = this.getMonthData();
+    this.mergedData = this.getDateData(this.parsedDate);
+    // this.monthData = this.getMonthData();
   }
 };
 </script>
@@ -151,7 +147,7 @@ rect {
 }
 
 .counted-1 {
-  fill: #9be9a8;
+  fill: #d2eed7;
 }
 .counted-2 {
   fill: #9be9a8;

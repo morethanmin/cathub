@@ -64,21 +64,27 @@ export default {
   methods: {
     onChange(input) {
       this.searchInput = input;
+    },
+    async getCategories(input) {
+      let categories = [];
+      if (!input) {
+        categories = await this.$content("categories").fetch();
+      } else {
+        categories = await this.$content("categories")
+          .search(input)
+          .fetch();
+      }
+
+      return categories;
     }
   },
   watch: {
     async searchInput(searchInput) {
-      if (!searchInput) {
-        this.categories = await this.$content("categories").fetch();
-      } else {
-        this.categories = await this.$content("categories")
-          .search(searchInput)
-          .fetch();
-      }
+      this.categories = await this.getCategories(searchInput);
     }
   },
   async mounted() {
-    this.categories = await this.$content("categories").fetch();
+    this.categories = await this.getCategories();
   }
 };
 </script>

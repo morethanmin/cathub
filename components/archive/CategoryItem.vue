@@ -13,7 +13,7 @@
           {{ category.description }}
         </div>
         <div class="d-flex subdesc color_secondary">
-          <div>{{ category.createdAt }}</div>
+          <div>{{ this.parsedDate.length }} article archived</div>
         </div>
       </div>
       <div class="card-img">
@@ -36,7 +36,9 @@ export default {
       default: () => []
     }
   },
-  mounted() {}
+  mounted() {
+    console.log(this.parsedDate);
+  }
 };
 </script>
 
