@@ -1,31 +1,30 @@
 <template>
-  <div>
-    <svg width="400" height="100">
-      <g transform="translate(0,0)">
-        <g
-          v-for="week of Math.ceil(mergedData.length / 7)"
-          :key="week"
-          :transform="`translate(${16 * (week - 1)}, 0)`"
-        >
-          <rect
-            v-for="day of mergedData.length - week * 7 < 0
-              ? mergedData.length % 7
-              : 7"
-            :key="day"
-            width="10"
-            height="10"
-            :x="17 - week"
-            :y="15 * (day - 1)"
-            rx="2"
-            ry="2"
-            :date-date="mergedData[(week - 1) * 7 + (day - 1)].date"
-            :date-data="mergedData[(week - 1) * 7 + (day - 1)].count"
-            :class="`counted-${mergedData[(week - 1) * 7 + (day - 1)].count}`"
-          />
-        </g>
+  <svg class="svg">
+    <!-- 832 -->
+    <g transform="translate(-417,0)">
+      <g
+        v-for="week of Math.ceil(mergedData.length / 7)"
+        :key="week"
+        :transform="`translate(${16 * (week - 1)}, 0)`"
+      >
+        <rect
+          v-for="day of mergedData.length - week * 7 < 0
+            ? mergedData.length % 7
+            : 7"
+          :key="day"
+          width="10"
+          height="10"
+          :x="17 - week"
+          :y="15 * (day - 1)"
+          rx="2"
+          ry="2"
+          :date-date="mergedData[(week - 1) * 7 + (day - 1)].date"
+          :date-data="mergedData[(week - 1) * 7 + (day - 1)].count"
+          :class="`counted-${mergedData[(week - 1) * 7 + (day - 1)].count}`"
+        />
       </g>
-    </svg>
-  </div>
+    </g>
+  </svg>
 </template>
 
 <script>
@@ -34,6 +33,10 @@ export default {
     countedDate: {
       type: Object,
       default: () => ({})
+    },
+    parsedDate: {
+      type: Array,
+      default: () => []
     }
   },
   data: () => ({
@@ -42,11 +45,13 @@ export default {
   }),
   methods: {
     parseDate(date) {
+      //return 0000-00-00
       return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
         -2
       )}-${`0${date.getDate()}`.slice(-2)}`;
     },
     getStart(date) {
+      //return 0000-00-00 (current year - 1)
       return `${date.getFullYear() - 1}-${`0${date.getMonth() + 1}`.slice(
         -2
       )}-${`0${date.getDate()}`.slice(-2)}`;
@@ -68,9 +73,12 @@ export default {
       };
       return letter[month];
     },
-    getDateData() {
+    //1년전 date ~ 현재까지를 array로 생성하고 counted에 있는 데이터만큼 추가한다.
+    getDateData(countedDate) {
       const dateEnd = new Date();
       const dateStart = new Date(`${this.getStart(dateEnd)}`);
+
+      //datesBetween 생성
       const datesBetween = [];
       for (
         let date = new Date(dateStart);
@@ -80,13 +88,19 @@ export default {
         datesBetween.push(this.parseDate(date));
       }
 
+      //datesBetween과 countedDate를 합친다.
       const result = datesBetween.map(date => {
-        const value = Object.keys(this.countedDate).find(
-          key => `${key}` === date
-        );
+        // const value = Object.keys(countedDate).find(key => `${key}` === date);
+        const count = this.parsedDate.filter(item => item === date).length;
+
+        if (count)
+          console.log({
+            date: date,
+            count: count
+          });
         return {
           date: date,
-          count: value ? this.countedDate[value] : 0
+          count: count
         };
       });
       return result;
@@ -118,13 +132,17 @@ export default {
     }
   },
   mounted() {
-    this.mergedData = this.getDateData();
+    this.mergedData = this.getDateData(this.countedDate);
     this.monthData = this.getMonthData();
   }
 };
 </script>
 
 <style lang="scss">
+.svg {
+  width: 100%;
+  height: 100%;
+}
 rect {
   fill: #ebedf0;
 }

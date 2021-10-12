@@ -1,5 +1,6 @@
 <template>
   <Archive
+    :parsedDate="parsedDate"
     :categories="extendedCategories"
     :searchInput="searchInput"
     :onChange="onChange"
@@ -12,9 +13,41 @@ const formatDate = function(date) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(date).toLocaleDateString("en", options);
 };
+const parseDate = function(date) {
+  //return 0000-00-00
+  return `${date.getFullYear()}-${`0${date.getMonth() + 1}`.slice(
+    -2
+  )}-${`0${date.getDate()}`.slice(-2)}`;
+};
 
 export default {
-  async asyncData({ $content, params }) {},
+  async asyncData({ $content, params }) {
+    //category 이름 가져오기
+    const categoriesData = await $content("categories")
+      .only("name")
+      .fetch();
+    //category이름에 맞는 article date 가져오기
+    const articlesData = await Promise.all(
+      categoriesData.map(item => {
+        return $content("articles", { deep: true })
+          .where({ category: item.name })
+          .only("createdAt")
+          .fetch();
+      })
+    );
+
+    const parsedDate = categoriesData.map((item, index) => {
+      const dates = articlesData[index].map(article => {
+        const date = new Date(article.createdAt);
+        return parseDate(date);
+      });
+      return {
+        name: item.name,
+        dates: dates
+      };
+    });
+    return { parsedDate };
+  },
   data: () => ({
     searchInput: "",
     categories: []

@@ -4,7 +4,7 @@
       <input
         type="text"
         v-model="input"
-        placeholder="Find a project... project-name, languege, etc."
+        placeholder="Find a project..."
         v-on:keyup="onChange(input)"
       />
     </div>

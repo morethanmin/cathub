@@ -269,8 +269,6 @@ export default {
       }
     ]
   }),
-  mounted() {
-    console.log(this.skillsDetail);
-  }
+  mounted() {}
 };
 </script>

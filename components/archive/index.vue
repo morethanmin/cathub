@@ -14,6 +14,7 @@
         v-for="(category, index) of categories"
         :key="index"
         :category="category"
+        :parsedDate="parsedDate.find(item => item.name === category.name).dates"
       />
     </div>
   </div>
@@ -48,6 +49,10 @@ export default {
       default: () => {
         console.log("!");
       }
+    },
+    parsedDate: {
+      type: Array,
+      default: () => []
     }
   },
   data: () => ({

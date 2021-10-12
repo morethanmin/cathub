@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="card-img">
-        <CommitBox />
+        <CommitBox :parsedDate="parsedDate" />
       </div>
     </div>
     <v-divider class="mt-5 mb-5"></v-divider>
@@ -30,8 +30,13 @@ export default {
     category: {
       type: Object,
       default: () => ({})
+    },
+    parsedDate: {
+      type: Array,
+      default: () => []
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 
@@ -68,6 +73,11 @@ export default {
 }
 
 .card-img {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100px;
+  width: 400px;
 }
 
 @media (max-width: $vt_sm) {
