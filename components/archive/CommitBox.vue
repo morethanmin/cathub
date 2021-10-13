@@ -147,10 +147,10 @@ rect {
 }
 
 .counted-1 {
-  fill: #d2eed7;
+  fill: #9be9a8;
 }
 .counted-2 {
-  fill: #9be9a8;
+  fill: #72db83;
 }
 .counted-3 {
   fill: #40c463;

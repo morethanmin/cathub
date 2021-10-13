@@ -1,4 +1,4 @@
 ---
 name: javascript
-description: "node.js, typescript, webpack 등등등..."
+description: "node.js, typescript, webpack, etc"
 ---

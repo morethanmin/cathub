@@ -1,4 +1,4 @@
 ---
 name: vue
-description: "-"
+description: "vue, vuex, nuxt.js, etc"
 ---
