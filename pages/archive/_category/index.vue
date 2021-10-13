@@ -16,7 +16,7 @@ export default {
           category: category
         })
         .without("body")
-        .sortBy("createdAt", "asc")
+        .sortBy("createdAt", "desc")
         .fetch()
     ).map(article => {
       let extendedArticle = article;
