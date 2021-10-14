@@ -16,8 +16,10 @@ export default {
       }
     ).fetch();
 
-    const [prev, next] = await $content("articles", { deep: true })
-      .only(["title", "slug"])
+    const [prev, next] = await $content("articles", params.category, {
+      deep: true
+    })
+      .only(["title", "slug", "category"])
       .sortBy("createdAt", "asc")
       .surround(params.article)
       .fetch();

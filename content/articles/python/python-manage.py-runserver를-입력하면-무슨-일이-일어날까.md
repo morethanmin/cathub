@@ -4,8 +4,6 @@ description: "-"
 category: python
 ---
 
-# python manage.py runserver를 입력하면 무슨 일이 일어날까?
-
 파이썬에서 pip를통해 django를 설치한 뒤, 해당 커맨드를 입력하면 django-admin에 의해 somethingApp이라는 django 프로젝트가생성된다.
 
 ```bash

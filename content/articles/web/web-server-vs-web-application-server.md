@@ -4,9 +4,7 @@ description: "-"
 category: web
 ---
 
-# web server? web application server?
-
-각각의 명칭에 대한 구분점에 대해서 간단하게 적어보았다.
+각각의 명칭에 대한 구분점에 대해서 간단하게 적어본다.
 
 - web server (apache, nginx 등등) : **정적페이지** 처리하기 위한 용도 (동적 페이지를 wsgi에서 처리하게 끔 설정해준다)
 - web application server : 실제로 **동적페이지** 만들어 주는 용도
@@ -24,4 +22,4 @@ web server <-> was(express, Next.js 등등)
 
 웹서버 <-> wsgi <-> wsgi 애플리케이션
 
-아이패드를 사면 자세히 그려보겠다.
+아이패드를 사면 자세히 그려볼게용

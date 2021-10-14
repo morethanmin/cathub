@@ -4,7 +4,7 @@
     <Header class="header"></Header>
     <div class="title">
       <div class="wrapper">
-        <NuxtLink to="/archive" class="link prev">morethanmin</NuxtLink>
+        <NuxtLink to="/archive" class="link prev">archive</NuxtLink>
         <div class="gray">/</div>
         <NuxtLink
           :to="`/archive/${category}`"

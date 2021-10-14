@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="callout px-3 py-5 mb-5">
+      💡 이곳은 개발을 공부하거나 진행하면서 겪은 내용들을 기록하는 공간입니다.
+      (작성된 내용이 정답이 아닐 수도 있습니다.)
+    </div>
     <div class="filter-box pb-5 mb-5">
       <input
         type="text"
@@ -21,6 +25,11 @@
 </template>
 
 <style lang="scss" scoped>
+.callout {
+  background: rgba(245, 245, 245, 0.93);
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
 .filter-box {
   border-bottom: 1px solid #e4e4e4;
 }

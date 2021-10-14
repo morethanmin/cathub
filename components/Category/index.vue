@@ -11,7 +11,7 @@
             <NuxtLink
               v-if="articles.length"
               class="alink"
-              :to="`/archive/${category}/${articles[0].slug}`"
+              :to="`/archive/${category.name}/${articles[0].slug}`"
             >
               recently writed {{ articles[0].title }}
             </NuxtLink>
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div v-for="article in articles" :key="article.slug">
-          <NuxtLink :to="`/archive/${category}/${article.slug}`">
+          <NuxtLink :to="`/archive/${category.name}/${article.slug}`">
             <!-- <img :src="article.img" :alt="article.alt" /> -->
             <div class="mainBoxConetnt">
               <div class="left">
@@ -50,14 +50,19 @@
       작성된 게시글이 없습니당.
     </v-col>
     <v-col cols="3">
-      <div class="mt-5">
-        <div>About</div>
-        <div>카테고리 소개</div>
+      <div class="mt-5 rightCol">
+        <div class="header">About</div>
+        <div>{{ category.description }}</div>
       </div>
     </v-col>
   </v-row>
 </template>
 <style lang="scss" scoped>
+.rightCol {
+  .header {
+    font-weight: bold;
+  }
+}
 .mainBox {
   border: 1px solid #d0d7de;
   border-radius: 6px;
@@ -132,13 +137,15 @@ export default {
       default: () => []
     },
     category: {
-      type: String,
-      default: ""
+      type: Object,
+      default: () => {}
     }
   },
   data: () => ({}),
   content: {},
-  mounted() {},
+  mounted() {
+    console.log(this.category);
+  },
   methods: {}
 };
 </script>

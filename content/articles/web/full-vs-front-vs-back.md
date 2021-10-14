@@ -4,6 +4,8 @@ description: "-"
 category: web
 ---
 
+실제 존재할 수 있는 웹서비스 형태에 대해서 이해해보고 각각의 동작방식을 더 명확히 이해하기 위해 작성하였다.
+
 ### 고전적인 웹 서버의 서비스(django, express)
 
 - computer에서 browser에 접속해 특정 address에 접속한다.

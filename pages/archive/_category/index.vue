@@ -9,11 +9,11 @@ const formatDate = function(date) {
 export default {
   layout: "detail",
   async asyncData({ $content, params }) {
-    const category = params.category;
+    const categoryName = params.category;
     const articles = (
       await $content("articles", { deep: true })
         .where({
-          category: category
+          category: categoryName
         })
         .without("body")
         .sortBy("createdAt", "desc")
@@ -24,6 +24,13 @@ export default {
       extendedArticle.updatedAt = formatDate(article.updatedAt);
       return extendedArticle;
     });
+    const category = (
+      await $content("categories")
+        .where({
+          name: categoryName
+        })
+        .fetch()
+    )[0];
     return {
       articles,
       category

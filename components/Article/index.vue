@@ -34,7 +34,7 @@
             </li>
           </ul>
         </nav>
-        <prev-next :prev="prev" :next="next" />
+        <PrevNext :prev="prev" :next="next" />
       </v-col>
     </v-row>
   </div>
