@@ -1,6 +1,6 @@
 ---
 title: "[10951] A+B - 4 python 문제풀이"
-description: 아직 개발중입니다!
+description: 알고리즘 문제풀이
 category: algorithm
 ---
 
@@ -22,7 +22,7 @@ category: algorithm
 
 다른 A+B와 다른 점이 크게는 없지만 입력이 끝날 때까지 A+B를 출력하는 문제이다. EOF에 대해서 알아보라고 나와있다.
 
-특별한 테스트 케이스 입력되지 않아도 스크립트가 종료될 수 있도록 ``try except``로 예외처리를 해주면 된다.
+특별한 테스트 케이스 입력되지 않아도 스크립트가 종료될 수 있도록 `try except`로 예외처리를 해주면 된다.
 
 ```python
 while True:
