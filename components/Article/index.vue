@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="9">
+      <v-col sm="12" md="9" class="mainsection">
         <div class="articleBox">
           <div class="header">
             <div class="contents pa-3">
@@ -13,13 +13,13 @@
           <!-- <img :src="article.img" :alt="article.alt" /> -->
           <!-- <p>Article last updated: {{ formatDate(article.updatedAt) }}</p> -->
 
-          <div>
-            <nuxt-content class="py-3 px-7" :document="article" />
+          <div class="content">
+            <nuxt-content :document="article" />
           </div>
           <!-- <category :category="article.category" /> -->
         </div>
       </v-col>
-      <v-col cols="3">
+      <v-col sm="12" md="3" class="sidesection">
         <nav>
           <ul>
             <li
@@ -40,6 +40,9 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.content {
+  padding: 20px 15px;
+}
 .articleBox {
   border: 1px solid #e1e4e8;
   border-radius: 10px;
@@ -59,6 +62,23 @@
         font-weight: bold;
       }
     }
+  }
+}
+@media (max-width: $vt_sm) {
+  .mainsection {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .articleBox {
+    border-radius: 0;
+  }
+  .sidesection {
+    display: none;
+  }
+  .content {
+    padding: 10px 5px;
   }
 }
 </style>

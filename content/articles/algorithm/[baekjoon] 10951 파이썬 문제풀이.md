@@ -1,5 +1,5 @@
 ---
-title: "[10951] A+B - 4 python 문제풀이"
+title: "[baekjoon] 10951 파이썬 문제풀이"
 description: 알고리즘 문제풀이
 category: algorithm
 ---
@@ -18,7 +18,7 @@ category: algorithm
 
 각 테스트 케이스마다 A+B를 출력한다.
 
-## 풀이
+# 풀이
 
 다른 A+B와 다른 점이 크게는 없지만 입력이 끝날 때까지 A+B를 출력하는 문제이다. EOF에 대해서 알아보라고 나와있다.
 

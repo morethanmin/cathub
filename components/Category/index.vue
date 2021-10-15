@@ -1,6 +1,6 @@
 <template>
   <v-row class="row-box">
-    <v-col cols="9" v-if="articles.length > 0">
+    <v-col sm="12" md="9" class="mainsection" v-if="articles.length > 0">
       <div class="mainBox mt-5">
         <div class="mainBoxHeader">
           <div class="left">
@@ -46,11 +46,11 @@
         </div>
       </div>
     </v-col>
-    <v-col cols="9" v-else>
+    <v-col sm="12" md="9" class="mainsection" v-else>
       작성된 게시글이 없습니당.
     </v-col>
-    <v-col cols="3">
-      <div class="mt-5 rightCol">
+    <v-col sm="12" md="3" class="sidesection">
+      <div class="mt-5 sideBox">
         <div class="header">About</div>
         <div>{{ category.description }}</div>
       </div>
@@ -58,7 +58,7 @@
   </v-row>
 </template>
 <style lang="scss" scoped>
-.rightCol {
+.sideBox {
   .header {
     font-weight: bold;
   }
@@ -127,6 +127,17 @@
 }
 .row-box {
   height: 100%;
+}
+
+@media (max-width: $vt_sm) {
+  .mainsection {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sidesection,
+  .alink {
+    display: none;
+  }
 }
 </style>
 <script>
