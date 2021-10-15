@@ -12,7 +12,7 @@ You can check [here](https://morethanmin.web.app).
 
 ## Preview
 
-![image](https://user-images.githubusercontent.com/72514247/125021041-db206300-e0b4-11eb-999c-746476804ca5.png)
+![chrome-capture](https://user-images.githubusercontent.com/72514247/137414803-e815d51a-f778-40bf-87eb-7f7094602f07.gif)
 
 ## Tech and libraries
 
