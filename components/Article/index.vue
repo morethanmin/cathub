@@ -20,21 +20,20 @@
         </div>
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
-        <nav>
-          <ul>
-            <li
-              :class="{
-                'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3
-              }"
-              v-for="link of article.toc"
-              :key="link.id"
-            >
-              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-            </li>
-          </ul>
-        </nav>
-        <PrevNext :prev="prev" :next="next" />
+        <div class="nav">
+          <div v-if="article.toc.length" class="navheader pb-1">Navigation</div>
+          <div
+            v-for="link of article.toc"
+            :key="link.id"
+            :class="{
+              'py-1': link.depth === 2,
+              'ml-2 py-1': link.depth === 3
+            }"
+          >
+            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+          </div>
+          <!-- <PrevNext :prev="prev" :next="next" /> -->
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -61,6 +60,22 @@
         font-size: 1rem;
         font-weight: bold;
       }
+    }
+  }
+}
+
+.sidesection {
+  position: relative;
+  .nav {
+    position: fixed;
+    top: 25%;
+    transform: translate(0, 0%);
+    color: #24292f;
+    font-size: 0.9rem;
+    .navheader {
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
     }
   }
 }

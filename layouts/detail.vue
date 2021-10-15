@@ -4,6 +4,7 @@
     <Header class="header"></Header>
     <div class="title">
       <div class="wrapper">
+        <v-icon class="icon">mdi-book-outline</v-icon>
         <NuxtLink to="/archive" class="link prev">archive</NuxtLink>
         <div class="gray">/</div>
         <NuxtLink
@@ -44,6 +45,10 @@
     display: flex;
     gap: 3px;
     padding: 20px;
+    .icon {
+      align-self: self-start;
+      padding-top: 3px;
+    }
   }
 }
 .gray {
@@ -56,6 +61,9 @@
   }
   .mobile {
     display: block !important;
+  }
+  .wrapper {
+    padding: 15px 5px !important;
   }
 }
 </style>
