@@ -2,6 +2,7 @@
 title: web server? web application server?
 description: "-"
 category: web
+createdAt: "2021-10-15"
 ---
 
 각각의 명칭에 대한 구분점에 대해서 간단하게 적어본다.

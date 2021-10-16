@@ -2,6 +2,7 @@
 title: "[baekjoon] 10818 파이썬 문제풀이"
 description: 알고리즘 문제풀이
 category: algorithm
+createdAt: "2021-10-16"
 ---
 
 ## 문제

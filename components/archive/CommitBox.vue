@@ -89,11 +89,11 @@ export default {
         // const value = Object.keys(countedDate).find(key => `${key}` === date);
         const count = parsedDate.filter(item => item === date).length;
 
-        if (count)
-          console.log({
-            date: date,
-            count: count
-          });
+        // if (count)
+        //   console.log({
+        //     date: date,
+        //     count: count
+        //   });
         return {
           date: date,
           count: count

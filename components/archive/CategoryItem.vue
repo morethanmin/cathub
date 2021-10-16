@@ -36,9 +36,7 @@ export default {
       default: () => []
     }
   },
-  mounted() {
-    console.log(this.parsedDate);
-  }
+  mounted() {}
 };
 </script>
 

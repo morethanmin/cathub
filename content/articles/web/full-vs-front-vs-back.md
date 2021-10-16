@@ -2,6 +2,7 @@
 title: full stack web vs front-end vs back-end
 description: "-"
 category: web
+createdAt: "2021-10-16"
 ---
 
 실제 존재할 수 있는 웹서비스 형태에 대해서 이해해보고 각각의 동작방식을 더 명확히 이해하기 위해 작성하였다.
