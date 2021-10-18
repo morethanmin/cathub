@@ -151,7 +151,7 @@ export default {
       },
       {
         img: "weplanet.png",
-        title: "Opengallery - Web Developer",
+        title: "Weplanet - Frontend Developer",
         href: "https://www.opengallery.co.kr",
         type: "company",
         contents: [
@@ -162,11 +162,11 @@ export default {
       },
       {
         img: "trigit.png",
-        title: "Opengallery - Web Developer",
-        href: "https://www.opengallery.co.kr",
+        title: "Trigit Software - Frontend Developer",
+        href: "http://www.trigit.com",
         type: "company",
         contents: [
-          { text: `자사 홈페이지`, href: `http://www.trigit.com` },
+          { text: `자사 홈페이지 개발`, href: `http://www.trigit.com` },
           {
             text: `e-learning contents`,
             href: ``

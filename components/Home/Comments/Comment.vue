@@ -21,7 +21,7 @@
             {{ subTitle }}
           </div>
         </div>
-        <div class="comment-desc text-body-2 font-weight-light">
+        <div class="comment-desc text-body-2">
           {{ comment }}
         </div>
       </div>
@@ -87,6 +87,7 @@ export default {
   border-bottom-right-radius: 7px;
   padding: 15px 10px;
   background: white;
+  color: #24292e;
 }
 .arrow {
   width: 10;

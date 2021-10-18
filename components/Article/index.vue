@@ -18,6 +18,15 @@
           </div>
           <!-- <category :category="article.category" /> -->
         </div>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="morethanmin/cathub"
+          issue-term="title"
+          label="Comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async
+        ></script>
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
         <div class="nav">
@@ -93,7 +102,7 @@
     display: none;
   }
   .content {
-    padding: 10px 5px;
+    padding: 5px;
   }
 }
 </style>

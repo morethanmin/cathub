@@ -1,7 +1,7 @@
 <template>
   <v-card outlined flat class="card">
     <div class="imgBox">
-      <img src="" alt="">
+      <img src="" alt="" />
       <v-chip outlined class="ma-0" color="white"> {{ category }} </v-chip>
     </div>
     <v-card-title class="title d-flex flex-column align-start">
@@ -20,25 +20,25 @@ export default {
     image: {
       type: String,
       // default: "./images/ArticleDefault.jpg",
-      default: "",
+      default: ""
     },
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     date: {
       type: String,
-      default: "",
+      default: ""
     },
     desc: {
       type: String,
-      default: "",
+      default: ""
     },
     category: {
       type: String,
-      default: "general",
-    },
-  },
+      default: "general"
+    }
+  }
 };
 </script>
 
@@ -48,23 +48,21 @@ export default {
 .v-chip {
   height: 23px;
 }
-.title{
-    font-weight: bold;
+.title {
+  font-weight: bold;
 }
-.imgBox{
-  position:relative;
-  img{
+.imgBox {
+  position: relative;
+  img {
     background: #252a2e;
     width: 100%;
     height: 250px;
   }
-  .v-chip{
-    position:absolute;
+  .v-chip {
+    position: absolute;
     z-index: 3;
     left: 15px;
     top: 15px;
   }
-
 }
-
 </style>

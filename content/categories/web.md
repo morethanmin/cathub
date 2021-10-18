@@ -1,4 +1,4 @@
 ---
 name: web
-description: computer science
+description: computer science, network
 ---

@@ -1,5 +1,5 @@
 ---
-title: web server? web application server?
+title: web server와 web application server의 차이
 description: "-"
 category: web
 createdAt: "2021-10-15"

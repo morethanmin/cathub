@@ -5,7 +5,6 @@
 <script>
 export default {
   layout: "detail",
-  data: () => ({}),
   async asyncData({ $content, params }) {
     const article = await $content(
       "articles",
@@ -28,6 +27,19 @@ export default {
       article,
       prev,
       next
+    };
+  },
+  data: () => ({}),
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Home page description"
+        }
+      ]
     };
   },
   methods: {
