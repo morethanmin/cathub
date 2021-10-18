@@ -1,6 +1,9 @@
 <template>
   <div
-    :class="[`search-box`, ...(searchBarActivated ? ['search-activated'] : [])]"
+    :class="[
+      `search-box`,
+      ...(searchQuery && !!articles.length ? ['search-activated'] : [])
+    ]"
   >
     <input
       :class="[`search`]"
@@ -16,18 +19,18 @@
       v-on:mouseover="hover = true"
       v-on:mouseout="hover = false"
       class="result-box"
-      v-if="searchBarActivated"
+      v-if="!!articles.length"
     >
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink
-          class="d-flex align-center"
-          :to="`/archive/${article.category}/${article.slug}`"
+        <div
+          class="result-item d-flex align-center"
+          @click="handleClick(article)"
         >
           <v-icon class="text-h6">mdi-cube-outline</v-icon>
           <span class="text-subtitle-2">
             {{ article.title }}
           </span>
-        </NuxtLink>
+        </div>
       </li>
     </ul>
   </div>
@@ -45,30 +48,61 @@ export default {
   },
   computed: {
     searchBarActivated() {
-      const activated = this.focus || this.hover;
+      const activated = this.focus || this.hover || !!this.searchQuery;
       return activated;
     }
   },
-  methods: {},
+  methods: {
+    handleClick(article) {
+      this.focus = false;
+      this.hover = false;
+      this.searchQuery = "";
+      this.articles = [];
+      this.$router.push(`/archive/${article.category}/${article.slug}`);
+    }
+  },
   watch: {
+    focus() {
+      if (!this.focus) {
+        if (!this.hover) {
+          this.searchQuery = "";
+          this.articles = [];
+        }
+      }
+    },
+    hover() {
+      if (!this.hover) {
+        if (!this.focus) {
+          this.searchQuery = "";
+          this.articles = [];
+        }
+      }
+    },
     async searchQuery(searchQuery) {
       if (!searchQuery) {
-        this.articles = await this.$content("articles", { deep: true }).fetch();
+        this.articles = [];
       } else {
         this.articles = await this.$content("articles", { deep: true })
-          .limit(1)
+          .limit(5)
           .search(searchQuery)
+          .sortBy("createdAt", "desc")
           .fetch();
       }
     }
   },
   async mounted() {
-    this.articles = await this.$content("articles", { deep: true }).fetch();
+    // this.articles = await this.$content("articles", { deep: true })
+    //   .limit(5)
+    //   .sortBy("createdAt", "desc")
+    //   .fetch();
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.result-item {
+  cursor: pointer;
+}
 .search-box {
   z-index: 15;
   position: relative;

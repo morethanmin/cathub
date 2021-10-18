@@ -40,7 +40,18 @@ export default {
   content: {
     nestedProperties: ["category.name"]
   },
-
+  head() {
+    return {
+      title: `morethanmin - ${this.category.name}`,
+      meta: [
+        {
+          hid: this.category.description,
+          name: `morethanmin - ${this.category.name}`,
+          content: this.category.description
+        }
+      ]
+    };
+  },
   watch: {},
   mounted() {}
 };

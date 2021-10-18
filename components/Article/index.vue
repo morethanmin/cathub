@@ -18,15 +18,17 @@
           </div>
           <!-- <category :category="article.category" /> -->
         </div>
-        <script
-          src="https://utteranc.es/client.js"
-          repo="morethanmin/cathub"
-          issue-term="title"
-          label="Comment"
-          theme="github-light"
-          crossorigin="anonymous"
-          async
-        ></script>
+        <no-ssr>
+          <script
+            src="https://utteranc.es/client.js"
+            repo="morethanmin/cathub"
+            issue-term="title"
+            label="Comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async
+          ></script>
+        </no-ssr>
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
         <div class="nav">
