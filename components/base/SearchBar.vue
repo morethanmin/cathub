@@ -26,7 +26,7 @@
           class="result-item d-flex align-center"
           @click="handleClick(article)"
         >
-          <v-icon class="text-h6">mdi-cube-outline</v-icon>
+          <v-icon class="icon">mdi-cube-outline</v-icon>
           <span class="text-subtitle-2">
             {{ article.title }}
           </span>
@@ -100,6 +100,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon {
+  transition: none;
+}
 .result-item {
   cursor: pointer;
 }
