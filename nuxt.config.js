@@ -20,9 +20,6 @@ export default {
   },
   target: "static",
 
-  // router: {
-  //   base: "/cat-hub/"
-  // },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -36,6 +33,8 @@ export default {
       pathPrefix: false
     }
   ],
+  srcDir: "src/",
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
@@ -43,6 +42,7 @@ export default {
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/content", "@nuxtjs/firebase"],
+
   firebase: {
     config: {
       apiKey: process.env.API_KEY,
