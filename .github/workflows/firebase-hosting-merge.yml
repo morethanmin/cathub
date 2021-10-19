@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          touch .env
-          echo ${{ FIREBASE_ENV }} >> .env
-          cat .env
+      - run: touch .env
+      - run: echo ${{ FIREBASE_ENV }} >> .env
+      - run: cat .env
       - run: npm install && npm run generate
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
