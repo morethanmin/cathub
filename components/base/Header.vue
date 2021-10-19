@@ -44,11 +44,6 @@
           },
           {
             type: `link`,
-            href: `https://moredevmin.tistory.com`,
-            text: `Blog`
-          },
-          {
-            type: `link`,
             href: `https://www.instagram.com/more_dev_min`,
             text: `Instagram`
           },
