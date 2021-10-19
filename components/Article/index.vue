@@ -5,7 +5,7 @@
         <div class="articleBox">
           <div class="header">
             <div class="contents pa-3">
-              <v-icon class="icon">mdi-format-list-bulleted</v-icon>
+              <v-icon class="">mdi-text-box-outline</v-icon>
               <div class="name">{{ article.title }}</div>
             </div>
           </div>
@@ -64,7 +64,7 @@
       align-items: center;
       gap: 10px;
       .icon {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: black;
       }
       .name {
