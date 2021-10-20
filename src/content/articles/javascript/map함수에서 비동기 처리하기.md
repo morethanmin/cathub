@@ -2,7 +2,7 @@
 title: map함수에서 비동기 처리하기
 description: map함수에서 비동기를 처리해보자.
 category: javascript
-createdAt: "2021-10-15"
+createdAt: "2021-10-14"
 ---
 
 Array.prototype.map에서 비동기 처리를 할 때 생겨난 간단한 이슈가 있다.

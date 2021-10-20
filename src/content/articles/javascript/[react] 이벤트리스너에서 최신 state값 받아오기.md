@@ -1,7 +1,7 @@
 ---
-title: 이벤트리스너에서 최신 state값 받아오기
+title: "[react] 이벤트리스너에서 최신 state값 받아오기"
 description: "이벤트리스너에서 최신 state값 받아오기"
-category: react
+category: javascript
 createdAt: "2021-10-15"
 ---
 

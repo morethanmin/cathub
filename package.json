@@ -19,7 +19,6 @@
     "prism-themes": "^1.7.0"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.3",
-    "push-dir": "^0.4.1"
+    "@nuxtjs/vuetify": "^1.11.3"
   }
 }

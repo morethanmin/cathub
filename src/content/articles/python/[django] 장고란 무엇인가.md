@@ -1,5 +1,5 @@
 ---
-title: 장고란 무엇인가?
+title: "[django] 장고란 무엇인가?"
 description: "-"
 category: python
 createdAt: "2021-10-16"

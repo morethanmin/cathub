@@ -1,9 +1,7 @@
 ---
-title: nuxt build를 통해 알아보는 nuxt 원리
-
+title: "[nuxt] build를 통해 알아보는 nuxt 원리"
 description: "nuxt build를 통해 알아보는 nuxt 원리"
-
-category: vue
+category: javascript
 createdAt: "2021-10-16"
 ---
 

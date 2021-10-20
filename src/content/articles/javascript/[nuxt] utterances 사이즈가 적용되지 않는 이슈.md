@@ -1,9 +1,7 @@
 ---
 title: "[nuxt] utterances 사이즈가 적용되지 않는 이슈"
-
 description: "nuxt trouble shooting"
-
-category: vue
+category: javascript
 createdAt: "2021-10-18"
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: 리액트가 돌아가는 원리
+title: "[react] 리액트가 돌아가는 원리"
 description: "-"
-category: react
-createdAt: "2021-10-16"
+category: javascript
+createdAt: "2021-10-17"
 ---
 
 - cdn으로 html에서 script를 불러와서 리액트를 사용 할 수도 있다.

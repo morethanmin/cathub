@@ -1,5 +1,5 @@
 ---
-title: wsgi 개념
+title: "[django] wsgi 개념"
 description: wsgi 개념을 익히자
 category: python
 createdAt: "2021-10-14"

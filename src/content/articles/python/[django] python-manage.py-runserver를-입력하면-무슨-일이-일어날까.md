@@ -1,5 +1,5 @@
 ---
-title: python manage.py runserver를 입력하면 무슨 일이 일어날까?
+title: "[django] python manage.py runserver를 입력하면 무슨 일이 일어날까?"
 description: "-"
 category: python
 createdAt: "2021-10-15"
