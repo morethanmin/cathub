@@ -22,7 +22,7 @@
               :color="tag.color"
             />
           </div>
-          <div>{{ project.createdAt }}</div>
+          <!-- <div>{{ project.createdAt }}</div> -->
         </div>
       </div>
       <div class="card-img">
