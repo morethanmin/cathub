@@ -1,6 +1,6 @@
 ---
-title: css 자주 사용하는 속성 톺아보기
-description: 자주 사용하는데 자꾸 까먹는 것들
+title: css 유용한 속성 톺아보기
+description: css 유용한 속성 톺아보기
 category: html&css
 createdAt: "2021-10-20"
 ---
