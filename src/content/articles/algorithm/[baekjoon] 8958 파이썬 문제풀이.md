@@ -1,5 +1,5 @@
 ---
-title: "[baekjoon] 8958 자바스크립트 문제풀이"
+title: "[baekjoon] 8958 파이썬 문제풀이"
 description: 알고리즘 문제풀이
 category: algorithm
 createdAt: "2021-10-21"
