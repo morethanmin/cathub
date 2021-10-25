@@ -32,11 +32,11 @@ export default {
   data: () => ({}),
   head() {
     return {
-      title: this.article.title,
+      title: `${this.article.title} - morethanmin`,
       meta: [
         {
           hid: this.article.description,
-          name: this.article.title,
+          name: `${this.article.title} - morethanmin`,
           content: this.article.description
         }
       ]
