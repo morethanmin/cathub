@@ -42,11 +42,11 @@ export default {
   },
   head() {
     return {
-      title: `morethanmin - ${this.category.name}`,
+      title: `${this.category.name} - morethanmin`,
       meta: [
         {
           hid: this.category.description,
-          name: `morethanmin - ${this.category.name}`,
+          name: `${this.category.name} - morethanmin`,
           content: this.category.description
         }
       ]

@@ -1,10 +1,6 @@
 # cat-hub
 
-> cat-hub은 github 스타일의 소개형 개발 블로그 서비스입니다.
->
-> 개발자로서 저에 대한 소개와, 개발 공부를 하며 배운 내용들을 기록하는 공간입니다.
-
-github에 저장소를 만들어 소스코드가 아닌 다른 개발 관련 정보를 올리거나, 저장해두었을 때 불편했던 점을 해소하기위해 만들었습니다.
+> Github'st Development Archive Application using vue and nuxt.
 
 ## Link
 

@@ -48,6 +48,18 @@ export default {
     });
     return { parsedDate };
   },
+  head() {
+    return {
+      title: `archive - morethanmin`,
+      meta: [
+        {
+          hid: this.category.description,
+          name: `archive - morethanmin`,
+          content: this.category.description
+        }
+      ]
+    };
+  },
   data: () => ({
     searchInput: "",
     categories: []

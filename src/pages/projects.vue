@@ -9,6 +9,18 @@ const formatDate = function(date) {
   return new Date(date).toLocaleDateString("en", options);
 };
 export default {
+  head() {
+    return {
+      title: `projects - morethanmin`,
+      meta: [
+        {
+          hid: this.category.description,
+          name: `projects - morethanmin`,
+          content: this.category.description
+        }
+      ]
+    };
+  },
   data: () => ({
     searchInput: "",
     projects: []

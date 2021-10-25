@@ -28,6 +28,18 @@ export default {
       projects
     };
   },
+  head() {
+    return {
+      title: `about - morethanmin`,
+      meta: [
+        {
+          hid: this.category.description,
+          name: `about - morethanmin`,
+          content: this.category.description
+        }
+      ]
+    };
+  },
   data: () => ({
     skills: [
       {
