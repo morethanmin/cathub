@@ -33,9 +33,9 @@ export default {
       title: `about - morethanmin`,
       meta: [
         {
-          hid: this.category.description,
+          hid: `about - morethanmin`,
           name: `about - morethanmin`,
-          content: this.category.description
+          content: `about - morethanmin`
         }
       ]
     };

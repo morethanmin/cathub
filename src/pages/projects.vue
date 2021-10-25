@@ -14,9 +14,9 @@ export default {
       title: `projects - morethanmin`,
       meta: [
         {
-          hid: this.category.description,
+          hid: `projects - morethanmin`,
           name: `projects - morethanmin`,
-          content: this.category.description
+          content: `projects - morethanmin`
         }
       ]
     };

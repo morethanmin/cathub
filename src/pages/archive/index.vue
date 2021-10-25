@@ -53,9 +53,9 @@ export default {
       title: `archive - morethanmin`,
       meta: [
         {
-          hid: this.category.description,
+          hid: `archive - morethanmin`,
           name: `archive - morethanmin`,
-          content: this.category.description
+          content: `archive - morethanmin`
         }
       ]
     };
