@@ -1,5 +1,5 @@
 ---
-title: 나의 IT산업기능요원 여정
+title: IT산업기능요원 여정
 description: 군대를 가게 되더라도,,, 기록해 봅니다.
 category: daily
 createdAt: "2021-10-26"
