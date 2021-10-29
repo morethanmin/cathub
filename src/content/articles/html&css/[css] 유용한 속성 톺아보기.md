@@ -1,6 +1,6 @@
 ---
-title: css 유용한 속성 톺아보기
-description: css 유용한 속성 톺아보기
+title: "[css] 유용한 속성 톺아보기"
+description: "[css] 유용한 속성 톺아보기"
 category: html&css
 createdAt: "2021-10-20"
 ---
