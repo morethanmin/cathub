@@ -2,7 +2,7 @@
 title: "[typescript] 타입스크립트란"
 description: "[typescript] 타입스크립트란"
 category: javascript
-createdAt: "2021-10-15"
+createdAt: "2021-10-29"
 ---
 
 ## javascript는 스크립트 언어이다.
