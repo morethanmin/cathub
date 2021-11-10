@@ -62,11 +62,7 @@ export default {
    ** See https://content.nuxtjs.org/configuration
    */
   content: {
-    markdown: {
-      prism: {
-        theme: "prism-themes/themes/prism-material-oceanic.css"
-      }
-    },
+    markdown: {},
     nestedProperties: ["category.name"]
   },
   /*
