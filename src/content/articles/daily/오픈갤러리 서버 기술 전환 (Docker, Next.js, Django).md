@@ -1,6 +1,6 @@
 ---
-title: 오픈갤러리 서버 기술 전환
-description: 기술 전환 여정
+title: 오픈갤러리 서버 기술 전환 (Docker, Next.js, Django)
+description: 기술 전환 과정
 category: daily
 createdAt: "2021-11-04"
 ---
