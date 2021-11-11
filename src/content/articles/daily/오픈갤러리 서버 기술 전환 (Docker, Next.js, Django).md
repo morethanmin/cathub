@@ -48,7 +48,7 @@ createdAt: "2021-11-04"
 
 #### Nginx
 
-**Nginx**를 통해 servers directory에 opengallery 파일 생성.
+servers directory에 opengallery 파일 생성.
 
 ```nginx
 server {
