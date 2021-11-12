@@ -7,7 +7,7 @@ createdAt: "2021-11-04"
 
 ## 배경
 
-**Django FullStack**으로 서비스를 운영하고 있지만, 서비스의 규모가 커지고(기존 서비스 고도화 및 CC페이지 신설), 스택이 노후화 됨에 따라 기술 전환을 결정하게 됨. 이에따라 기존의 **Django**를 **Django Rest Framework**를 전환해 API server로 활용하고, Next.js를 사용해 Frontend server를 구축할 예정입니다., 이에 따라AWS에서도 **Elastic beanstalk**를 사용하고 있지만 이를 **Elastic Container Service**로 전환하고자 합니다.
+**Django FullStack**으로 서비스를 운영하고 있지만, 서비스의 규모가 커지고(기존 서비스 고도화 및 CC페이지 신설), 스택이 노후화 됨에 따라 기술 전환을 결정하게 됨. 이에따라 기존의 **Django**를 **Django Rest Framework**를 전환해 API server로 활용하고, Next.js를 사용해 Frontend server를 구축할 예정입니다. 이에 따라 AWS에서도 **Elastic beanstalk**를 사용하고 있지만 이를 **Elastic Container Service**로 전환하고자 합니다.
 
 ## 목표
 
@@ -51,27 +51,41 @@ createdAt: "2021-11-04"
 servers directory에 opengallery 파일 생성.
 
 ```nginx
+upstream frontend {
+    server frontend:4000;
+}
+
+upstream backend {
+    server backend:5000;
+}
+
 server {
-        listen 3030;
-        server_name 127.0.0.1;
+        listen 3001;
+        server_name localhost;
 
-        location = /favicon.ico { access_log off; log_not_found off; }
-
-
-        location /static {
-                alias /Users/jade/projects/projectfolder/projectname/static;
-        }
-
-	location / {
+	    location /cc/ {
          	rewrite ^/cc/(.*)$ /$1 break;
-		proxy_pass http://localhost:4000;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header Host $host;
+            proxy_pass http://frontend;
+            proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Forwarded-Host $server_name;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
-	location /api/ {
-        		proxy_pass http://localhost:5000;
+        location /_next/ {
+            proxy_pass http://frontend;
+            proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Forwarded-Host $server_name;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	        alias /_next;
         }
-
+	    location / {
+            proxy_pass http://backend;
+            proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Forwarded-Host $server_name;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
 }
 ```
 
@@ -146,44 +160,7 @@ services:
 
 #### Nginx
 
-```nginx
-upstream frontend {
-    server frontend:4000;
-}
-
-upstream backend {
-    server backend:5000;
-}
-
-server {
-        listen 3001;
-        server_name localhost;
-
-	    location /cc/ {
-         	rewrite ^/cc/(.*)$ /$1 break;
-            proxy_pass http://frontend;
-            proxy_set_header Host $host:$server_port;
-            proxy_set_header X-Forwarded-Host $server_name;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        }
-        location /_next/ {
-            proxy_pass http://frontend;
-            proxy_set_header Host $host:$server_port;
-            proxy_set_header X-Forwarded-Host $server_name;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-	        alias /_next;
-        }
-	    location / {
-            proxy_pass http://backend;
-            proxy_set_header Host $host:$server_port;
-            proxy_set_header X-Forwarded-Host $server_name;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        }
-}
-```
+docker-compose에서 이미지를 가져오고있기에 따로 dockerfile은 필요하지 않지만, 위에서 명시한 Nginx설정 파일을 volumes 를 통해 넣어주고 있으므로 위에서 작성한 설정파일을 잘 넣어주도록 하면 됩니다.
 
 #### Django
 
