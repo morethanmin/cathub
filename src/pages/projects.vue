@@ -14,9 +14,9 @@ export default {
       title: `projects - morethanmin`,
       meta: [
         {
-          hid: `projects - morethanmin`,
-          name: `projects - morethanmin`,
-          content: `projects - morethanmin`
+          hid: "description",
+          name: "description",
+          content: "몰댄민의 프로젝트 페이지"
         }
       ]
     };

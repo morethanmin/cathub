@@ -35,8 +35,8 @@ export default {
       title: `${this.article.title} - morethanmin`,
       meta: [
         {
-          hid: this.article.description,
-          name: `${this.article.title} - morethanmin`,
+          hid: "description",
+          name: "description",
           content: this.article.description
         }
       ]

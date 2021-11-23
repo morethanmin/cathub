@@ -53,9 +53,9 @@ export default {
       title: `archive - morethanmin`,
       meta: [
         {
-          hid: `archive - morethanmin`,
-          name: `archive - morethanmin`,
-          content: `archive - morethanmin`
+          hid: "description",
+          name: "description",
+          content: `몰댄민의 블로그 페이지`
         }
       ]
     };

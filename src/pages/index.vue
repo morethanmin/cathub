@@ -33,9 +33,9 @@ export default {
       title: `about - morethanmin`,
       meta: [
         {
-          hid: `about - morethanmin`,
-          name: `about - morethanmin`,
-          content: `about - morethanmin`
+          hid: `description`,
+          name: `description`,
+          content: `몰댄민의 포트폴리오 페이지`
         }
       ]
     };
