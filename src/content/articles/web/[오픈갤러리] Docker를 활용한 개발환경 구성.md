@@ -1,14 +1,11 @@
 ---
-title: "1. Docker를 활용한 개발환경 구성"
+title: "[오픈갤러리] Docker를 활용한 개발환경 구성"
 description: "서버 기술 전환 과정"
-category: opengallery
+category: web
 createdAt: "2021-11-19"
 ---
 
-<aside>
-💡 기술전환을 위한 test project의 dockerfile입니다. 실제 서비스의 코드와는 다릅니다.
-
-</aside>
+> 💡 기술전환을 위한 test project의 dockerfile입니다. 실제 서비스의 코드와는 다릅니다.
 
 ## 개요
 
