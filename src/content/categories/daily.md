@@ -1,4 +1,4 @@
 ---
 name: daily
-description: 개발하며 겪는 일상적인 이야기
+description: 개발하는 일상
 ---

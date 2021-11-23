@@ -1,4 +1,4 @@
 ---
 name: javascript
-description: "node.js, typescript, webpack, etc"
+description: "node.js, react, next.js, vue, webpack, babel 등"
 ---

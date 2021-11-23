@@ -1,4 +1,4 @@
 ---
 name: python
-description: "django, wsgi, etc"
+description: "python, django, wsgi 등"
 ---
