@@ -15,17 +15,17 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: "description",
-        name: "description",
-        content: "몰댄민의 포트폴리오/블로그"
-      },
-      {
         name: "google-site-verification",
         content: "Zou2V8zKDuVgkMCYaTcb5TDyOKWo-OmO4HvLaDCVJJs"
       },
       {
         property: "naver-site-verification",
         content: "341c03125af8051dda4a27c463395015db303636"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "몰댄민의 포트폴리오/블로그"
       },
       {
         property: "og:type",
