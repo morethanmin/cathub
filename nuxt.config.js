@@ -22,6 +22,10 @@ export default {
       {
         name: "google-site-verification",
         content: "Zou2V8zKDuVgkMCYaTcb5TDyOKWo-OmO4HvLaDCVJJs"
+      },
+      {
+        name: "naver-site-verification",
+        content: "341c03125af8051dda4a27c463395015db303636"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "cat.png" }]
