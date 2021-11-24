@@ -36,17 +36,9 @@ export default {
         content: "https://morethanmin.web.app"
       },
       {
-        property: "og:title",
-        content: "morethanmin"
-      },
-      {
         property: "og:image",
         content:
           "https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png"
-      },
-      {
-        property: "og:description",
-        content: "몰댄민의 포트폴리오/블로그"
       },
       {
         property: "og:site_name",
