@@ -56,6 +56,14 @@ export default {
           hid: "description",
           name: "description",
           content: `몰댄민의 블로그 페이지`
+        },
+        {
+          property: "og:title",
+          content: "archive - morethanmin"
+        },
+        {
+          property: "og:description",
+          content: "몰댄민의 블로그 페이지"
         }
       ]
     };

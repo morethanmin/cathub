@@ -36,6 +36,14 @@ export default {
           hid: `description`,
           name: `description`,
           content: `몰댄민의 포트폴리오 페이지`
+        },
+        {
+          property: "og:title",
+          content: "about - morethanmin"
+        },
+        {
+          property: "og:description",
+          content: "몰댄민의 포트폴리오 페이지"
         }
       ]
     };

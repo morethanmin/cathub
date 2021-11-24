@@ -17,6 +17,14 @@ export default {
           hid: "description",
           name: "description",
           content: "몰댄민의 프로젝트 페이지"
+        },
+        {
+          property: "og:title",
+          content: "projects - morethanmin"
+        },
+        {
+          property: "og:description",
+          content: "몰댄민의 프로젝트 페이지"
         }
       ]
     };

@@ -92,8 +92,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.info-profile {
-}
 .info-profile-detail {
   > div {
     padding: 0;

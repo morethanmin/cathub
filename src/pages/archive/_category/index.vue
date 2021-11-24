@@ -48,6 +48,14 @@ export default {
           hid: `description`,
           name: `description`,
           content: this.category.description
+        },
+        {
+          property: "og:title",
+          content: `${this.category.name} - morethanmin`
+        },
+        {
+          property: "og:description",
+          content: this.category.description
         }
       ]
     };

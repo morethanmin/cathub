@@ -38,6 +38,14 @@ export default {
           hid: "description",
           name: "description",
           content: this.article.description
+        },
+        {
+          property: "og:title",
+          content: `${this.article.title} - morethanmin`
+        },
+        {
+          property: "og:description",
+          content: this.article.description
         }
       ]
     };
