@@ -1,12 +1,12 @@
 # cat-hub
 
+![morethanmin_blog](https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png)
+
 > Github'st Development Archive Application using vue and nuxt.
 
 ## Link
 
 You can check [here](https://morethanmin.web.app).
-
-## Preview
 
 ![chrome-capture](https://user-images.githubusercontent.com/72514247/137414803-e815d51a-f778-40bf-87eb-7f7094602f07.gif)
 
