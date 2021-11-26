@@ -124,27 +124,27 @@ export default {
   },
   loading: "~/components/Loading.vue",
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-  generate: {
-    async routes() {
-      const { $content } = require("@nuxt/content");
-      const articles = await $content("articles", { deep: true })
-        .only(["path"])
-        .fetch();
-      const categories = await $content("categories")
-        .only(["path"])
-        .fetch();
-      const articleRoutes = articles.map(article =>
-        article.path === "/index" ? "/" : `/archive/${article.path.slice(10)}`
-      );
-      const categoryRoutes = categories.map(category =>
-        category.path === "/index" ? "/" : `/archive/${category.path.slice(12)}`
-      );
+  build: {}
+  // generate: {
+  //   async routes() {
+  //     const { $content } = require("@nuxt/content");
+  //     const articles = await $content("articles", { deep: true })
+  //       .only(["path"])
+  //       .fetch();
+  //     const categories = await $content("categories")
+  //       .only(["path"])
+  //       .fetch();
+  //     const articleRoutes = articles.map(article =>
+  //       article.path === "/index" ? "/" : `/archive/${article.path.slice(10)}`
+  //     );
+  //     const categoryRoutes = categories.map(category =>
+  //       category.path === "/index" ? "/" : `/archive/${category.path.slice(12)}`
+  //     );
 
-      return [...articleRoutes, ...categoryRoutes];
-    }
-  },
-  static: {
-    prefix: true
-  }
+  //     return [...articleRoutes, ...categoryRoutes];
+  //   }
+  // },
+  // static: {
+  //   prefix: true
+  // }
 };
