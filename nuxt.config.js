@@ -16,7 +16,7 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         name: "google-site-verification",
-        content: "Zou2V8zKDuVgkMCYaTcb5TDyOKWo-OmO4HvLaDCVJJs"
+        content: "hl_kHkDsGTNvjpdQOwa9dmH8VRYfr7SsR_stM1KkxRg"
       },
       {
         property: "naver-site-verification",
