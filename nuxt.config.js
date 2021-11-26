@@ -92,8 +92,7 @@ export default {
   },
 
   sitemap: {
-    hostname: "https://morethanmin.web.app",
-    gzip: true
+    hostname: "https://morethanmin.web.app"
   },
 
   /*
