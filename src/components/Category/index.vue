@@ -11,7 +11,10 @@
             <NuxtLink
               v-if="articles.length"
               class="alink"
-              :to="`/archive/${category.name}/${articles[0].slug}`"
+              :to="{
+                name: 'archive-category-article',
+                params: { category: category.name, article: articles[0].slug }
+              }"
             >
               recently writed {{ articles[0].title }}
             </NuxtLink>
@@ -27,7 +30,12 @@
           </div>
         </div>
         <div v-for="article in articles" :key="article.slug">
-          <NuxtLink :to="`/archive/${category.name}/${article.slug}`">
+          <NuxtLink
+            :to="{
+              name: 'archive-category-article',
+              params: { category: category.name, article: article.slug }
+            }"
+          >
             <!-- <img :src="article.img" :alt="article.alt" /> -->
             <div class="mainBoxConetnt">
               <div class="left">

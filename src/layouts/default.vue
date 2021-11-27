@@ -10,7 +10,7 @@
             <Profile />
           </v-col>
           <v-col class="card align-self-start pa-5" sm="12" md="9">
-            <nuxt />
+            <Nuxt />
           </v-col>
         </v-row>
       </v-container>

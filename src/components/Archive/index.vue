@@ -12,11 +12,10 @@
         v-on:keyup="onChange(input)"
       />
     </div>
-
     <div class="mb-5">
-      <CategoryItem
-        v-for="(category, index) of categories"
-        :key="index"
+      <CategoryList
+        v-for="category of categories"
+        :key="category.slug"
         :category="category"
         :parsedDate="parsedDate.find(item => item.name === category.name).dates"
       />

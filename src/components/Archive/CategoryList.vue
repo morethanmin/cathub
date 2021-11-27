@@ -4,7 +4,10 @@
       <div class="card-content">
         <div class="d-flex justify-space-between">
           <NuxtLink
-            :to="`/archive/${category.name}`"
+            :to="{
+              name: 'archive-category',
+              params: { category: category.name }
+            }"
             class="text-h6 pinned-link"
             >{{ category.name }}</NuxtLink
           >

@@ -18,7 +18,7 @@
     </div>
     <v-main app>
       <v-container class="common-wrapper">
-        <nuxt :category="category" />
+        <Nuxt :category="category" />
       </v-container>
     </v-main>
 
@@ -80,13 +80,11 @@ export default {
     },
     "$route.params.article"() {
       this.article = this.$route.params.article;
-      console.log(this.article);
     }
   },
   mounted() {
     this.category = this.$route.params.category;
     this.article = this.$route.params.article;
-    console.log(this.article);
   }
 };
 </script>

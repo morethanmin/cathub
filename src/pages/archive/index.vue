@@ -46,7 +46,8 @@ export default {
         dates: dates
       };
     });
-    return { parsedDate };
+    const categories = await $content("categories").fetch();
+    return { parsedDate, categories };
   },
   head() {
     return {
