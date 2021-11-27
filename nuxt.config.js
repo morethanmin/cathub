@@ -74,7 +74,7 @@ export default {
     "@nuxtjs/vuetify"
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/firebase", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/content", "@nuxtjs/firebase"],
 
   firebase: {
     config: {
@@ -89,10 +89,6 @@ export default {
     services: {
       analytics: true
     }
-  },
-
-  sitemap: {
-    hostname: "https://morethanmin.web.app"
   },
 
   /*
