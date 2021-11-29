@@ -19,6 +19,7 @@
           <!-- <category :category="article.category" /> -->
         </div>
         <script
+          type="application/javascript"
           src="https://utteranc.es/client.js"
           repo="morethanmin/cathub"
           issue-term="title"
