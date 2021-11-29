@@ -6,7 +6,11 @@
         <!-- <span class="title-text text-h6"> Cathub </span> -->
       </NuxtLink>
       <div
-        v-if="selectedTab === `Projects` || selectedTab === `Archive`"
+        v-if="
+          selectedTab === `Projects` ||
+          selectedTab === `Archive` ||
+          selectedTab === `Other`
+        "
         class="tab"
       >
         <div class="d-flex align-center">
@@ -95,6 +99,7 @@ export default {
         this.selectedTab = "Projects";
       if (match.some((x) => x.path === "/archive"))
         this.selectedTab = "Archive";
+      else this.selectedTab = "Other";
     },
 
     handleScroll(classname) {
