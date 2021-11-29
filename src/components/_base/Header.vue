@@ -5,6 +5,18 @@
         <v-icon>mdi-cat</v-icon>
         <!-- <span class="title-text text-h6"> Cathub </span> -->
       </NuxtLink>
+
+      <div v-if="selectedTab === `About`" class="tab">
+        <div
+          class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
+        >
+          <a @click="handleScroll(`.about`)">About</a>
+          <a @click="handleScroll(`.projects`)">Projects</a>
+          <a @click="handleScroll(`.skills`)">Skills</a>
+          <a @click="handleScroll(`.carrer`)">Activity</a>
+          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
+        </div>
+      </div>
       <div
         v-if="
           selectedTab === `Projects` ||
@@ -27,17 +39,6 @@
               {{ category.name }}
             </NuxtLink>
           </div>
-        </div>
-      </div>
-      <div v-if="selectedTab === `About`" class="tab">
-        <div
-          class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
-        >
-          <a @click="handleScroll(`.about`)">About</a>
-          <a @click="handleScroll(`.projects`)">Projects</a>
-          <a @click="handleScroll(`.skills`)">Skills</a>
-          <a @click="handleScroll(`.carrer`)">Activity</a>
-          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
     </div>
@@ -94,10 +95,10 @@ export default {
     getSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some((x) => x.path === "")) this.selectedTab = "About";
-      if (match.some((x) => x.path === "/projects"))
+      else if (match.some((x) => x.path === "")) this.selectedTab = "About";
+      else if (match.some((x) => x.path === "/projects"))
         this.selectedTab = "Projects";
-      if (match.some((x) => x.path === "/archive"))
+      else if (match.some((x) => x.path === "/archive"))
         this.selectedTab = "Archive";
       else this.selectedTab = "Other";
     },
