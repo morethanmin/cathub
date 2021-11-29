@@ -18,16 +18,8 @@
           </div>
           <!-- <category :category="article.category" /> -->
         </div>
-        <script
-          type="application/javascript"
-          src="https://utteranc.es/client.js"
-          repo="morethanmin/cathub"
-          issue-term="title"
-          label="Comment"
-          theme="github-light"
-          crossorigin="anonymous"
-          async
-        ></script>
+
+        <div class="commentBox"></div>
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
         <div class="nav">
@@ -125,6 +117,16 @@ export default {
     },
   },
   data: () => ({}),
-  mounted() {},
+  mounted() {
+    const scriptTag = document.createElement("SCRIPT");
+    scriptTag.setAttribute("src", "https://utteranc.es/client.js");
+    scriptTag.setAttribute("repo", "morethanmin/cathub");
+    scriptTag.setAttribute("issue-term", "title");
+    scriptTag.setAttribute("label", "Comment");
+    scriptTag.setAttribute("theme", "github-light");
+    scriptTag.setAttribute("crossorigin", "anonymous");
+    scriptTag.setAttribute("async", "async");
+    this.$el.querySelector(".commentBox").append(scriptTag);
+  },
 };
 </script>
