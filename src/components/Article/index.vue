@@ -127,7 +127,7 @@ export default {
     scriptTag.setAttribute("theme", "github-light");
     scriptTag.setAttribute("crossorigin", "anonymous");
     scriptTag.setAttribute("async", "async");
-    console.log(this.$el.querySelector(".commentBox"));
+    this.$el.querySelector(".commentBox").append(scriptTag);
   },
 };
 </script>
