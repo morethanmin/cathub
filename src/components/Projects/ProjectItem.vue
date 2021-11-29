@@ -27,6 +27,7 @@
       </div>
       <div class="card-img">
         <v-img
+          class="v-img"
           v-for="(img, idx) in project.imgs"
           :key="idx"
           :src="require(`~/static/images/${img}`)"
@@ -46,9 +47,9 @@ export default {
   props: {
     project: {
       type: Object,
-      default: () => ({})
-    }
-  }
+      default: () => ({}),
+    },
+  },
 };
 </script>
 
@@ -91,6 +92,7 @@ export default {
   filter: brightness(95%);
   .v-img {
     object-fit: cover !important;
+    background: #e2e3e4;
   }
 }
 

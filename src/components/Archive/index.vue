@@ -17,7 +17,9 @@
         v-for="category of categories"
         :key="category.slug"
         :category="category"
-        :parsedDate="parsedDate.find(item => item.name === category.name).dates"
+        :parsedDate="
+          parsedDate.find((item) => item.name === category.name).dates
+        "
       />
     </div>
   </div>
@@ -46,31 +48,29 @@ export default {
   props: {
     categories: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     searchInput: {
       type: String,
-      default: ""
+      default: "",
     },
     onChange: {
       type: Function,
-      default: () => {
-        console.log("!");
-      }
+      default: () => {},
     },
     parsedDate: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data: () => ({
-    input: ""
+    input: "",
   }),
   computed: {},
   methods: {},
   watch: {},
   mounted() {
     this.input = this.searchInput;
-  }
+  },
 };
 </script>

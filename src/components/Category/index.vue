@@ -5,22 +5,18 @@
         <div class="mainBoxHeader">
           <div class="left">
             <img src="~/static/images/face.jpeg" alt="" srcset="" />
-            <div class="name">
-              morethanmin
-            </div>
+            <div class="name">morethanmin</div>
             <NuxtLink
               v-if="articles.length"
               class="alink"
               :to="{
                 name: 'archive-category-article',
-                params: { category: category.name, article: articles[0].slug }
+                params: { category: category.name, article: articles[0].slug },
               }"
             >
               recently writed {{ articles[0].title }}
             </NuxtLink>
-            <div v-else>
-              nothing
-            </div>
+            <div v-else>nothing</div>
           </div>
           <div class="right">
             <div v-if="articles.length">
@@ -33,7 +29,7 @@
           <NuxtLink
             :to="{
               name: 'archive-category-article',
-              params: { category: category.name, article: article.slug }
+              params: { category: category.name, article: article.slug },
             }"
           >
             <!-- <img :src="article.img" :alt="article.alt" /> -->
@@ -153,18 +149,16 @@ export default {
   props: {
     articles: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     category: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   data: () => ({}),
   content: {},
-  mounted() {
-    console.log(this.category);
-  },
-  methods: {}
+  mounted() {},
+  methods: {},
 };
 </script>

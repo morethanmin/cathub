@@ -36,24 +36,22 @@ export default {
   props: {
     projects: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     searchInput: {
       type: String,
-      default: ""
+      default: "",
     },
     onChange: {
       type: Function,
-      default: () => {
-        console.log("!");
-      }
-    }
+      default: () => {},
+    },
   },
   data: () => ({
-    input: ""
+    input: "",
   }),
   mounted() {
     this.input = this.searchInput;
-  }
+  },
 };
 </script>

@@ -50,12 +50,12 @@ export default {
   props: {
     items: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     detailItems: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data: () => ({
     selected: 0,
@@ -65,10 +65,8 @@ export default {
     expressDialog: false,
     javascriptDialog: false,
     djangoDialog: false,
-    cssDialog: false
+    cssDialog: false,
   }),
-  mounted() {
-    console.log(this.detailItems);
-  }
+  mounted() {},
 };
 </script>

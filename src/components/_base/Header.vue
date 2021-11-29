@@ -5,18 +5,10 @@
         <v-icon>mdi-cat</v-icon>
         <!-- <span class="title-text text-h6"> Cathub </span> -->
       </NuxtLink>
-      <div v-if="selectedTab === `About`" class="tab">
-        <div
-          class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
-        >
-          <a @click="handleScroll(`.about`)">About</a>
-          <a @click="handleScroll(`.projects`)">Projects</a>
-          <a @click="handleScroll(`.skills`)">Skills</a>
-          <a @click="handleScroll(`.carrer`)">Activity</a>
-          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
-        </div>
-      </div>
-      <div v-else class="tab">
+      <div
+        v-if="selectedTab === `Projects` || selectedTab === `Archive`"
+        class="tab"
+      >
         <div class="d-flex align-center">
           <SearchBar />
           <div
@@ -33,6 +25,17 @@
           </div>
         </div>
       </div>
+      <div v-if="selectedTab === `About`" class="tab">
+        <div
+          class="header-nav text-body-2 font-weight-bold d-flex flex-row align-center"
+        >
+          <a @click="handleScroll(`.about`)">About</a>
+          <a @click="handleScroll(`.projects`)">Projects</a>
+          <a @click="handleScroll(`.skills`)">Skills</a>
+          <a @click="handleScroll(`.carrer`)">Activity</a>
+          <a @click="handleScroll(`.recommendations`)">Recommendations</a>
+        </div>
+      </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">
       <toggle
@@ -40,18 +43,18 @@
           {
             type: `link`,
             href: `https://github.com/morethanmin`,
-            text: `Github`
+            text: `Github`,
           },
           {
             type: `link`,
             href: `https://www.instagram.com/more_dev_min`,
-            text: `Instagram`
+            text: `Instagram`,
           },
           {
             type: `link`,
             href: `mailto:mini4614@gmail.com`,
-            text: `Contact`
-          }
+            text: `Contact`,
+          },
         ]"
       >
         <img
@@ -68,32 +71,30 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
 export default {
   data: () => ({
     selectedTab: "",
-    categories: []
+    categories: [],
   }),
   watch: {
     "$route.fullPath"(log) {
-      this.initialSelectedTab();
-    }
+      this.getSelectedTab();
+    },
   },
   computed: {},
   methods: {
     async getContent() {
       const { $content } = this;
-      this.categories = await $content("categories")
-        .only(["name"])
-        .fetch();
+      this.categories = await $content("categories").only(["name"]).fetch();
     },
-    initialSelectedTab() {
+    getSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some(x => x.path === "")) this.selectedTab = "About";
-      if (match.some(x => x.path === "/projects"))
+      if (match.some((x) => x.path === "")) this.selectedTab = "About";
+      if (match.some((x) => x.path === "/projects"))
         this.selectedTab = "Projects";
-      if (match.some(x => x.path === "/archive")) this.selectedTab = "Archive";
+      if (match.some((x) => x.path === "/archive"))
+        this.selectedTab = "Archive";
     },
 
     handleScroll(classname) {
@@ -102,14 +103,14 @@ export default {
       window.scroll({
         behavior: "smooth",
         left: 0,
-        top: top - 45
+        top: top - 45,
       });
-    }
+    },
   },
   async mounted() {
+    this.getSelectedTab();
     await this.getContent();
-    this.initialSelectedTab();
-  }
+  },
 };
 </script>
 
