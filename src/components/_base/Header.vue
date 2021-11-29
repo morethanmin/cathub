@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div :class="`header `">
     <div class="header-mainBox">
       <NuxtLink class="d-flex flex-row align-center" to="/">
         <v-icon>mdi-cat</v-icon>
@@ -43,6 +43,7 @@
       </div>
     </div>
     <div class="header-itemBox d-flex flex-row align-center">
+      <button @click="$vuetify.theme.dark = !$vuetify.theme.dark">dark</button>
       <toggle
         :menuItems="[
           {
@@ -116,6 +117,8 @@ export default {
   async mounted() {
     this.getSelectedTab();
     await this.getContent();
+    // this.$vuetify.theme.dark = true;
+    console.log(this.$vuetify.theme.dark);
   },
 };
 </script>
@@ -129,6 +132,9 @@ export default {
   display: flex;
   align-content: center;
   justify-content: space-between;
+  .v-icon {
+    color: white !important;
+  }
 }
 .tab {
   display: flex;

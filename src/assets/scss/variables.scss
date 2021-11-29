@@ -2,7 +2,6 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 $vt_xs: 600px;
 $vt_sm: 961px;
 $vt_md: 1265px;
@@ -11,17 +10,13 @@ $vt_lg: 1905px;
 $vt_container_max: 1200px;
 
 $color_primary: #22242a;
-$color_secondary: #586069;
+$color_secondary: #8b949e;
 
 $color_black: black;
 $color_gray: #9b9b9b;
 $color_gray2: #e5e5e5;
 $color_light_gray: #f8f8f8;
 $color_white: #fff;
-
-$font_family: "Roboto", sans-serif;
-$font_family_ko: "Roboto", sans-serif;
-$font_family_en: "Roboto", sans-serif;
 
 @import "./typo.scss";
 @import "./vuetify.scss";

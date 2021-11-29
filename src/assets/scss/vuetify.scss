@@ -1,11 +1,30 @@
 .v-application {
   font-family: $font_family;
-  background: transparent !important;
-
   &.theme--light {
     color: $color_black;
   }
-
+  &.theme--dark {
+    background-color: #0d1117;
+    color: #c9d1d9;
+  }
+  .v-card {
+    background: transparent !important;
+    &.theme--light {
+      color: $color_black;
+    }
+    &.theme--dark {
+      color: #c9d1d9;
+    }
+  }
+  .v-icon {
+    background: transparent !important;
+    &.theme--light {
+      color: #484f58;
+    }
+    &.theme--dark {
+      color: #c9d1d9;
+    }
+  }
   a {
     color: inherit;
     text-decoration: none;

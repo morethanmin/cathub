@@ -1,6 +1,10 @@
 <template>
-  <nav class="header-nav  color-black pa-0">
-    <v-row class=" ma-0 pa-0 common-wrapper">
+  <nav
+    :class="`header-nav color-black pa-0 ${
+      $vuetify.theme.dark ? `theme--dark` : `theme--light`
+    }`"
+  >
+    <v-row class="ma-0 pa-0 common-wrapper">
       <v-col class="show-info-box pa-0 pl-5 pr-3" cols="3">
         <transition name="fade">
           <div v-if="$store.getters.getIsOvered" class="show-data">
@@ -25,7 +29,7 @@
                 :class="[
                   ...(selectedTab === 'About'
                     ? ['selectedTab', 'font-weight-bold']
-                    : [])
+                    : []),
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -42,7 +46,7 @@
                 :class="[
                   ...(selectedTab === 'projects'
                     ? ['selectedTab', 'font-weight-bold']
-                    : [])
+                    : []),
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -59,7 +63,7 @@
                 :class="[
                   ...(selectedTab === 'archive'
                     ? ['selectedTab', 'font-weight-bold']
-                    : [])
+                    : []),
                 ]"
                 class="d-flex flex-row align-center"
               >
@@ -78,27 +82,37 @@
 .header-nav {
   z-index: 10;
   margin-top: 30px;
-}
-.header-nav {
   position: sticky !important;
   top: 0;
   width: 100%;
   border-bottom: 1px solid #eaecef;
   display: flex;
   justify-content: center;
-  background: white;
-}
-.header-row {
-  height: 100%;
-}
+  background: $color_white;
 
-.layout-nav {
-  position: fixed;
-  width: 100%;
-  color: #252a2e;
-  background-color: white !important;
-  border-bottom: 1px solid black;
-  //height: 100%;
+  &.theme--dark {
+    .show-info-box {
+      color: #c9d1d9;
+    }
+    background: #0d1117;
+    color: #c9d1d9;
+    border-bottom: 1px solid #2a2e33;
+    .header-tab {
+      color: #c9d1d9;
+      button {
+        border-bottom: 2px solid #0d1117;
+      }
+      button:hover {
+        border-bottom: 2px solid #d1d5da;
+      }
+      .selectedTab {
+        .v-icon {
+          color: #c9d1d9;
+        }
+        border-bottom: 2px solid red !important;
+      }
+    }
+  }
 }
 
 .header-tab {
@@ -132,7 +146,8 @@
 .fade-leave-active {
   transition: opacity 0.25s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 @media (max-width: $vt_sm) {
@@ -146,26 +161,27 @@
 export default {
   data() {
     return {
-      selectedTab: ""
+      selectedTab: "",
     };
   },
   watch: {
     "$route.fullPath"(log) {
       this.initialSelectedTab();
-    }
+    },
   },
   methods: {
     initialSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      if (match.some(x => x.path === "")) this.selectedTab = "About";
-      if (match.some(x => x.path === "/projects"))
+      if (match.some((x) => x.path === "")) this.selectedTab = "About";
+      if (match.some((x) => x.path === "/projects"))
         this.selectedTab = "projects";
-      if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
-    }
+      if (match.some((x) => x.path === "/archive"))
+        this.selectedTab = "archive";
+    },
   },
   mounted() {
     this.initialSelectedTab();
-  }
+  },
 };
 </script>

@@ -1,5 +1,9 @@
 <template>
-  <div class="info-profile black--text">
+  <div
+    :class="`info-profile  ${
+      $vuetify.theme.dark ? `theme--dark` : `theme--light`
+    }`"
+  >
     <div class="profile-header">
       <img
         ref="profileImage"
@@ -92,69 +96,80 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.info-profile-detail {
-  > div {
-    padding: 0;
+.info-profile {
+  .info-profile-detail {
     > div {
-      font-weight: 400;
-      > .v-icon {
-        margin-right: 5px;
+      padding: 0;
+      > div {
+        font-weight: 400;
+        > .v-icon {
+          margin-right: 5px;
+        }
+        list-style-type: none;
+        display: flex;
+        margin-bottom: 8px;
       }
-      list-style-type: none;
-      display: flex;
-      margin-bottom: 8px;
+    }
+
+    .v-icon {
+      font-size: 1.2rem;
+    }
+    /* transform: translateY(-25%); */
+  }
+
+  .info-profile-face {
+    object-fit: cover;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .btn-resume {
+    width: 100%;
+    border: 1px solid #e2e3e4;
+    background-color: #fafbfc;
+  }
+  .info-profile-follo {
+    li {
+      float: left;
+      margin-right: 5px;
+    }
+    height: 10px;
+  }
+  .info-profile-detail {
+    li {
+      margin-bottom: 4px;
     }
   }
+  .corp-img {
+    background: #e2e3e4;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+  }
 
-  .v-icon {
-    font-size: 1.2rem;
+  @media (max-width: $vt_sm) {
+    .no-d {
+      display: none !important;
+    }
+    .info-profile-face {
+      max-width: 100px;
+      max-height: 100px;
+    }
+    .profile-header {
+      display: flex;
+      align-content: center;
+      > * {
+        margin-right: 10px;
+      }
+    }
   }
-  /* transform: translateY(-25%); */
-}
-
-.info-profile-face {
-  object-fit: cover;
-  width: 100%;
-  max-width: 400px;
-  max-height: 400px;
-}
-.btn-resume {
-  width: 100%;
-  border: 1px solid #e2e3e4;
-  background-color: #fafbfc;
-}
-.info-profile-follo {
-  li {
-    float: left;
-    margin-right: 5px;
-  }
-  height: 10px;
-}
-.info-profile-detail {
-  li {
-    margin-bottom: 4px;
-  }
-}
-.corp-img {
-  background: #e2e3e4;
-  width: 45px;
-  height: 45px;
-  border-radius: 15px;
-}
-
-@media (max-width: $vt_sm) {
-  .no-d {
-    display: none !important;
-  }
-  .info-profile-face {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  .profile-header {
-    display: flex;
-    align-content: center;
-    > * {
-      margin-right: 10px;
+  &.theme--dark {
+    color: #c9d1d9;
+    .btn-resume {
+      // #
+      background: #21262d;
+      color: #c9d1d9;
+      border-color: #363b42;
     }
   }
 }
@@ -165,12 +180,12 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   computed: {
     ...mapGetters({
-      isOvered: "getIsOvered"
-    })
+      isOvered: "getIsOvered",
+    }),
   },
   methods: {
     ...mapMutations({
-      setIsOvered: "setIsOvered"
+      setIsOvered: "setIsOvered",
     }),
     handleScrollEvent() {
       const dom = this.$refs.profileImage;
@@ -178,13 +193,13 @@ export default {
         dom.offsetParent.offsetTop - 45 + dom.offsetTop + dom.height;
       if (targetScroll < window.scrollY) this.setIsOvered(true);
       else this.setIsOvered(false);
-    }
+    },
   },
   mounted() {
     document.addEventListener("scroll", this.handleScrollEvent);
   },
   beforeDestroy() {
     document.removeEventListener("scroll", this.handleScrollEvent);
-  }
+  },
 };
 </script>

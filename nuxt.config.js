@@ -10,47 +10,47 @@ export default {
     titleTemplate: "%s",
     title: "morethanmin",
     htmlAttrs: {
-      lang: "en"
+      lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         name: "google-site-verification",
-        content: "hl_kHkDsGTNvjpdQOwa9dmH8VRYfr7SsR_stM1KkxRg"
+        content: "hl_kHkDsGTNvjpdQOwa9dmH8VRYfr7SsR_stM1KkxRg",
       },
       {
         property: "naver-site-verification",
-        content: "341c03125af8051dda4a27c463395015db303636"
+        content: "341c03125af8051dda4a27c463395015db303636",
       },
       {
         hid: "description",
         name: "description",
-        content: "몰댄민의 포트폴리오/블로그"
+        content: "몰댄민의 포트폴리오/블로그",
       },
       {
         property: "og:type",
-        content: "website"
+        content: "website",
       },
       {
         property: "og:url",
-        content: "https://morethanmin.web.app"
+        content: "https://morethanmin.web.app",
       },
       {
         property: "og:image",
         content:
-          "https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png"
+          "https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png",
       },
       {
         property: "og:site_name",
-        content: "morethanmin"
+        content: "morethanmin",
       },
       {
         property: "og:locale",
-        content: "ko_KR"
-      }
+        content: "ko_KR",
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "cat.png" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "cat.png" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -63,15 +63,15 @@ export default {
   components: [
     {
       path: "~/components", // will get any components nested in let's say /components/test too
-      pathPrefix: false
-    }
+      pathPrefix: false,
+    },
   ],
   srcDir: "src/",
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify"
+    "@nuxtjs/vuetify",
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/content", "@nuxtjs/firebase"],
@@ -84,11 +84,11 @@ export default {
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGING_SENDER_ID,
       appId: process.env.APP_ID,
-      measurementId: process.env.MEASUREMENT_ID
+      measurementId: process.env.MEASUREMENT_ID,
     },
     services: {
-      analytics: true
-    }
+      analytics: true,
+    },
   },
 
   /*
@@ -97,7 +97,7 @@ export default {
    */
   content: {
     markdown: {},
-    nestedProperties: ["category.name"]
+    nestedProperties: ["category.name"],
   },
   /*
    ** Customize the progress-bar color
@@ -106,21 +106,22 @@ export default {
   vuetify: {
     customVariables: ["~/assets/scss/variables.scss"],
     theme: {
-      themes: {
-        light: {
-          primary: "#22242a",
-          secondary: "#f64c72"
-        },
-        dark: {
-          primary: "#22242a",
-          secondary: "#f64c72"
-        }
-      }
-    }
+      // themes: {
+      //   light: {
+      //     primary: "#22242a",
+      //     secondary: "#f64c72",
+      //   },
+      //   dark: {
+      //     primary: "#22242a",
+      //     secondary: "#f64c72",
+      //   },
+      // },
+    },
   },
   loading: "~/components/Loading.vue",
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
   // generate: {
   //   async routes() {
   //     const { $content } = require("@nuxt/content");
