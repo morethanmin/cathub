@@ -18,17 +18,15 @@
           </div>
           <!-- <category :category="article.category" /> -->
         </div>
-        <no-ssr>
-          <script
-            src="https://utteranc.es/client.js"
-            repo="morethanmin/cathub"
-            issue-term="title"
-            label="Comment"
-            theme="github-light"
-            crossorigin="anonymous"
-            async
-          ></script>
-        </no-ssr>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="morethanmin/cathub"
+          issue-term="title"
+          label="Comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async
+        ></script>
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
         <div class="nav">
@@ -38,7 +36,7 @@
             :key="link.id"
             :class="{
               'py-1': link.depth === 2,
-              'ml-2 py-1': link.depth === 3
+              'ml-2 py-1': link.depth === 3,
             }"
           >
             <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
@@ -114,18 +112,18 @@ export default {
   props: {
     article: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     prev: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     next: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   data: () => ({}),
-  mounted() {}
+  mounted() {},
 };
 </script>
