@@ -119,6 +119,7 @@ export default {
   data: () => ({}),
   mounted() {
     const scriptTag = document.createElement("SCRIPT");
+    scriptTag.setAttribute("type", "application/javascript");
     scriptTag.setAttribute("src", "https://utteranc.es/client.js");
     scriptTag.setAttribute("repo", "morethanmin/cathub");
     scriptTag.setAttribute("issue-term", "title");
@@ -126,7 +127,7 @@ export default {
     scriptTag.setAttribute("theme", "github-light");
     scriptTag.setAttribute("crossorigin", "anonymous");
     scriptTag.setAttribute("async", "async");
-    this.$el.querySelector(".commentBox").append(scriptTag);
+    console.log(this.$el.querySelector(".commentBox"));
   },
 };
 </script>
