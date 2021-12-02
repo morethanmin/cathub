@@ -16,14 +16,6 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        name: "google-site-verification",
-        content: "hl_kHkDsGTNvjpdQOwa9dmH8VRYfr7SsR_stM1KkxRg"
-      },
-      {
-        property: "naver-site-verification",
-        content: "341c03125af8051dda4a27c463395015db303636"
-      },
-      {
         hid: "description",
         name: "description",
         content: "몰댄민의 포트폴리오/블로그"
