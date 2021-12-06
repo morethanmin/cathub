@@ -5,8 +5,6 @@ category: java
 createdAt: "2021-09-18"
 ---
 
-[##_Image|kage@c3qgJh/btqSWacVeY3/Rz3DFOMvMz4lR6kvFpkARK/img.png|alignCenter|data-filename="title.png" data-origin-width="541" data-origin-height="372" data-ke-mobilestyle="widthContent"|||_##]
-
 ## **목표**
 
 ---

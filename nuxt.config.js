@@ -19,28 +19,28 @@ export default {
         hid: "description",
         name: "description",
         content: "몰댄민의 포트폴리오/블로그"
-      },
-      {
-        property: "og:type",
-        content: "website"
-      },
-      {
-        property: "og:url",
-        content: "https://morethanmin.web.app"
-      },
-      {
-        property: "og:image",
-        content:
-          "https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png"
-      },
-      {
-        property: "og:site_name",
-        content: "morethanmin"
-      },
-      {
-        property: "og:locale",
-        content: "ko_KR"
       }
+      // {
+      //   property: "og:type",
+      //   content: "website"
+      // },
+      // {
+      //   property: "og:url",
+      //   content: "https://morethanmin.web.app"
+      // },
+      // {
+      //   property: "og:image",
+      //   content:
+      //     "https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png"
+      // },
+      // {
+      //   property: "og:site_name",
+      //   content: "morethanmin"
+      // },
+      // {
+      //   property: "og:locale",
+      //   content: "ko_KR"
+      // }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "cat.png" }]
   },
