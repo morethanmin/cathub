@@ -1,7 +1,5 @@
 # cat-hub
 
-![morethanmin_blog](https://user-images.githubusercontent.com/72514247/143175436-6fec3b75-b6fd-40ab-a472-5b34674e9548.png)
-
 > Github'st Development Archive Application using vue and nuxt.
 
 ## Link
@@ -59,4 +57,4 @@ This project is ongoing.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md for details
+This project is licensed under the MIT License - see the LICENSE.md for details.
