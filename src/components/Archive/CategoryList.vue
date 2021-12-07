@@ -15,6 +15,15 @@
         <div class="mb-3 desc color_secondary">
           {{ category.description }}
         </div>
+        <!-- <div class="chip-group">
+          <TagChip
+            v-for="(tag, index) in category.tags"
+            :key="index"
+            :text="tag"
+            size="small"
+            class="mr-2"
+          />
+        </div> -->
         <div class="d-flex subdesc color_secondary">
           <div>{{ this.parsedDate.length }} article archived</div>
         </div>
@@ -82,7 +91,14 @@ export default {
   height: 100px;
   width: 400px;
 }
-
+.chip-group {
+  display: flex;
+  overflow: scroll;
+  flex-wrap: nowrap;
+}
+.chip-group::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
 @media (max-width: $vt_sm) {
   .card-img {
     display: none;

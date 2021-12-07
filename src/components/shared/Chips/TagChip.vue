@@ -1,5 +1,5 @@
 <template>
-  <div class="chip">{{ text }}</div>
+  <div :class="`chip ${size}`">{{ text }}</div>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
     text: {
       type: String,
       default: ""
+    },
+    size: {
+      type: String,
+      default: "normal"
     }
   }
 };
@@ -23,5 +27,8 @@ export default {
   word-break: nowrap;
   width: fit-content;
   white-space: nowrap;
+  &.small {
+    font-size: 0.7rem;
+  }
 }
 </style>

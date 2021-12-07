@@ -1,4 +1,5 @@
 ---
 name: java
-description: "study halle, spring, java 등"
+description: "자바와 관련된 내용을 정리하고 올립니다."
+tags: ["studyhalle", "spring", "sringboot", "java"]
 ---
