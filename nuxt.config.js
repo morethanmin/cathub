@@ -70,10 +70,11 @@ export default {
     "@nuxtjs/vuetify"
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/firebase", "@nuxtjs/sitemap"],
-  sitemap: {
-    hostname: "https://morethanmin.web.app"
-  },
+  modules: ["@nuxt/content", "@nuxtjs/firebase"],
+  // modules: ["@nuxt/content", "@nuxtjs/firebase", "@nuxtjs/sitemap"],
+  // sitemap: {
+  //   hostname: "https://morethanmin.web.app"
+  // },
   firebase: {
     config: {
       apiKey: process.env.API_KEY,
