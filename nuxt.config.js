@@ -19,6 +19,10 @@ export default {
         hid: "description",
         name: "description",
         content: "몰댄민의 포트폴리오/블로그"
+      },
+      {
+        name: "google-site-verification",
+        content: "Zou2V8zKDuVgkMCYaTcb5TDyOKWo-OmO4HvLaDCVJJs"
       }
       // {
       //   property: "og:type",
