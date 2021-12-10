@@ -33,7 +33,7 @@ createdAt: "2021-12-10"
 
 왜냐하면 팩토리얼은 이동하려는 값에서 가장 빠르게 1로 이동했을 때의 값이기 때문이다.
 
-```jsx
+```js
 const readline = require("readline");
 const rl = readline.createInterface({
   input: process.stdin,
@@ -58,6 +58,7 @@ rl.on("line", line => {
       // 이동 할 수 있는 거리.
       let moveAmount = 0;
       // 이동한 횟수.
+      let count = 0;
 
       while (distance !== 0) {
         if (getSum(moveAmount + 1) <= distance) {
