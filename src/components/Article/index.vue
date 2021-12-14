@@ -23,13 +23,13 @@
       </v-col>
       <v-col sm="12" md="3" class="sidesection">
         <div class="nav">
-          <div v-if="article.toc.length" class="navheader pb-1">Navigation</div>
+          <!-- <div v-if="article.toc.length" class="navheader pb-1">Navigation</div> -->
           <div
             v-for="link of article.toc"
             :key="link.id"
             :class="{
               'py-1': link.depth === 2,
-              'ml-2 py-1': link.depth === 3,
+              'ml-2 py-1': link.depth === 3
             }"
           >
             <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
@@ -105,16 +105,16 @@ export default {
   props: {
     article: {
       type: Object,
-      default: () => {},
+      default: () => {}
     },
     prev: {
       type: Object,
-      default: () => {},
+      default: () => {}
     },
     next: {
       type: Object,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data: () => ({}),
   mounted() {
@@ -128,6 +128,6 @@ export default {
     scriptTag.setAttribute("crossorigin", "anonymous");
     scriptTag.setAttribute("async", "async");
     this.$el.querySelector(".commentBox").append(scriptTag);
-  },
+  }
 };
 </script>
