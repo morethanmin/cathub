@@ -171,7 +171,7 @@ export default {
       },
       {
         img: "weplanet.png",
-        title: "Weplanet - Frontend Developer",
+        title: "Weplanet - Frontend Intern",
         href: "https://www.opengallery.co.kr",
         type: "company",
         contents: [
@@ -182,7 +182,7 @@ export default {
       },
       {
         img: "trigit.png",
-        title: "Trigit Software - Frontend Developer",
+        title: "Trigit Software - Frontend Intern",
         href: "http://www.trigit.com",
         type: "company",
         contents: [
