@@ -6,7 +6,7 @@
     :skillsDetail="skillsDetail"
     :activitys="{
       careers: careers,
-      educations: educations,
+      activities: activities,
       certificates: certificates,
       awards: awards
     }"
@@ -194,12 +194,19 @@ export default {
         ]
       }
     ],
-    educations: [
+    activities: [
+      {
+        icon: "mdi-book-open-outline",
+        title: "Jext",
+        href: "https://zext.oopy.io",
+        contents: [{ text: `유학생 커뮤니티 Int'ly 프론트엔드 개발` }]
+      },
       {
         img: "j2kb.png",
-        title: "J2KB 3기 (전국 코딩 연합 동아리)",
+        title: "J2KB",
         href: "https://github.com/J2KB-3rd-Season",
         contents: [
+          { text: `전국 코딩 연합 동아리 3기 수료` },
           { text: `유니콘 팀 프로젝트 Dev-in 프론트엔드 개발 (React)` }
         ]
       },

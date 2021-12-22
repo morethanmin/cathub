@@ -13,15 +13,15 @@
           <a @click="handleScroll(`.about`)">About</a>
           <a @click="handleScroll(`.projects`)">Projects</a>
           <a @click="handleScroll(`.skills`)">Skills</a>
-          <a @click="handleScroll(`.carrer`)">Activity</a>
+          <a @click="handleScroll(`.carrer`)">Experience</a>
           <a @click="handleScroll(`.recommendations`)">Recommendations</a>
         </div>
       </div>
       <div
         v-if="
           selectedTab === `Projects` ||
-          selectedTab === `Archive` ||
-          selectedTab === `Other`
+            selectedTab === `Archive` ||
+            selectedTab === `Other`
         "
         class="tab"
       >
@@ -48,18 +48,18 @@
           {
             type: `link`,
             href: `https://github.com/morethanmin`,
-            text: `Github`,
+            text: `Github`
           },
           {
             type: `link`,
             href: `https://www.instagram.com/more_dev_min`,
-            text: `Instagram`,
+            text: `Instagram`
           },
           {
             type: `link`,
             href: `mailto:mini4614@gmail.com`,
-            text: `Contact`,
-          },
+            text: `Contact`
+          }
         ]"
       >
         <img
@@ -79,26 +79,28 @@
 export default {
   data: () => ({
     selectedTab: "",
-    categories: [],
+    categories: []
   }),
   watch: {
     "$route.fullPath"(log) {
       this.getSelectedTab();
-    },
+    }
   },
   computed: {},
   methods: {
     async getContent() {
       const { $content } = this;
-      this.categories = await $content("categories").only(["name"]).fetch();
+      this.categories = await $content("categories")
+        .only(["name"])
+        .fetch();
     },
     getSelectedTab() {
       const match = this.$route.matched;
       if (Array.isArray(match) === false) return;
-      else if (match.some((x) => x.path === "")) this.selectedTab = "About";
-      else if (match.some((x) => x.path === "/projects"))
+      else if (match.some(x => x.path === "")) this.selectedTab = "About";
+      else if (match.some(x => x.path === "/projects"))
         this.selectedTab = "Projects";
-      else if (match.some((x) => x.path === "/archive"))
+      else if (match.some(x => x.path === "/archive"))
         this.selectedTab = "Archive";
       else this.selectedTab = "Other";
     },
@@ -109,14 +111,14 @@ export default {
       window.scroll({
         behavior: "smooth",
         left: 0,
-        top: top - 45,
+        top: top - 45
       });
-    },
+    }
   },
   async mounted() {
     this.getSelectedTab();
     await this.getContent();
-  },
+  }
 };
 </script>
 

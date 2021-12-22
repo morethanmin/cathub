@@ -1,11 +1,11 @@
 <template>
   <v-container class="main common-wrapper mt-5 pa-0">
     <div class="d-flex justify-space-between mb-3">
-      <div class="carrer color-black">Develop Activity</div>
+      <div class="carrer color-black">Experience</div>
       <div>
-        <toggle
+        <Toggle
           @Career="selected = `career`"
-          @Education="selected = `education`"
+          @Activity="selected = `activity`"
           @Certificate="selected = `certificate`"
           @Awards="selected = `awards`"
           :menuItems="[
@@ -15,7 +15,7 @@
             },
             {
               type: `event`,
-              text: `Education`
+              text: `Activity`
             },
             {
               type: `event`,
@@ -31,7 +31,7 @@
             {{ selected }}
             <v-icon>mdi-menu-down</v-icon>
           </div>
-        </toggle>
+        </Toggle>
       </div>
     </div>
     <v-row>
@@ -58,7 +58,7 @@
         </div>
       </v-col>
       <v-col
-        v-else-if="selected === `education`"
+        v-else-if="selected === `activity`"
         class="contribution-main"
         sm="12"
         md="10"
@@ -73,7 +73,7 @@
             title="Google Developer Group "
           /> -->
           <Activity
-            v-for="(item, idx) in activitys.educations"
+            v-for="(item, idx) in activitys.activities"
             :key="idx"
             :img="item.img ? require(`~/static/images/${item.img}`) : ''"
             :icon="item.icon ? item.icon : ''"
@@ -144,17 +144,17 @@
           Carrer
         </button>
         <button
-          @click="selected = `education`"
+          @click="selected = `activity`"
           :class="[
             'rounded-lg',
             'pa-1',
             'pl-4',
             'mb-4',
             'text-left',
-            selected === 'education' ? 'selected' : ''
+            selected === 'activity' ? 'selected' : ''
           ]"
         >
-          Education
+          Activity
         </button>
         <button
           @click="selected = `certificate`"
