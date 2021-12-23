@@ -1,5 +1,8 @@
 <template>
   <div>
+    <Callout
+      text="개인적으로 진행했던 프로젝트만 정리해두었습니다. 클릭하면 해당 repository로 이동됩니다!"
+    />
     <div class="filter-box pb-5 mb-5">
       <input
         type="text"
@@ -36,22 +39,22 @@ export default {
   props: {
     projects: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     searchInput: {
       type: String,
-      default: "",
+      default: ""
     },
     onChange: {
       type: Function,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data: () => ({
-    input: "",
+    input: ""
   }),
   mounted() {
     this.input = this.searchInput;
-  },
+  }
 };
 </script>
