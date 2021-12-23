@@ -212,14 +212,15 @@ export default {
       },
       {
         icon: "mdi-book-open-outline",
-        title: "STUDY HALLE (자바 스터디)",
-        href: "https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE"
+        title: "STUDY HALLE",
+        href: "https://moredevmin.tistory.com/category/JAVA/STUDY%20HALLE",
+        contents: [{ text: `백기선 님과 함께하는 온라인 자비스터디 수료` }]
       },
       {
         img: "doongji.png",
-        title: "Doongji (현업 개발자 모임)",
+        title: "Doongji",
         href: "https://github.com/Doong-Ji",
-        contents: [{ text: `Dvelopment Sub Leader` }]
+        contents: [{ text: `현업 개발자 모임에서 부리더로 활동` }]
       },
       {
         icon: "mdi-laptop",
