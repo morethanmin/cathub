@@ -18,9 +18,6 @@
       <PinnedList :items="projects" />
     </div>
     <div class="mb-5">
-      <div class="d-flex justify-space-between mb-3">
-        <div class="skills color-black">Skills</div>
-      </div>
       <Skills :items="skills" :detailItems="skillsDetail" />
     </div>
     <div class="mb-5">
