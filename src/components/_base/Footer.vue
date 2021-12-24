@@ -1,6 +1,6 @@
 <template>
   <div class="footer-box d-flex align-center common-wrapper">
-    <div class="align-center footer-info ma-5 d-flex flex-row justify-center">
+    <div class="align-center footer-info my-5 d-flex flex-row justify-center">
       <span>&copy; {{ new Date().getFullYear() }} morethanmin</span>
     </div>
   </div>

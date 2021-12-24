@@ -52,7 +52,12 @@
           },
           {
             type: `link`,
-            href: `https://www.instagram.com/more_dev_min`,
+            href: `https://www.linkedin.com/in/sangmin-lee-80703b229/`,
+            text: `LinkedIn`
+          },
+          {
+            type: `link`,
+            href: `https://www.instagram.com/more_dev_min/`,
             text: `Instagram`
           },
           {

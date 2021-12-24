@@ -12,13 +12,10 @@
         <div class="text-h6 font-weight-thin">morethanmin</div>
       </div>
     </div>
-    <a
-      target="_blank"
-      href="https://drive.google.com/file/d/14nCRNLFrW6macCUp4ImfaYqcs7vORfF-/view?usp=sharing"
-    >
+    <a target="_blank" href="mailto:mini4614@gmail.com">
       <Button
         class="mt-3 mb-3 pa-1 font-weight-bold text-subtitle-2 btn-resume"
-        text="resume"
+        text="contact"
       />
     </a>
     <!-- <div class="info-profile-follo mb-8 text-body-2">
@@ -36,13 +33,13 @@
     </div> -->
     <div class="info-profile-detail text-body-2">
       <div class="d-flex flex-column flex-nowrap">
-        <!-- <div>
-          <v-icon>mdi-laptop</v-icon>
-          Frontend engineer
-        </div> -->
         <div>
           <v-icon>mdi-office-building-outline</v-icon>
           Myongji University
+        </div>
+        <div>
+          <v-icon>mdi-laptop</v-icon>
+          Software engineer
         </div>
         <div>
           <v-icon>mdi-map-marker-outline</v-icon>
@@ -62,17 +59,8 @@
     </div>
     <v-divider class="mt-3 mb-3"></v-divider>
 
-    <!-- <div class="text-body-1 font-weight-bold mb-3">Skills</div>
-    <a href="http://www.giantcorp.co.kr/">
-      <img class="corp-img" src="~/static/images/giant.png" alt="" />
-    </a>
-    <a href="http://wepla.net/">
-      <img class="corp-img" src="~/static/images/weplanet.png" alt="" />
-    </a>
-    <a href="http://www.trigit.com/">
-      <img class="corp-img" src="~/static/images/trigit.png" alt="" />
-    </a> -->
-    <div class="text-body-1 font-weight-bold mb-3">Corporations</div>
+    <!--<div class="text-body-1 font-weight-bold mb-3">Corporations</div>
+    
     <a href="https://www.opengallery.co.kr/">
       <img class="corp-img" src="~/static/images/opengallery.png" alt="" />
     </a>
@@ -84,11 +72,19 @@
     </a>
     <a href="http://www.trigit.com/">
       <img class="corp-img" src="~/static/images/trigit.png" alt="" />
+    </a> -->
+    <a href="https://github.com/morethanmin" target="_blank">
+      <img class="corp-img" src="~/static/svgs/github.svg" alt="" />
     </a>
-    <!-- <div class="text-body-1 font-weight-bold mb-3">Organizations</div>
-    <img class="corp-img" src="" alt="" />
-    <img class="corp-img" src="" alt="" />
-    <img class="corp-img" src="" alt="" /> -->
+    <a
+      href="https://www.linkedin.com/in/sangmin-lee-80703b229/"
+      target="_blank"
+    >
+      <img class="corp-img" src="~/static/svgs/linkedin.svg" alt="" />
+    </a>
+    <a href="https://www.instagram.com/more_dev_min/" target="_blank">
+      <img class="corp-img" src="~/static/svgs/instagram.svg" alt="" />
+    </a>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -136,10 +132,15 @@
   }
 }
 .corp-img {
-  background: #e2e3e4;
-  width: 45px;
-  height: 45px;
-  border-radius: 15px;
+  // background: white;
+  // background: #e2e3e4;
+  width: 35px;
+  // width: 45px;
+  height: 35px;
+  // height: 45px;
+  // border-radius: 50%;
+  // border-radius: 15px;
+  padding: 5px;
 }
 
 @media (max-width: $vt_sm) {
@@ -161,7 +162,6 @@
 </style>
 <script>
 import { mapGetters, mapMutations } from "vuex";
-
 export default {
   computed: {
     ...mapGetters({

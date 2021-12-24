@@ -15,8 +15,8 @@
         </v-row>
       </v-container>
     </v-main>
+    <v-divider></v-divider>
     <v-footer>
-      <v-divider></v-divider>
       <Footer />
     </v-footer>
   </v-app>
@@ -45,6 +45,6 @@
 
 <script>
 export default {
-  mounted() {},
+  mounted() {}
 };
 </script>

@@ -3,7 +3,11 @@
     <v-row class=" ma-0 pa-0 common-wrapper">
       <v-col class="show-info-box pa-0 pl-5 pr-3" cols="3">
         <transition name="fade">
-          <div v-if="$store.getters.getIsOvered" class="show-data">
+          <div
+            v-if="$store.getters.getIsOvered"
+            class="show-data"
+            @click="handleProfileClick"
+          >
             <img
               src="~/static/images/face.jpeg"
               alt="face"
@@ -127,6 +131,7 @@
   display: flex;
   height: 100%;
   align-items: center;
+  cursor: pointer;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -162,6 +167,13 @@ export default {
       if (match.some(x => x.path === "/projects"))
         this.selectedTab = "projects";
       if (match.some(x => x.path === "/archive")) this.selectedTab = "archive";
+    },
+    handleProfileClick() {
+      window.scroll({
+        behavior: "smooth",
+        left: 0,
+        top: 0
+      });
     }
   },
   mounted() {

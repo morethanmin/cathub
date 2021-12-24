@@ -43,7 +43,7 @@
       >
         <div class="activity">
           <div class="contribution-main-line text-body-2 d-flex align-center">
-            <div class="">May 2021</div>
+            <!-- <div class="">May 2021</div> -->
             <v-divider></v-divider>
           </div>
           <Activity
@@ -65,7 +65,7 @@
       >
         <div class="activity">
           <div class="contribution-main-line text-body-2 d-flex align-center">
-            <div class="">May 2021</div>
+            <!-- <div class="">May 2021</div> -->
             <v-divider></v-divider>
           </div>
           <!-- <Activity
@@ -91,7 +91,7 @@
       >
         <div class="activity">
           <div class="contribution-main-line text-body-2 d-flex align-center">
-            <div class="">May 2021</div>
+            <!-- <div class="">May 2021</div> -->
             <v-divider></v-divider>
           </div>
           <Activity
@@ -113,7 +113,7 @@
       >
         <div class="activity">
           <div class="contribution-main-line text-body-2 d-flex align-center">
-            <div class="">May 2021</div>
+            <!-- <div class="">May 2021</div> -->
             <v-divider></v-divider>
           </div>
           <Activity
