@@ -101,7 +101,9 @@
       margin-bottom: 8px;
     }
   }
-
+  li {
+    margin-bottom: 4px;
+  }
   .v-icon {
     font-size: 1.2rem;
   }
@@ -125,11 +127,6 @@
     margin-right: 5px;
   }
   height: 10px;
-}
-.info-profile-detail {
-  li {
-    margin-bottom: 4px;
-  }
 }
 .corp-img {
   // background: white;
