@@ -181,6 +181,7 @@ export default {
     }
   },
   mounted() {
+    this.handleScrollEvent();
     document.addEventListener("scroll", this.handleScrollEvent);
   },
   beforeDestroy() {
