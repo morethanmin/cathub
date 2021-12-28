@@ -39,7 +39,7 @@
         </div>
         <div>
           <v-icon>mdi-laptop</v-icon>
-          Software engineer
+          Software Engineer
         </div>
         <div>
           <v-icon>mdi-map-marker-outline</v-icon>
