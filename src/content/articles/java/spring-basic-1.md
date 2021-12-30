@@ -2,7 +2,7 @@
 title: "[Spring Basic 1] 시작하기"
 description: "스프링 공부해보기"
 category: java
-createdAt: "2021-12-30"
+createdAt: "2021-12-11"
 ---
 
 > spring.io에 있는 document를 보고 나름 정리한 글입니다.
