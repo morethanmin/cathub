@@ -77,7 +77,7 @@
       <img class="corp-img" src="~/static/svgs/github.svg" alt="" />
     </a>
     <a
-      href="https://www.linkedin.com/in/sangmin-lee-80703b229/"
+      href="https://www.linkedin.com/in/morethanmin"
       target="_blank"
     >
       <img class="corp-img" src="~/static/svgs/linkedin.svg" alt="" />
