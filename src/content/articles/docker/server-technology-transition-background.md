@@ -1,5 +1,5 @@
 ---
-title: "[2] 서버기술전환의 배경"
+title: "0.서버기술전환의 배경"
 description: "서버 기술 전환 과정"
 category: docker
 createdAt: "2021-11-17"

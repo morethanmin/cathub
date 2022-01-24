@@ -1,5 +1,5 @@
 ---
-title: "[1] Docker를 활용한 개발환경 구성"
+title: "1.Docker를 활용한 개발환경 구성"
 description: "서버 기술 전환 과정"
 category: docker
 createdAt: "2021-11-19"
