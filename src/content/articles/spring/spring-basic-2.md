@@ -1,7 +1,7 @@
 ---
 title: "[Spring Basic 2] api 작성해보기"
 description: "스프링 공부해보기"
-category: java
+category: spring
 createdAt: "2021-12-18"
 ---
 
