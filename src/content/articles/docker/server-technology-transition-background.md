@@ -1,7 +1,7 @@
 ---
-title: "[오픈갤러리] 서버기술전환의 배경"
+title: "[2] 서버기술전환의 배경"
 description: "서버 기술 전환 과정"
-category: web
+category: docker
 createdAt: "2021-11-17"
 ---
 
