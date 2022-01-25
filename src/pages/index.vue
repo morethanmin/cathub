@@ -79,7 +79,7 @@ export default {
       {
         id: 5,
         icon: "javascript.svg",
-        title: "Javascript",
+        title: "Javascript & Node.js",
         subtitle:
           "ES6 + 문법에 익숙하고 비동기 처리가 가능해요. typescript를 사용한 서비스 경험이 있어요."
       },
@@ -139,7 +139,7 @@ export default {
         tags: [`typescript`, "nodejs", "webpack", "babel"],
         title: "Javascript",
         subtitle:
-          "ES6+ 문법에 익숙해요. 동기 단일 스레드로 동작하는 원리를 이해하고 비동기 처리가 가능해요. webpack과 babel을 통한 개발환경을 이해하고 구축 할 수 있어요. typescript를 사용할 수 있고, 서비스 경험이 있어요. 디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다."
+          "ES6+ 문법에 익숙해요. 동기 단일 스레드로 동작하는 원리를 이해하고 비동기 처리가 가능해요. webpack과 babel을 통한 개발 환경을 이해하고 구축 할 수 있어요. typescript를 사용할 수 있고, 서비스 경험이 있어요. 디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다."
       },
       {
         id: 6,
