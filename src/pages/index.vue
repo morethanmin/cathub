@@ -53,14 +53,14 @@ export default {
       {
         id: 1,
         icon: "react.svg",
-        title: "React",
+        title: "React & Next.js",
         subtitle:
           "재 사용성을 고려한 Component와 Custom Hook을 만들어요. Next.js를 주로 사용하고 있어요."
       },
       {
         id: 2,
         icon: "vue.svg",
-        title: "Vue",
+        title: "Vue & Nuxt.js",
         subtitle:
           "Vuex를 통해 전역적 상태관리를 하고, Nuxt를 이용해 SSR Application을 만들 수 있어요."
       },
