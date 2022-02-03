@@ -3,7 +3,7 @@
     <div class="profile-header">
       <img
         ref="profileImage"
-        src="~/static/images/face.jpeg"
+        src="~/static/images/face.jpg"
         alt="face"
         class="info-profile-face rounded-circle"
       />

@@ -9,7 +9,7 @@
             @click="handleProfileClick"
           >
             <img
-              src="~/static/images/face.jpeg"
+              src="~/static/images/face.jpg"
               alt="face"
               width="30"
               height="30"

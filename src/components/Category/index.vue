@@ -4,7 +4,7 @@
       <div class="mainBox mt-5">
         <div class="mainBoxHeader">
           <div class="left">
-            <img src="~/static/images/face.jpeg" alt="" srcset="" />
+            <img src="~/static/images/face.jpg" alt="" srcset="" />
             <div class="name">morethanmin</div>
             <NuxtLink
               v-if="articles.length"
