@@ -6,7 +6,7 @@
 
 You can check [here](https://morethanmin.web.app).
 
-![chrome-capture](https://user-images.githubusercontent.com/72514247/137414803-e815d51a-f778-40bf-87eb-7f7094602f07.gif)
+![image](https://user-images.githubusercontent.com/72514247/152294516-6d48ddef-fc9f-49a5-a09f-825f2a099a7e.png)
 
 ## Tech and libraries
 
