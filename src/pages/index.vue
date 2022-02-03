@@ -154,6 +154,12 @@ export default {
     ],
     careers: [
       {
+        img: "mobileentropy.png",
+        title: "Mobileentropy - Web Developer",
+        href: "http://entropykorea.com",
+        contents: []
+      },
+      {
         img: "opengallery.png",
         title: "Opengallery - Web Developer",
         href: "https://www.opengallery.co.kr",
