@@ -12,7 +12,7 @@
         <div class="text-h6 font-weight-thin">morethanmin</div>
       </div>
     </div>
-    <a target="_blank" href="mailto:mini4614@gmail.com">
+    <a target="_blank" href="mailto:morethanmin.dev@gmail.com">
       <Button
         class="mt-3 mb-3 pa-1 font-weight-bold text-subtitle-2 btn-resume"
         text="contact"
@@ -47,7 +47,7 @@
         </div>
         <div>
           <v-icon>mdi-email-outline</v-icon>
-          mini4614@gmail.com
+          morethanmin.dev@gmail.com
         </div>
         <!-- <div>
           <v-icon>mdi-link-variant</v-icon>

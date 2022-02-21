@@ -35,7 +35,7 @@
             },
             {
               type: `link`,
-              href: `mailto:mini4614@gmail.com`,
+              href: `mailto:morethanmin.dev@gmail.com`,
               text: `Contact`
             }
           ]"
