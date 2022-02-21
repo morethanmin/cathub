@@ -52,7 +52,7 @@
           },
           {
             type: `link`,
-            href: `https://www.linkedin.com/in/sangmin-lee-80703b229/`,
+            href: `https://www.linkedin.com/in/morethanmin`,
             text: `LinkedIn`
           },
           {
