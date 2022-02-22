@@ -25,12 +25,12 @@
             },
             {
               type: `link`,
-              href: `https://moredevmin.tistory.com`,
-              text: `Blog`
+              href: `https://www.linkedin.com/in/morethanmin`,
+              text: `LinkedIn`
             },
             {
               type: `link`,
-              href: `https://www.instagram.com/more_dev_min`,
+              href: `https://www.instagram.com/more_dev_min/`,
               text: `Instagram`
             },
             {
