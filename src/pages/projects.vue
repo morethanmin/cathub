@@ -10,7 +10,7 @@ const formatDate = function (date) {
 };
 export default {
   async asyncData({ $content, params }) {
-    const projects = await $content("projects").fetch();
+    const projects = await $content("projects").sortBy("createdAt", "desc").fetch();
 
     return {
       projects,
