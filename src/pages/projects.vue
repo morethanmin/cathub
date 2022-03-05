@@ -57,16 +57,16 @@ export default {
   watch: {
     async searchInput(searchInput) {
       if (!searchInput) {
-        this.projects = await this.$content("projects").fetch();
+        this.projects = await this.$content("projects").sortBy("createdAt", "desc").fetch();
       } else {
         this.projects = await this.$content("projects")
-          .search(searchInput)
+          .search(searchInput).sortBy("createdAt", "desc")
           .fetch();
       }
     },
   },
   async mounted() {
-    this.projects = await this.$content("projects").fetch();
+    this.projects = await this.$content("projects").sortBy("createdAt", "desc").fetch();
   },
 };
 </script>
