@@ -2,21 +2,13 @@
 
 > Github'st Development Archive Application using vue and nuxt.
 
+![chrome-capture-2022-3-1](https://user-images.githubusercontent.com/72514247/161201534-0c7f889a-ac52-4e43-aa99-abef6afbb2b2.gif)
+
 ## Features
 
 - markdown 기반 게시글/프로젝트 생성  검색
-
-![chrome-capture-2022-1-22](https://user-images.githubusercontent.com/72514247/155041261-44408ae9-57ed-4dac-80ce-81a6922d6660.gif)
-
-
 - 카테고리별 작성 내역 잔디로 표시
-
-![image](https://user-images.githubusercontent.com/72514247/155041182-c343d2bd-619d-4ca9-a376-6d6644aa180f.png)
-
 - 게시글 Navigation 기능
-
-![chrome-capture-2022-1-22 (1)](https://user-images.githubusercontent.com/72514247/155041388-9d363ee2-8616-4d51-a3d9-73715a900266.gif)
-
 - 등등 ....
 
 ## Tech and libraries
