@@ -1,6 +1,6 @@
 ## Hi there, I'm Jade <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> </h1>
 
-개발을 일이 아닌 저의 생각을 표현해낼 수 있는 도구라고 생각하는 **Software Engineer**입니다.
+개발을 일이 아닌 저의 생각을 표현해낼 수 있는 도구라고 생각하는 **Frontend Engineer**입니다.
 
 끊임없이 발전하는 자바스트립트 생태계를 좋아하고, 기술은 필요에 의해 생겨나는 것임을 머릿속에 되새기며 특정 프레임워크에 구애받지 않는 모던한 개발자가 되고자 합니다. 스스로 발전하고 성장하는 개발을 지향하며 원하는 서비스를 만들어내기 위한 개발 공부를 통해 끊임없이 배워나가고 있습니다🔥
 
