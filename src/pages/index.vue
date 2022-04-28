@@ -171,15 +171,12 @@ export default {
       },
       {
         img: "giant.png",
-        title: "Giant - Web Developer",
+        title: "Giant - Frontend Intern",
         href: "https://giantcorp.co.kr",
         type: "company",
         contents: [
           { text: `삶기술학교`, href: `https://hansan.slowtech.ac` },
           { text: `커뮤니티호텔H`, href: `https://hotelh1500.com` },
-          {
-            text: `산업기능요원 인센티브TO를 전제로 입사하였으나 회사에서 TO가 발생하지 않아 이직`,
-          },
         ],
       },
       {
@@ -276,10 +273,10 @@ export default {
         ],
       },
       {
-        title: "교내 공모전 우수상",
+        title: "동아리 공모전 우수상",
         contents: [
           {
-            text: `교내 공모전에서 재정이의 모험이라는 게임을 출품해 우수상을 수상했습니다.`,
+            text: `동아리 공모전에서 재정이의 모험이라는 게임을 출품해 우수상을 수상했습니다.`,
           },
         ],
       },
