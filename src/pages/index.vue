@@ -79,7 +79,7 @@ export default {
       {
         id: 5,
         icon: "javascript.svg",
-        title: "Javascript & Node.js",
+        title: "Javascript & Typescript",
         subtitle:
           "ES6 + 문법에 익숙하고 비동기 처리가 가능해요. typescript를 사용한 서비스 경험이 있어요.",
       },
