@@ -1,7 +1,7 @@
 ---
 title: "[Spring Basic 1] 시작하기"
 description: "스프링 공부해보기"
-category: spring
+category: java
 createdAt: "2021-12-11"
 ---
 

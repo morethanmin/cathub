@@ -1,7 +1,7 @@
 ---
 title: 웹서비스 형태에 대해 이해하기
 description: "-"
-category: web
+category: computerscience
 createdAt: "2021-10-16"
 ---
 

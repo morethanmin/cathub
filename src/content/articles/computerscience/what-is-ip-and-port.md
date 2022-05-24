@@ -1,7 +1,7 @@
 ---
 title: ip와 port에 대한 개념
 description: "네트워크 개념 이해하기"
-category: web
+category: computerscience
 createdAt: "2021-10-18"
 ---
 

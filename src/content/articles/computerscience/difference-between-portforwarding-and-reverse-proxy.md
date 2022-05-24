@@ -1,7 +1,7 @@
 ---
 title: 포트포워딩과 리버스프록시의 차이점
 description: "웹 개발에 필요한 네트워크 지식"
-category: web
+category: computerscience
 createdAt: "2021-10-17"
 ---
 

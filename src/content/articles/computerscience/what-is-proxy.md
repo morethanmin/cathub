@@ -1,7 +1,7 @@
 ---
 title: 프록시 개념 (포워드 프록시, 리버스 프록시)
 description: "-"
-category: web
+category: computerscience
 createdAt: "2021-10-14"
 ---
 

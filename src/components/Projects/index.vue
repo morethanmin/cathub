@@ -1,7 +1,7 @@
 <template>
   <div>
     <Callout
-      text="개인적으로 진행했던 프로젝트를 정리해두고있습니다. 클릭하면 해당 repository로 이동됩니다!"
+      text="개인적으로 진행했던 프로젝트를 정리해두고있습니다. 클릭하면 해당 repository로 이동해요"
     />
     <div class="filter-box pb-5 mb-5">
       <input

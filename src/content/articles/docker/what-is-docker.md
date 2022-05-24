@@ -1,7 +1,7 @@
 ---
 title: 도커란 무엇인가
 description: "도커 공부"
-category: web
+category: docker
 createdAt: "2021-11-03"
 ---
 
