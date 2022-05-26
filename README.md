@@ -1,4 +1,4 @@
-# [Cathub](https://morethanmin.web.app).
+# Cathub.
 
 > Github'st Development Archive Application using vue and nuxt.
 
@@ -6,20 +6,23 @@
 
 ## Features
 
-- markdown 기반 게시글/프로젝트 생성  검색
-- 카테고리별 작성 내역 잔디로 표시
+- markdown 기반 글 작성, 수정
+- 게시글 검색 기능
+- 카테고리별 게시글 작성 내역 시각화
+- 검색엔진 최적화 (SEO)
+- 댓글 작성 기능 (utteranc.es)
 - 게시글 Navigation 기능
 - 등등 ....
 
 ## Tech and libraries
 
-- vue
-- vuex
-- vuetify
-- sass
-- nuxt
-- nuxt/content
-- firebase (hosting)
+- Vue
+- Vuex
+- Vuetify
+- Sass
+- Nuxt
+- Nuxt/content
+- Firebase (for hosting)
 
 ## Getting started
 
