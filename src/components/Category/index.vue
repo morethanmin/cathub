@@ -62,6 +62,9 @@
   </v-row>
 </template>
 <style lang="scss" scoped>
+.mainsection{
+  margin-bottom: 30px;
+}
 .sideBox {
   .header {
     font-weight: bold;
