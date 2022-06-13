@@ -1,3 +1,5 @@
+![cat (1)](https://user-images.githubusercontent.com/72514247/173262530-f875ae62-d6f5-4f41-aa62-1e325f008a29.png)
+
 # [cathub](https://morethanmin.web.app/)
 
 > Github'st Development Archive Application using vue and nuxt.
@@ -13,16 +15,6 @@
 - 댓글 작성 기능 (utteranc.es)
 - 게시글 Navigation 기능
 - 등등 ....
-
-## Tech and libraries
-
-- Vue
-- Vuex
-- Vuetify
-- Sass
-- Nuxt
-- Nuxt/content
-- Firebase (for hosting)
 
 ## Getting started
 
@@ -57,9 +49,15 @@ $ npm run deploy
 
 ```
 
-## Note
+## Tech and libraries
 
-This project is ongoing.
+- Vue
+- Vuex
+- Vuetify
+- Sass
+- Nuxt
+- Nuxt/content
+- Firebase (for hosting)
 
 ## License
 
