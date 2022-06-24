@@ -2,9 +2,14 @@
 
 # [cathub](https://morethanmin.web.app/)
 
-> Github'st Development Archive Application using vue and nuxt.
-
 ![chrome-capture-2022-3-1](https://user-images.githubusercontent.com/72514247/161201534-0c7f889a-ac52-4e43-aa99-abef6afbb2b2.gif)
+
+## 만든 이유
+
+github을 통해 TIL(Today I Learned)commit을 하거나 ReadMe를 통해 자신을 소개하는게 불편하다고 느꼈습니다.
+그러다 보니 자연스럽게 github을 최대한 코드 관리하는 목적에 맞게 사용하고 싶어서 만들었습니다.
+
+지금은 TIL은 하고있지 않고, 포트폴리오 용도로 사용하고 있습니다.
 
 ## Features
 
