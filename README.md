@@ -13,13 +13,10 @@
 
 ## Features
 
-- markdown 기반 글 작성, 수정
-- 게시글 검색 기능
-- 카테고리별 게시글 작성 내역 시각화 (github의 잔디처럼 작성내역이 표시됩니다)
-- 검색엔진 최적화 (SEO)
-- 댓글 작성 기능 (utteranc.es)
-- 게시글 Navigation 기능
-- 등등 ....
+- 📝 markdown 기반 글 작성, 수정
+- 🔍 게시글 검색 기능
+- 🌱 카테고리별 게시글 작성 내역 시각화 (github처럼 잔디심기 가능!!)
+- 🤖 검색엔진 최적화 (SEO)
 
 ## Getting started
 
