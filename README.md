@@ -4,12 +4,7 @@
 
 ![chrome-capture-2022-3-1](https://user-images.githubusercontent.com/72514247/161201534-0c7f889a-ac52-4e43-aa99-abef6afbb2b2.gif)
 
-## 만든 이유
-
-협업 및 소스코드를 관리하는 공간인 github을 통해 TIL(Today I Learned)등의 공부한 내용을 올리거나, ReadMe를 통해 내 자신을 소개하는게 불편하다고 생각했습니다. (어찌보면 git 저장소이기에 당연한 부분) 
-또한 공부한 내용을 다른 사람에게 효과적으로 공유하지 못한다는 점이 아쉬웠습니다.
-
-이러한 부분을 해소하고자 배운내용을 정리하고 기록하는 동시에 나를 소개할 수 있는 별도의 서비스인 cathub을 만들게 되었습니다.
+github에 잔디를 심는 것처럼 글을 쓰며 잔디를 심어보아용
 
 ## Features
 
